@@ -1,0 +1,36 @@
+[{
+    "past_competitions": [
+        {
+            "date": "05.12.2015",
+            "guest": "AC Potsdam<br>SV Empor Berlin",
+            "home": "KG G\u00f6rlitz-Zittau",
+            "location": "G\u00f6rlitz",
+            "score": "376.0 : 544.3<br>:264.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=B5B08AAEA1B6418984EFCB274147400A"
+        },
+        {
+            "date": "07.11.2015",
+            "guest": "KG G\u00f6rlitz-Zittau",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "451.8 : 416.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=5B419D0F33A447A7A73AD13610BA82D0"
+        },
+        {
+            "date": "17.10.2015",
+            "guest": "SV Empor Berlin",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "478.0 : 414.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=D81D62CFDE8246A18ED8E6BDA0A1E474"
+        },
+        {
+            "date": "26.09.2015",
+            "guest": "AC Potsdam",
+            "home": "KG G\u00f6rlitz-Zittau",
+            "location": "G\u00f6rlitz",
+            "score": "416.3 : 507.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=8D057C4FA5E64A2CB8F5354E1C3A626D"
+        }
+    ]
+}]

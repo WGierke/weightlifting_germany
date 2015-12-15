@@ -1,0 +1,25 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "12 : 0",
+            "club": "AC Potsdam",
+            "max_score": "544.3",
+            "place": "1",
+            "score": "2074.5 : 1471.5"
+        },
+        {
+            "cardinal_points": "4 : 8",
+            "club": "KG G\u00f6rlitz-Zittau",
+            "max_score": "416.3",
+            "place": "2",
+            "score": "1584.3 : 1768.8"
+        },
+        {
+            "cardinal_points": "2 : 10",
+            "club": "SV Empor Berlin",
+            "max_score": "451.8",
+            "place": "3",
+            "score": "1395.8 : 1814.3"
+        }
+    ]
+}]
