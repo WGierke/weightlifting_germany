@@ -51,7 +51,7 @@ class BuliParser:
         re_competition_entry = re.compile(ur'(?<=class=font4>).*(?=[\r\n]?<\/TD>)')
         re_href = re.compile(ur'(?<=href=)[^>]*(?=>)')
         competition_entries = re.findall(re_competition_entry, competitions)
-        competition_entries = [w.replace('\r', '') for w in competition_entries]
+        competition_entries = [w.replace('\r', '').replace('<br>', ' ') for w in competition_entries]
 
         competitions_dict = {}
         final_competitions = []
