@@ -1,0 +1,88 @@
+[{
+    "scheduled_competitions": [
+        {
+            "date": "19.12.2015",
+            "guest": "FTG Pfungstadt",
+            "home": "SV90 Gr\u00e4fenroda",
+            "location": "Gr\u00e4fenroda",
+            "time": "15:00/16:00 Uhr"
+        },
+        {
+            "date": "19.12.2015",
+            "guest": "KSV Langen",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "time": "16:00/17:00 Uhr"
+        },
+        {
+            "date": "30.01.2016",
+            "guest": "TB 03 Roding II",
+            "home": "KSV Langen",
+            "location": "Langen",
+            "time": "18:00/19:00 Uhr"
+        },
+        {
+            "date": "30.01.2016",
+            "guest": "SV90 Gr\u00e4fenroda",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "time": "16:00/17:00 Uhr"
+        },
+        {
+            "date": "13.02.2016",
+            "guest": "AC Suhl",
+            "home": "KSV Langen",
+            "location": "Langen",
+            "time": "18:00/19:00 Uhr"
+        },
+        {
+            "date": "13.02.2016",
+            "guest": "SV90 Gr\u00e4fenroda",
+            "home": "FTG Pfungstadt",
+            "location": "Pfungstadt",
+            "time": "15:00/16:00 Uhr"
+        },
+        {
+            "date": "05.03.2016",
+            "guest": "KSV Langen",
+            "home": "FTG Pfungstadt",
+            "location": "Pfungstadt",
+            "time": "15:00/16:00 Uhr"
+        },
+        {
+            "date": "05.03.2016",
+            "guest": "AC Suhl",
+            "home": "TB 03 Roding II",
+            "location": "Roding",
+            "time": "15:30/16:30 Uhr"
+        },
+        {
+            "date": "19.03.2016",
+            "guest": "FTG Pfungstadt",
+            "home": "TB 03 Roding II",
+            "location": "Roding",
+            "time": "15:30/16:30 Uhr"
+        },
+        {
+            "date": "02.04.2016",
+            "guest": "KSV Langen",
+            "home": "SV90 Gr\u00e4fenroda",
+            "location": "Gr\u00e4fenroda",
+            "time": "15:00/16:00 Uhr"
+        },
+        {
+            "date": "23.04.2016",
+            "guest": "TB 03 Roding II",
+            "home": "SV90 Gr\u00e4fenroda",
+            "location": "Gr\u00e4fenroda",
+            "time": "15:00/16:00 Uhr"
+        },
+        {
+            "date": "23.04.2016",
+            "guest": "FTG Pfungstadt",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "time": "16:00/17:00 Uhr"
+        }
+    ]
+}]

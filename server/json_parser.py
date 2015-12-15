@@ -10,12 +10,14 @@ from bs4 import BeautifulSoup
 
 class BuliParser:
 
-    def __init__(self, season, league, relay, competition_file_name, table_file_name):
+    def __init__(self, season, league, relay, schedule_file_name, competition_file_name, table_file_name):
         self.league = league
         self.relay = relay
         self.iat_season_base = "https://www.iat.uni-leipzig.de/datenbanken/blgew{0}/".format(season)
+        self.iat_schedule_url = "{0}start.php?pid=%27123%27&ansetzungen=1&bl={1}&staffel={2}".format(self.iat_season_base, league, relay)
         self.iat_competitions_url = "{0}start.php?pid=%27123%27&resultate=1&bl={1}&staffel={2}".format(self.iat_season_base, league, relay)
         self.iat_table_url = "{0}start.php?pid=%27123%27&tabelle=1&bl={1}&staffel={2}".format(self.iat_season_base, league, relay)
+        self.schedule_file_name = "production/" + schedule_file_name + ".json"
         self.competition_file_name = "production/" + competition_file_name + ".json"
         self.table_file_name = "production/" + table_file_name + ".json"
         self.error_occured = False
@@ -38,9 +40,48 @@ class BuliParser:
     # Main functions
 
 
+    def create_schedule_file(self):
+        """Save scheduled competitions in schedule_file_name.json"""
+        print "Parsing scheduled competitions ..."
+        try:
+            scheduled = urllib2.urlopen(self.iat_schedule_url).read().split("</TABLE>")[0]
+        except Exception, e:
+            print 'Error while downloading schedule ', e
+            self.error_occured = True
+            return
+
+        re_competition_entry = re.compile(ur'(?<=class=font4>).*(?=[\r\n]?<\/TD>)')
+        schedule_entries = re.findall(re_competition_entry, scheduled.split('</A>')[-1].replace('</TD></TR>', '</TD>\n</TR>'))
+        schedule_entries = [w.replace('\r', '').replace('<br>', ' ') for w in schedule_entries]
+
+        schedule_dict = {}
+        final_schedule = []
+
+        for i in range(0, len(schedule_entries), 7):
+            if schedule_entries[i+6] == "&nbsp;":
+                entry = {}
+                entry["date"] = schedule_entries[i]
+                entry["home"] = schedule_entries[i+1]
+                entry["guest"] = schedule_entries[i+2]
+                entry["location"] = schedule_entries[i+3]
+                entry["time"] = schedule_entries[i+4]
+
+                final_schedule.append(entry)
+
+        if len(final_schedule) == 0:
+            return
+
+        schedule_dict["scheduled_competitions"] = final_schedule
+        json_scheduled = json.dumps(schedule_dict, encoding='latin1', sort_keys=True, indent=4, separators=(',', ': '))
+        schedule_dict_json = "[" + json_scheduled + "]"
+
+        with open(self.schedule_file_name, "w+") as f:
+            f.write(schedule_dict_json.decode('utf-8'))
+
+
     def create_competitions_file(self):
         """Save past competitions in competition_file_name.json"""
-        print "Parsing competitions ..."
+        print "Parsing past competitions ..."
         try:
             competitions = urllib2.urlopen(self.iat_competitions_url).read().split("</TABLE>")[0]
         except Exception, e:
@@ -153,18 +194,18 @@ class BuliParser:
 
     def create_buli_files(self):
         print "Creating Bundesliga files for BL " + self.league + " - " + self.relay
-        for func in [self.create_competitions_file, self.create_table_file]:
+        for func in [self.create_schedule_file, self.create_competitions_file, self.create_table_file]:
             if not self.error_occured:
                 func()
 
 
 if __name__ == '__main__':
     SEASON = "1516"
-    BuliParser1A = BuliParser(SEASON, "1", "Gruppe+A", "1A_competitions", "1A_table")
-    BuliParser1B = BuliParser(SEASON, "1", "Gruppe+B", "1B_competitions", "1B_table")
-    BuliParser2South = BuliParser(SEASON, "2", "S%FCdwest", "2South_competitions", "2South_table")
-    BuliParser2North = BuliParser(SEASON, "2", "Nordost", "2North_competitions", "2North_table")
-    BuliParser2Middle = BuliParser(SEASON, "2", "Mitte", "2Middle_competitions", "2Middle_table")
+    BuliParser1A = BuliParser(SEASON, "1", "Gruppe+A", "1A_schedule", "1A_competitions", "1A_table")
+    BuliParser1B = BuliParser(SEASON, "1", "Gruppe+B", "1B_schedule", "1B_competitions", "1B_table")
+    BuliParser2South = BuliParser(SEASON, "2", "S%FCdwest", "2South_schedule", "2South_competitions", "2South_table")
+    BuliParser2North = BuliParser(SEASON, "2", "Nordost", "2North_schedule", "2North_competitions", "2North_table")
+    BuliParser2Middle = BuliParser(SEASON, "2", "Mitte", "2Middle_schedule", "2Middle_competitions", "2Middle_table")
 
     for parser in [BuliParser1A, BuliParser1B, BuliParser2South, BuliParser2North, BuliParser2Middle]:
         parser.create_buli_files()
