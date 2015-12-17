@@ -8,7 +8,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Date;
 
-import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;
@@ -18,8 +17,6 @@ public class Table extends UpdateableWrapper {
 
     public static final String FILE_NAME = "table.json";
     public static ArrayList<TableEntry> itemsToMark = new ArrayList<>();
-    public final static int navigationPosition = MainActivity.FRAGMENT_BULI;
-    public final static int subPosition = 2;
     private final String UPDATE_URL = "https://raw.githubusercontent.com/WGierke/weightlifting_schwedt/updates/production/table.json";
     private final String TAG = "Table";
 

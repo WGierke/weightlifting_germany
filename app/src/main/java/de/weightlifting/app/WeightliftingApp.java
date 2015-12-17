@@ -11,8 +11,10 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import java.io.File;
 import java.util.Date;
 
-import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.relay1A.Competitions1A;
+import de.weightlifting.app.buli.relay1A.Table1A;
+import de.weightlifting.app.buli.relay1B.Competitions1B;
+import de.weightlifting.app.buli.relay1B.Table1B;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
@@ -33,7 +35,9 @@ public class WeightliftingApp extends Application {
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
     public Competitions1A competitions1A;
-    public Table table;
+    public Table1A table1A;
+    public Competitions1B competitions1B;
+    public Table1B table1B;
     public Handler splashCallbackHandler;
 
     public void initialize(Handler callbackHandler) {
@@ -50,8 +54,6 @@ public class WeightliftingApp extends Application {
         FaqFragment.faqEntries.add(new FaqItem(getString(R.string.faq_bad_attempt_jerking_heading), getString(R.string.faq_bad_attempt_jerking_question), getString(R.string.faq_bad_attempt_jerking_answer)));
         FaqFragment.faqEntries.add(new FaqItem(getString(R.string.winner_single_competition_heading), getString(R.string.winner_single_competition_question), getString(R.string.winner_single_competition_answer)));
         FaqFragment.faqEntries.add(new FaqItem(getString(R.string.winner_team_competition_heading), getString(R.string.winner_team_competition_question), getString(R.string.winner_team_competition_answer)));
-
-        long dateDiff = (new Date().getTime() - dateStart);
 
         DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
                 .cacheInMemory(true)
@@ -95,22 +97,26 @@ public class WeightliftingApp extends Application {
 
     public void loadDataFromStorage() {
         getCompetitions1A(LOAD_FROM_FILE);
-        getTable(LOAD_FROM_FILE);
+        getTable1A(LOAD_FROM_FILE);
+        getCompetitions1B(LOAD_FROM_FILE);
+        getTable1B(LOAD_FROM_FILE);
     }
 
     public void updateDataForcefully() {
         //Update everything and save it on storage
         getCompetitions1A(UPDATE_FORCEFULLY);
-        getTable(UPDATE_FORCEFULLY);
+        getTable1A(UPDATE_FORCEFULLY);
+        getCompetitions1B(UPDATE_FORCEFULLY);
+        getTable1B(UPDATE_FORCEFULLY);
     }
 
     public int getUpdateStatus() {
-        //Log.d(WeightliftingApp.TAG, news.isUpToDate + " " + events.isUpToDate + " " + team.isUpToDate + " " + competitions1A.isUpToDate + " " + table.isUpToDate + " " + galleries.isUpToDate);
-        if (competitions1A.updateFailed || table.updateFailed) {
+        //Log.d(WeightliftingApp.TAG, news.isUpToDate + " " + events.isUpToDate + " " + team.isUpToDate + " " + competitions1B.isUpToDate + " " + table.isUpToDate + " " + galleries.isUpToDate);
+        if (competitions1A.updateFailed || table1A.updateFailed || competitions1B.updateFailed || table1B.updateFailed) {
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
         }
-        if (competitions1A.isUpToDate && table.isUpToDate) {
+        if (competitions1A.isUpToDate && table1A.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate) {
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
         } else
@@ -120,8 +126,12 @@ public class WeightliftingApp extends Application {
     public void setFinishUpdateFlags(boolean value) {
         if (competitions1A != null)
             competitions1A.isUpToDate = value;
-        if (table != null)
-            table.isUpToDate = value;
+        if (table1A != null)
+            table1A.isUpToDate = value;
+        if (competitions1B != null)
+            competitions1B.isUpToDate = value;
+        if (table1B != null)
+            table1B.isUpToDate = value;
     }
 
     public UpdateableWrapper getWrapperItems(UpdateableWrapper myInstance, Class<?> myClass, int mode) {
@@ -165,9 +175,19 @@ public class WeightliftingApp extends Application {
         return competitions1A;
     }
 
-    public Table getTable(int updateMode) {
-        table = (Table) getWrapperItems(table, Table.class, updateMode);
-        return table;
+    public Table1A getTable1A(int updateMode) {
+        table1A = (Table1A) getWrapperItems(table1A, Table1A.class, updateMode);
+        return table1A;
+    }
+
+    public Competitions1B getCompetitions1B(int updateMode) {
+        competitions1B = (Competitions1B) getWrapperItems(competitions1B, Competitions1B.class, updateMode);
+        return competitions1B;
+    }
+
+    public Table1B getTable1B(int updateMode) {
+        table1B = (Table1B) getWrapperItems(table1B, Table1B.class, updateMode);
+        return table1B;
     }
 
     public ImageLoader getImageLoader() {

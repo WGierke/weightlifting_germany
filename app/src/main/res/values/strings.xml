@@ -16,7 +16,12 @@
     <!-- Navigation -->
     <string name="nav_home">Startseite</string>
     <string name="nav_news">News &amp; Events</string>
-    <string name="nav_buli">Bundesliga</string>
+    <string name="nav_buli_1">1. Bundesliga</string>
+    <string name="nav_buli_1A">Staffel A</string>
+    <string name="nav_buli_1B">Staffel B</string>
+    <string name="nav_buli_2North">Staffel Nordost</string>
+    <string name="nav_buli_2Middle">Staffel Mitte</string>
+    <string name="nav_buli_2South">Staffel Südwest</string>
     <string name="nav_faq">FAQ</string>
     <string name="nav_gallery">Galerie</string>
     <string name="nav_contact">Kontakt</string>
@@ -27,6 +32,12 @@
     <string name="home_text">Seit 1967 gibt es das Gewichtheben in der Oderstadt. Über 180 Mitglieder im TSV Blau-Weiß 65 Schwedt sind in der Abteilung Gewichtheben tätig. Unsere Mannschaft für die 1. Bundesliga stellen wir gemeinsam mit dem TSV 1860 Stralsund auf. \n \nHier finden Sie für Sie aufbereitete, aktuelle Informationen zum Bundesliga-Team, -Wettkämpfen und -Platzierungen, aber auch zu Veranstaltungen und Wettkämpfen im Jugendbereich.</string>
 
     <!-- Bundesliga -->
+    <string name="buli_1A">1. Bundesliga - Staffel A</string>
+    <string name="buli_1B">1. Bundesliga - Staffel B</string>
+    <string name="buli_2North">2. Bundesliga - Staffel Nordost</string>
+    <string name="buli_2Middle">2. Bundesliga - Staffel Mitte</string>
+    <string name="buli_2South">2. Bundesliga - Staffel Südwest</string>
+
     <string name="buli_team">Team</string>
     <string name="buli_competitions">Wettkämpfe</string>
     <string name="buli_table">Tabelle</string>

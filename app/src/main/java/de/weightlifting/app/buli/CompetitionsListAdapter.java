@@ -2,7 +2,6 @@ package de.weightlifting.app.buli;
 
 import android.app.Activity;
 import android.content.Context;
-import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import de.weightlifting.app.R;
-import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.UiHelper;
 
 public class CompetitionsListAdapter extends BaseAdapter {

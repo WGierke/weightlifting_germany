@@ -8,7 +8,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.Date;
 
-import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;

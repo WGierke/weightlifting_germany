@@ -1,6 +1,7 @@
 package de.weightlifting.app;
 
 import android.content.Intent;
+import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -18,19 +19,26 @@ import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.Table;
+import de.weightlifting.app.buli.relay1A.BuliFragment1A;
+import de.weightlifting.app.buli.relay1B.BuliFragment1B;
 import de.weightlifting.app.helper.UiHelper;
 import de.weightlifting.app.service.RegistrationIntentService;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final int FRAGMENT_HOME = 0;
-    public static final int FRAGMENT_BULI = 1;
-    public static final int FRAGMENT_FAQ = 2;
-    public static final int FRAGMENT_CONTACT = 3;
+    public static final int FRAGMENT_BULI_1A = 2;
+    public static final int FRAGMENT_BULI_1B = 3;
+    public static final int FRAGMENT_BULI_2NORTH = 5;
+    public static final int FRAGMENT_BULI_2MIDDLE = 6;
+    public static final int FRAGMENT_BULI_2SOUTH = 7;
+    public static final int FRAGMENT_FAQ = 9;
+    public static final int FRAGMENT_CONTACT = 11;
     private WeightliftingApp app;
     private Toolbar mToolbar;
     private CharSequence mTitle;
@@ -66,9 +74,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initNavigation(Bundle savedInstanceState) {
-
         PrimaryDrawerItem nav_home = new PrimaryDrawerItem().withName(R.string.nav_home).withIcon(R.drawable.nav_home);
-        PrimaryDrawerItem nav_buli = new PrimaryDrawerItem().withName(R.string.nav_buli).withIcon(R.drawable.nav_buli);
+        SectionDrawerItem nav_buli1_section = new SectionDrawerItem().withName("1. Bundesliga");
+        PrimaryDrawerItem nav_buli_1A = new PrimaryDrawerItem().withName(R.string.nav_buli_1A).withIcon(R.drawable.nav_buli);
+        PrimaryDrawerItem nav_buli_1B = new PrimaryDrawerItem().withName(R.string.nav_buli_1B).withIcon(R.drawable.nav_buli);
+        SectionDrawerItem nav_buli2_section = new SectionDrawerItem().withName("2. Bundesliga");
+        PrimaryDrawerItem nav_buli_2North = new PrimaryDrawerItem().withName(R.string.nav_buli_2North).withIcon(R.drawable.nav_buli);
+        PrimaryDrawerItem nav_buli_2Middle = new PrimaryDrawerItem().withName(R.string.nav_buli_2Middle).withIcon(R.drawable.nav_buli);
+        PrimaryDrawerItem nav_buli_2South = new PrimaryDrawerItem().withName(R.string.nav_buli_2South).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_faq = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_help);
         PrimaryDrawerItem nav_contact = new PrimaryDrawerItem().withName(R.string.nav_contact).withIcon(R.drawable.nav_contact);
 
@@ -77,8 +90,13 @@ public class MainActivity extends AppCompatActivity {
                 .withToolbar(mToolbar)
                 .addDrawerItems(
                         nav_home,
-                        new DividerDrawerItem(),
-                        nav_buli,
+                        nav_buli1_section,
+                        nav_buli_1A,
+                        nav_buli_1B,
+                        nav_buli2_section,
+                        nav_buli_2North,
+                        nav_buli_2Middle,
+                        nav_buli_2South,
                         new DividerDrawerItem(),
                         nav_faq,
                         new DividerDrawerItem(),
@@ -87,10 +105,11 @@ public class MainActivity extends AppCompatActivity {
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        showFragment(position / 2);
-                        return false;
-                    }
-                })
+                        Log.d(WeightliftingApp.TAG, "clicked: " + position);
+                showFragment(position);
+                return false;
+            }
+        })
                 .build();
 
         if (savedInstanceState == null) {
@@ -175,9 +194,13 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new HomeFragment();
                 setTitle(getString(R.string.nav_home));
                 break;
-            case FRAGMENT_BULI:
-                fragment = new BuliFragment();
-                setTitle(getString(R.string.nav_buli));
+            case FRAGMENT_BULI_1A:
+                fragment = new BuliFragment1A();
+                setTitle(getString(R.string.buli_1A));
+                break;
+            case FRAGMENT_BULI_1B:
+                fragment = new BuliFragment1B();
+                setTitle(getString(R.string.buli_1B));
                 break;
             case FRAGMENT_FAQ:
                 fragment = new FaqFragment();
@@ -190,6 +213,8 @@ public class MainActivity extends AppCompatActivity {
             default:
                 break;
         }
+        Log.d(WeightliftingApp.TAG, "showing fragment with id " + position);
+
 
         replaceFragment(fragment, mTitle.toString());
 

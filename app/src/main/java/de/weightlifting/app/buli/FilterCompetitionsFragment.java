@@ -13,12 +13,16 @@ import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 
-public class FilterCompetitionsFragment extends CompetitionsFragment {
+public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
 
-    private ArrayList<PastCompetition> filteredCompetitions;
+    protected ArrayList<PastCompetition> filteredCompetitions;
+
+    protected abstract Competitions getSpecificCompetitions();
+
+    protected abstract String getTitle();
 
     protected void getCompetitions() {
-        competitions = app.getCompetitions1A(WeightliftingApp.UPDATE_IF_NECESSARY);
+        competitions = getSpecificCompetitions();
         if (competitions.getItems().size() == 0) {
             //Log.d(WeightliftingApp.TAG, "Waiting for Competitions...");
 
@@ -44,7 +48,7 @@ public class FilterCompetitionsFragment extends CompetitionsFragment {
                         Bundle bundle = new Bundle();
                         bundle.putString("protocol-url", filteredCompetitions.get(position).getProtocolUrl());
                         protocol.setArguments(bundle);
-                        ((MainActivity) getActivity()).addFragment(protocol, getString(R.string.nav_buli), true);
+                        ((MainActivity) getActivity()).addFragment(protocol, getTitle(), true);
                     }
                 });
             } catch (Exception ex) {
