@@ -16,6 +16,7 @@ import de.weightlifting.app.buli.relay1A.Competitions1A;
 import de.weightlifting.app.buli.relay1A.Schedule1A;
 import de.weightlifting.app.buli.relay1A.Table1A;
 import de.weightlifting.app.buli.relay1B.Competitions1B;
+import de.weightlifting.app.buli.relay1B.Schedule1B;
 import de.weightlifting.app.buli.relay1B.Table1B;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.DataHelper;
@@ -36,9 +37,10 @@ public class WeightliftingApp extends Application {
     public boolean initializedParse = false;
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
+    public Schedule1A schedule1A;
     public Competitions1A competitions1A;
     public Table1A table1A;
-    public Schedule1A schedule1A;
+    public Schedule1B schedule1B;
     public Competitions1B competitions1B;
     public Table1B table1B;
     public Handler splashCallbackHandler;
@@ -102,6 +104,7 @@ public class WeightliftingApp extends Application {
         getSchedule1A(LOAD_FROM_FILE);
         getCompetitions1A(LOAD_FROM_FILE);
         getTable1A(LOAD_FROM_FILE);
+        getSchedule1B(LOAD_FROM_FILE);
         getCompetitions1B(LOAD_FROM_FILE);
         getTable1B(LOAD_FROM_FILE);
     }
@@ -111,17 +114,18 @@ public class WeightliftingApp extends Application {
         getSchedule1A(UPDATE_FORCEFULLY);
         getCompetitions1A(UPDATE_FORCEFULLY);
         getTable1A(UPDATE_FORCEFULLY);
+        getSchedule1B(UPDATE_FORCEFULLY);
         getCompetitions1B(UPDATE_FORCEFULLY);
         getTable1B(UPDATE_FORCEFULLY);
     }
 
     public int getUpdateStatus() {
         //Log.d(WeightliftingApp.TAG, news.isUpToDate + " " + events.isUpToDate + " " + team.isUpToDate + " " + competitions1B.isUpToDate + " " + table.isUpToDate + " " + galleries.isUpToDate);
-        if (schedule1A.updateFailed || competitions1A.updateFailed || table1A.updateFailed || competitions1B.updateFailed || table1B.updateFailed) {
+        if (schedule1A.updateFailed || competitions1A.updateFailed || table1A.updateFailed || schedule1B.updateFailed || competitions1B.updateFailed || table1B.updateFailed) {
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
         }
-        if (schedule1A.isUpToDate && competitions1A.isUpToDate && table1A.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate) {
+        if (schedule1A.isUpToDate && competitions1A.isUpToDate && table1A.isUpToDate && schedule1B.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate) {
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
         } else
@@ -135,6 +139,8 @@ public class WeightliftingApp extends Application {
             competitions1A.isUpToDate = value;
         if (table1A != null)
             table1A.isUpToDate = value;
+        if (schedule1B != null)
+            schedule1B.isUpToDate = value;
         if (competitions1B != null)
             competitions1B.isUpToDate = value;
         if (table1B != null)
@@ -176,6 +182,11 @@ public class WeightliftingApp extends Application {
         return myInstance;
     }
 
+    public Schedule1A getSchedule1A(int updateMode) {
+        schedule1A = (Schedule1A) getWrapperItems(schedule1A, Schedule1A.class, updateMode);
+        return schedule1A;
+    }
+
     public Competitions1A getCompetitions1A(int updateMode) {
         competitions1A = (Competitions1A) getWrapperItems(competitions1A, Competitions1A.class, updateMode);
         return competitions1A;
@@ -186,9 +197,9 @@ public class WeightliftingApp extends Application {
         return table1A;
     }
 
-    public Schedule1A getSchedule1A(int updateMode) {
-        schedule1A = (Schedule1A) getWrapperItems(schedule1A, Schedule1A.class, updateMode);
-        return schedule1A;
+    public Schedule1B getSchedule1B(int updateMode) {
+        schedule1B = (Schedule1B) getWrapperItems(schedule1B, Schedule1B.class, updateMode);
+        return schedule1B;
     }
 
     public Competitions1B getCompetitions1B(int updateMode) {
