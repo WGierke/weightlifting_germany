@@ -6,21 +6,21 @@ import android.widget.ListView;
 
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.buli.ScheduleListAdapter;
 import de.weightlifting.app.buli.Table;
-import de.weightlifting.app.buli.TableFragment;
 
-public class ScheduleFragment2North extends TableFragment {
+public class ScheduleFragment2North extends ListViewFragment {
 
     private Schedule2North schedule2North;
 
-    protected void getTable() {
+    protected void getBuliElements() {
         schedule2North = app.getSchedule2North(WeightliftingApp.UPDATE_IF_NECESSARY);
         if (schedule2North.getItems().size() == 0) {
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    getTable();
+                    getBuliElements();
                 }
             };
             Handler refreshHandler = new Handler();
@@ -28,11 +28,11 @@ public class ScheduleFragment2North extends TableFragment {
         } else {
             // We have Table items to display
             try {
-                ListView listViewTable = (ListView) fragment.findViewById(R.id.listView_Buli);
+                ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
                 ScheduleListAdapter adapter = new ScheduleListAdapter(Schedule2North.casteArray(schedule2North.getItems()), getActivity());
                 listViewTable.setAdapter(adapter);
             } catch (Exception ex) {
-                Log.e(WeightliftingApp.TAG, "Showing Table2North failed");
+                Log.e(WeightliftingApp.TAG, "Showing Schedule2North failed");
                 ex.toString();
             }
 

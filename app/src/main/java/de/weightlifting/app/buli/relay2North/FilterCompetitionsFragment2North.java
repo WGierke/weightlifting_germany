@@ -7,7 +7,7 @@ import de.weightlifting.app.buli.FilterCompetitionsFragment;
 public class FilterCompetitionsFragment2North extends FilterCompetitionsFragment {
 
     protected String getTitle() {
-        return getString(R.string.buli_1A);
+        return getString(R.string.buli_2North);
     }
 
     protected Competitions2North getSpecificCompetitions() {

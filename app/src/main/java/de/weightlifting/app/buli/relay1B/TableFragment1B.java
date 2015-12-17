@@ -11,23 +11,22 @@ import android.widget.ListView;
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.buli.FilterCompetitionsFragment;
+import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.TableEntry;
-import de.weightlifting.app.buli.TableFragment;
 import de.weightlifting.app.buli.TableListAdapter;
 
-public class TableFragment1B extends TableFragment {
+public class TableFragment1B extends ListViewFragment {
 
     private Table buliTable;
 
-    protected void getTable() {
+    protected void getBuliElements() {
         buliTable = app.getTable1B(WeightliftingApp.UPDATE_IF_NECESSARY);
         if (buliTable.getItems().size() == 0) {
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    getTable();
+                    getBuliElements();
                 }
             };
             Handler refreshHandler = new Handler();
@@ -35,7 +34,7 @@ public class TableFragment1B extends TableFragment {
         } else {
             // We have Table items to display
             try {
-                ListView listViewTable = (ListView) fragment.findViewById(R.id.listView_Buli);
+                ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
                 TableListAdapter adapter = new TableListAdapter(Table.casteArray(buliTable.getItems()), getActivity());
                 listViewTable.setAdapter(adapter);
                 listViewTable.setOnItemClickListener(new AdapterView.OnItemClickListener() {

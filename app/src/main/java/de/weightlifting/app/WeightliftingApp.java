@@ -21,6 +21,9 @@ import de.weightlifting.app.buli.relay1B.Table1B;
 import de.weightlifting.app.buli.relay2North.Competitions2North;
 import de.weightlifting.app.buli.relay2North.Schedule2North;
 import de.weightlifting.app.buli.relay2North.Table2North;
+import de.weightlifting.app.buli.relay2South.Competitions2South;
+import de.weightlifting.app.buli.relay2South.Schedule2South;
+import de.weightlifting.app.buli.relay2South.Table2South;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
@@ -49,6 +52,9 @@ public class WeightliftingApp extends Application {
     public Schedule2North schedule2North;
     public Competitions2North competitions2North;
     public Table2North table2North;
+    public Schedule2South schedule2South;
+    public Competitions2South competitions2South;
+    public Table2South table2South;
 
     public Handler splashCallbackHandler;
 
@@ -114,6 +120,12 @@ public class WeightliftingApp extends Application {
         getSchedule1B(LOAD_FROM_FILE);
         getCompetitions1B(LOAD_FROM_FILE);
         getTable1B(LOAD_FROM_FILE);
+        getSchedule2North(LOAD_FROM_FILE);
+        getCompetitions2North(LOAD_FROM_FILE);
+        getTable2North(LOAD_FROM_FILE);
+        getSchedule2South(LOAD_FROM_FILE);
+        getCompetitions2South(LOAD_FROM_FILE);
+        getTable2South(LOAD_FROM_FILE);
     }
 
     public void updateDataForcefully() {
@@ -124,15 +136,28 @@ public class WeightliftingApp extends Application {
         getSchedule1B(UPDATE_FORCEFULLY);
         getCompetitions1B(UPDATE_FORCEFULLY);
         getTable1B(UPDATE_FORCEFULLY);
+        getSchedule2North(UPDATE_FORCEFULLY);
+        getCompetitions2North(UPDATE_FORCEFULLY);
+        getTable2North(UPDATE_FORCEFULLY);
+        getSchedule2South(UPDATE_FORCEFULLY);
+        getCompetitions2South(UPDATE_FORCEFULLY);
+        getTable2South(UPDATE_FORCEFULLY);
     }
 
     public int getUpdateStatus() {
-        //Log.d(WeightliftingApp.TAG, news.isUpToDate + " " + events.isUpToDate + " " + team.isUpToDate + " " + competitions1B.isUpToDate + " " + table.isUpToDate + " " + galleries.isUpToDate);
-        if (schedule1A.updateFailed || competitions1A.updateFailed || table1A.updateFailed || schedule1B.updateFailed || competitions1B.updateFailed || table1B.updateFailed) {
+        if (schedule1A.updateFailed || competitions1A.updateFailed || table1A.updateFailed ||
+                schedule1B.updateFailed || competitions1B.updateFailed || table1B.updateFailed ||
+                schedule2North.updateFailed || competitions2North.updateFailed || table2North.updateFailed ||
+                schedule2South.updateFailed || competitions2South.updateFailed || table2South.updateFailed) {
+
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
         }
-        if (schedule1A.isUpToDate && competitions1A.isUpToDate && table1A.isUpToDate && schedule1B.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate) {
+        if (schedule1A.isUpToDate && competitions1A.isUpToDate && table1A.isUpToDate &&
+                schedule1B.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate &&
+                schedule2North.isUpToDate && competitions2North.isUpToDate && table2North.isUpToDate &&
+                schedule2South.isUpToDate && competitions2South.isUpToDate && table2South.isUpToDate) {
+
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
         } else
@@ -152,6 +177,18 @@ public class WeightliftingApp extends Application {
             competitions1B.isUpToDate = value;
         if (table1B != null)
             table1B.isUpToDate = value;
+        if (schedule2North != null)
+            schedule2North.isUpToDate = value;
+        if (competitions2North != null)
+            competitions2North.isUpToDate = value;
+        if (table2North != null)
+            table2North.isUpToDate = value;
+        if (schedule2South != null)
+            schedule2South.isUpToDate = value;
+        if (competitions2South != null)
+            competitions2South.isUpToDate = value;
+        if (table2South != null)
+            table2South.isUpToDate = value;
     }
 
     public UpdateableWrapper getWrapperItems(UpdateableWrapper myInstance, Class<?> myClass, int mode) {
@@ -232,6 +269,21 @@ public class WeightliftingApp extends Application {
     public Table2North getTable2North(int updateMode) {
         table2North = (Table2North) getWrapperItems(table2North, Table2North.class, updateMode);
         return table2North;
+    }
+
+    public Schedule2South getSchedule2South(int updateMode) {
+        schedule2South = (Schedule2South) getWrapperItems(schedule2South, Schedule2South.class, updateMode);
+        return schedule2South;
+    }
+
+    public Competitions2South getCompetitions2South(int updateMode) {
+        competitions2South = (Competitions2South) getWrapperItems(competitions2South, Competitions2South.class, updateMode);
+        return competitions2South;
+    }
+
+    public Table2South getTable2South(int updateMode) {
+        table2South = (Table2South) getWrapperItems(table2South, Table2South.class, updateMode);
+        return table2South;
     }
 
     public ImageLoader getImageLoader() {

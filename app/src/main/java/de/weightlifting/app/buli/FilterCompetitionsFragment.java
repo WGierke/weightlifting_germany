@@ -10,18 +10,19 @@ import android.widget.AdapterView;
 import java.util.ArrayList;
 
 import de.weightlifting.app.MainActivity;
-import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 
-public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
+public abstract class FilterCompetitionsFragment extends ListViewFragment {
 
     protected ArrayList<PastCompetition> filteredCompetitions;
+
+    protected Competitions competitions;
 
     protected abstract Competitions getSpecificCompetitions();
 
     protected abstract String getTitle();
 
-    protected void getCompetitions() {
+    protected void getBuliElements() {
         competitions = getSpecificCompetitions();
         if (competitions.getItems().size() == 0) {
             //Log.d(WeightliftingApp.TAG, "Waiting for Competitions...");
@@ -29,7 +30,7 @@ public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    getCompetitions();
+                    getBuliElements();
                 }
             };
             Handler refreshHandler = new Handler();
@@ -40,8 +41,8 @@ public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
                 String clubName = bundle.getString("club-name");
                 filteredCompetitions = filter(Competitions.casteArray(competitions.getItems()), clubName);
                 CompetitionsListAdapter adapter = new CompetitionsListAdapter(filteredCompetitions, getActivity());
-                listViewCompetitions.setAdapter(adapter);
-                listViewCompetitions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                listViewBuli.setAdapter(adapter);
+                listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Fragment protocol = new ProtocolFragment();

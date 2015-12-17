@@ -6,21 +6,21 @@ import android.widget.ListView;
 
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.buli.ScheduleListAdapter;
 import de.weightlifting.app.buli.Table;
-import de.weightlifting.app.buli.TableFragment;
 
-public class ScheduleFragment1B extends TableFragment {
+public class ScheduleFragment1B extends ListViewFragment {
 
     private Schedule1B schedule1B;
 
-    protected void getTable() {
+    protected void getBuliElements() {
         schedule1B = app.getSchedule1B(WeightliftingApp.UPDATE_IF_NECESSARY);
         if (schedule1B.getItems().size() == 0) {
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    getTable();
+                    getBuliElements();
                 }
             };
             Handler refreshHandler = new Handler();
@@ -28,7 +28,7 @@ public class ScheduleFragment1B extends TableFragment {
         } else {
             // We have Table items to display
             try {
-                ListView listViewTable = (ListView) fragment.findViewById(R.id.listView_Buli);
+                ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
                 ScheduleListAdapter adapter = new ScheduleListAdapter(Schedule1B.casteArray(schedule1B.getItems()), getActivity());
                 listViewTable.setAdapter(adapter);
             } catch (Exception ex) {

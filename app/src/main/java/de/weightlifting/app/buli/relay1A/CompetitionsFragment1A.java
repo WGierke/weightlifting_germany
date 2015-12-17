@@ -11,21 +11,21 @@ import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.buli.Competitions;
-import de.weightlifting.app.buli.CompetitionsFragment;
+import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.buli.CompetitionsListAdapter;
 import de.weightlifting.app.buli.ProtocolFragment;
 
-public class CompetitionsFragment1A extends CompetitionsFragment {
+public class CompetitionsFragment1A extends ListViewFragment {
 
     protected Competitions1A competitions1A;
 
-    protected void getCompetitions() {
+    protected void getBuliElements() {
         competitions1A = app.getCompetitions1A(WeightliftingApp.UPDATE_IF_NECESSARY);
         if (competitions1A.getItems().size() == 0) {
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    getCompetitions();
+                    getBuliElements();
                 }
             };
             Handler refreshHandler = new Handler();
@@ -33,8 +33,8 @@ public class CompetitionsFragment1A extends CompetitionsFragment {
         } else {
             try {
                 CompetitionsListAdapter adapter = new CompetitionsListAdapter(Competitions.casteArray(competitions1A.getItems()), getActivity());
-                listViewCompetitions.setAdapter(adapter);
-                listViewCompetitions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                listViewBuli.setAdapter(adapter);
+                listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         // Show the protocol which belongs to the competition

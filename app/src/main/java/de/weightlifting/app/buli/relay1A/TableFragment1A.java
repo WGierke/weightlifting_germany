@@ -11,27 +11,22 @@ import android.widget.ListView;
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.buli.FilterCompetitionsFragment;
+import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.TableEntry;
-import de.weightlifting.app.buli.TableFragment;
 import de.weightlifting.app.buli.TableListAdapter;
 
-public class TableFragment1A extends TableFragment {
+public class TableFragment1A extends ListViewFragment {
 
     private Table table1A;
 
-    protected void getTable() {
+    protected void getBuliElements() {
         table1A = app.getTable1A(WeightliftingApp.UPDATE_IF_NECESSARY);
         if (table1A.getItems().size() == 0) {
-            // No table items yet
-            //Log.d(WeightliftingApp.TAG, "Waiting for table1A...");
-
-            // Check again in a few seconds
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    getTable();
+                    getBuliElements();
                 }
             };
             Handler refreshHandler = new Handler();
@@ -39,7 +34,7 @@ public class TableFragment1A extends TableFragment {
         } else {
             // We have Table items to display
             try {
-                ListView listViewTable = (ListView) fragment.findViewById(R.id.listView_Buli);
+                ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
                 TableListAdapter adapter = new TableListAdapter(Table.casteArray(table1A.getItems()), getActivity());
                 listViewTable.setAdapter(adapter);
                 listViewTable.setOnItemClickListener(new AdapterView.OnItemClickListener() {

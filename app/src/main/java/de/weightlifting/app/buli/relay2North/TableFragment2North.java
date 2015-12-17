@@ -11,26 +11,22 @@ import android.widget.ListView;
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.TableEntry;
-import de.weightlifting.app.buli.TableFragment;
 import de.weightlifting.app.buli.TableListAdapter;
 
-public class TableFragment2North extends TableFragment {
+public class TableFragment2North extends ListViewFragment {
 
     private Table table2North;
 
-    protected void getTable() {
+    protected void getBuliElements() {
         table2North = app.getTable2North(WeightliftingApp.UPDATE_IF_NECESSARY);
         if (table2North.getItems().size() == 0) {
-            // No table items yet
-            //Log.d(WeightliftingApp.TAG, "Waiting for table2North...");
-
-            // Check again in a few seconds
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
-                    getTable();
+                    getBuliElements();
                 }
             };
             Handler refreshHandler = new Handler();
@@ -38,7 +34,7 @@ public class TableFragment2North extends TableFragment {
         } else {
             // We have Table items to display
             try {
-                ListView listViewTable = (ListView) fragment.findViewById(R.id.listView_Buli);
+                ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
                 TableListAdapter adapter = new TableListAdapter(Table.casteArray(table2North.getItems()), getActivity());
                 listViewTable.setAdapter(adapter);
                 listViewTable.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -55,7 +51,7 @@ public class TableFragment2North extends TableFragment {
                 });
 
             } catch (Exception ex) {
-                Log.e(WeightliftingApp.TAG, "Showing Table2North failed");
+                Log.e(WeightliftingApp.TAG, "Showing Table2South failed");
                 ex.toString();
             }
 
