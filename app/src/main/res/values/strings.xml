@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Gewichtheben Schwedt</string>
+
+    <!-- Stuff -->
+    <string name="refresh">Aktualisieren</string>
+    <string name="updated_all_successfully">Inhalte wurden erfolgreich synchronisiert</string>
+    <string name="updated_all_unsuccessfully">Nicht alle Inhalte konnten synchronisiert werden. Besteht eine Internetverbindung?</string>
+    <plurals name="new_elements">
+        <item quantity="zero">Kein neues oder geändertes Element gefunden</item>
+        <item quantity="one">%d neues/geändertes Element gefunden</item>
+        <item quantity="other">%d neue/geänderte Elemente gefunden</item>
+    </plurals>
+
+    <!-- Navigation -->
+    <string name="nav_home">Startseite</string>
+    <string name="nav_news">News &amp; Events</string>
+    <string name="nav_buli">Bundesliga</string>
+    <string name="nav_faq">FAQ</string>
+    <string name="nav_gallery">Galerie</string>
+    <string name="nav_contact">Kontakt</string>
+
+
+    <!-- Home -->
+    <string name="home_welcome">Willkommen</string>
+    <string name="home_text">Seit 1967 gibt es das Gewichtheben in der Oderstadt. Über 180 Mitglieder im TSV Blau-Weiß 65 Schwedt sind in der Abteilung Gewichtheben tätig. Unsere Mannschaft für die 1. Bundesliga stellen wir gemeinsam mit dem TSV 1860 Stralsund auf. \n \nHier finden Sie für Sie aufbereitete, aktuelle Informationen zum Bundesliga-Team, -Wettkämpfen und -Platzierungen, aber auch zu Veranstaltungen und Wettkämpfen im Jugendbereich.</string>
+
+
+    <!-- News -->
+    <string name="news_error_heading">Something went wrong</string>
+    <string name="news_error_content">This shouldn\'t happen, please go back and try again. Restart the app if that doesn\'t solve the issue.</string>
+    <string name="news_feed">Neuigkeiten</string>
+    <string name="news_events">Veranstaltungen</string>
+    <string name="news_article_url">Link zum Artikel</string>
+
+    <!-- Bundesliga -->
+    <string name="buli_team">Team</string>
+    <string name="buli_competitions">Wettkämpfe</string>
+    <string name="buli_table">Tabelle</string>
+    <string name="buli_year">Jahrgang</string>
+    <string name="buli_relative_points">Relativpunkte</string>
+    <string name="buli_snatching">Reißen</string>
+    <string name="buli_jerking">Stoßen</string>
+    <string name="buli_place">Platz</string>
+    <string name="buli_max_score">Höchstpunktzahl</string>
+    <string name="buli_points">Punkte</string>
+
+    <!-- FAQs -->
+    <string name="faq_off_signal_heading">Ab-Zeichen</string>
+    <string name="faq_off_signal_question">Wann darf das Ab-Zeichen gegeben werden?</string>
+    <string name="faq_off_signal_answer">Der Athlet muss die Last auf ausgestreckten Armen und Beinen halten und dabei vollständig bewegungslos sein. Hat er einen Regelverstoß begangen, wie z.B. beim "Nachdrücken" im Ausstoßen, so wird das Signal ebenfalls gegeben.</string>
+
+    <string name="faq_bad_attempt_jerking_heading">Ungültiger Stoß-Versuch</string>
+    <string name="faq_bad_attempt_jerking_question">Wann ist ein Versuch im Stoßen ungültig?</string>
+    <string name="faq_bad_attempt_jerking_answer">Bei folgenden Bewegungen ist der Stoß-Versuch als ungültig zu bewerten:\n - ein anderes Körperteil als die Füße berühren den Boden\n - die Ellenbogen berühren beim Umsetzen die Knie\n - beim Ausstoßen werden die Arme nicht in einer Bewegung gestreckt ("Nachdrücken")</string>
+
+    <string name="winner_team_competition_heading">Sieger eines Mannschafts-Wettkampfes</string>
+    <string name="winner_team_competition_question">Wer ist Sieger eines Mannschafts-Wettkampfes?</string>
+    <string name="winner_team_competition_answer">Sieger eines Mannschafts-Wettkampfes (z.B. eines Bundesliga-Kampfes) ist das Team, das die meisten Relativpunkte in die Bewertung einbringen kann.\nJedem Athleten wird relativ zu seinem Körpergewichtes ein Wert zugeordnet. Dieser Wert wird sowohl von der größten erreichten Last im Reißen wie auch im Stoßen abgezogen (daher: Relativabzug).\nEinem Athleten mit einem Körpergewicht von 80kg wird beispielsweise ein Abzug von 80 Punkten zugeordnet. Reißt dieser Athlet 130kg und stößt 150kg, so erhält er 130+150-2*80 = 280-160 = 120 Relativpunkte. Diese werden mit den Relativpunkten seiner Mannschaftskameraden addiert. Das Team mit den meisten Relativpunkten gewinnt den Mannschafts-Wettkampf.</string>
+
+    <string name="winner_single_competition_heading">Sieger eines Einzel-Wettkampfes</string>
+    <string name="winner_single_competition_question">Wer ist Sieger eines Einzel-Wettkampfes?</string>
+    <string name="winner_single_competition_answer">Sieger eines Einzel-Wettkampfes (z.B. einer Deutschen Meisterschaft) in seiner Gewichtsklasse ist der Sportler, der das höchste Zweikampf-Ergebnis erzielt.\nEinem Athleten mit einem Körpergewicht von 80kg wird dabei die Gewichtsklasse -85kg zugeordnet. Reißt dieser 130kg und stößt 150kg, so hat er ein Zweikampf-Ergebnis von 280kg erbracht. Erbringt kein anderer Athlet dieser Gewichtsklasse ein höheres Ergebnis, so ist der Athlet Sieger der Gewichtsklasse -85kg im Olympischen Zweikampf. Bei größeren Meisterschaften werden auch das Reißen und das Stoßen mit Medaillen geehrt.</string>
+
+    <!-- Contact -->
+    <string name="contact_club">TSV Blau-Weiß 65 Schwedt e.V.</string>
+    <string name="contact_department_chief">Abteilungsleiter Gewichtheben</string>
+    <string name="contact_department_name">Roland Taubert</string>
+    <string name="contact_department_email">taubert@ospff.de</string>
+    <string name="contact_competition_site_headline">Trainings- und Wettkampfstätte</string>
+    <string name="contact_competition_site_address">Sport- und Freizeitzentrum Külzviertel\nDr.-W.-Külzviertel 2b\n16303 Schwedt/Oder\nTel./Fax (03332) 419967</string>
+    <string name="contact_competition_email">info@gewichtheben-schwedt.de</string>
+    <string name="contact_app_developer">App-Developer</string>
+    <string name="contact_app_developer_name">Willi Gierke</string>
+    <string name="contact_app_developer_email">willi.gierke@student.hpi.de</string>
+    <string name="homepage_weightlifting_schwedt">Homepage der Abteilung Gewichtheben \n gewichtheben-schwedt.de</string>
+    <string name="homepage_club">Homepage des TSV Blau-Weiß 65 Schwedt \n blauweiss65-schwedt.de</string>
+    <string name="homepage_bvdg">Bundesverband Deutscher Gewichtheber \n bvdg-online.de</string>
+    <string name="updating_in_progress">Update-Prozess wurde bereits gestartet.</string>
+    <string name="error_network">Netzwerkfehler. Sind Sie online?</string>
+    <string name="loading_data">Lade aktuellste Daten ...</string>
+
+</resources>

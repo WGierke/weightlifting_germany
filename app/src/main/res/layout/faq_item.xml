@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dip">
+
+    <TextView
+        android:id="@+id/faqs_heading"
+        style="@style/NewsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dip"
+        android:layout_marginTop="5dip"
+        android:text="Heading" />
+
+    <TextView
+        android:id="@+id/faqs_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/faqs_heading"
+        android:layout_marginBottom="5dip"
+        android:layout_marginLeft="10dip"
+        android:text="Question" />
+
+    <ImageView
+        android:id="@+id/faq_show"
+        android:layout_width="40dip"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:padding="5dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/arrow_right" />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/cover_buli"
+        style="@style/CoverImage"
+        android:src="@drawable/cover_competition" />
+
+    <!--<TextView
+        android:id="@+id/buli_relay"
+        style="@style/NewsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/buli_relay" />-->
+
+    <ListView
+        android:id="@+id/listView_Buli"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fadingEdgeLength="50dip"
+        android:requiresFadingEdge="vertical">
+
+    </ListView>
+
+
+</LinearLayout>

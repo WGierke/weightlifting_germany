@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Corporate colors -->
+    <color name="tsv_blue">#153387</color>
+    <color name="tsv_middle_blue">#385299</color>
+    <color name="tsv_light_blue">#ADB8D5</color>
+
+    <!-- Stuff -->
+    <color name="text_heading">@color/tsv_blue</color>
+    <color name="text_subheading">#af0039</color>
+    <color name="text_content">#333</color>
+
+    <!-- Navigation -->
+    <color name="list_item_title">#09173D</color>
+    <color name="list_background">#fff</color>
+    <color name="list_background_pressed">@color/tsv_light_blue</color>
+    <color name="list_divider">#ccc</color>
+    <color name="counter_text_bg">@color/tsv_middle_blue</color>
+    <color name="counter_text_color">#fff</color>
+    <color name="view_pager_background">@color/tsv_middle_blue</color>
+
+    <!-- Galleries -->
+    <color name="white">#ffffff</color>
+
+    <!--<color name="colorPrimary">#125688</color>-->
+    <color name="colorPrimary">@color/tsv_blue</color>
+    <color name="colorPrimaryDark">@color/tsv_blue</color>
+    <color name="textColorPrimary">#FFFFFF</color>
+    <color name="windowBackground">#FFFFFF</color>
+    <color name="navigationBarColor">@color/white</color>
+    <color name="colorAccent">@color/tsv_light_blue</color>
+
+</resources>

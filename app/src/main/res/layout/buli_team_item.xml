@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/frame"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/buli_member_image"
+        android:layout_width="115dip"
+        android:layout_height="115dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="5dip"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/buli_member_name"
+        style="@style/NewsHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dip"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@id/buli_member_image"
+        android:text="Name" />
+
+    <TextView
+        android:id="@+id/buli_member_year"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buli_member_name"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="40dip"
+        android:layout_toRightOf="@id/buli_member_image"
+        android:text="Geburtstag" />
+
+    <TextView
+        android:id="@+id/buli_member_snatching"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buli_member_year"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="40dip"
+        android:layout_toRightOf="@id/buli_member_image"
+        android:text="Reißen" />
+
+    <TextView
+        android:id="@+id/buli_member_jerking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buli_member_snatching"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="40dip"
+        android:layout_toRightOf="@id/buli_member_image"
+        android:text="Stoßen" />
+
+    <TextView
+        android:id="@+id/buli_member_max_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buli_member_jerking"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="40dip"
+        android:layout_toRightOf="@id/buli_member_image"
+        android:text="Höchstpunktzahl" />
+
+</RelativeLayout>
