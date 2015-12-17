@@ -17,8 +17,6 @@ import de.weightlifting.app.helper.JsonParser;
 public class Competitions extends UpdateableWrapper {
 
     public static final String FILE_NAME = "competitions.json";
-    public final static int navigationPosition = MainActivity.FRAGMENT_BULI;
-    public final static int subPosition = 1;
     public static ArrayList<PastCompetition> itemsToMark = new ArrayList<>();
     private final String UPDATE_URL = "https://raw.githubusercontent.com/WGierke/weightlifting_schwedt/updates/production/past_competitions.json";
     private final String TAG = "Competitions";

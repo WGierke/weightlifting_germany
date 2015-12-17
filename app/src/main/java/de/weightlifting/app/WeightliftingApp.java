@@ -11,8 +11,8 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import java.io.File;
 import java.util.Date;
 
-import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.Table;
+import de.weightlifting.app.buli.relay1A.Competitions1A;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
@@ -21,8 +21,6 @@ import de.weightlifting.app.helper.MemoryCache;
 public class WeightliftingApp extends Application {
 
     public static final String TAG = "WeightliftingLog";
-    public static final String TEAM_NAME = "Oder-Sund-Team";
-    public static final int DISPLAY_DELAY = 500;
     public final static int UPDATE_STATUS_SUCCESSFUL = 200;
     public final static int UPDATE_STATUS_FAILED = 201;
     public final static int UPDATE_STATUS_PENDING = 202;
@@ -31,12 +29,10 @@ public class WeightliftingApp extends Application {
     public final static int LOAD_FROM_FILE = 3;
     public static Context mContext;
     public static boolean isUpdatingAll = false;
-    private static MainActivity mActivity;
-    public boolean isInitialized = false;
     public boolean initializedParse = false;
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
-    public Competitions competitions;
+    public Competitions1A competitions1A;
     public Table table;
     public Handler splashCallbackHandler;
 
@@ -69,14 +65,8 @@ public class WeightliftingApp extends Application {
         mContext = getApplicationContext();
 
         loadDataFromStorage();
-
         updateDataForcefully();
-
         updateSplashScreen();
-
-        isInitialized = true;
-
-        Log.i(TAG, "Initialized (" + String.valueOf(dateDiff) + "ms)");
     }
 
     private void updateSplashScreen() {
@@ -104,24 +94,23 @@ public class WeightliftingApp extends Application {
     }
 
     public void loadDataFromStorage() {
-        getCompetitions(LOAD_FROM_FILE);
+        getCompetitions1A(LOAD_FROM_FILE);
         getTable(LOAD_FROM_FILE);
     }
 
     public void updateDataForcefully() {
         //Update everything and save it on storage
-        //Log.d(TAG, "updating everything");
-        getCompetitions(UPDATE_FORCEFULLY);
+        getCompetitions1A(UPDATE_FORCEFULLY);
         getTable(UPDATE_FORCEFULLY);
     }
 
     public int getUpdateStatus() {
-        //Log.d(WeightliftingApp.TAG, news.isUpToDate + " " + events.isUpToDate + " " + team.isUpToDate + " " + competitions.isUpToDate + " " + table.isUpToDate + " " + galleries.isUpToDate);
-        if (competitions.updateFailed || table.updateFailed) {
+        //Log.d(WeightliftingApp.TAG, news.isUpToDate + " " + events.isUpToDate + " " + team.isUpToDate + " " + competitions1A.isUpToDate + " " + table.isUpToDate + " " + galleries.isUpToDate);
+        if (competitions1A.updateFailed || table.updateFailed) {
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
         }
-        if (competitions.isUpToDate && table.isUpToDate) {
+        if (competitions1A.isUpToDate && table.isUpToDate) {
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
         } else
@@ -129,8 +118,8 @@ public class WeightliftingApp extends Application {
     }
 
     public void setFinishUpdateFlags(boolean value) {
-        if (competitions != null)
-            competitions.isUpToDate = value;
+        if (competitions1A != null)
+            competitions1A.isUpToDate = value;
         if (table != null)
             table.isUpToDate = value;
     }
@@ -171,18 +160,14 @@ public class WeightliftingApp extends Application {
         return myInstance;
     }
 
-    public Competitions getCompetitions(int updateMode) {
-        competitions = (Competitions) getWrapperItems(competitions, Competitions.class, updateMode);
-        return competitions;
+    public Competitions1A getCompetitions1A(int updateMode) {
+        competitions1A = (Competitions1A) getWrapperItems(competitions1A, Competitions1A.class, updateMode);
+        return competitions1A;
     }
 
     public Table getTable(int updateMode) {
         table = (Table) getWrapperItems(table, Table.class, updateMode);
         return table;
-    }
-
-    public void setActivity(MainActivity activity) {
-        mActivity = activity;
     }
 
     public ImageLoader getImageLoader() {

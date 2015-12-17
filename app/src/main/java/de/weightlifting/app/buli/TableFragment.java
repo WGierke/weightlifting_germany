@@ -28,9 +28,6 @@ public class TableFragment extends Fragment {
         fragment = inflater.inflate(R.layout.buli_page, container, false);
         app = (WeightliftingApp) getActivity().getApplicationContext();
 
-        ImageView cover = (ImageView) fragment.findViewById(R.id.cover_buli);
-        cover.setImageDrawable(getResources().getDrawable(R.drawable.cover_competition));
-
         getTable();
 
         return fragment;

@@ -5,19 +5,6 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/cover_buli"
-        style="@style/CoverImage"
-        android:src="@drawable/cover_competition" />
-
-    <!--<TextView
-        android:id="@+id/buli_relay"
-        style="@style/NewsHeading"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="@string/buli_relay" />-->
-
     <ListView
         android:id="@+id/listView_Buli"
         android:layout_width="fill_parent"

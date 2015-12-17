@@ -9,13 +9,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import de.weightlifting.app.buli.CompetitionsFragment;
 import de.weightlifting.app.buli.TableFragment;
+import de.weightlifting.app.buli.relay1A.CompetitionsFragment1A;
 
 public class BuliFragment extends Fragment {
 
-    private static final int FRAGMENT_COMPETITIONS = 0;
+    private static final int FRAGMENT_COMPETITIONS1A = 0;
     private static final int FRAGMENT_TABLE = 1;
+    private static final int FRAGMENT_COMPETITIONS = 2;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -40,8 +41,8 @@ public class BuliFragment extends Fragment {
             Fragment fragment;
 
             switch (position) {
-                case FRAGMENT_COMPETITIONS:
-                    fragment = new CompetitionsFragment();
+                case FRAGMENT_COMPETITIONS1A:
+                    fragment = new CompetitionsFragment1A();
                     break;
                 case FRAGMENT_TABLE:
                     fragment = new TableFragment();
@@ -55,7 +56,7 @@ public class BuliFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 2;
+            return 1;
         }
 
         @Override
@@ -67,6 +68,9 @@ public class BuliFragment extends Fragment {
                     break;
                 case FRAGMENT_TABLE:
                     title = getString(R.string.buli_table);
+                    break;
+                case FRAGMENT_COMPETITIONS1A:
+                    title = getString(R.string.buli_competitions);
                     break;
                 default:
                     title = getString(R.string.nav_buli);

@@ -57,8 +57,6 @@ public class TableListAdapter extends BaseAdapter {
 
         TextView club = (TextView) view.findViewById(R.id.buli_table_club);
         club.setText(items.get(position).getClub());
-        if (club.getText().toString().contains(WeightliftingApp.TEAM_NAME))
-            club.setText(Html.fromHtml("<u>" + club.getText() + "</u>"));
 
         TextView score = (TextView) view.findViewById(R.id.buli_table_score);
         score.setText(items.get(position).getScore() + " " + res.getString(R.string.buli_relative_points));

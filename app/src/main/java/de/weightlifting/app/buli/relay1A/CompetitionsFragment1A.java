@@ -1,27 +1,34 @@
-package de.weightlifting.app.buli;
+package de.weightlifting.app.buli.relay1A;
 
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
-
-import java.util.ArrayList;
+import android.widget.ListView;
 
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.buli.Competitions;
+import de.weightlifting.app.buli.CompetitionsFragment;
+import de.weightlifting.app.buli.CompetitionsListAdapter;
+import de.weightlifting.app.buli.ProtocolFragment;
 
-public class FilterCompetitionsFragment extends CompetitionsFragment {
+public class CompetitionsFragment1A extends CompetitionsFragment {
 
-    private ArrayList<PastCompetition> filteredCompetitions;
+    protected Competitions1A competitions1A;
 
     protected void getCompetitions() {
-        competitions = app.getCompetitions1A(WeightliftingApp.UPDATE_IF_NECESSARY);
-        if (competitions.getItems().size() == 0) {
-            //Log.d(WeightliftingApp.TAG, "Waiting for Competitions...");
+        competitions1A = app.getCompetitions1A(WeightliftingApp.UPDATE_IF_NECESSARY);
+        if (competitions1A.getItems().size() == 0) {
+            // No news items yet
+            //Log.d(WeightliftingApp.TAG, "Waiting for competitions1A...");
 
+            // Check again in a few seconds
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
@@ -32,36 +39,24 @@ public class FilterCompetitionsFragment extends CompetitionsFragment {
             refreshHandler.postDelayed(refreshRunnable, Competitions.TIMER_RETRY);
         } else {
             try {
-                Bundle bundle = this.getArguments();
-                String clubName = bundle.getString("club-name");
-                filteredCompetitions = filter(Competitions.casteArray(competitions.getItems()), clubName);
-                CompetitionsListAdapter adapter = new CompetitionsListAdapter(filteredCompetitions, getActivity());
+                CompetitionsListAdapter1A adapter = new CompetitionsListAdapter1A(Competitions.casteArray(competitions1A.getItems()), getActivity());
                 listViewCompetitions.setAdapter(adapter);
                 listViewCompetitions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                        // Show the protocol which belongs to the competition
                         Fragment protocol = new ProtocolFragment();
                         Bundle bundle = new Bundle();
-                        bundle.putString("protocol-url", filteredCompetitions.get(position).getProtocolUrl());
+                        bundle.putString("protocol-url", Competitions.casteArray(competitions1A.getItems()).get(position).getProtocolUrl());
                         protocol.setArguments(bundle);
                         ((MainActivity) getActivity()).addFragment(protocol, getString(R.string.nav_buli), true);
                     }
                 });
+
             } catch (Exception ex) {
-                Log.e(WeightliftingApp.TAG, "Showing competitions failed");
+                Log.e(WeightliftingApp.TAG, "Showing competitions1A failed");
                 ex.toString();
             }
         }
     }
-
-    private ArrayList<PastCompetition> filter(ArrayList<PastCompetition> items, String name) {
-        ArrayList<PastCompetition> result = new ArrayList<>();
-        for (int i = 0; i < items.size(); i++) {
-            if (items.get(i).getHome().equals(name) || items.get(i).getGuest().equals(name)) {
-                result.add(items.get(i));
-            }
-        }
-        return result;
-    }
 }
-

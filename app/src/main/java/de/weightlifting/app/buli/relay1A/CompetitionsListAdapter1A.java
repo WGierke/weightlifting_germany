@@ -1,4 +1,4 @@
-package de.weightlifting.app.buli;
+package de.weightlifting.app.buli.relay1A;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,15 +13,19 @@ import java.util.ArrayList;
 
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.buli.Competitions;
+import de.weightlifting.app.buli.CompetitionsListAdapter;
+import de.weightlifting.app.buli.PastCompetition;
 import de.weightlifting.app.helper.UiHelper;
 
-public class CompetitionsListAdapter extends BaseAdapter {
+public class CompetitionsListAdapter1A extends CompetitionsListAdapter {
 
     private ArrayList<PastCompetition> items;
     private Activity activity;
     private LayoutInflater inflater;
 
-    public CompetitionsListAdapter(ArrayList<PastCompetition> items, Activity activity) {
+    public CompetitionsListAdapter1A(ArrayList<PastCompetition> items, Activity activity) {
+        super(items, activity);
         this.items = items;
         this.activity = activity;
         inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
