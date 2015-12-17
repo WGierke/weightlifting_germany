@@ -1,4 +1,4 @@
-package de.weightlifting.app.buli.relay2South;
+package de.weightlifting.app.buli.relay2Middle;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -16,13 +16,13 @@ import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.TableEntry;
 import de.weightlifting.app.buli.TableListAdapter;
 
-public class TableFragment2South extends ListViewFragment {
+public class TableFragment2Middle extends ListViewFragment {
 
-    private Table2South table2South;
+    private Table2Middle table2Middle;
 
     protected void getBuliElements() {
-        table2South = app.getTable2South(WeightliftingApp.UPDATE_IF_NECESSARY);
-        if (table2South.getItems().size() == 0) {
+        table2Middle = app.getTable2Middle(WeightliftingApp.UPDATE_IF_NECESSARY);
+        if (table2Middle.getItems().size() == 0) {
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
@@ -35,15 +35,15 @@ public class TableFragment2South extends ListViewFragment {
             // We have Table items to display
             try {
                 ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
-                TableListAdapter adapter = new TableListAdapter(Table.casteArray(table2South.getItems()), getActivity());
+                TableListAdapter adapter = new TableListAdapter(Table.casteArray(table2Middle.getItems()), getActivity());
                 listViewTable.setAdapter(adapter);
                 listViewTable.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         // Show the competitions the club already had
-                        Fragment protocol = new FilterCompetitionsFragment2South();
+                        Fragment protocol = new FilterCompetitionsFragment2Middle();
                         Bundle bundle = new Bundle();
-                        TableEntry entry = (TableEntry) table2South.getItem(position);
+                        TableEntry entry = (TableEntry) table2Middle.getItem(position);
                         bundle.putString("club-name", entry.getClub());
                         protocol.setArguments(bundle);
                         ((MainActivity) getActivity()).addFragment(protocol, entry.getClub(), true);
@@ -51,7 +51,7 @@ public class TableFragment2South extends ListViewFragment {
                 });
 
             } catch (Exception ex) {
-                Log.e(WeightliftingApp.TAG, "Showing Table2South failed");
+                Log.e(WeightliftingApp.TAG, "Showing Table2Middle failed");
                 ex.toString();
             }
 

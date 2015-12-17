@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/home"
-        style="@style/CompetitionOpponents"
+        style="@style/BlueBoldHeadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="3dip"
@@ -17,7 +17,7 @@
 
     <TextView
         android:id="@+id/vs"
-        style="@style/CompetitionOpponents"
+        style="@style/BlueBoldHeadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dip"
@@ -27,7 +27,7 @@
 
     <TextView
         android:id="@+id/guest"
-        style="@style/CompetitionOpponents"
+        style="@style/BlueBoldHeadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dip"

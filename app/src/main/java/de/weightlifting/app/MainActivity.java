@@ -1,7 +1,6 @@
 package de.weightlifting.app;
 
 import android.content.Intent;
-import android.nfc.Tag;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
@@ -26,7 +25,9 @@ import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.relay1A.BuliFragment1A;
 import de.weightlifting.app.buli.relay1B.BuliFragment1B;
+import de.weightlifting.app.buli.relay2Middle.BuliFragment2Middle;
 import de.weightlifting.app.buli.relay2North.BuliFragment2North;
+import de.weightlifting.app.buli.relay2South.BuliFragment2South;
 import de.weightlifting.app.helper.UiHelper;
 import de.weightlifting.app.service.RegistrationIntentService;
 
@@ -107,10 +108,10 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
                         Log.d(WeightliftingApp.TAG, "clicked: " + position);
-                showFragment(position);
-                return false;
-            }
-        })
+                        showFragment(position);
+                        return false;
+                    }
+                })
                 .build();
 
         if (savedInstanceState == null) {
@@ -206,6 +207,14 @@ public class MainActivity extends AppCompatActivity {
             case FRAGMENT_BULI_2NORTH:
                 fragment = new BuliFragment2North();
                 setTitle(getString(R.string.buli_2North));
+                break;
+            case FRAGMENT_BULI_2SOUTH:
+                fragment = new BuliFragment2South();
+                setTitle(getString(R.string.buli_2South));
+                break;
+            case FRAGMENT_BULI_2MIDDLE:
+                fragment = new BuliFragment2Middle();
+                setTitle(getString(R.string.buli_2Middle));
                 break;
             case FRAGMENT_FAQ:
                 fragment = new FaqFragment();

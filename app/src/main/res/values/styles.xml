@@ -42,7 +42,7 @@
         <item name="android:layout_marginBottom">5dip</item>
     </style>
 
-    <style name="CompetitionOpponents" parent="android:TextAppearance.Holo.Medium">
+    <style name="BlueBoldHeadline" parent="android:TextAppearance.Holo.Medium">
         <item name="android:textColor">@color/text_heading</item>
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">15sp</item>

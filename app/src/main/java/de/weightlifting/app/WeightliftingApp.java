@@ -11,13 +11,15 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import java.io.File;
 import java.util.Date;
 
-import de.weightlifting.app.buli.Schedule;
 import de.weightlifting.app.buli.relay1A.Competitions1A;
 import de.weightlifting.app.buli.relay1A.Schedule1A;
 import de.weightlifting.app.buli.relay1A.Table1A;
 import de.weightlifting.app.buli.relay1B.Competitions1B;
 import de.weightlifting.app.buli.relay1B.Schedule1B;
 import de.weightlifting.app.buli.relay1B.Table1B;
+import de.weightlifting.app.buli.relay2Middle.Competitions2Middle;
+import de.weightlifting.app.buli.relay2Middle.Schedule2Middle;
+import de.weightlifting.app.buli.relay2Middle.Table2Middle;
 import de.weightlifting.app.buli.relay2North.Competitions2North;
 import de.weightlifting.app.buli.relay2North.Schedule2North;
 import de.weightlifting.app.buli.relay2North.Table2North;
@@ -55,6 +57,9 @@ public class WeightliftingApp extends Application {
     public Schedule2South schedule2South;
     public Competitions2South competitions2South;
     public Table2South table2South;
+    public Schedule2Middle schedule2Middle;
+    public Competitions2Middle competitions2Middle;
+    public Table2Middle table2Middle;
 
     public Handler splashCallbackHandler;
 
@@ -63,7 +68,6 @@ public class WeightliftingApp extends Application {
         DataHelper.sendMessage(splashCallbackHandler, SplashActivity.KEY_MESSAGE, getString(R.string.loading_data));
 
         Log.i(TAG, "Initializing...");
-        long dateStart = new Date().getTime();
 
         memoryCache = new MemoryCache();
         imageLoader = new ImageLoader(getApplicationContext());
@@ -126,6 +130,9 @@ public class WeightliftingApp extends Application {
         getSchedule2South(LOAD_FROM_FILE);
         getCompetitions2South(LOAD_FROM_FILE);
         getTable2South(LOAD_FROM_FILE);
+        getSchedule2Middle(LOAD_FROM_FILE);
+        getCompetitions2Middle(LOAD_FROM_FILE);
+        getTable2Middle(LOAD_FROM_FILE);
     }
 
     public void updateDataForcefully() {
@@ -142,13 +149,17 @@ public class WeightliftingApp extends Application {
         getSchedule2South(UPDATE_FORCEFULLY);
         getCompetitions2South(UPDATE_FORCEFULLY);
         getTable2South(UPDATE_FORCEFULLY);
+        getSchedule2Middle(UPDATE_FORCEFULLY);
+        getCompetitions2Middle(UPDATE_FORCEFULLY);
+        getTable2Middle(UPDATE_FORCEFULLY);
     }
 
     public int getUpdateStatus() {
         if (schedule1A.updateFailed || competitions1A.updateFailed || table1A.updateFailed ||
                 schedule1B.updateFailed || competitions1B.updateFailed || table1B.updateFailed ||
                 schedule2North.updateFailed || competitions2North.updateFailed || table2North.updateFailed ||
-                schedule2South.updateFailed || competitions2South.updateFailed || table2South.updateFailed) {
+                schedule2South.updateFailed || competitions2South.updateFailed || table2South.updateFailed ||
+                schedule2Middle.updateFailed || competitions2Middle.updateFailed || table2Middle.updateFailed) {
 
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
@@ -156,7 +167,8 @@ public class WeightliftingApp extends Application {
         if (schedule1A.isUpToDate && competitions1A.isUpToDate && table1A.isUpToDate &&
                 schedule1B.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate &&
                 schedule2North.isUpToDate && competitions2North.isUpToDate && table2North.isUpToDate &&
-                schedule2South.isUpToDate && competitions2South.isUpToDate && table2South.isUpToDate) {
+                schedule2South.isUpToDate && competitions2South.isUpToDate && table2South.isUpToDate &&
+                schedule2Middle.isUpToDate && competitions2Middle.isUpToDate && table2Middle.isUpToDate) {
 
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
@@ -189,6 +201,12 @@ public class WeightliftingApp extends Application {
             competitions2South.isUpToDate = value;
         if (table2South != null)
             table2South.isUpToDate = value;
+        if (schedule2Middle != null)
+            schedule2Middle.isUpToDate = value;
+        if (competitions2Middle != null)
+            competitions2Middle.isUpToDate = value;
+        if (table2Middle != null)
+            table2Middle.isUpToDate = value;
     }
 
     public UpdateableWrapper getWrapperItems(UpdateableWrapper myInstance, Class<?> myClass, int mode) {
@@ -284,6 +302,21 @@ public class WeightliftingApp extends Application {
     public Table2South getTable2South(int updateMode) {
         table2South = (Table2South) getWrapperItems(table2South, Table2South.class, updateMode);
         return table2South;
+    }
+
+    public Schedule2Middle getSchedule2Middle(int updateMode) {
+        schedule2Middle = (Schedule2Middle) getWrapperItems(schedule2Middle, Schedule2Middle.class, updateMode);
+        return schedule2Middle;
+    }
+
+    public Competitions2Middle getCompetitions2Middle(int updateMode) {
+        competitions2Middle = (Competitions2Middle) getWrapperItems(competitions2Middle, Competitions2Middle.class, updateMode);
+        return competitions2Middle;
+    }
+
+    public Table2Middle getTable2Middle(int updateMode) {
+        table2Middle = (Table2Middle) getWrapperItems(table2Middle, Table2Middle.class, updateMode);
+        return table2Middle;
     }
 
     public ImageLoader getImageLoader() {

@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/buli_table_place"
-        style="@style/NewsHeading"
+        style="@style/BlueBoldHeadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dip"
@@ -16,7 +16,7 @@
 
     <TextView
         android:id="@+id/buli_table_club"
-        style="@style/NewsHeading"
+        style="@style/BlueBoldHeadline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dip"

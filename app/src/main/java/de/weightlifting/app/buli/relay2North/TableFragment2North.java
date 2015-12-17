@@ -18,7 +18,7 @@ import de.weightlifting.app.buli.TableListAdapter;
 
 public class TableFragment2North extends ListViewFragment {
 
-    private Table table2North;
+    private Table2North table2North;
 
     protected void getBuliElements() {
         table2North = app.getTable2North(WeightliftingApp.UPDATE_IF_NECESSARY);
