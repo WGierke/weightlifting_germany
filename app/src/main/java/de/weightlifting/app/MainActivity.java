@@ -26,6 +26,7 @@ import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.relay1A.BuliFragment1A;
 import de.weightlifting.app.buli.relay1B.BuliFragment1B;
+import de.weightlifting.app.buli.relay2North.BuliFragment2North;
 import de.weightlifting.app.helper.UiHelper;
 import de.weightlifting.app.service.RegistrationIntentService;
 
@@ -201,6 +202,10 @@ public class MainActivity extends AppCompatActivity {
             case FRAGMENT_BULI_1B:
                 fragment = new BuliFragment1B();
                 setTitle(getString(R.string.buli_1B));
+                break;
+            case FRAGMENT_BULI_2NORTH:
+                fragment = new BuliFragment2North();
+                setTitle(getString(R.string.buli_2North));
                 break;
             case FRAGMENT_FAQ:
                 fragment = new FaqFragment();

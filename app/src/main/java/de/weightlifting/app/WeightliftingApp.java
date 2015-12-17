@@ -18,6 +18,9 @@ import de.weightlifting.app.buli.relay1A.Table1A;
 import de.weightlifting.app.buli.relay1B.Competitions1B;
 import de.weightlifting.app.buli.relay1B.Schedule1B;
 import de.weightlifting.app.buli.relay1B.Table1B;
+import de.weightlifting.app.buli.relay2North.Competitions2North;
+import de.weightlifting.app.buli.relay2North.Schedule2North;
+import de.weightlifting.app.buli.relay2North.Table2North;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
@@ -43,6 +46,10 @@ public class WeightliftingApp extends Application {
     public Schedule1B schedule1B;
     public Competitions1B competitions1B;
     public Table1B table1B;
+    public Schedule2North schedule2North;
+    public Competitions2North competitions2North;
+    public Table2North table2North;
+
     public Handler splashCallbackHandler;
 
     public void initialize(Handler callbackHandler) {
@@ -210,6 +217,21 @@ public class WeightliftingApp extends Application {
     public Table1B getTable1B(int updateMode) {
         table1B = (Table1B) getWrapperItems(table1B, Table1B.class, updateMode);
         return table1B;
+    }
+
+    public Schedule2North getSchedule2North(int updateMode) {
+        schedule2North = (Schedule2North) getWrapperItems(schedule2North, Schedule2North.class, updateMode);
+        return schedule2North;
+    }
+
+    public Competitions2North getCompetitions2North(int updateMode) {
+        competitions2North = (Competitions2North) getWrapperItems(competitions2North, Competitions2North.class, updateMode);
+        return competitions2North;
+    }
+
+    public Table2North getTable2North(int updateMode) {
+        table2North = (Table2North) getWrapperItems(table2North, Table2North.class, updateMode);
+        return table2North;
     }
 
     public ImageLoader getImageLoader() {
