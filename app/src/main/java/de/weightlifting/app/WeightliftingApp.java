@@ -11,7 +11,9 @@ import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import java.io.File;
 import java.util.Date;
 
+import de.weightlifting.app.buli.Schedule;
 import de.weightlifting.app.buli.relay1A.Competitions1A;
+import de.weightlifting.app.buli.relay1A.Schedule1A;
 import de.weightlifting.app.buli.relay1A.Table1A;
 import de.weightlifting.app.buli.relay1B.Competitions1B;
 import de.weightlifting.app.buli.relay1B.Table1B;
@@ -36,6 +38,7 @@ public class WeightliftingApp extends Application {
     public ImageLoader imageLoader;
     public Competitions1A competitions1A;
     public Table1A table1A;
+    public Schedule1A schedule1A;
     public Competitions1B competitions1B;
     public Table1B table1B;
     public Handler splashCallbackHandler;
@@ -96,6 +99,7 @@ public class WeightliftingApp extends Application {
     }
 
     public void loadDataFromStorage() {
+        getSchedule1A(LOAD_FROM_FILE);
         getCompetitions1A(LOAD_FROM_FILE);
         getTable1A(LOAD_FROM_FILE);
         getCompetitions1B(LOAD_FROM_FILE);
@@ -104,6 +108,7 @@ public class WeightliftingApp extends Application {
 
     public void updateDataForcefully() {
         //Update everything and save it on storage
+        getSchedule1A(UPDATE_FORCEFULLY);
         getCompetitions1A(UPDATE_FORCEFULLY);
         getTable1A(UPDATE_FORCEFULLY);
         getCompetitions1B(UPDATE_FORCEFULLY);
@@ -112,11 +117,11 @@ public class WeightliftingApp extends Application {
 
     public int getUpdateStatus() {
         //Log.d(WeightliftingApp.TAG, news.isUpToDate + " " + events.isUpToDate + " " + team.isUpToDate + " " + competitions1B.isUpToDate + " " + table.isUpToDate + " " + galleries.isUpToDate);
-        if (competitions1A.updateFailed || table1A.updateFailed || competitions1B.updateFailed || table1B.updateFailed) {
+        if (schedule1A.updateFailed || competitions1A.updateFailed || table1A.updateFailed || competitions1B.updateFailed || table1B.updateFailed) {
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
         }
-        if (competitions1A.isUpToDate && table1A.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate) {
+        if (schedule1A.isUpToDate && competitions1A.isUpToDate && table1A.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate) {
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
         } else
@@ -124,6 +129,8 @@ public class WeightliftingApp extends Application {
     }
 
     public void setFinishUpdateFlags(boolean value) {
+        if (schedule1A != null)
+            schedule1A.isUpToDate = value;
         if (competitions1A != null)
             competitions1A.isUpToDate = value;
         if (table1A != null)
@@ -164,7 +171,6 @@ public class WeightliftingApp extends Application {
                 }
             }
         } catch (Exception e) {
-            //Log.d(TAG, "Error in getWrapperItems");
             e.printStackTrace();
         }
         return myInstance;
@@ -178,6 +184,11 @@ public class WeightliftingApp extends Application {
     public Table1A getTable1A(int updateMode) {
         table1A = (Table1A) getWrapperItems(table1A, Table1A.class, updateMode);
         return table1A;
+    }
+
+    public Schedule1A getSchedule1A(int updateMode) {
+        schedule1A = (Schedule1A) getWrapperItems(schedule1A, Schedule1A.class, updateMode);
+        return schedule1A;
     }
 
     public Competitions1B getCompetitions1B(int updateMode) {

@@ -15,9 +15,9 @@ import de.weightlifting.app.helper.JsonParser;
 
 public class Table extends UpdateableWrapper {
 
-    public static final String FILE_NAME = "table.json";
+    public static final String FILE_NAME = "";
     public static ArrayList<TableEntry> itemsToMark = new ArrayList<>();
-    private final String UPDATE_URL = "https://raw.githubusercontent.com/WGierke/weightlifting_schwedt/updates/production/table.json";
+    private final String UPDATE_URL = "";
     private final String TAG = "Table";
 
     public static ArrayList<TableEntry> casteArray(ArrayList<UpdateableItem> array) {

@@ -13,13 +13,13 @@ import java.util.ArrayList;
 import de.weightlifting.app.R;
 import de.weightlifting.app.helper.UiHelper;
 
-public class CompetitionsListAdapter extends BaseAdapter {
+public class ScheduleListAdapter extends BaseAdapter {
 
-    private ArrayList<PastCompetition> items;
+    private ArrayList<ScheduleEntry> items;
     private Activity activity;
     private LayoutInflater inflater;
 
-    public CompetitionsListAdapter(ArrayList<PastCompetition> items, Activity activity) {
+    public ScheduleListAdapter(ArrayList<ScheduleEntry> items, Activity activity) {
         this.items = items;
         this.activity = activity;
         inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -44,31 +44,37 @@ public class CompetitionsListAdapter extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = convertView;
         if (convertView == null) {
-            view = inflater.inflate(R.layout.buli_competition_item, null);
+            view = inflater.inflate(R.layout.buli_schedule_item, null);
         }
 
-        TextView home = (TextView) view.findViewById(R.id.buli_competition_home);
+        TextView home = (TextView) view.findViewById(R.id.home);
         home.setText(items.get(position).getHome());
 
-        TextView guest = (TextView) view.findViewById(R.id.buli_competition_guest);
+        ((TextView) view.findViewById(R.id.vs)).setText(R.string.buli_schedule_vs);
+
+        TextView guest = (TextView) view.findViewById(R.id.guest);
         guest.setText(items.get(position).getGuest());
 
-        TextView score = (TextView) view.findViewById(R.id.date_at);
-        score.setText(items.get(position).getScore());
+        ((TextView) view.findViewById(R.id.date_at)).setText(R.string.buli_schedule_date_at);
 
         TextView date = (TextView) view.findViewById(R.id.date);
         date.setText(items.get(position).getDate());
 
-        TextView location = (TextView) view.findViewById(R.id.time);
+        ((TextView) view.findViewById(R.id.time_at)).setText(R.string.buli_schedule_time_at);
+
+        TextView time = (TextView) view.findViewById(R.id.time);
+        time.setText(items.get(position).getTime());
+
+        ((TextView) view.findViewById(R.id.location_in)).setText(R.string.buli_schedule_location_in);
+
+        TextView location = (TextView) view.findViewById(R.id.location);
         location.setText(items.get(position).getLocation());
 
-        //Log.d(WeightliftingApp.TAG, "Competition Date: " + items.get(position).getDate() + " " + items.get(position).getHome());
-
-        if (Competitions.itemsToMark.contains(items.get(position))) {
-            //Log.d(WeightliftingApp.TAG, "item to mark is being displayed");
+        if (Table.itemsToMark.contains(items.get(position))) {
             UiHelper.colorFade(view, activity.getResources());
-            Competitions.itemsToMark.remove(items.get(position));
+            Table.itemsToMark.remove(items.get(position));
         }
+
         return view;
     }
 }

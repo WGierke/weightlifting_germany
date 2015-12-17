@@ -6,76 +6,96 @@
     android:paddingBottom="5dip">
 
     <TextView
-        android:id="@+id/buli_competition_home"
+        android:id="@+id/home"
         style="@style/CompetitionOpponents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="3dip"
-         android:layout_marginLeft="10dip"
+        android:layout_marginLeft="10dip"
         android:layout_marginTop="3dip"
         android:text="Home" />
 
     <TextView
-        android:id="@+id/buli_competition_vs"
+        android:id="@+id/vs"
         style="@style/CompetitionOpponents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dip"
         android:layout_marginTop="3dip"
-        android:layout_toRightOf="@id/buli_competition_home"
+        android:layout_toRightOf="@id/home"
         android:text="vs." />
 
     <TextView
-        android:id="@+id/buli_competition_guest"
+        android:id="@+id/guest"
         style="@style/CompetitionOpponents"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="5dip"
         android:layout_marginTop="3dip"
-        android:layout_toRightOf="@id/buli_competition_vs"
+        android:layout_toRightOf="@id/vs"
         android:text="Guest" />
 
     <TextView
         android:id="@+id/date_at"
-        style="@style/TextSubHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buli_competition_home"
+        android:layout_below="@id/home"
         android:layout_marginBottom="3dip"
         android:layout_marginLeft="10dip"
-        android:text="100 : 90" />
+        android:text="At" />
 
 
     <TextView
         android:id="@+id/date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/date_at"
+        android:layout_below="@id/home"
         android:layout_marginBottom="5dip"
-        android:layout_marginLeft="10dip"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/date_at"
         android:text="Date"
         android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/time_at"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/home"
+        android:layout_marginBottom="3dip"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/date"
+        android:text="At" />
 
     <TextView
         android:id="@+id/time"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/date_at"
+        android:layout_below="@id/home"
         android:layout_marginBottom="7dip"
-        android:layout_marginLeft="20dip"
-        android:layout_toRightOf="@id/date"
-        android:text="Location"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/time_at"
+        android:text="Time"
         android:textSize="14sp" />
 
+    <TextView
+        android:id="@+id/location_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:layout_marginBottom="7dip"
+        android:layout_marginLeft="10dip"
+        android:text="In"
+        android:textSize="14sp" />
 
-    <ImageView
-        android:id="@+id/buli_competition_protocol"
-        android:layout_width="40dip"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_centerVertical="true"
-        android:padding="5dip"
-        android:scaleType="centerInside"
-        android:src="@drawable/arrow_right" />
+    <TextView
+        android:id="@+id/location"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/date"
+        android:layout_marginBottom="7dip"
+        android:layout_marginLeft="5dip"
+        android:layout_toRightOf="@id/location_in"
+        android:text="Location"
+        android:textSize="14sp" />
 
 </RelativeLayout>

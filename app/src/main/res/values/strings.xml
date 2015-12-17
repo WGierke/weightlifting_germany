@@ -38,7 +38,11 @@
     <string name="buli_2Middle">2. Bundesliga - Staffel Mitte</string>
     <string name="buli_2South">2. Bundesliga - Staffel Südwest</string>
 
-    <string name="buli_team">Team</string>
+    <string name="buli_schedule">Ansetzungen</string>
+    <string name="buli_schedule_vs">vs.</string>
+    <string name="buli_schedule_date_at">Am</string>
+    <string name="buli_schedule_time_at">um</string>
+    <string name="buli_schedule_location_in">In</string>
     <string name="buli_competitions">Wettkämpfe</string>
     <string name="buli_table">Tabelle</string>
     <string name="buli_relative_points">Relativpunkte</string>

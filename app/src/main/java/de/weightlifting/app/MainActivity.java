@@ -265,6 +265,5 @@ public class MainActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
         showFragmentFromBundle();
-        //Log.d(WeightliftingApp.TAG, "resumed");
     }
 }

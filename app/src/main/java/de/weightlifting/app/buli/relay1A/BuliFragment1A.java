@@ -37,6 +37,9 @@ public class BuliFragment1A extends BuliFragment {
             Fragment fragment;
 
             switch (position) {
+                case FRAGMENT_SCHEDULE:
+                    fragment = new ScheduleFragment1A();
+                    break;
                 case FRAGMENT_COMPETITIONS:
                     fragment = new CompetitionsFragment1A();
                     break;
@@ -52,13 +55,16 @@ public class BuliFragment1A extends BuliFragment {
 
         @Override
         public int getCount() {
-            return 2;
+            return 3;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             String title;
             switch (position) {
+                case FRAGMENT_SCHEDULE:
+                    title = getString(R.string.buli_schedule);
+                    break;
                 case FRAGMENT_COMPETITIONS:
                     title = getString(R.string.buli_competitions);
                     break;
