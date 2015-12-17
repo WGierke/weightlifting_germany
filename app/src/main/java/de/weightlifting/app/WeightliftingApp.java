@@ -13,14 +13,10 @@ import java.util.Date;
 
 import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.Table;
-import de.weightlifting.app.buli.Team;
 import de.weightlifting.app.faq.FaqItem;
-import de.weightlifting.app.gallery.Galleries;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
 import de.weightlifting.app.helper.MemoryCache;
-import de.weightlifting.app.news.Events;
-import de.weightlifting.app.news.News;
 
 public class WeightliftingApp extends Application {
 
@@ -40,12 +36,8 @@ public class WeightliftingApp extends Application {
     public boolean initializedParse = false;
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
-    public News news;
-    public Events events;
-    public Team team;
     public Competitions competitions;
     public Table table;
-    public Galleries galleries;
     public Handler splashCallbackHandler;
 
     public void initialize(Handler callbackHandler) {
@@ -112,32 +104,24 @@ public class WeightliftingApp extends Application {
     }
 
     public void loadDataFromStorage() {
-        getNews(LOAD_FROM_FILE);
-        getEvents(LOAD_FROM_FILE);
-        getTeam(LOAD_FROM_FILE);
         getCompetitions(LOAD_FROM_FILE);
         getTable(LOAD_FROM_FILE);
-        getGalleries(LOAD_FROM_FILE);
     }
 
     public void updateDataForcefully() {
         //Update everything and save it on storage
         //Log.d(TAG, "updating everything");
-        getNews(UPDATE_FORCEFULLY);
-        getEvents(UPDATE_FORCEFULLY);
-        getTeam(UPDATE_FORCEFULLY);
         getCompetitions(UPDATE_FORCEFULLY);
         getTable(UPDATE_FORCEFULLY);
-        getGalleries(UPDATE_FORCEFULLY);
     }
 
     public int getUpdateStatus() {
         //Log.d(WeightliftingApp.TAG, news.isUpToDate + " " + events.isUpToDate + " " + team.isUpToDate + " " + competitions.isUpToDate + " " + table.isUpToDate + " " + galleries.isUpToDate);
-        if (news.updateFailed || events.updateFailed || team.updateFailed || competitions.updateFailed || table.updateFailed || galleries.updateFailed) {
+        if (competitions.updateFailed || table.updateFailed) {
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
         }
-        if (news.isUpToDate && events.isUpToDate && team.isUpToDate && competitions.isUpToDate && table.isUpToDate && galleries.isUpToDate) {
+        if (competitions.isUpToDate && table.isUpToDate) {
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
         } else
@@ -145,20 +129,10 @@ public class WeightliftingApp extends Application {
     }
 
     public void setFinishUpdateFlags(boolean value) {
-        if (news != null)
-            news.isUpToDate = value;
-        else
-            //Log.d(TAG, "news is null");
-        if (events != null)
-            events.isUpToDate = value;
-        if (team != null)
-            team.isUpToDate = value;
         if (competitions != null)
             competitions.isUpToDate = value;
         if (table != null)
             table.isUpToDate = value;
-        if (galleries != null)
-            galleries.isUpToDate = value;
     }
 
     public UpdateableWrapper getWrapperItems(UpdateableWrapper myInstance, Class<?> myClass, int mode) {
@@ -197,21 +171,6 @@ public class WeightliftingApp extends Application {
         return myInstance;
     }
 
-    public News getNews(int updateMode) {
-        news = (News) getWrapperItems(news, News.class, updateMode);
-        return news;
-    }
-
-    public Events getEvents(int updateMode) {
-        events = (Events) getWrapperItems(events, Events.class, updateMode);
-        return events;
-    }
-
-    public Team getTeam(int updateMode) {
-        team = (Team) getWrapperItems(team, Team.class, updateMode);
-        return team;
-    }
-
     public Competitions getCompetitions(int updateMode) {
         competitions = (Competitions) getWrapperItems(competitions, Competitions.class, updateMode);
         return competitions;
@@ -220,11 +179,6 @@ public class WeightliftingApp extends Application {
     public Table getTable(int updateMode) {
         table = (Table) getWrapperItems(table, Table.class, updateMode);
         return table;
-    }
-
-    public Galleries getGalleries(int updateMode) {
-        galleries = (Galleries) getWrapperItems(galleries, Galleries.class, updateMode);
-        return galleries;
     }
 
     public void setActivity(MainActivity activity) {

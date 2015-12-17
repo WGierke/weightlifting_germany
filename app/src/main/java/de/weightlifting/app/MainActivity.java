@@ -22,11 +22,7 @@ import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
 import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.Table;
-import de.weightlifting.app.buli.Team;
-import de.weightlifting.app.gallery.Galleries;
 import de.weightlifting.app.helper.UiHelper;
-import de.weightlifting.app.news.Events;
-import de.weightlifting.app.news.News;
 import de.weightlifting.app.service.RegistrationIntentService;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,11 +30,8 @@ public class MainActivity extends AppCompatActivity {
     public static final int FRAGMENT_HOME = 0;
     public static final int FRAGMENT_NEWS = 1;
     public static final int FRAGMENT_BULI = 2;
-    public static final int FRAGMENT_GALLERY = 3;
     public static final int FRAGMENT_FAQ = 4;
     public static final int FRAGMENT_CONTACT = 5;
-    //home, (news, events), (team, competitions, table), (gallery)
-    public static int counter[][] = {{}, {0, 0}, {0, 0, 0}, {0}};
     private WeightliftingApp app;
     private Toolbar mToolbar;
     private CharSequence mTitle;
@@ -77,9 +70,7 @@ public class MainActivity extends AppCompatActivity {
     private void initNavigation(Bundle savedInstanceState) {
 
         PrimaryDrawerItem nav_home = new PrimaryDrawerItem().withName(R.string.nav_home).withIcon(R.drawable.nav_home);
-        PrimaryDrawerItem nav_news = new PrimaryDrawerItem().withName(R.string.nav_news).withIcon(R.drawable.nav_news);
         PrimaryDrawerItem nav_buli = new PrimaryDrawerItem().withName(R.string.nav_buli).withIcon(R.drawable.nav_buli);
-        PrimaryDrawerItem nav_gallery = new PrimaryDrawerItem().withName(R.string.nav_gallery).withIcon(R.drawable.nav_gallery);
         PrimaryDrawerItem nav_faq = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_help);
         PrimaryDrawerItem nav_contact = new PrimaryDrawerItem().withName(R.string.nav_contact).withIcon(R.drawable.nav_contact);
 
@@ -89,11 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 .addDrawerItems(
                         nav_home,
                         new DividerDrawerItem(),
-                        nav_news,
-                        new DividerDrawerItem(),
                         nav_buli,
-                        new DividerDrawerItem(),
-                        nav_gallery,
                         new DividerDrawerItem(),
                         nav_faq,
                         new DividerDrawerItem(),
@@ -146,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showCountedNewElements(boolean updatedSuccessfully) {
-        int newElements = News.itemsToMark.size() + Events.itemsToMark.size() + Team.itemsToMark.size() + Competitions.itemsToMark.size() + Table.itemsToMark.size() + Galleries.itemsToMark.size();
+        int newElements = Competitions.itemsToMark.size() + Table.itemsToMark.size();
         if (updatedSuccessfully)
             UiHelper.showToast(getResources().getString(R.string.updated_all_successfully), getApplicationContext());
         else
@@ -190,17 +177,9 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new HomeFragment();
                 setTitle(getString(R.string.nav_home));
                 break;
-            case FRAGMENT_NEWS:
-                fragment = new NewsFragment();
-                setTitle(getString(R.string.nav_news));
-                break;
             case FRAGMENT_BULI:
                 fragment = new BuliFragment();
                 setTitle(getString(R.string.nav_buli));
-                break;
-            case FRAGMENT_GALLERY:
-                fragment = new GalleriesFragment();
-                setTitle(getString(R.string.nav_gallery));
                 break;
             case FRAGMENT_FAQ:
                 fragment = new FaqFragment();
