@@ -4,11 +4,8 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.ListView;
 
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
@@ -25,10 +22,6 @@ public class CompetitionsFragment1A extends CompetitionsFragment {
     protected void getCompetitions() {
         competitions1A = app.getCompetitions1A(WeightliftingApp.UPDATE_IF_NECESSARY);
         if (competitions1A.getItems().size() == 0) {
-            // No news items yet
-            //Log.d(WeightliftingApp.TAG, "Waiting for competitions1A...");
-
-            // Check again in a few seconds
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
@@ -39,7 +32,7 @@ public class CompetitionsFragment1A extends CompetitionsFragment {
             refreshHandler.postDelayed(refreshRunnable, Competitions.TIMER_RETRY);
         } else {
             try {
-                CompetitionsListAdapter1A adapter = new CompetitionsListAdapter1A(Competitions.casteArray(competitions1A.getItems()), getActivity());
+                CompetitionsListAdapter adapter = new CompetitionsListAdapter(Competitions.casteArray(competitions1A.getItems()), getActivity());
                 listViewCompetitions.setAdapter(adapter);
                 listViewCompetitions.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -49,12 +42,12 @@ public class CompetitionsFragment1A extends CompetitionsFragment {
                         Bundle bundle = new Bundle();
                         bundle.putString("protocol-url", Competitions.casteArray(competitions1A.getItems()).get(position).getProtocolUrl());
                         protocol.setArguments(bundle);
-                        ((MainActivity) getActivity()).addFragment(protocol, getString(R.string.nav_buli), true);
+                        ((MainActivity) getActivity()).addFragment(protocol, getString(R.string.buli_1A), true);
                     }
                 });
 
             } catch (Exception ex) {
-                Log.e(WeightliftingApp.TAG, "Showing competitions1A failed");
+                Log.e(WeightliftingApp.TAG, "Showing competitions1B failed");
                 ex.toString();
             }
         }
