@@ -62,7 +62,7 @@ public abstract class FilterCompetitionsFragment extends ListViewFragment {
     private ArrayList<PastCompetition> filter(ArrayList<PastCompetition> items, String name) {
         ArrayList<PastCompetition> result = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
-            if (items.get(i).getHome().equals(name) || items.get(i).getGuest().equals(name)) {
+            if (items.get(i).getHome().contains(name) || items.get(i).getGuest().contains(name)) {
                 result.add(items.get(i));
             }
         }
