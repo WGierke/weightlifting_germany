@@ -37,7 +37,6 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
 
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.gallery.Galleries;
 
 
 /**
@@ -58,8 +57,6 @@ public class ImagePagerFragment extends Fragment {
         int galleryPosition = bundle.getInt("GALLERY_POSITION");
 
         WeightliftingApp app = (WeightliftingApp) getActivity().getApplicationContext();
-        Galleries galleries = app.getGalleries(WeightliftingApp.UPDATE_IF_NECESSARY);
-        imageUrls = Galleries.casteArray(galleries.getItems()).get(galleryPosition).getImageUrls();
 
         super.onCreate(savedInstanceState);
 

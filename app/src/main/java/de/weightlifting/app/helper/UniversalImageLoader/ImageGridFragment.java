@@ -23,8 +23,6 @@ import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListene
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.gallery.Galleries;
-import de.weightlifting.app.gallery.GalleryItem;
 
 /*******************************************************************************
  * Copyright 2011-2014 Sergey Tarasevich
@@ -67,8 +65,6 @@ public class ImageGridFragment extends Fragment {
         galleryPosition = bundle.getInt("GALLERY_POSITION");
 
         WeightliftingApp app = (WeightliftingApp) getActivity().getApplicationContext();
-        Galleries galleries = app.getGalleries(WeightliftingApp.UPDATE_IF_NECESSARY);
-        imageUrls = Galleries.casteArray(galleries.getItems()).get(galleryPosition).getImageUrls();
 
         super.onCreate(savedInstanceState);
 
@@ -83,31 +79,6 @@ public class ImageGridFragment extends Fragment {
                 .build();
     }
 
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.gallery_pictures, container, false);
-        listView = (GridView) rootView.findViewById(R.id.grid);
-        listView.setAdapter(new ImageAdapter());
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Fragment fr = new ImageControllerFragment();
-                Bundle bundle = new Bundle();
-                bundle.putInt("FRAGMENT_INDEX", ImagePagerFragment.INDEX);
-                bundle.putInt("GALLERY_POSITION", galleryPosition);
-                bundle.putInt("IMAGE_POSITION", position);
-                fr.setArguments(bundle);
-                WeightliftingApp app = (WeightliftingApp) getActivity().getApplicationContext();
-                GalleryItem currentGallery = (GalleryItem) app.getGalleries(WeightliftingApp.UPDATE_IF_NECESSARY).getItem(galleryPosition);
-                String tag = currentGallery.getTitle();
-
-                ((MainActivity) getActivity()).addFragment(fr, tag, false);
-
-            }
-        });
-        return rootView;
-    }
 
     @Override
     public void onResume() {

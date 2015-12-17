@@ -8,7 +8,6 @@ import android.view.ViewGroup;
 
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.gallery.GalleryItem;
 
 
 /*******************************************************************************
@@ -57,8 +56,6 @@ public class ImageControllerFragment extends Fragment {
                 if (fr == null) {
                     fr = new ImageGridFragment();
                     fr.setArguments(bundle);
-                    GalleryItem currentGallery = (GalleryItem) app.getGalleries(WeightliftingApp.UPDATE_IF_NECESSARY).getItem(bundle.getInt("GALLERY_POSITION"));
-                    tag = currentGallery.getTitle();
                 }
                 break;
             case ImagePagerFragment.INDEX:
@@ -68,8 +65,6 @@ public class ImageControllerFragment extends Fragment {
                 if (fr == null) {
                     fr = new ImagePagerFragment();
                     fr.setArguments(bundle);
-                    GalleryItem currentGallery = (GalleryItem) app.getGalleries(WeightliftingApp.UPDATE_IF_NECESSARY).getItem(bundle.getInt("GALLERY_POSITION"));
-                    tag = currentGallery.getTitle();
                 }
                 break;
         }
