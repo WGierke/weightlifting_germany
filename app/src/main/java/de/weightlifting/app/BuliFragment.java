@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 
 import de.weightlifting.app.buli.CompetitionsFragment;
 import de.weightlifting.app.buli.TableFragment;
-import de.weightlifting.app.buli.TeamFragment;
 
 public class BuliFragment extends Fragment {
 
@@ -43,9 +42,6 @@ public class BuliFragment extends Fragment {
             Fragment fragment;
 
             switch (position) {
-                case FRAGMENT_TEAM:
-                    fragment = new TeamFragment();
-                    break;
                 case FRAGMENT_COMPETITIONS:
                     fragment = new CompetitionsFragment();
                     break;
