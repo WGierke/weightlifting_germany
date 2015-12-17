@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.UiHelper;

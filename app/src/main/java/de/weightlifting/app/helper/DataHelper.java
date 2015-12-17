@@ -9,7 +9,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
 import android.preference.PreferenceManager;
-import android.util.Log;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
@@ -20,8 +19,6 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.nio.charset.Charset;
-
-import de.weightlifting.app.WeightliftingApp;
 
 public class DataHelper {
 

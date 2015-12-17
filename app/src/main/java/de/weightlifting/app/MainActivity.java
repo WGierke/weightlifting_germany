@@ -28,10 +28,9 @@ import de.weightlifting.app.service.RegistrationIntentService;
 public class MainActivity extends AppCompatActivity {
 
     public static final int FRAGMENT_HOME = 0;
-    public static final int FRAGMENT_NEWS = 1;
-    public static final int FRAGMENT_BULI = 2;
-    public static final int FRAGMENT_FAQ = 4;
-    public static final int FRAGMENT_CONTACT = 5;
+    public static final int FRAGMENT_BULI = 1;
+    public static final int FRAGMENT_FAQ = 2;
+    public static final int FRAGMENT_CONTACT = 3;
     private WeightliftingApp app;
     private Toolbar mToolbar;
     private CharSequence mTitle;

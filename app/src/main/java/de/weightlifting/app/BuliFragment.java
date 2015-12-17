@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,9 +14,8 @@ import de.weightlifting.app.buli.TableFragment;
 
 public class BuliFragment extends Fragment {
 
-    private static final int FRAGMENT_TEAM = 0;
-    private static final int FRAGMENT_COMPETITIONS = 1;
-    private static final int FRAGMENT_TABLE = 2;
+    private static final int FRAGMENT_COMPETITIONS = 0;
+    private static final int FRAGMENT_TABLE = 1;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -57,16 +55,13 @@ public class BuliFragment extends Fragment {
 
         @Override
         public int getCount() {
-            return 3;
+            return 2;
         }
 
         @Override
         public CharSequence getPageTitle(int position) {
             String title;
             switch (position) {
-                case FRAGMENT_TEAM:
-                    title = getString(R.string.buli_team);
-                    break;
                 case FRAGMENT_COMPETITIONS:
                     title = getString(R.string.buli_competitions);
                     break;

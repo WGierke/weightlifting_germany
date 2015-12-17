@@ -2,7 +2,6 @@ package de.weightlifting.app.faq;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +9,6 @@ import android.widget.TextView;
 
 import de.weightlifting.app.FaqFragment;
 import de.weightlifting.app.R;
-import de.weightlifting.app.WeightliftingApp;
 
 public class FaqAnswerFragment extends Fragment {
 
