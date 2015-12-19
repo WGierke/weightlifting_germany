@@ -93,8 +93,6 @@ public abstract class UpdateableWrapper {
                         updateFailed = true;
                         return;
                     }
-                    if(WeightliftingApp.mContext == null)
-                        //Log.d(WeightliftingApp.TAG, "mContext is null");
                     DataHelper.saveIntern(result, FILENAME, WeightliftingApp.mContext);
 
                     updateWrapper(result);
