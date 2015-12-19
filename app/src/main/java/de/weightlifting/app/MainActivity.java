@@ -107,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        Log.d(WeightliftingApp.TAG, "clicked: " + position);
                         showFragment(position);
                         return false;
                     }
@@ -227,8 +226,6 @@ public class MainActivity extends AppCompatActivity {
             default:
                 break;
         }
-        Log.d(WeightliftingApp.TAG, "showing fragment with id " + position);
-
 
         replaceFragment(fragment, mTitle.toString());
 

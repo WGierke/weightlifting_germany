@@ -9,7 +9,6 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.io.File;
-import java.util.Date;
 
 import de.weightlifting.app.buli.relay1A.Competitions1A;
 import de.weightlifting.app.buli.relay1A.Schedule1A;
