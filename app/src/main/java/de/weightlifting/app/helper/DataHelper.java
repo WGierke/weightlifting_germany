@@ -22,7 +22,7 @@ import java.nio.charset.Charset;
 
 public class DataHelper {
 
-    public static final String PREF_FILE_NAME = "hpi_preferences";
+    public static final String PREF_FILE_NAME = "weightlifting_ger_preferences";
     private static final Charset UTF8_CHARSET = Charset.forName("UTF-8");
 
     public static byte[] encodeUTF8(String string) {
@@ -119,21 +119,21 @@ public class DataHelper {
         SharedPreferences preferences = application.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putString(prev_name, prev_value);
-        editor.commit();
+        editor.apply();
     }
 
     public static void setPreference(String prev_name, Boolean prev_value, Application application) {
         SharedPreferences preferences = application.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.putBoolean(prev_name, prev_value);
-        editor.commit();
+        editor.apply();
     }
 
     public static void deletePreference(String prev_name, Application application) {
         SharedPreferences preferences = application.getSharedPreferences(PREF_FILE_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
         editor.remove(prev_name);
-        editor.commit();
+        editor.apply();
     }
 
     public static Boolean checkPreference(String prev_name, Application application) {

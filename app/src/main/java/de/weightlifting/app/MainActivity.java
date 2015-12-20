@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
     public static final int FRAGMENT_BULI_2SOUTH = 7;
     public static final int FRAGMENT_FAQ = 9;
     public static final int FRAGMENT_CONTACT = 11;
+    public static final int FRAGMENT_SETTINGS = 20;
     private WeightliftingApp app;
     private Toolbar mToolbar;
     private CharSequence mTitle;
@@ -178,6 +179,8 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
                 return true;
+            case R.id.action_settings:
+                addFragment(new SettingsFragment(), getString(R.string.settings), true);
             default:
                 return super.onOptionsItemSelected(item);
         }

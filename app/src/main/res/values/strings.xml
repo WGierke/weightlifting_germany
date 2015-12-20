@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Gewichtheben Schwedt</string>
+    <string name="app_name">Bundesliga Gewichtheben</string>
 
-    <!-- Stuff -->
+    <!-- Settings -->
+    <string name="settings">Einstellungen</string>
+    <string name="filter_notifications">Wenn Sie nur über bestimmte Wettkämpfe oder Platzierungen informiert werden wollen, so können Sie hier Ihre Lieblings-Liga bzw. Ihren Lieblings-Club festlegen.</string>
+    <string name="i_want_to">Ich möchte …</string>
+    <string name="no_favorites">über alle Wettkämpfe und Platzierungen</string>
+    <string name="favorite_relay">nur über die Liga</string>
+    <string name="favorite_club">nur über den Club</string>
+    <string name="be_notified_about">… informiert werden.</string>
+
+    <!-- Refreshing -->
     <string name="refresh">Aktualisieren</string>
     <string name="updated_all_successfully">Inhalte wurden erfolgreich synchronisiert</string>
     <string name="updated_all_unsuccessfully">Nicht alle Inhalte konnten synchronisiert werden. Besteht eine Internetverbindung?</string>

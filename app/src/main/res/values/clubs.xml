@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="clubs_1516">
+        <item>AC Germania St.Ilgen</item>
+        <item>AC Mei\u00dfen</item>
+        <item>AC Mutterstadt</item>
+        <item>AC Potsdam</item>
+        <item>AC Suhl</item>
+        <item>AC Weinheim</item>
+        <item>Athletenteam Vogtland</item>
+        <item>AV Speyer 03</item>
+        <item>Berliner TSC</item>
+        <item>Chemnitzer AC</item>
+        <item>FTG Pfungstadt</item>
+        <item>KG G\u00f6rlitz-Zittau</item>
+        <item>KSC Schifferstadt</item>
+        <item>KSV Durlach</item>
+        <item>KSV L\u00f6rrach</item>
+        <item>KSV Langen</item>
+        <item>Oder-Sund-Team</item>
+        <item>SC Pforzheim</item>
+        <item>SG Fortschritt Eibau</item>
+        <item>SSV Samswegen</item>
+        <item>SV Empor Berlin</item>
+        <item>SV Germania Obrigheim II</item>
+        <item>SV Germania Obrigheim</item>
+        <item>SV90 Gr\u00e4fenroda</item>
+        <item>TB 03 Roding II</item>
+        <item>TB 03 Roding</item>
+        <item>TSV Heinsheim</item>
+    </string-array>
+</resources>
