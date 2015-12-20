@@ -3,8 +3,8 @@
     <string-array name="relays_1516">
         <item>1. Bundesliga - Staffel A</item>
         <item>1. Bundesliga - Staffel B</item>
-        <item>2. Bundesliga - Nordost</item>
-        <item>2. Bundesliga - Südwest</item>
-        <item>2. Bundesliga - Mitte</item>
+        <item>2. Bundesliga - Staffel Nordost</item>
+        <item>2. Bundesliga - Staffel Südwest</item>
+        <item>2. Bundesliga - Staffel Mitte</item>
     </string-array>
 </resources>

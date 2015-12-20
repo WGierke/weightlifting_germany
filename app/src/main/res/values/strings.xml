@@ -12,7 +12,9 @@
     <string name="favorite_club">nur über den Club</string>
     <string name="be_notified_about">… informiert werden.</string>
     <string name="save_button">Speichern</string>
-    <string name="saved_message">Ihre Einstellungen wurden gespeichert.</string>
+    <string name="saved_no_filter">Ihre Einstellungen wurden gespeichert. Sie werden zukünftig über alle Ereignisse informiert.</string>
+    <string name="saved_club_filter">Ihre Einstellungen wurden gespeichert. Sie werden zukünftig nur noch über die Mannschaft "%1$s" informiert.</string>
+    <string name="saved_relay_filter">Ihre Einstellungen wurden gespeichert. Sie werden zukünftig nur noch über die %1$s informiert.</string>
 
     <!-- Refreshing -->
     <string name="refresh">Aktualisieren</string>

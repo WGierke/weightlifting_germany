@@ -23,7 +23,6 @@ public class SettingsFragment extends Fragment {
         View fragment = inflater.inflate(R.layout.fragment_settings, container, false);
 
         //init spinners
-        UiHelper.showToast(DataHelper.getPreference(API.FILTER_TEXT_KEY, getActivity().getApplication()), getActivity());
         Log.d(WeightliftingApp.TAG, (DataHelper.getPreference(API.FILTER_TEXT_KEY, getActivity().getApplication()) == null) + "");
         ArrayAdapter<CharSequence> relayAdapter = ArrayAdapter.createFromResource(getActivity(),
                 R.array.relays_1516, android.R.layout.simple_spinner_item);
@@ -82,10 +81,14 @@ public class SettingsFragment extends Fragment {
                 case API.FILTER_MODE_RELAY:
                     btnRelay.setChecked(true);
                     relaySpinner.setSelection(relayAdapter.getPosition(filterText));
+                    relaySpinner.setEnabled(true);
+                    clubSpinner.setEnabled(false);
                     break;
                 case API.FILTER_MODE_CLUB:
                     btnClub.setChecked(true);
                     clubSpinner.setSelection(clubAdapter.getPosition(filterText));
+                    relaySpinner.setEnabled(false);
+                    clubSpinner.setEnabled(true);
                     break;
                 default:
                     btnAll.setChecked(true);
@@ -100,14 +103,18 @@ public class SettingsFragment extends Fragment {
                 Application app = getActivity().getApplication();
                 if (btnAll.isChecked()) {
                     DataHelper.setPreference(API.FILTER_MODE_KEY, API.FILTER_MODE_NONE, app);
+                    UiHelper.showToast(getString(R.string.saved_no_filter), getActivity());
                 } else if (btnRelay.isChecked()) {
+                    String selectedRelay = relaySpinner.getSelectedItem().toString();
                     DataHelper.setPreference(API.FILTER_MODE_KEY, API.FILTER_MODE_RELAY, app);
-                    DataHelper.setPreference(API.FILTER_TEXT_KEY, relaySpinner.getSelectedItem().toString(), app);
+                    DataHelper.setPreference(API.FILTER_TEXT_KEY, selectedRelay, app);
+                    UiHelper.showToast(getString(R.string.saved_relay_filter, selectedRelay), getActivity());
                 } else if (btnClub.isChecked()) {
+                    String selectedClub = clubSpinner.getSelectedItem().toString();
                     DataHelper.setPreference(API.FILTER_MODE_KEY, API.FILTER_MODE_CLUB, app);
-                    DataHelper.setPreference(API.FILTER_TEXT_KEY, clubSpinner.getSelectedItem().toString(), app);
+                    DataHelper.setPreference(API.FILTER_TEXT_KEY, selectedClub, app);
+                    UiHelper.showToast(getString(R.string.saved_club_filter, selectedClub), getActivity());
                 }
-                UiHelper.showToast(getString(R.string.saved_message), getActivity());
             }
         });
 
