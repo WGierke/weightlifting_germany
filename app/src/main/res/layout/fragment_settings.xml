@@ -48,9 +48,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:buttonTint="@color/colorPrimaryDark"
             android:text="@string/no_favorites" />
-
 
         <RadioButton
             android:id="@+id/radioFilterRelay"
@@ -58,7 +56,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
-            android:buttonTint="@color/colorPrimaryDark"
             android:text="@string/favorite_relay" />
 
         <Spinner
@@ -98,5 +95,18 @@
         android:text="@string/be_notified_about"
         android:textColor="@color/md_black_1000"
         android:textSize="16sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="30dp" />
+
+    <Button
+        android:id="@+id/saveButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/tsv_middle_blue"
+        android:text="@string/save_button"
+        android:textColor="@color/white" />
 
 </LinearLayout>

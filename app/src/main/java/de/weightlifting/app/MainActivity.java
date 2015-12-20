@@ -33,15 +33,6 @@ import de.weightlifting.app.service.RegistrationIntentService;
 
 public class MainActivity extends AppCompatActivity {
 
-    public static final int FRAGMENT_HOME = 0;
-    public static final int FRAGMENT_BULI_1A = 2;
-    public static final int FRAGMENT_BULI_1B = 3;
-    public static final int FRAGMENT_BULI_2NORTH = 5;
-    public static final int FRAGMENT_BULI_2MIDDLE = 6;
-    public static final int FRAGMENT_BULI_2SOUTH = 7;
-    public static final int FRAGMENT_FAQ = 9;
-    public static final int FRAGMENT_CONTACT = 11;
-    public static final int FRAGMENT_SETTINGS = 20;
     private WeightliftingApp app;
     private Toolbar mToolbar;
     private CharSequence mTitle;
@@ -70,7 +61,6 @@ public class MainActivity extends AppCompatActivity {
         if (extras != null) {
             int fragmentId = extras.getInt("fragmentId");
             if (fragmentId != 0) {
-                //Log.d(WeightliftingApp.TAG, "Fragment to open: " + fragmentId);
                 showFragment(fragmentId);
             }
         }
@@ -116,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             // on first time display view for first nav item
-            showFragment(FRAGMENT_HOME);
+            showFragment(API.FRAGMENT_HOME);
             setTitle(R.string.app_name);
         }
 
@@ -194,35 +184,35 @@ public class MainActivity extends AppCompatActivity {
         Fragment fragment = null;
 
         switch (position) {
-            case FRAGMENT_HOME:
+            case API.FRAGMENT_HOME:
                 fragment = new HomeFragment();
                 setTitle(getString(R.string.nav_home));
                 break;
-            case FRAGMENT_BULI_1A:
+            case API.FRAGMENT_BULI_1A:
                 fragment = new BuliFragment1A();
                 setTitle(getString(R.string.buli_1A));
                 break;
-            case FRAGMENT_BULI_1B:
+            case API.FRAGMENT_BULI_1B:
                 fragment = new BuliFragment1B();
                 setTitle(getString(R.string.buli_1B));
                 break;
-            case FRAGMENT_BULI_2NORTH:
+            case API.FRAGMENT_BULI_2NORTH:
                 fragment = new BuliFragment2North();
                 setTitle(getString(R.string.buli_2North));
                 break;
-            case FRAGMENT_BULI_2SOUTH:
+            case API.FRAGMENT_BULI_2SOUTH:
                 fragment = new BuliFragment2South();
                 setTitle(getString(R.string.buli_2South));
                 break;
-            case FRAGMENT_BULI_2MIDDLE:
+            case API.FRAGMENT_BULI_2MIDDLE:
                 fragment = new BuliFragment2Middle();
                 setTitle(getString(R.string.buli_2Middle));
                 break;
-            case FRAGMENT_FAQ:
+            case API.FRAGMENT_FAQ:
                 fragment = new FaqFragment();
                 setTitle(getString(R.string.nav_faq));
                 break;
-            case FRAGMENT_CONTACT:
+            case API.FRAGMENT_CONTACT:
                 fragment = new ContactFragment();
                 setTitle(getString(R.string.nav_contact));
                 break;

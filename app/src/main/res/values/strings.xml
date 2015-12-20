@@ -11,6 +11,8 @@
     <string name="favorite_relay">nur über die Liga</string>
     <string name="favorite_club">nur über den Club</string>
     <string name="be_notified_about">… informiert werden.</string>
+    <string name="save_button">Speichern</string>
+    <string name="saved_message">Ihre Einstellungen wurden gespeichert.</string>
 
     <!-- Refreshing -->
     <string name="refresh">Aktualisieren</string>
@@ -95,3 +97,4 @@
     <string name="loading_data">Lade aktuellste Daten ...</string>
 
 </resources>
+
