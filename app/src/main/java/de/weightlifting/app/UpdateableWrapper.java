@@ -93,7 +93,7 @@ public abstract class UpdateableWrapper {
                         updateFailed = true;
                         return;
                     }
-                    DataHelper.saveIntern(result, FILENAME, WeightliftingApp.mContext);
+                    DataHelper.saveIntern(result, FILENAME, WeightliftingApp.getContext());
 
                     updateWrapper(result);
 

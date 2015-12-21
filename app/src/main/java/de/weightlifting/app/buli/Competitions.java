@@ -40,7 +40,6 @@ public class Competitions extends UpdateableWrapper {
                 }
             }
             if (isNew) {
-                Log.d("WeightliftingLog", "new competition: " + newCompetitionItems.get(i).getDate());
                 itemsToMark.add(newCompetitionItems.get(i));
             }
         }

@@ -96,17 +96,4 @@
         android:textColor="@color/md_black_1000"
         android:textSize="16sp" />
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="30dp" />
-
-    <Button
-        android:id="@+id/saveButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:background="@color/tsv_middle_blue"
-        android:text="@string/save_button"
-        android:textColor="@color/white" />
-
 </LinearLayout>
