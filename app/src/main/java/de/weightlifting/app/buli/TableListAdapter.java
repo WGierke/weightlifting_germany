@@ -3,6 +3,7 @@ package de.weightlifting.app.buli;
 import android.app.Activity;
 import android.content.Context;
 import android.content.res.Resources;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import de.weightlifting.app.API;
 import de.weightlifting.app.R;
+import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.UiHelper;
 
 public class TableListAdapter extends BaseAdapter {
@@ -43,6 +46,8 @@ public class TableListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        WeightliftingApp app = (WeightliftingApp) WeightliftingApp.getContext();
+
         View view = convertView;
         if (convertView == null) {
             view = inflater.inflate(R.layout.buli_table_item, null);
@@ -55,6 +60,8 @@ public class TableListAdapter extends BaseAdapter {
 
         TextView club = (TextView) view.findViewById(R.id.buli_table_club);
         club.setText(items.get(position).getClub());
+        if (app.getFilterMode().equals(API.FILTER_MODE_CLUB) && club.getText().toString().contains(app.getFilterText()))
+            club.setText(Html.fromHtml("<u>" + club.getText() + "</u>"));
 
         TextView score = (TextView) view.findViewById(R.id.buli_table_score);
         score.setText(items.get(position).getScore() + " " + res.getString(R.string.buli_relative_points));

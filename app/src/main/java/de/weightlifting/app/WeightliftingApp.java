@@ -39,8 +39,8 @@ public class WeightliftingApp extends Application {
     public final static int UPDATE_FORCEFULLY = 1;
     public final static int UPDATE_IF_NECESSARY = 2;
     public final static int LOAD_FROM_FILE = 3;
-    public static Context mContext;
     public static boolean isUpdatingAll = false;
+    private static Context mContext;
     public boolean initializedParse = false;
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
@@ -59,8 +59,15 @@ public class WeightliftingApp extends Application {
     public Schedule2Middle schedule2Middle;
     public Competitions2Middle competitions2Middle;
     public Table2Middle table2Middle;
-
     public Handler splashCallbackHandler;
+    private String filterMode;
+    private String filterText;
+
+    public static Context getContext() {
+        if (mContext == null)
+            mContext = getContext();
+        return mContext;
+    }
 
     public void initialize(Handler callbackHandler) {
         splashCallbackHandler = callbackHandler;
@@ -90,6 +97,7 @@ public class WeightliftingApp extends Application {
         loadDataFromStorage();
         updateDataForcefully();
         updateSplashScreen();
+        loadSettings();
     }
 
     private void updateSplashScreen() {
@@ -114,6 +122,11 @@ public class WeightliftingApp extends Application {
                 DataHelper.sendMessage(splashCallbackHandler, SplashActivity.KEY_STATUS, SplashActivity.STATUS_ERROR_NETWORK);
                 break;
         }
+    }
+
+    private void loadSettings() {
+        filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
+        filterText = DataHelper.getPreference(API.FILTER_TEXT_KEY, this);
     }
 
     public void loadDataFromStorage() {
@@ -322,5 +335,22 @@ public class WeightliftingApp extends Application {
         if (imageLoader == null)
             imageLoader = new ImageLoader(getApplicationContext());
         return imageLoader;
+    }
+
+    public String getFilterMode() {
+        if (filterMode == null)
+            filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
+        return filterMode;
+    }
+
+    public String getFilterText() {
+        if (filterText == null)
+            filterText = DataHelper.getPreference(API.FILTER_TEXT_KEY, this);
+        return filterText;
+    }
+
+    public void refreshFilterSettings() {
+        filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
+        filterText = DataHelper.getPreference(API.FILTER_TEXT_KEY, this);
     }
 }
