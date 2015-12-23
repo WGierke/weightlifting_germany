@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Bundesliga Gewichtheben</string>
+    <string name="app_name">Gewichtheben Bundesliga</string>
 
     <!-- Settings -->
     <string name="settings">Einstellungen</string>
