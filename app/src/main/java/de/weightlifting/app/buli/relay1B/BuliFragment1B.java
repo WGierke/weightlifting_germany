@@ -23,6 +23,7 @@ public class BuliFragment1B extends BuliFragment {
         BuliCollectionPagerAdapter mBuliCollectionPagerAdapter = new BuliCollectionPagerAdapter(getActivity().getSupportFragmentManager());
         ViewPager mViewPager = (ViewPager) fragment.findViewById(R.id.pager);
         mViewPager.setAdapter(mBuliCollectionPagerAdapter);
+        setAdapterItemFromBundle(mViewPager, this);
 
         return fragment;
     }

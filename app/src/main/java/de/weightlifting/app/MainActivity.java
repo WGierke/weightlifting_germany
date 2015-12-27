@@ -220,6 +220,17 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            int fragmentId = extras.getInt("fragmentId");
+            int subFragmentId = extras.getInt("subFragmentId");
+            if (fragmentId == position && subFragmentId != 0) {
+                fragment.setArguments(extras);
+                getIntent().removeExtra("fragmentId");
+                getIntent().removeExtra("subFragmentId");
+            }
+        }
+
         replaceFragment(fragment, mTitle.toString());
 
         invalidateOptionsMenu();

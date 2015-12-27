@@ -96,12 +96,13 @@ public class UiHelper {
      * @param description    Description of the notification
      * @param notificationId Identifier of the notification
      */
-    public static void showNotification(String title, String message, String description, int notificationId, Context context) {
+    public static void showNotification(String title, String message, String description, int notificationId, int subFragmentId, Context context) {
 
         Intent resultIntent = new Intent(context, SplashActivity.class);
         resultIntent.setAction(Intent.ACTION_MAIN);
         resultIntent.addCategory(Intent.CATEGORY_LAUNCHER);
         resultIntent.putExtra("fragmentId", notificationId);
+        resultIntent.putExtra("subFragmentId", subFragmentId);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 

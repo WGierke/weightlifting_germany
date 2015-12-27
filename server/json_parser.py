@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 
 class BuliParser:
 
-    def __init__(self, season, league, relay, schedule_file_name, competition_file_name, table_file_name):
+    def __init__(self, season, league, relay, schedule_file_name, competition_file_name, table_file_name, push_descr, fragment_id):
         self.league = league
         self.relay = relay
         self.iat_season_base = "https://www.iat.uni-leipzig.de/datenbanken/blgew{0}/".format(season)
@@ -20,9 +20,11 @@ class BuliParser:
         self.schedule_file_name = "production/" + schedule_file_name + ".json"
         self.competition_file_name = "production/" + competition_file_name + ".json"
         self.table_file_name = "production/" + table_file_name + ".json"
+        self.push_descr = push_descr
+        self.fragment_id = fragment_id
         self.error_occured = False
 
-        # Helper functions
+    # Helper functions
 
     def get_additional_entries(self, old_array, new_array):
         new_entries = []
@@ -31,8 +33,10 @@ class BuliParser:
                 new_entries.append(new_entry)
         return new_entries
 
-    def save_push_message(self, headline, message_array, notification_id):
-        msg = headline + "#" + "|".join(message_array) + u"#Dr\u00fccke im Menu auf 'Aktualisieren', um Updates herunterzuladen.#" + str(notification_id) + "\n"
+    def save_push_message(self, headline, message_array, fragment_sub_id):
+        #TITLE#TEXT#DESCRIPTION#FRAGMENT_ID#FRAGMENT_SUB_ID
+        #Neue Tabellenergebnisse#1. Potsdam|2.Berlin#2. Bundesliga - Staffel Nordost#5#2
+        msg = headline + "#" + "|".join(message_array) + "#" + self.push_descr + "#" + self.fragment_id + "#" + fragment_sub_id + "\n"
         push_file = codecs.open('server/push_messages.txt', 'a', 'utf-8')
         push_file.write(msg)
         push_file.close()
@@ -136,7 +140,7 @@ class BuliParser:
 
             for competition in self.get_additional_entries(old_competitions_dict, new_competitions_dict):
                 push_messages.append(competition["home"] + " vs. " + competition["guest"] + " - " + competition["score"])
-            self.save_push_message("Neue Wettkampfergebnisse", push_messages, 2)
+            self.save_push_message("Neue Wettkampfergebnisse", push_messages, "1")
 
     def create_table_file(self):
         """Save table entries in table_file_name.json"""
@@ -190,7 +194,7 @@ class BuliParser:
 
             for table_entry in self.get_additional_entries(old_table_dict, new_table_dict):
                 push_messages.append(table_entry["place"] + ". " + table_entry["club"])
-            self.save_push_message("Neue Tabellenergebnisse", push_messages, 3)
+            self.save_push_message("Neue Tabellenergebnisse", push_messages, "2")
 
     def create_buli_files(self):
         print "Creating Bundesliga files for BL " + self.league + " - " + self.relay
@@ -201,11 +205,11 @@ class BuliParser:
 
 if __name__ == '__main__':
     SEASON = "1516"
-    BuliParser1A = BuliParser(SEASON, "1", "Gruppe+A", "1A_schedule", "1A_competitions", "1A_table")
-    BuliParser1B = BuliParser(SEASON, "1", "Gruppe+B", "1B_schedule", "1B_competitions", "1B_table")
-    BuliParser2South = BuliParser(SEASON, "2", "S%FCdwest", "2South_schedule", "2South_competitions", "2South_table")
-    BuliParser2North = BuliParser(SEASON, "2", "Nordost", "2North_schedule", "2North_competitions", "2North_table")
-    BuliParser2Middle = BuliParser(SEASON, "2", "Mitte", "2Middle_schedule", "2Middle_competitions", "2Middle_table")
+    BuliParser1A = BuliParser(SEASON, "1", "Gruppe+A", "1A_schedule", "1A_competitions", "1A_table", "1. Bundesliga - Gruppe A", "2")
+    BuliParser1B = BuliParser(SEASON, "1", "Gruppe+B", "1B_schedule", "1B_competitions", "1B_table", "1. Bundesliga - Gruppe B", "3")
+    BuliParser2South = BuliParser(SEASON, "2", "S%FCdwest", "2South_schedule", "2South_competitions", "2South_table", u"2. Bundesliga - Staffel S\u00fcdwest", "5")
+    BuliParser2North = BuliParser(SEASON, "2", "Nordost", "2North_schedule", "2North_competitions", "2North_table", "2. Bundesliga - Staffel Nordost", "6")
+    BuliParser2Middle = BuliParser(SEASON, "2", "Mitte", "2Middle_schedule", "2Middle_competitions", "2Middle_table", "2. Bundesliga - Staffel Mitte", "7")
 
     for parser in [BuliParser1A, BuliParser1B, BuliParser2South, BuliParser2North, BuliParser2Middle]:
         parser.create_buli_files()

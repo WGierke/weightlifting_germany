@@ -10,8 +10,8 @@ public class API {
     public static final int FRAGMENT_FAQ = 9;
     public static final int FRAGMENT_CONTACT = 11;
 
-    //TITLE#TEXT#DESCRIPTION#FRAGMENT_ID
-    //2. Bundesliga - Staffel Nordost#Text#Description#5
+    //TITLE#TEXT#DESCRIPTION#FRAGMENT_ID#FRAGMENT_SUB_ID
+    //Neue Tabellenergebnisse#1. Potsdam|2.Berlin#2. Bundesliga - Staffel Nordost#5#2
     public static final String FILTER_MODE_KEY = "FILTER_MODE";
     public static final String FILTER_MODE_NONE = "FILER_NONE";
     public static final String FILTER_MODE_RELAY = "FILTER_RELAY";
