@@ -11,12 +11,8 @@
     <color name="text_content">#333</color>
 
     <!-- Navigation -->
-    <color name="list_item_title">#09173D</color>
     <color name="list_background">#fff</color>
-    <color name="list_background_pressed">@color/tsv_light_blue</color>
-    <color name="list_divider">#ccc</color>
     <color name="counter_text_bg">@color/tsv_middle_blue</color>
-    <color name="counter_text_color">#fff</color>
     <color name="view_pager_background">@color/tsv_middle_blue</color>
 
     <!-- Galleries -->
