@@ -64,8 +64,6 @@ public class WeightliftingApp extends Application {
     private String filterText;
 
     public static Context getContext() {
-        if (mContext == null)
-            mContext = getContext();
         return mContext;
     }
 

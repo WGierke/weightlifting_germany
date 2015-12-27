@@ -45,7 +45,7 @@ public class ScheduleListAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        WeightliftingApp app = (WeightliftingApp) WeightliftingApp.getContext();
+        WeightliftingApp app = (WeightliftingApp) activity.getApplication();
 
         View view = convertView;
         if (convertView == null) {
