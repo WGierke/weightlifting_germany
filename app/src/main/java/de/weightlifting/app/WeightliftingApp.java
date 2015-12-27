@@ -9,7 +9,11 @@ import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.Collections;
 
+import de.weightlifting.app.buli.Schedule;
+import de.weightlifting.app.buli.ScheduleEntry;
 import de.weightlifting.app.buli.relay1A.Competitions1A;
 import de.weightlifting.app.buli.relay1A.Schedule1A;
 import de.weightlifting.app.buli.relay1A.Table1A;
@@ -225,7 +229,6 @@ public class WeightliftingApp extends Application {
                 myInstance = (UpdateableWrapper) myClass.newInstance();
 
             if (mode == UPDATE_FORCEFULLY) {
-                //Log.d(TAG, "started forced update for " + myClass.getName());
                 myInstance.refreshItems();
                 return myInstance;
             }
@@ -327,6 +330,53 @@ public class WeightliftingApp extends Application {
     public Table2Middle getTable2Middle(int updateMode) {
         table2Middle = (Table2Middle) getWrapperItems(table2Middle, Table2Middle.class, updateMode);
         return table2Middle;
+    }
+
+    public ArrayList<ScheduleEntry> getFilteredScheduledCompetitions() {
+        ArrayList<ScheduleEntry> result = new ArrayList<>();
+
+        Schedule1A schedule1A = getSchedule1A(UPDATE_IF_NECESSARY);
+        Schedule1B schedule1B = getSchedule1B(UPDATE_IF_NECESSARY);
+        Schedule2North schedule2North = getSchedule2North(UPDATE_IF_NECESSARY);
+        Schedule2South schedule2South = getSchedule2South(UPDATE_IF_NECESSARY);
+        Schedule2Middle schedule2Middle = getSchedule2Middle(UPDATE_IF_NECESSARY);
+
+        ArrayList<Schedule> schedules = new ArrayList<>();
+        schedules.add(schedule1A);
+        schedules.add(schedule1B);
+        schedules.add(schedule2North);
+        schedules.add(schedule2South);
+        schedules.add(schedule2Middle);
+
+        switch (filterMode) {
+            case API.FILTER_MODE_RELAY:
+                for (int i = 0; i < schedules.size(); i++) {
+                    if (schedules.get(i).getRelayName().equals(filterText)) {
+                        result.addAll(Schedule.casteArray(schedules.get(i).getItems()));
+                        break;
+                    }
+                }
+                break;
+            case API.FILTER_MODE_CLUB:
+                for (int i = 0; i < schedules.size(); i++) {
+                    ArrayList<ScheduleEntry> currentScheduleEntries = Schedule.casteArray(schedules.get(i).getItems());
+                    for (ScheduleEntry s : currentScheduleEntries) {
+                        if (s.getHome().contains(filterText) || s.getGuest().contains(filterText)) {
+                            result.add(s);
+                        }
+                    }
+                }
+                break;
+            default:
+                for (int i = 0; i < schedules.size(); i++) {
+                    result.addAll(Schedule.casteArray(schedules.get(i).getItems()));
+                }
+                break;
+        }
+
+        Collections.sort(result);
+
+        return result;
     }
 
     public ImageLoader getImageLoader() {

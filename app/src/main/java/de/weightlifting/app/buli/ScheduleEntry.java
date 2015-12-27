@@ -1,8 +1,13 @@
 package de.weightlifting.app.buli;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 import de.weightlifting.app.UpdateableItem;
 
-public class ScheduleEntry extends UpdateableItem {
+public class ScheduleEntry extends UpdateableItem implements Comparable<ScheduleEntry> {
 
     private String date;
     private String time;
@@ -11,7 +16,6 @@ public class ScheduleEntry extends UpdateableItem {
     private String location;
 
     public ScheduleEntry() {
-
     }
 
     public boolean equals(ScheduleEntry item2) {
@@ -60,5 +64,18 @@ public class ScheduleEntry extends UpdateableItem {
         this.home = home;
     }
 
+    @Override
+    public int compareTo(ScheduleEntry s) {
+        DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
+        Date ownDate = new Date();
+        Date otherDate = new Date();
+        try {
+            ownDate = format.parse(getDate());
+            otherDate = format.parse(s.getDate());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return ownDate.compareTo(otherDate);
+    }
 
 }

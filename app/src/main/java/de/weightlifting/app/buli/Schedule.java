@@ -19,6 +19,8 @@ public class Schedule extends UpdateableWrapper {
     private final String UPDATE_URL = "";
     private final String TAG = "Schedule";
 
+    public String getRelayName() { return "RELAY_NAME"; }
+
     public static ArrayList<ScheduleEntry> casteArray(ArrayList<UpdateableItem> array) {
         ArrayList<ScheduleEntry> convertedItems = new ArrayList<>();
         for (int i = 0; i < array.size(); i++) {

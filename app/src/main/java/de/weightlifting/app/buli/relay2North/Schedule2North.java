@@ -8,6 +8,8 @@ public class Schedule2North extends Schedule {
     private final String UPDATE_URL = "https://raw.githubusercontent.com/WGierke/weightlifting_germany/master/production/2North_schedule.json";
     private final String TAG = "Schedule2North";
 
+    public String getRelayName() { return "2. Bundesliga - Staffel Nordost"; }
+
     public void refreshItems() {
         super.update(UPDATE_URL, FILE_NAME, TAG);
     }

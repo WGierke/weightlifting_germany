@@ -8,6 +8,7 @@
     <string name="filter_notifications">Wenn Sie nur über bestimmte Wettkämpfe oder Platzierungen informiert werden wollen, so können Sie hier Ihre Lieblings-Liga bzw. Ihren Lieblings-Club festlegen.</string>
     <string name="i_want_to">Ich möchte …</string>
     <string name="no_favorites">über alle Wettkämpfe und Platzierungen</string>
+    <string name="all_competitions_and_placings">alle Wettkämpfe und Platzierungen</string>
     <string name="favorite_relay">nur über die Liga</string>
     <string name="favorite_club">nur über den Club</string>
     <string name="be_notified_about">… informiert werden.</string>
@@ -42,7 +43,7 @@
 
     <!-- Home -->
     <string name="home_welcome">Willkommen</string>
-    <string name="home_text">Seit 1967 gibt es das Gewichtheben in der Oderstadt. Über 180 Mitglieder im TSV Blau-Weiß 65 Schwedt sind in der Abteilung Gewichtheben tätig. Unsere Mannschaft für die 1. Bundesliga stellen wir gemeinsam mit dem TSV 1860 Stralsund auf. \n \nHier finden Sie für Sie aufbereitete, aktuelle Informationen zum Bundesliga-Team, -Wettkämpfen und -Platzierungen, aber auch zu Veranstaltungen und Wettkämpfen im Jugendbereich.</string>
+    <string name="home_text">Die nächsten Wettkämpfe, entsprechend ihrer Filtereinstellungen</string>
 
     <!-- Bundesliga -->
     <string name="buli_1A">1. Bundesliga - Staffel A</string>
@@ -74,7 +75,7 @@
 
     <string name="winner_team_competition_heading">Sieger eines Mannschafts-Wettkampfes</string>
     <string name="winner_team_competition_question">Wer ist Sieger eines Mannschafts-Wettkampfes?</string>
-    <string name="winner_team_competition_answer">Sieger eines Mannschafts-Wettkampfes (z.B. eines Bundesliga-Kampfes) ist das Team, das die meisten Relativpunkte in die Bewertung einbringen kann.\nJedem Athleten wird relativ zu seinem Körpergewichtes ein Wert zugeordnet. Dieser Wert wird sowohl von der größten erreichten Last im Reißen wie auch im Stoßen abgezogen (daher: Relativabzug).\nEinem Athleten mit einem Körpergewicht von 80kg wird beispielsweise ein Abzug von 80 Punkten zugeordnet. Reißt dieser Athlet 130kg und stößt 150kg, so erhält er 130+150-2*80 = 280-160 = 120 Relativpunkte. Diese werden mit den Relativpunkten seiner Mannschaftskameraden addiert. Das Team mit den meisten Relativpunkten gewinnt den Mannschafts-Wettkampf.</string>
+    <string name="winner_team_competition_answer">Sieger eines Mannschafts–Wettkampfes (z.B. eines Bundesliga–Kampfes) ist das Team, das die meisten Relativpunkte in die Bewertung einbringen kann.\nJedem Athleten wird relativ zu seinem Körpergewichtes ein Wert zugeordnet. Dieser Wert wird sowohl von der größten erreichten Last im Reißen wie auch im Stoßen abgezogen (daher: Relativabzug).\nEinem Athleten mit einem Körpergewicht von 80kg wird beispielsweise ein Abzug von 80 Punkten zugeordnet. Reißt dieser Athlet 130kg und stößt 150kg, so erhält er 130+150–2*80 = 280–160 = 120 Relativpunkte. Diese werden mit den Relativpunkten seiner Mannschaftskameraden addiert. Das Team mit den meisten Relativpunkten gewinnt den Mannschafts-Wettkampf.</string>
 
     <string name="winner_single_competition_heading">Sieger eines Einzel-Wettkampfes</string>
     <string name="winner_single_competition_question">Wer ist Sieger eines Einzel-Wettkampfes?</string>
@@ -96,7 +97,7 @@
     <string name="homepage_bvdg">Bundesverband Deutscher Gewichtheber \n bvdg-online.de</string>
     <string name="updating_in_progress">Update-Prozess wurde bereits gestartet.</string>
     <string name="error_network">Netzwerkfehler. Sind Sie online?</string>
-    <string name="loading_data">Lade aktuellste Daten ...</string>
+    <string name="loading_data">Lade aktuellste Daten …</string>
 
 </resources>
 
