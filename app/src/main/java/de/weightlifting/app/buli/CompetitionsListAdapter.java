@@ -71,10 +71,7 @@ public class CompetitionsListAdapter extends BaseAdapter {
         TextView location = (TextView) view.findViewById(R.id.time);
         location.setText(items.get(position).getLocation());
 
-        //Log.d(WeightliftingApp.TAG, "Competition Date: " + items.get(position).getDate() + " " + items.get(position).getHome());
-
         if (Competitions.itemsToMark.contains(items.get(position))) {
-            //Log.d(WeightliftingApp.TAG, "item to mark is being displayed");
             UiHelper.colorFade(view, activity.getResources());
             Competitions.itemsToMark.remove(items.get(position));
         }

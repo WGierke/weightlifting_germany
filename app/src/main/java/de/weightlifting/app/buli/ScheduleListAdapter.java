@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import java.text.DateFormat;
 import java.util.ArrayList;
 
 import de.weightlifting.app.API;
@@ -67,12 +68,14 @@ public class ScheduleListAdapter extends BaseAdapter {
         ((TextView) view.findViewById(R.id.date_at)).setText(R.string.buli_schedule_date_at);
 
         TextView date = (TextView) view.findViewById(R.id.date);
-        date.setText(items.get(position).getDate());
+        DateFormat dateFormat = android.text.format.DateFormat.getDateFormat(activity);
+        date.setText(dateFormat.format(items.get(position).getDateTime()));
 
         ((TextView) view.findViewById(R.id.time_at)).setText(R.string.buli_schedule_time_at);
 
         TextView time = (TextView) view.findViewById(R.id.time);
-        time.setText(items.get(position).getTime());
+        DateFormat timeFormat = android.text.format.DateFormat.getTimeFormat(activity);
+        time.setText(timeFormat.format(items.get(position).getDateTime()));
 
         ((TextView) view.findViewById(R.id.location_in)).setText(R.string.buli_schedule_location_in);
 

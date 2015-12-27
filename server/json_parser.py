@@ -68,7 +68,7 @@ class BuliParser:
                 entry["home"] = schedule_entries[i+1]
                 entry["guest"] = schedule_entries[i+2]
                 entry["location"] = schedule_entries[i+3]
-                entry["time"] = schedule_entries[i+4]
+                entry["time"] = schedule_entries[i+4].split('/')[1].split(' ')[0]
 
                 final_schedule.append(entry)
 

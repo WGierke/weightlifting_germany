@@ -1,6 +1,14 @@
 [{
     "past_competitions": [
         {
+            "date": "19.12.2015",
+            "guest": "SG Fortschritt Eibau",
+            "home": "SSV Samswegen",
+            "location": "Samswegen",
+            "score": "664.4 : 574.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=43B6771949FE48E9967F2832276084B3"
+        },
+        {
             "date": "05.12.2015",
             "guest": "AC Mei\u00dfen",
             "home": "Athletenteam Vogtland",
@@ -66,14 +74,6 @@
         },
         {
             "date": "26.09.2015",
-            "guest": "AC Mei\u00dfen",
-            "home": "Oder-Sund-Team ",
-            "location": "Schwedt/Stralsund",
-            "score": "565.4 : 496.4",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=AB18EC4B801341AFABF8DE9D840D015E"
-        },
-        {
-            "date": "26.09.2015",
             "guest": "Chemnitzer AC",
             "home": "SG Fortschritt Eibau",
             "location": "Eibau",
@@ -87,6 +87,14 @@
             "location": "Berlin",
             "score": "759.8 : 598.0",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=71FE462665CA484BA1CDE3EC2752C790"
+        },
+        {
+            "date": "26.09.2015",
+            "guest": "AC Mei\u00dfen",
+            "home": "Oder-Sund-Team ",
+            "location": "Schwedt/Stralsund",
+            "score": "565.4 : 496.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=AB18EC4B801341AFABF8DE9D840D015E"
         }
     ]
 }]

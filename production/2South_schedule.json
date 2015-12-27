@@ -1,88 +1,74 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "19.12.2015",
-            "guest": "KSC Schifferstadt",
-            "home": "KSV L\u00f6rrach",
-            "location": "L\u00f6rrach-Haagen",
-            "time": "18:00/19:00 Uhr"
-        },
-        {
-            "date": "19.12.2015",
-            "guest": "SV Germania Obrigheim II",
-            "home": "SC Pforzheim",
-            "location": "Pforzheim",
-            "time": "17:00/18:00 Uhr"
-        },
-        {
             "date": "30.01.2016",
             "guest": "AC Weinheim",
             "home": "SV Germania Obrigheim II",
             "location": "Obrigheim",
-            "time": "14:00/15:00 Uhr"
+            "time": "15:00"
         },
         {
             "date": "30.01.2016",
             "guest": "KSV L\u00f6rrach",
             "home": "SC Pforzheim",
             "location": "Pforzheim",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         },
         {
             "date": "13.02.2016",
             "guest": "SC Pforzheim",
             "home": "AC Weinheim",
             "location": "Weinheim",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "20.02.2016",
             "guest": "KSC Schifferstadt",
             "home": "SV Germania Obrigheim II",
             "location": "Obrigheim ",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "05.03.2016",
             "guest": "KSV L\u00f6rrach",
             "home": "AC Weinheim",
             "location": "L\u00f6rrach-Haagen",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "05.03.2016",
             "guest": "KSC Schifferstadt",
             "home": "SC Pforzheim",
             "location": "Pforzheim",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         },
         {
             "date": "02.04.2016",
             "guest": "SV Germania Obrigheim II",
             "home": "KSV L\u00f6rrach",
             "location": "L\u00f6rrach-Haagen",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "02.04.2016",
             "guest": "KSC Schifferstadt",
             "home": "AC Weinheim",
             "location": "Weinheim",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "23.04.2016",
             "guest": "SC Pforzheim",
             "home": "SV Germania Obrigheim II",
             "location": "Obrigheim",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "23.04.2016",
             "guest": "KSV L\u00f6rrach",
             "home": "KSC Schifferstadt",
             "location": "Schifferstadt",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         }
     ]
 }]

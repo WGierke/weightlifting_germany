@@ -5,6 +5,9 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -19,8 +22,6 @@ public class Schedule extends UpdateableWrapper {
     private final String UPDATE_URL = "";
     private final String TAG = "Schedule";
 
-    public String getRelayName() { return "RELAY_NAME"; }
-
     public static ArrayList<ScheduleEntry> casteArray(ArrayList<UpdateableItem> array) {
         ArrayList<ScheduleEntry> convertedItems = new ArrayList<>();
         for (int i = 0; i < array.size(); i++) {
@@ -29,7 +30,13 @@ public class Schedule extends UpdateableWrapper {
         return convertedItems;
     }
 
-    public void refreshItems() { super.update(UPDATE_URL, FILE_NAME, TAG); }
+    public String getRelayName() {
+        return "RELAY_NAME";
+    }
+
+    public void refreshItems() {
+        super.update(UPDATE_URL, FILE_NAME, TAG);
+    }
 
     protected void updateWrapper(String result) {
         Schedule newItems = new Schedule();
@@ -49,11 +56,19 @@ public class Schedule extends UpdateableWrapper {
                 try {
                     JSONObject jsonScheduleEntry = table.getJSONObject(i);
                     ScheduleEntry scheduleEntry = new ScheduleEntry();
-                    scheduleEntry.setDate(jsonScheduleEntry.getString("date"));
                     scheduleEntry.setGuest(jsonScheduleEntry.getString("guest"));
                     scheduleEntry.setHome(jsonScheduleEntry.getString("home"));
                     scheduleEntry.setLocation(jsonScheduleEntry.getString("location"));
-                    scheduleEntry.setTime(jsonScheduleEntry.getString("time"));
+
+                    String oldDateTime = jsonScheduleEntry.getString("date") + " " + jsonScheduleEntry.getString("time");
+                    DateFormat format = new SimpleDateFormat("dd.MM.yyyy kk:mm");
+                    Date newDateTime = new Date();
+                    try {
+                        newDateTime = format.parse(oldDateTime);
+                    } catch (ParseException e) {
+                        e.printStackTrace();
+                    }
+                    scheduleEntry.setDateTime(newDateTime);
 
                     newBuliTableItems.add(scheduleEntry);
                 } catch (Exception ex) {

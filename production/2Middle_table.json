@@ -1,39 +1,39 @@
 [{
     "table": [
         {
+            "cardinal_points": "11 : 1",
+            "club": "AC Suhl",
+            "max_score": "503.0",
+            "place": "1",
+            "score": "1771.3 : 1603"
+        },
+        {
             "cardinal_points": "10 : 2",
             "club": "TB 03 Roding II",
             "max_score": "539.6",
-            "place": "1",
+            "place": "2",
             "score": "1941.4 : 1613.2"
         },
         {
-            "cardinal_points": "8 : 1",
-            "club": "AC Suhl",
-            "max_score": "458.4",
-            "place": "2",
-            "score": "1268.3 : 1120"
-        },
-        {
-            "cardinal_points": "3 : 6",
+            "cardinal_points": "6 : 6",
             "club": "SV90 Gr\u00e4fenroda",
             "max_score": "473.3",
             "place": "3",
-            "score": "1378.6 : 1421"
+            "score": "1826.2 : 1631"
         },
         {
-            "cardinal_points": "3 : 6",
+            "cardinal_points": "3 : 9",
             "club": "KSV Langen",
-            "max_score": "423.0",
+            "max_score": "483.0",
             "place": "4",
-            "score": "1242 : 1174.8"
+            "score": "1725 : 1677.8"
         },
         {
-            "cardinal_points": "0 : 9",
+            "cardinal_points": "0 : 12",
             "club": "FTG Pfungstadt",
             "max_score": "286.2",
             "place": "5",
-            "score": "718.1 : 1219.4"
+            "score": "928.1 : 1667"
         }
     ]
 }]

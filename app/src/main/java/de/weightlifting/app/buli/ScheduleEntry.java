@@ -1,43 +1,30 @@
 package de.weightlifting.app.buli;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import de.weightlifting.app.UpdateableItem;
 
 public class ScheduleEntry extends UpdateableItem implements Comparable<ScheduleEntry> {
 
-    private String date;
-    private String time;
     private String guest;
     private String home;
     private String location;
+    private Date dateTime;
 
     public ScheduleEntry() {
     }
 
+    public Date getDateTime() {
+        return dateTime;
+    }
+
+    public void setDateTime(Date dateTime) {
+        this.dateTime = dateTime;
+    }
+
     public boolean equals(ScheduleEntry item2) {
-        return date.equals(item2.getDate()) && guest.equals(item2.getGuest())
-                && home.equals(item2.getHome()) && location.equals(item2.getLocation())
-                && time.equals(item2.getTime());
-    }
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
-    }
-
-    public String getTime() {
-        return time;
-    }
-
-    public void setTime(String time) {
-        this.time = time;
+        return guest.equals(item2.getGuest()) && home.equals(item2.getHome())
+                && location.equals(item2.getLocation()) && dateTime.equals(item2.dateTime);
     }
 
     public String getGuest() {
@@ -66,16 +53,7 @@ public class ScheduleEntry extends UpdateableItem implements Comparable<Schedule
 
     @Override
     public int compareTo(ScheduleEntry s) {
-        DateFormat format = new SimpleDateFormat("dd.MM.yyyy");
-        Date ownDate = new Date();
-        Date otherDate = new Date();
-        try {
-            ownDate = format.parse(getDate());
-            otherDate = format.parse(s.getDate());
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        return ownDate.compareTo(otherDate);
+        return getDateTime().compareTo(s.getDateTime());
     }
 
 }

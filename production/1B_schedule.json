@@ -1,74 +1,67 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "19.12.2015",
-            "guest": "SG Fortschritt Eibau",
-            "home": "SSV Samswegen",
-            "location": "Samswegen",
-            "time": "17:00/18:00 Uhr"
-        },
-        {
             "date": "16.01.2016",
             "guest": "Athletenteam Vogtland",
             "home": "Chemnitzer AC",
             "location": "Chemnitz",
-            "time": "16:00/17:00 Uhr"
+            "time": "17:00"
         },
         {
             "date": "30.01.2016",
             "guest": "Oder-Sund-Team ",
             "home": "SG Fortschritt Eibau",
             "location": "Eibau",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         },
         {
             "date": "30.01.2016",
             "guest": "Berliner TSC",
             "home": "SSV Samswegen",
             "location": "Samswegen",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         },
         {
             "date": "13.02.2016",
             "guest": "SG Fortschritt Eibau",
             "home": "Berliner TSC",
             "location": "Berlin",
-            "time": "15:00/16:00 Uhr"
+            "time": "16:00"
         },
         {
             "date": "13.02.2016",
             "guest": "Chemnitzer AC",
             "home": "AC Mei\u00dfen",
             "location": "Mei\u00dfen",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         },
         {
             "date": "13.02.2016",
             "guest": "SSV Samswegen",
             "home": "Athletenteam Vogtland",
             "location": "Plauen/Rodewisch",
-            "time": "16:00/17:00 Uhr"
+            "time": "17:00"
         },
         {
             "date": "05.03.2016",
             "guest": "Athletenteam Vogtland",
             "home": "SG Fortschritt Eibau",
             "location": "Eibau",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         },
         {
             "date": "05.03.2016",
             "guest": "AC Mei\u00dfen",
             "home": "SSV Samswegen",
             "location": "Samswegen",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         },
         {
             "date": "05.03.2016",
             "guest": "Berliner TSC",
             "home": "Oder-Sund-Team ",
             "location": "Schwedt/Stralsund",
-            "time": "17:00/18:00 Uhr"
+            "time": "18:00"
         }
     ]
 }]

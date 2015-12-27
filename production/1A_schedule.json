@@ -5,63 +5,63 @@
             "guest": "AC Germania St.Ilgen",
             "home": "AV Speyer 03",
             "location": "Speyer",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "30.01.2016",
             "guest": "TB 03 Roding",
             "home": "KSV Durlach",
             "location": "Durlach",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "30.01.2016",
             "guest": "SV Germania Obrigheim",
             "home": "AC Mutterstadt",
             "location": "Mutterstadt",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "13.02.2016",
             "guest": "AV Speyer 03",
             "home": "TSV Heinsheim",
             "location": "Bad Rappenau - Heinsheim",
-            "time": "19:00/20:00 Uhr"
+            "time": "20:00"
         },
         {
             "date": "13.02.2016",
             "guest": "AC Mutterstadt",
             "home": "AC Germania St.Ilgen",
             "location": "Leimen-St.Ilgen",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "13.02.2016",
             "guest": "KSV Durlach",
             "home": "SV Germania Obrigheim",
             "location": "Obrigheim",
-            "time": "18:30/19:30 Uhr"
+            "time": "19:30"
         },
         {
             "date": "05.03.2016",
             "guest": "AC Germania St.Ilgen",
             "home": "KSV Durlach",
             "location": "Durlach",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "05.03.2016",
             "guest": "TSV Heinsheim",
             "home": "AC Mutterstadt",
             "location": "Mutterstadt",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         },
         {
             "date": "05.03.2016",
             "guest": "SV Germania Obrigheim",
             "home": "TB 03 Roding",
             "location": "Roding",
-            "time": "18:00/19:00 Uhr"
+            "time": "19:00"
         }
     ]
 }]
