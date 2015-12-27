@@ -107,7 +107,7 @@ public class UiHelper {
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
         NotificationCompat.Builder normal = new NotificationCompat.Builder(context)
-                .setSmallIcon(R.drawable.icon_gewichtheben)
+                .setSmallIcon(R.drawable.icon_germany_bar)
                 .setContentTitle(title)
                 .setContentIntent(pendingIntent)
                 .setAutoCancel(true);

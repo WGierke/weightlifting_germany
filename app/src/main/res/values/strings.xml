@@ -12,7 +12,6 @@
     <string name="favorite_relay">nur über die Liga</string>
     <string name="favorite_club">nur über den Club</string>
     <string name="be_notified_about">… informiert werden.</string>
-    <string name="save_button">Speichern</string>
     <string name="saved_no_filter">Einstellungen gespeichert. Sie werden zukünftig über alle Ereignisse informiert.</string>
     <string name="saved_club_filter">Einstellungen gespeichert. Sie werden zukünftig nur noch über die Mannschaft "%1$s" informiert.</string>
     <string name="saved_relay_filter">Einstellungen gespeichert. Sie werden zukünftig nur noch über die %1$s informiert.</string>
@@ -29,15 +28,12 @@
 
     <!-- Navigation -->
     <string name="nav_home">Startseite</string>
-    <string name="nav_news">News &amp; Events</string>
-    <string name="nav_buli_1">1. Bundesliga</string>
     <string name="nav_buli_1A">Staffel A</string>
     <string name="nav_buli_1B">Staffel B</string>
     <string name="nav_buli_2North">Staffel Nordost</string>
     <string name="nav_buli_2Middle">Staffel Mitte</string>
     <string name="nav_buli_2South">Staffel Südwest</string>
     <string name="nav_faq">FAQ</string>
-    <string name="nav_gallery">Galerie</string>
     <string name="nav_contact">Kontakt</string>
 
 
@@ -82,19 +78,15 @@
     <string name="winner_single_competition_answer">Sieger eines Einzel-Wettkampfes (z.B. einer Deutschen Meisterschaft) in seiner Gewichtsklasse ist der Sportler, der das höchste Zweikampf-Ergebnis erzielt.\nEinem Athleten mit einem Körpergewicht von 80kg wird dabei die Gewichtsklasse -85kg zugeordnet. Reißt dieser 130kg und stößt 150kg, so hat er ein Zweikampf-Ergebnis von 280kg erbracht. Erbringt kein anderer Athlet dieser Gewichtsklasse ein höheres Ergebnis, so ist der Athlet Sieger der Gewichtsklasse -85kg im Olympischen Zweikampf. Bei größeren Meisterschaften werden auch das Reißen und das Stoßen mit Medaillen geehrt.</string>
 
     <!-- Contact -->
-    <string name="contact_club">TSV Blau-Weiß 65 Schwedt e.V.</string>
-    <string name="contact_department_chief">Abteilungsleiter Gewichtheben</string>
-    <string name="contact_department_name">Roland Taubert</string>
-    <string name="contact_department_email">taubert@ospff.de</string>
-    <string name="contact_competition_site_headline">Trainings- und Wettkampfstätte</string>
-    <string name="contact_competition_site_address">Sport- und Freizeitzentrum Külzviertel\nDr.-W.-Külzviertel 2b\n16303 Schwedt/Oder\nTel./Fax (03332) 419967</string>
-    <string name="contact_competition_email">info@gewichtheben-schwedt.de</string>
     <string name="contact_app_developer">App-Developer</string>
     <string name="contact_app_developer_name">Willi Gierke</string>
-    <string name="contact_app_developer_email">willi.gierke@student.hpi.de</string>
-    <string name="homepage_weightlifting_schwedt">Homepage der Abteilung Gewichtheben \n gewichtheben-schwedt.de</string>
-    <string name="homepage_club">Homepage des TSV Blau-Weiß 65 Schwedt \n blauweiss65-schwedt.de</string>
-    <string name="homepage_bvdg">Bundesverband Deutscher Gewichtheber \n bvdg-online.de</string>
+    <string name="contact_app_developer_email_key">Email</string>
+    <string name="contact_app_developer_email_value">willi.gierke@student.hpi.de</string>
+    <string name="contact_linkedin_key">LinkedIn-Profil</string>
+    <string name="contact_linkedin_value">linkedin.com/in/willi-gierke-5221a7b5</string>
+    <string name="contact_database">Datenbank</string>
+    <string name="contact_database_key">IAT Leipzig</string>
+    <string name="contact_database_value">www.iat.uni-leipzig.de/service/kontakt-zum-iat</string>
     <string name="updating_in_progress">Update-Prozess wurde bereits gestartet.</string>
     <string name="error_network">Netzwerkfehler. Sind Sie online?</string>
     <string name="loading_data">Lade aktuellste Daten …</string>
