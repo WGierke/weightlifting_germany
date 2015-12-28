@@ -30,6 +30,7 @@
             android:id="@+id/home_text"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:paddingRight="@dimen/activity_horizontal_margin"
             android:text="@string/home_text" />
 
     </LinearLayout>
@@ -41,5 +42,13 @@
         android:layout_weight="1"
         android:fadingEdgeLength="50dip"
         android:requiresFadingEdge="vertical"/>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:text="@string/home_no_schedules"/>
 
 </LinearLayout>

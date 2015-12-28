@@ -42,6 +42,8 @@ public class HomeFragment extends Fragment {
         ArrayList<ScheduleEntry> filteredSchedule = app.getFilteredScheduledCompetitions();
         try {
             ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewFilteredSchedules);
+            TextView emptyText = (TextView) fragment.findViewById(android.R.id.empty);
+            listViewTable.setEmptyView(emptyText);
             ScheduleListAdapter adapter = new ScheduleListAdapter(filteredSchedule, getActivity());
             listViewTable.setAdapter(adapter);
         } catch (Exception ex) {

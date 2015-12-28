@@ -5,10 +5,10 @@ import android.widget.ListView;
 
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.buli.ListViewFragment;
+import de.weightlifting.app.buli.ScheduleFragment;
 import de.weightlifting.app.buli.ScheduleListAdapter;
 
-public class ScheduleFragment2Middle extends ListViewFragment {
+public class ScheduleFragment2Middle extends ScheduleFragment {
 
     protected void getBuliElements() {
         Schedule2Middle schedule2Middle = app.getSchedule2Middle(WeightliftingApp.UPDATE_IF_NECESSARY);

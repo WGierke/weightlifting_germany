@@ -11,12 +11,12 @@ import android.widget.ListView;
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.TableEntry;
+import de.weightlifting.app.buli.TableFragment;
 import de.weightlifting.app.buli.TableListAdapter;
 
-public class TableFragment2South extends ListViewFragment {
+public class TableFragment2South extends TableFragment {
 
     private Table2South table2South;
 

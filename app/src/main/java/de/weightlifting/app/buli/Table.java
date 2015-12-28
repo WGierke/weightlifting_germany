@@ -45,7 +45,9 @@ public class Table extends UpdateableWrapper {
         }
     }
 
-    public void refreshItems() { super.update(UPDATE_URL, FILE_NAME, TAG); }
+    public void refreshItems() {
+        super.update(UPDATE_URL, FILE_NAME, TAG);
+    }
 
     protected void updateWrapper(String result) {
         Table newItems = new Table();

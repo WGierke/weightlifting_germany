@@ -16,7 +16,6 @@ public class BuliFragment1A extends BuliFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        //Log.d(WeightliftingApp.TAG, "Showing Buli fragment");
 
         View fragment = inflater.inflate(R.layout.pager_tab_strip, container, false);
 

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.WeightliftingApp;
 
-public abstract class FilterCompetitionsFragment extends ListViewFragment {
+public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
 
     protected ArrayList<PastCompetition> filteredCompetitions;
 

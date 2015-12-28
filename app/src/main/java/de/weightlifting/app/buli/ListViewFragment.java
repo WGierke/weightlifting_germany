@@ -25,10 +25,13 @@ public abstract class ListViewFragment extends Fragment {
 
         listViewBuli = (ListView) fragment.findViewById(R.id.listViewBuli);
 
+        setEmptyListItem();
         getBuliElements();
 
         return fragment;
     }
+
+    protected abstract void setEmptyListItem();
 
     protected abstract void getBuliElements();
 }

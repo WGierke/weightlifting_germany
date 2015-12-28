@@ -386,8 +386,11 @@ public class WeightliftingApp extends Application {
     }
 
     public String getFilterMode() {
-        if (filterMode == null)
+        if (filterMode == null) {
             filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
+            if(filterMode == null)
+                filterMode = API.FILTER_MODE_NONE;
+        }
         return filterMode;
     }
 

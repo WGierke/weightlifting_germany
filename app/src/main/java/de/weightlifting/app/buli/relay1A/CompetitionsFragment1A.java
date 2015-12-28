@@ -11,11 +11,11 @@ import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.buli.Competitions;
-import de.weightlifting.app.buli.ListViewFragment;
+import de.weightlifting.app.buli.CompetitionsFragment;
 import de.weightlifting.app.buli.CompetitionsListAdapter;
 import de.weightlifting.app.buli.ProtocolFragment;
 
-public class CompetitionsFragment1A extends ListViewFragment {
+public class CompetitionsFragment1A extends CompetitionsFragment {
 
     protected Competitions1A competitions1A;
 

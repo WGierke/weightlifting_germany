@@ -40,6 +40,7 @@
     <!-- Home -->
     <string name="home_welcome">Willkommen</string>
     <string name="home_text">Die nächsten Wettkämpfe entsprechend ihrer Filtereinstellungen</string>
+    <string name="home_no_schedules">Es konnten keine Ansetzungen gefunden werden, die Ihren Fitereinstellungen entsprechen.</string>
 
     <!-- Bundesliga -->
     <string name="buli_1A">1. Bundesliga - Staffel A</string>
@@ -49,12 +50,15 @@
     <string name="buli_2South">2. Bundesliga - Staffel Südwest</string>
 
     <string name="buli_schedule">Ansetzungen</string>
+    <string name="buli_no_schedules">Es konnten keine Ansetzungen gefunden werden.</string>
     <string name="buli_schedule_vs">vs.</string>
     <string name="buli_schedule_date_at">Am</string>
     <string name="buli_schedule_time_at">um</string>
     <string name="buli_schedule_location_in">In</string>
     <string name="buli_competitions">Wettkämpfe</string>
+    <string name="buli_no_competitions">Es konnten keine Wettkämpfe gefunden werden.</string>
     <string name="buli_table">Tabelle</string>
+    <string name="buli_no_tables">Es konnten keine Tabellenergebnisse gefunden werden.</string>
     <string name="buli_relative_points">Relativpunkte</string>
     <string name="buli_place">Platz</string>
     <string name="buli_max_score">Höchstpunktzahl</string>
