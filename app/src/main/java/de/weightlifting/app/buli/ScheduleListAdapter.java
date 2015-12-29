@@ -82,11 +82,6 @@ public class ScheduleListAdapter extends BaseAdapter {
         TextView location = (TextView) view.findViewById(R.id.location);
         location.setText(items.get(position).getLocation());
 
-        if (Table.itemsToMark.contains(items.get(position))) {
-            UiHelper.colorFade(view, activity.getResources());
-            Table.itemsToMark.remove(items.get(position));
-        }
-
         return view;
     }
 }

@@ -33,8 +33,11 @@ public class Table extends UpdateableWrapper {
         ArrayList<TableEntry> newTableItems = casteArray(newItems);
         for (int i = 0; i < newTableItems.size(); i++) {
             boolean isNew = true;
+            TableEntry newTE = newTableItems.get(i);
+            TableEntry oldTE;
             for (int j = 0; j < oldTableItems.size(); j++) {
-                if (newTableItems.get(i).getClub().equals(oldTableItems.get(j).getClub()) && newTableItems.get(i).getScore().equals(oldTableItems.get(j).getScore()) && newTableItems.get(i).getCardinalPoints().equals(oldTableItems.get(j).getCardinalPoints()) && newTableItems.get(i).getMaxScore().equals(oldTableItems.get(j).getMaxScore()) && newTableItems.get(i).getPlace().equals(oldTableItems.get(j).getPlace())) {
+                oldTE = oldTableItems.get(j);
+                if (newTE.getClub().equals(oldTE.getClub()) && newTE.getScore().equals(oldTE.getScore()) && newTE.getCardinalPoints().equals(oldTE.getCardinalPoints()) && newTE.getMaxScore().equals(oldTE.getMaxScore()) && newTE.getPlace().equals(oldTE.getPlace())) {
                     isNew = false;
                     break;
                 }
