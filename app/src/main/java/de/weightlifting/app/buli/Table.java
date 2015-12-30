@@ -90,7 +90,7 @@ public class Table extends UpdateableWrapper {
             }
             setItems(newBuliTableItems);
             setLastUpdate((new Date()).getTime());
-            Log.i(WeightliftingApp.TAG, "Table items parsed, " + newBuliTableItems.size() + " items found");
+            //Log.i(WeightliftingApp.TAG, "Table items parsed, " + newBuliTableItems.size() + " items found");
         } catch (Exception ex) {
             Log.e(WeightliftingApp.TAG, "Error while parsing buli table");
             ex.printStackTrace();

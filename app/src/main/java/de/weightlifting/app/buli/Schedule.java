@@ -78,7 +78,7 @@ public class Schedule extends UpdateableWrapper {
             }
             setItems(newBuliTableItems);
             setLastUpdate((new Date()).getTime());
-            Log.i(WeightliftingApp.TAG, "Schedule items parsed, " + newBuliTableItems.size() + " items found");
+            //Log.i(WeightliftingApp.TAG, "Schedule items parsed, " + newBuliTableItems.size() + " items found");
         } catch (Exception ex) {
             Log.e(WeightliftingApp.TAG, "Error while parsing scheduled competitions");
             ex.printStackTrace();

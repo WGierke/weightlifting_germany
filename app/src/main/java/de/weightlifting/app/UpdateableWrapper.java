@@ -77,7 +77,7 @@ public abstract class UpdateableWrapper {
         final String FILENAME = fileName;
         final String TAG = tag;
 
-        Log.i(WeightliftingApp.TAG, "Updating " + TAG + " ...");
+        //Log.i(WeightliftingApp.TAG, "Updating " + TAG + " ...");
         isUpdating = true;
         updateFailed = false;
 
@@ -97,7 +97,7 @@ public abstract class UpdateableWrapper {
 
                     updateWrapper(result);
 
-                    Log.i(WeightliftingApp.TAG, TAG + " updated");
+                    //Log.i(WeightliftingApp.TAG, TAG + " updated");
                 } catch (Exception ex) {
                     Log.e(WeightliftingApp.TAG, TAG + " update failed: " + ex.getMessage());
                     ex.printStackTrace();
