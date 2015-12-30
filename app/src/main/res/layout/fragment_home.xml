@@ -41,7 +41,8 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:fadingEdgeLength="50dip"
-        android:requiresFadingEdge="vertical"/>
+        android:requiresFadingEdge="vertical"
+        android:listSelector="@android:color/transparent"/>
 
     <TextView
         android:id="@android:id/empty"

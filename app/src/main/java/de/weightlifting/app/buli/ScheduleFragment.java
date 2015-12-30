@@ -12,6 +12,7 @@ public class ScheduleFragment extends ListViewFragment {
         TextView emptyText = (TextView) fragment.findViewById(R.id.emptySchedules);
         emptyText.setVisibility(View.VISIBLE);
         listViewBuli.setEmptyView(emptyText);
+        listViewBuli.setSelector(android.R.color.transparent);
     }
 
     protected void getBuliElements() {
