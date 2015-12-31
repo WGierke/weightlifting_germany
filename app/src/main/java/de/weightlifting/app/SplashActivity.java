@@ -13,10 +13,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.parse.Parse;
-import com.parse.ParseAnalytics;
 import com.parse.ParseCrashReporting;
 
-import de.weightlifting.app.helper.Keys;
 import de.weightlifting.app.helper.UiHelper;
 
 public class SplashActivity extends Activity {
@@ -90,13 +88,11 @@ public class SplashActivity extends Activity {
                 }
             }
         };
-        if(!app.initializedParse) {
+        if (!app.initializedParse) {
             Parse.enableLocalDatastore(this);
             ParseCrashReporting.enable(this);
             app.initializedParse = true;
         }
-        Parse.initialize(this, Keys.CONFIG_APP_ID, Keys.CONFIG_CLIENT_KEY);
-        ParseAnalytics.trackAppOpenedInBackground(getIntent());
     }
 
     @Override
@@ -123,7 +119,7 @@ public class SplashActivity extends Activity {
 
     private void switchToMainActivity() {
         Intent i = new Intent(this, MainActivity.class);
-        if(getIntent().getExtras() != null)
+        if (getIntent().getExtras() != null)
             i.putExtras(getIntent().getExtras());
         startActivity(i);
 

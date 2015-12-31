@@ -20,6 +20,7 @@ import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
+import com.parse.ParseAnalytics;
 
 import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.Table;
@@ -54,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         initNavigation(savedInstanceState);
 
         showFragmentFromBundle();
+        try {
+            ParseAnalytics.trackAppOpenedInBackground(getIntent());
+        } catch (Exception e) {
+        }
     }
 
     private void showFragmentFromBundle() {

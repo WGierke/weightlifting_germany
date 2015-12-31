@@ -7,6 +7,7 @@ import android.util.Log;
 
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
+import com.parse.Parse;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ import de.weightlifting.app.buli.relay2South.Table2South;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
+import de.weightlifting.app.helper.Keys;
 import de.weightlifting.app.helper.MemoryCache;
 
 public class WeightliftingApp extends Application {
@@ -95,6 +97,8 @@ public class WeightliftingApp extends Application {
         com.nostra13.universalimageloader.core.ImageLoader.getInstance().init(config);
 
         mContext = getApplicationContext();
+
+        Parse.initialize(this, Keys.CONFIG_APP_ID, Keys.CONFIG_CLIENT_KEY);
 
         loadDataFromStorage();
         updateDataForcefully();
@@ -388,7 +392,7 @@ public class WeightliftingApp extends Application {
     public String getFilterMode() {
         if (filterMode == null) {
             filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
-            if(filterMode == null)
+            if (filterMode == null)
                 filterMode = API.FILTER_MODE_NONE;
         }
         return filterMode;
