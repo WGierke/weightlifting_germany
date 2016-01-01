@@ -96,9 +96,12 @@ public class WeightliftingApp extends Application {
                 .build();
         com.nostra13.universalimageloader.core.ImageLoader.getInstance().init(config);
 
-        mContext = getApplicationContext();
+        try {
+            Parse.initialize(this, Keys.CONFIG_APP_ID, Keys.CONFIG_CLIENT_KEY);
+        } catch (Exception e) {
+        }
 
-        Parse.initialize(this, Keys.CONFIG_APP_ID, Keys.CONFIG_CLIENT_KEY);
+        mContext = getApplicationContext();
 
         loadDataFromStorage();
         updateDataForcefully();

@@ -89,9 +89,12 @@ public class SplashActivity extends Activity {
             }
         };
         if (!app.initializedParse) {
-            Parse.enableLocalDatastore(this);
-            ParseCrashReporting.enable(this);
-            app.initializedParse = true;
+            try {
+                Parse.enableLocalDatastore(this);
+                ParseCrashReporting.enable(this);
+                app.initializedParse = true;
+            } catch (Exception e) {
+            }
         }
     }
 
