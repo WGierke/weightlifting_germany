@@ -23,6 +23,7 @@ class BuliParser:
         self.push_descr = push_descr
         self.fragment_id = fragment_id
         self.error_occured = False
+        self.TIMEOUT = 15
 
     # Helper functions
 
@@ -48,7 +49,7 @@ class BuliParser:
         """Save scheduled competitions in schedule_file_name.json"""
         print "Parsing scheduled competitions ..."
         try:
-            scheduled = urllib2.urlopen(self.iat_schedule_url).read().split("</TABLE>")[0]
+            scheduled = urllib2.urlopen(self.iat_schedule_url, timeout=self.TIMEOUT).read().split("</TABLE>")[0]
         except Exception, e:
             print 'Error while downloading schedule ', e
             self.error_occured = True
@@ -87,7 +88,7 @@ class BuliParser:
         """Save past competitions in competition_file_name.json"""
         print "Parsing past competitions ..."
         try:
-            competitions = urllib2.urlopen(self.iat_competitions_url).read().split("</TABLE>")[0]
+            competitions = urllib2.urlopen(self.iat_competitions_url, timeout=self.TIMEOUT).read().split("</TABLE>")[0]
         except Exception, e:
             print 'Error while downloading competitions ', e
             self.error_occured = True
@@ -146,7 +147,7 @@ class BuliParser:
         """Save table entries in table_file_name.json"""
         print "Parsing table ..."
         try:
-            table = urllib2.urlopen(self.iat_table_url).read().split("</TABLE>")[0]
+            table = urllib2.urlopen(self.iat_table_url, timeout=self.TIMEOUT).read().split("</TABLE>")[0]
         except Exception, e:
             print 'Error while downloading table ', e
             self.error_occured = True

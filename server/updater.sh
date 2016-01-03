@@ -2,6 +2,8 @@ while true
 do
 	date +"%T"
 	python server/json_parser.py
+	git fetch --all
+	git reset --hard origin/master
 	CHANGES=$(git status | grep modified: | awk '{split($0,a,"/"); print a[2]}' | sed 's/\.json//' | tr '\n' ' ')
 	git add --all
 	git commit -m "Update: $CHANGES"
