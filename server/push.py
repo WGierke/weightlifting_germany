@@ -25,7 +25,7 @@ else:
     print "There is no file containing push messages that should be delivered."
     sys.exit()
 
-registration_ids_response = send_parse_api_request("get", "https://api.parse.com/1/classes/GcmToken", application_id, rest_key)
+registration_ids_response = send_parse_api_request("get", "https://api.parse.com/1/classes/GcmToken?limit=999", application_id, rest_key)
 gcm_token_objects = json.loads(registration_ids_response)["results"]
 
 gcm = GCM(gcm_key)
