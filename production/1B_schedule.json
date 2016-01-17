@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "16.01.2016",
-            "guest": "Athletenteam Vogtland",
-            "home": "Chemnitzer AC",
-            "location": "Chemnitz",
-            "time": "17:00"
-        },
-        {
             "date": "30.01.2016",
             "guest": "Oder-Sund-Team ",
             "home": "SG Fortschritt Eibau",
