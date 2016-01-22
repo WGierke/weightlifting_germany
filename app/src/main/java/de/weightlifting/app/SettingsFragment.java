@@ -132,6 +132,7 @@ public class SettingsFragment extends Fragment {
             UiHelper.showToast(getString(R.string.saved_club_filter, selectedClub), getActivity());
         }
         app.refreshFilterSettings();
+        app.saveFilterOnline();
     }
 }
 

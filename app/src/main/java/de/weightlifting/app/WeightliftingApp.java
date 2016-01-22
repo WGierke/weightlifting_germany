@@ -8,10 +8,12 @@ import android.util.Log;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.parse.Parse;
+import com.parse.ParseObject;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.UUID;
 
 import de.weightlifting.app.buli.Schedule;
 import de.weightlifting.app.buli.ScheduleEntry;
@@ -47,6 +49,7 @@ public class WeightliftingApp extends Application {
     public final static int LOAD_FROM_FILE = 3;
     public static boolean isUpdatingAll = false;
     private static Context mContext;
+    public final String INSTALLATION_FILE = "installation.txt";
     public boolean initializedParse = false;
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
@@ -410,5 +413,26 @@ public class WeightliftingApp extends Application {
     public void refreshFilterSettings() {
         filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
         filterText = DataHelper.getPreference(API.FILTER_TEXT_KEY, this);
+    }
+
+    public void saveFilterOnline() {
+        try {
+            String userID;
+            if (DataHelper.readIntern(INSTALLATION_FILE, getApplicationContext()).equals("")) {
+                userID = UUID.randomUUID().toString();
+                DataHelper.saveIntern(userID, INSTALLATION_FILE, getApplicationContext());
+            } else {
+                userID = DataHelper.readIntern(INSTALLATION_FILE, getApplicationContext());
+            }
+            ParseObject filter = new ParseObject("FilterSetting");
+            filter.put("userId", userID);
+            if (filterMode.equals(API.FILTER_MODE_NONE))
+                filter.put("filter", "all");
+            else
+                filter.put("filter", filterText);
+            filter.saveInBackground();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
