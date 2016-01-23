@@ -1,11 +1,11 @@
 [{
     "table": [
         {
-            "cardinal_points": "12 : 0",
+            "cardinal_points": "15 : 0",
             "club": "AV Speyer 03",
             "max_score": "898.6",
             "place": "1",
-            "score": "3503.5 : 2904.4"
+            "score": "4250 : 3485.6"
         },
         {
             "cardinal_points": "6 : 3",
@@ -15,18 +15,18 @@
             "score": "2352.3 : 2145.9"
         },
         {
-            "cardinal_points": "5 : 4",
-            "club": "AC Germania St.Ilgen",
-            "max_score": "745.2",
-            "place": "3",
-            "score": "2045.4 : 2169"
-        },
-        {
             "cardinal_points": "5 : 7",
             "club": "TB 03 Roding",
             "max_score": "752.8",
-            "place": "4",
+            "place": "3",
             "score": "2940.4 : 3069.7"
+        },
+        {
+            "cardinal_points": "5 : 7",
+            "club": "AC Germania St.Ilgen",
+            "max_score": "745.2",
+            "place": "4",
+            "score": "2626.6 : 2915.5"
         },
         {
             "cardinal_points": "3 : 6",
