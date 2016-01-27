@@ -56,7 +56,7 @@ class BuliParser:
             return
 
         re_competition_entry = re.compile(ur'(?<=class=font4>).*(?=[\r\n]?<\/TD>)')
-        schedule_entries = re.findall(re_competition_entry, scheduled.split('</A>')[-1].replace('</TD></TR>', '</TD>\n</TR>'))
+        schedule_entries = re.findall(re_competition_entry, scheduled.replace('</TD></TR>', '</TD>\n</TR>'))
         schedule_entries = [w.replace('\r', '').replace('<br>', ' ') for w in schedule_entries]
 
         schedule_dict = {}
