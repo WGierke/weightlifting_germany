@@ -21,11 +21,9 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
-import com.parse.ParseObject;
 
 import de.weightlifting.app.R;
 
@@ -70,9 +68,7 @@ public class RegistrationIntentService extends IntentService {
     private void sendRegistrationToServer(String token, boolean sent_token) {
         if (!sent_token) {
             //Log.i(TAG, "Sent token");
-            ParseObject GcmToken = new ParseObject("GcmToken");
-            GcmToken.put("token", token);
-            GcmToken.saveInBackground();
+
         }
     }
 }

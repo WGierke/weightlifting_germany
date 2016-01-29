@@ -12,9 +12,6 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.parse.Parse;
-import com.parse.ParseCrashReporting;
-
 import de.weightlifting.app.helper.UiHelper;
 
 public class SplashActivity extends Activity {
@@ -88,14 +85,6 @@ public class SplashActivity extends Activity {
                 }
             }
         };
-        if (!app.initializedParse) {
-            try {
-                Parse.enableLocalDatastore(this);
-                ParseCrashReporting.enable(this);
-                app.initializedParse = true;
-            } catch (Exception e) {
-            }
-        }
     }
 
     @Override

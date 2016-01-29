@@ -9,8 +9,6 @@ import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.parse.Parse;
-import com.parse.ParseObject;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -37,7 +35,6 @@ import de.weightlifting.app.buli.relay2South.Table2South;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
-import de.weightlifting.app.helper.Keys;
 import de.weightlifting.app.helper.MemoryCache;
 
 public class WeightliftingApp extends Application {
@@ -101,11 +98,6 @@ public class WeightliftingApp extends Application {
                 .defaultDisplayImageOptions(defaultOptions)
                 .build();
         com.nostra13.universalimageloader.core.ImageLoader.getInstance().init(config);
-
-        try {
-            Parse.initialize(this, Keys.CONFIG_APP_ID, Keys.CONFIG_CLIENT_KEY);
-        } catch (Exception e) {
-        }
 
         mContext = getApplicationContext();
 
@@ -427,13 +419,6 @@ public class WeightliftingApp extends Application {
             } else {
                 userID = DataHelper.readIntern(INSTALLATION_FILE, getApplicationContext());
             }
-            ParseObject filter = new ParseObject("FilterSetting");
-            filter.put("userId", userID);
-            if (filterMode.equals(API.FILTER_MODE_NONE))
-                filter.put("filter", "all");
-            else
-                filter.put("filter", filterText);
-            filter.saveInBackground();
         } catch (Exception e) {
             e.printStackTrace();
         }
