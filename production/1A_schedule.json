@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "23.01.2016",
-            "guest": "AC Germania St.Ilgen",
-            "home": "AV Speyer 03",
-            "location": "Speyer",
-            "time": "19:00"
-        },
-        {
             "date": "30.01.2016",
             "guest": "TB 03 Roding",
             "home": "KSV Durlach",
