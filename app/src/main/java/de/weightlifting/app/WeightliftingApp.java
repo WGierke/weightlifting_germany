@@ -5,6 +5,8 @@ import android.content.Context;
 import android.os.Handler;
 import android.util.Log;
 
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.Tracker;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.parse.Parse;
@@ -71,6 +73,7 @@ public class WeightliftingApp extends Application {
     public Handler splashCallbackHandler;
     private String filterMode;
     private String filterText;
+    private Tracker mTracker;
 
     public static Context getContext() {
         return mContext;
@@ -434,5 +437,19 @@ public class WeightliftingApp extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Gets the default {@link Tracker} for this {@link Application}.
+     *
+     * @return tracker
+     */
+    synchronized public Tracker getDefaultTracker() {
+        if (mTracker == null) {
+            GoogleAnalytics analytics = GoogleAnalytics.getInstance(this);
+            // To enable debug logging use: adb shell setprop log.tag.GAv4 DEBUG
+            mTracker = analytics.newTracker(R.xml.global_tracker);
+        }
+        return mTracker;
     }
 }

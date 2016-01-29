@@ -14,6 +14,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
@@ -37,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private WeightliftingApp app;
     private Toolbar mToolbar;
     private CharSequence mTitle;
+    private Tracker mTracker;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(mToolbar);
 
         app = (WeightliftingApp) getApplicationContext();
+
+        mTracker = app.getDefaultTracker();
 
         initNavigation(savedInstanceState);
 
@@ -235,6 +240,9 @@ public class MainActivity extends AppCompatActivity {
                 getIntent().removeExtra("subFragmentId");
             }
         }
+
+        mTracker.setScreenName((String) mTitle);
+        mTracker.send(new HitBuilders.ScreenViewBuilder().build());
 
         replaceFragment(fragment, mTitle.toString());
 
