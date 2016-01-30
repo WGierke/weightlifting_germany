@@ -2,13 +2,6 @@
     "scheduled_competitions": [
         {
             "date": "30.01.2016",
-            "guest": "TB 03 Roding",
-            "home": "KSV Durlach",
-            "location": "Durlach",
-            "time": "19:00"
-        },
-        {
-            "date": "30.01.2016",
             "guest": "SV Germania Obrigheim",
             "home": "AC Mutterstadt",
             "location": "Mutterstadt",

@@ -1,20 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "30.01.2016",
-            "guest": "TB 03 Roding II",
-            "home": "KSV Langen",
-            "location": "Langen",
-            "time": "19:00"
-        },
-        {
-            "date": "30.01.2016",
-            "guest": "SV90 Gr\u00e4fenroda",
-            "home": "AC Suhl",
-            "location": "Suhl",
-            "time": "17:00"
-        },
-        {
             "date": "13.02.2016",
             "guest": "AC Suhl",
             "home": "KSV Langen",
