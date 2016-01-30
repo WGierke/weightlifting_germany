@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "30.01.2016",
-            "guest": "SV Germania Obrigheim",
-            "home": "AC Mutterstadt",
-            "location": "Mutterstadt",
-            "time": "19:00"
-        },
-        {
             "date": "13.02.2016",
             "guest": "AV Speyer 03",
             "home": "TSV Heinsheim",
