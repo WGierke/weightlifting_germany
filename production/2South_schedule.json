@@ -2,13 +2,6 @@
     "scheduled_competitions": [
         {
             "date": "30.01.2016",
-            "guest": "AC Weinheim",
-            "home": "SV Germania Obrigheim II",
-            "location": "Obrigheim",
-            "time": "15:00"
-        },
-        {
-            "date": "30.01.2016",
             "guest": "KSV L\u00f6rrach",
             "home": "SC Pforzheim",
             "location": "Pforzheim",
