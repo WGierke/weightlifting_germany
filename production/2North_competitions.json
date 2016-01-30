@@ -1,6 +1,14 @@
 [{
     "past_competitions": [
         {
+            "date": "30.01.2016",
+            "guest": "KG G\u00f6rlitz-Zittau",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "534.0 : 376.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=0977A1C8D0324E00A4A35EFCC8E1C697"
+        },
+        {
             "date": "05.12.2015",
             "guest": "AC Potsdam SV Empor Berlin",
             "home": "KG G\u00f6rlitz-Zittau",
