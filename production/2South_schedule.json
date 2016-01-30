@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "30.01.2016",
-            "guest": "KSV L\u00f6rrach",
-            "home": "SC Pforzheim",
-            "location": "Pforzheim",
-            "time": "18:00"
-        },
-        {
             "date": "13.02.2016",
             "guest": "SC Pforzheim",
             "home": "AC Weinheim",
