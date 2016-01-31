@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "30.01.2016",
-            "guest": "Berliner TSC",
-            "home": "SSV Samswegen",
-            "location": "Samswegen",
-            "time": "18:00"
-        },
-        {
             "date": "13.02.2016",
             "guest": "SG Fortschritt Eibau",
             "home": "Berliner TSC",

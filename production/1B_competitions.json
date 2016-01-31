@@ -17,20 +17,20 @@
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=8496037521C841BFA53FCC0FD42006BF"
         },
         {
+            "date": "30.01.2016",
+            "guest": "Berliner TSC",
+            "home": "SSV Samswegen",
+            "location": "Samswegen",
+            "score": "708.4 : 761.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=09120A59BC4C4179895EE9E2550A3840"
+        },
+        {
             "date": "19.12.2015",
             "guest": "SG Fortschritt Eibau",
             "home": "SSV Samswegen",
             "location": "Samswegen",
             "score": "664.4 : 574.0",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=43B6771949FE48E9967F2832276084B3"
-        },
-        {
-            "date": "05.12.2015",
-            "guest": "Chemnitzer AC",
-            "home": "Berliner TSC",
-            "location": "Berlin",
-            "score": "809.6 : 833.6",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=1A4062548E4D4001A411C58985CA2381"
         },
         {
             "date": "05.12.2015",
@@ -47,6 +47,14 @@
             "location": "Schwedt/Stralsund",
             "score": "710.0 : 735.6",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=937B87A130E045DBAE7894EF6838A827"
+        },
+        {
+            "date": "05.12.2015",
+            "guest": "Chemnitzer AC",
+            "home": "Berliner TSC",
+            "location": "Berlin",
+            "score": "809.6 : 833.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=1A4062548E4D4001A411C58985CA2381"
         },
         {
             "date": "07.11.2015",
@@ -90,6 +98,14 @@
         },
         {
             "date": "26.09.2015",
+            "guest": "Athletenteam Vogtland",
+            "home": "Berliner TSC",
+            "location": "Berlin",
+            "score": "759.8 : 598.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=71FE462665CA484BA1CDE3EC2752C790"
+        },
+        {
+            "date": "26.09.2015",
             "guest": "AC Mei\u00dfen",
             "home": "Oder-Sund-Team ",
             "location": "Schwedt/Stralsund",
@@ -103,14 +119,6 @@
             "location": "Eibau",
             "score": "590.2 : 656.6",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=DA7732D95D6342DBAF45C069D50FA3C4"
-        },
-        {
-            "date": "26.09.2015",
-            "guest": "Athletenteam Vogtland",
-            "home": "Berliner TSC",
-            "location": "Berlin",
-            "score": "759.8 : 598.0",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=71FE462665CA484BA1CDE3EC2752C790"
         }
     ]
 }]
