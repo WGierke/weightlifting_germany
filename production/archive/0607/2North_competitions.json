@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "21.04.2007",
+            "guest": "AC Heros Berlin",
+            "home": "FSV Magdeburg",
+            "location": "Magdeburg",
+            "score": "555.1 : 460.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=D137739C55DB4DFF871400DA83FD1E9E"
+        },
+        {
+            "date": "31.03.2007",
+            "guest": "FSV Magdeburg",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "512.2 : 518.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=86AF137F12D143049CC55FD3ECA19435"
+        },
+        {
+            "date": "17.03.2007",
+            "guest": "AC Heros Berlin",
+            "home": "VfL Wolfsburg",
+            "location": "Wolfsburg",
+            "score": "0.0 : 1.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=001B62AAC11E41D0B49DEA4203212225"
+        },
+        {
+            "date": "24.02.2007",
+            "guest": "SV Empor Berlin",
+            "home": "VfL Wolfsburg",
+            "location": "Wolfsburg",
+            "score": "520.0 : 548.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=F627AD84FC434059AF2954275E7A970C"
+        },
+        {
+            "date": "03.02.2007",
+            "guest": "FSV Magdeburg",
+            "home": "VfL Wolfsburg",
+            "location": "Wolfsburg",
+            "score": "502.0 : 419.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=F296192D5C1D45419209F16BB6B1B68D"
+        },
+        {
+            "date": "03.02.2007",
+            "guest": "SV Empor Berlin",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "558.0 : 504.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=893A6E5911A74A6FAFAF59451A23061F"
+        },
+        {
+            "date": "16.12.2006",
+            "guest": "FSV Magdeburg",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "630.0 : 470.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=14755663A3B44496AA2882B598BEBE2B"
+        },
+        {
+            "date": "11.11.2006",
+            "guest": "VfL Wolfsburg",
+            "home": "FSV Magdeburg",
+            "location": "Magdeburg",
+            "score": "552.6 : 569.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=99CE2F6A799E4783A827BE94A524BE99"
+        },
+        {
+            "date": "04.11.2006",
+            "guest": "SV Empor Berlin",
+            "home": "FSV Magdeburg",
+            "location": "Magdeburg",
+            "score": "558.4 : 473.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=21F81A439EEC446DA0266D322D1841C4"
+        },
+        {
+            "date": "21.10.2006",
+            "guest": "VfL Wolfsburg",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "595.8 : 487.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=FD762828F9574345A528F1B7D05435FE"
+        },
+        {
+            "date": "07.10.2006",
+            "guest": "VfL Wolfsburg",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "438.2 : 615.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=AF19A8981CA64E4387922A7E66A2EE4B"
+        },
+        {
+            "date": "23.09.2006",
+            "guest": "SV Empor Berlin",
+            "home": "AC Heros Berlin",
+            "location": "Berlin",
+            "score": "525.0 : 474.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0607/start.php?pid='123'&protokoll=1&wkid=F0DC444D318F43D79ED31613D0CB356B"
+        }
+    ]
+}]

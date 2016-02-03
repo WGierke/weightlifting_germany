@@ -1,0 +1,32 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "10 : 2",
+            "club": "AC Heros Berlin",
+            "max_score": "630.0",
+            "place": "1",
+            "score": "2770.4 : 2491.1"
+        },
+        {
+            "cardinal_points": "6 : 6",
+            "club": "FSV Magdeburg",
+            "max_score": "558.4",
+            "place": "2",
+            "score": "3073.9 : 3147.6"
+        },
+        {
+            "cardinal_points": "6 : 6",
+            "club": "VfL Wolfsburg",
+            "max_score": "615.0",
+            "place": "3",
+            "score": "2693.6 : 2555.2"
+        },
+        {
+            "cardinal_points": "2 : 10",
+            "club": "SV Empor Berlin",
+            "max_score": "548.4",
+            "place": "4",
+            "score": "2951 : 3295"
+        }
+    ]
+}]

@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "16 : 0",
+            "club": "AC Altrip",
+            "max_score": "658.4",
+            "place": "1",
+            "score": "5138.6 : 4430.8"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "TSV Heinsheim",
+            "max_score": "632.0",
+            "place": "2",
+            "score": "4903.5 : 4692.3"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "AC Weinheim",
+            "max_score": "610.4",
+            "place": "3",
+            "score": "4614.8 : 4528.3"
+        },
+        {
+            "cardinal_points": "2 : 14",
+            "club": "KSV Hostenbach",
+            "max_score": "588.4",
+            "place": "4",
+            "score": "4258.6 : 4797.8"
+        },
+        {
+            "cardinal_points": "2 : 14",
+            "club": "ASV Ladenburg",
+            "max_score": "571.5",
+            "place": "5",
+            "score": "4246.9 : 4713.2"
+        }
+    ]
+}]

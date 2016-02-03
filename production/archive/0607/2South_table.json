@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "14 : 2",
+            "club": "TB 03 Roding",
+            "max_score": "523.2",
+            "place": "1",
+            "score": "3885.7 : 3620.8"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "TSV Erding",
+            "max_score": "502.4",
+            "place": "2",
+            "score": "3596.1 : 3524.4"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "TSV Waldkirchen",
+            "max_score": "491.2",
+            "place": "3",
+            "score": "3508.9 : 3408.8"
+        },
+        {
+            "cardinal_points": "6 : 10",
+            "club": "Eichenauer SV",
+            "max_score": "482.0",
+            "place": "4",
+            "score": "3670.8 : 3709"
+        },
+        {
+            "cardinal_points": "0 : 16",
+            "club": "ESV M\u00fcnchen-Neuaubing",
+            "max_score": "472.0",
+            "place": "5",
+            "score": "3396.4 : 3794.9"
+        }
+    ]
+}]

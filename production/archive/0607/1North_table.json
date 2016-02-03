@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "14 : 2",
+            "club": "SSV Samswegen",
+            "max_score": "919.9",
+            "place": "1",
+            "score": "6819.1 : 5808.9"
+        },
+        {
+            "cardinal_points": "14 : 2",
+            "club": "Berliner TSC",
+            "max_score": "970.3",
+            "place": "2",
+            "score": "6645.3 : 6041.1"
+        },
+        {
+            "cardinal_points": "6 : 10",
+            "club": "TSV Stralsund",
+            "max_score": "864.0",
+            "place": "3",
+            "score": "5831.1 : 5923.1"
+        },
+        {
+            "cardinal_points": "6 : 10",
+            "club": "AC Airport Neuhardenberg",
+            "max_score": "809.0",
+            "place": "4",
+            "score": "5391 : 5696.9"
+        },
+        {
+            "cardinal_points": "0 : 16",
+            "club": "TSV Blau-Wei\u00df Schwedt",
+            "max_score": "628.6",
+            "place": "5",
+            "score": "4611.4 : 5827.9"
+        }
+    ]
+}]
