@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "21.03.2015",
+            "guest": "AC Suhl",
+            "home": "SV90 Gr\u00e4fenroda",
+            "location": "Gr\u00e4fenroda",
+            "score": "439.2 : 517.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=D8D41C4D572F49AE9F8E3A46A2C3EFDA"
+        },
+        {
+            "date": "21.03.2015",
+            "guest": "TSG Rodewisch",
+            "home": "KSV Langen",
+            "location": "Langen",
+            "score": "430.4 : 0.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=737044B06AF54B53B2A5110BF46D9638"
+        },
+        {
+            "date": "21.02.2015",
+            "guest": "TSG Rodewisch",
+            "home": "SV90 Gr\u00e4fenroda",
+            "location": "Gr\u00e4fenroda",
+            "score": "403.6 : 379.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=5A516965AF724F22AD77BED827853128"
+        },
+        {
+            "date": "21.02.2015",
+            "guest": "KSV Langen",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "score": "408.6 : 313.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=6F2AACA89D5945DEA4E7A84B6A633C57"
+        },
+        {
+            "date": "24.01.2015",
+            "guest": "SV90 Gr\u00e4fenroda",
+            "home": "KSV Langen",
+            "location": "Langen",
+            "score": "443.6 : 418.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=F73C19B40CA9446FB9F7DC55103C4312"
+        },
+        {
+            "date": "10.01.2015",
+            "guest": "AC Suhl",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "320.8 : 382.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=45F46EBD6CF24402803AF94F12906977"
+        },
+        {
+            "date": "20.12.2014",
+            "guest": "SV90 Gr\u00e4fenroda",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "score": "479.8 : 377.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=4230CDF839264F96B27E7F0C0C7DF3F2"
+        },
+        {
+            "date": "20.12.2014",
+            "guest": "KSV Langen",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "482.2 : 456.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=D1D9B1B83E0249D2A80E8C950124BA9E"
+        },
+        {
+            "date": "15.11.2014",
+            "guest": "AC Suhl",
+            "home": "KSV Langen",
+            "location": "Langen",
+            "score": "480.0 : 417.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=AB594BCE6C3A45BABC82111388CAE400"
+        },
+        {
+            "date": "15.11.2014",
+            "guest": "SV90 Gr\u00e4fenroda",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "368.0 : 403.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=A06ED11AF3264DF1AEA27FA9C1A80CFA"
+        },
+        {
+            "date": "11.10.2014",
+            "guest": "TSG Rodewisch",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "score": "505.5 : 400.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=A88ADE9AB0324844B47AEEB01AA71A90"
+        },
+        {
+            "date": "11.10.2014",
+            "guest": "KSV Langen",
+            "home": "SV90 Gr\u00e4fenroda",
+            "location": "Gr\u00e4fenroda",
+            "score": "426.4 : 400.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=281F7E5B31E245629801B4AF3C253DC7"
+        }
+    ]
+}]

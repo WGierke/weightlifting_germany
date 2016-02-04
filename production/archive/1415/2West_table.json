@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "24 : 0",
+            "club": "TSV Heinsheim",
+            "max_score": "616.9",
+            "place": "1",
+            "score": "4805.7 : 3659"
+        },
+        {
+            "cardinal_points": "17 : 7",
+            "club": "KSC Schifferstadt",
+            "max_score": "560.0",
+            "place": "2",
+            "score": "4052.6 : 3881.7"
+        },
+        {
+            "cardinal_points": "12 : 12",
+            "club": "KSV L\u00f6rrach",
+            "max_score": "591.6",
+            "place": "3",
+            "score": "3912.9 : 3999.2"
+        },
+        {
+            "cardinal_points": "7 : 17",
+            "club": "SC Pforzheim",
+            "max_score": "529.3",
+            "place": "4",
+            "score": "3856.3 : 4199.9"
+        },
+        {
+            "cardinal_points": "0 : 24",
+            "club": "ASV Ladenburg",
+            "max_score": "441.1",
+            "place": "5",
+            "score": "3338.7 : 4226.4"
+        }
+    ]
+}]
