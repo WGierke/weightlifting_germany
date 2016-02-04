@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "12 : 4",
+            "club": "AC Mei\u00dfen",
+            "max_score": "556.6",
+            "place": "1",
+            "score": "4201 : 4004.3"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "KG G\u00f6rlitz-Zittau",
+            "max_score": "587.6",
+            "place": "2",
+            "score": "4150.2 : 4093.8"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "TSG Rodewisch",
+            "max_score": "537.0",
+            "place": "3",
+            "score": "4118.9 : 4062.2"
+        },
+        {
+            "cardinal_points": "8 : 8",
+            "club": "ASV Herbsleben",
+            "max_score": "534.2",
+            "place": "4",
+            "score": "3998.4 : 3933.2"
+        },
+        {
+            "cardinal_points": "0 : 16",
+            "club": "Riesaer AC",
+            "max_score": "498.6",
+            "place": "5",
+            "score": "3738.6 : 4113.6"
+        }
+    ]
+}]

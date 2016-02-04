@@ -1,0 +1,32 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "12 : 0",
+            "club": "Chemnitzer AC",
+            "max_score": "881.6",
+            "place": "1",
+            "score": "4788.6 : 3201.1"
+        },
+        {
+            "cardinal_points": "8 : 4",
+            "club": "SG Fortschritt Eibau",
+            "max_score": "686.8",
+            "place": "2",
+            "score": "3779 : 3733.4"
+        },
+        {
+            "cardinal_points": "2 : 10",
+            "club": "AC Suhl",
+            "max_score": "606.0",
+            "place": "3",
+            "score": "3270 : 3983.2"
+        },
+        {
+            "cardinal_points": "2 : 10",
+            "club": "AC Atlas Plauen",
+            "max_score": "569.0",
+            "place": "4",
+            "score": "2999.1 : 3919"
+        }
+    ]
+}]

@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "14 : 2",
+            "club": "VfL Duisburg - S\u00fcd",
+            "max_score": "615.4",
+            "place": "1",
+            "score": "4169.2 : 3198.7"
+        },
+        {
+            "cardinal_points": "12 : 4",
+            "club": "KSV Langen",
+            "max_score": "562.2",
+            "place": "2",
+            "score": "4266.1 : 3505"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "AC Goliath Mengede",
+            "max_score": "514.6",
+            "place": "3",
+            "score": "3738.2 : 3152.3"
+        },
+        {
+            "cardinal_points": "4 : 12",
+            "club": "TV Eichen",
+            "max_score": "439.6",
+            "place": "4",
+            "score": "2817.2 : 3444.3"
+        },
+        {
+            "cardinal_points": "0 : 16",
+            "club": "KG Nordhessen",
+            "max_score": "337.6",
+            "place": "5",
+            "score": "2118.4 : 3808.8"
+        }
+    ]
+}]
