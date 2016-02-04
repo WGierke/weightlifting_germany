@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "23 : 1",
+            "club": "AC Suhl",
+            "max_score": "650.4",
+            "place": "1",
+            "score": "4762.9 : 3396.5"
+        },
+        {
+            "cardinal_points": "19 : 5",
+            "club": "AC Atlas Plauen",
+            "max_score": "623.8",
+            "place": "2",
+            "score": "4527.5 : 3521.5"
+        },
+        {
+            "cardinal_points": "12 : 12",
+            "club": "TSG Rodewisch",
+            "max_score": "500.6",
+            "place": "3",
+            "score": "3580.1 : 3620.7"
+        },
+        {
+            "cardinal_points": "4 : 20",
+            "club": "ESV M\u00fcnchen-Neuaubing",
+            "max_score": "408.4",
+            "place": "4",
+            "score": "2616.9 : 3978"
+        },
+        {
+            "cardinal_points": "2 : 22",
+            "club": "AC Weiden",
+            "max_score": "417.8",
+            "place": "5",
+            "score": "3070.8 : 4041.5"
+        }
+    ]
+}]
