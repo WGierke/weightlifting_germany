@@ -9,6 +9,22 @@
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=FF40494F9AFB417890A30116C759E2CF"
         },
         {
+            "date": "30.01.2016",
+            "guest": "TB 03 Roding",
+            "home": "KSV Durlach",
+            "location": "Durlach",
+            "score": "724.8 : 633.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=13AB42C42E0041D1BA6DF4D1869C2EBF"
+        },
+        {
+            "date": "30.01.2016",
+            "guest": "SV Germania Obrigheim",
+            "home": "AC Mutterstadt",
+            "location": "Mutterstadt",
+            "score": "737.4 : 776.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=C329C8623EAF4387BCD5EA7F0AC30B50"
+        },
+        {
             "date": "05.12.2015",
             "guest": "AC Mutterstadt",
             "home": "TB 03 Roding",
@@ -58,14 +74,6 @@
         },
         {
             "date": "17.10.2015",
-            "guest": "AV Speyer 03",
-            "home": "KSV Durlach",
-            "location": "Durlach",
-            "score": "727.2 : 898.6",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=244A32F43EFD4F639E452461EEE7E3C5"
-        },
-        {
-            "date": "17.10.2015",
             "guest": "TSV Heinsheim",
             "home": "TB 03 Roding",
             "location": "Roding",
@@ -79,6 +87,14 @@
             "location": "Obrigheim",
             "score": "807.0 : 556.2",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=AB570C2800D54244AB2AD60AF3FBF5E0"
+        },
+        {
+            "date": "17.10.2015",
+            "guest": "AV Speyer 03",
+            "home": "KSV Durlach",
+            "location": "Durlach",
+            "score": "727.2 : 898.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=244A32F43EFD4F639E452461EEE7E3C5"
         },
         {
             "date": "26.09.2015",

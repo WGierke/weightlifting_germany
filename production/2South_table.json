@@ -1,18 +1,18 @@
 [{
     "table": [
         {
-            "cardinal_points": "12 : 0",
+            "cardinal_points": "15 : 0",
             "club": "SC Pforzheim",
             "max_score": "579.0",
             "place": "1",
-            "score": "2238 : 1707.2"
+            "score": "2762.6 : 2003.2"
         },
         {
-            "cardinal_points": "6 : 6",
+            "cardinal_points": "9 : 6",
             "club": "AC Weinheim",
             "max_score": "548.5",
             "place": "2",
-            "score": "2104 : 1830.8"
+            "score": "2573 : 2091.1"
         },
         {
             "cardinal_points": "6 : 6",
@@ -22,18 +22,18 @@
             "score": "2028.5 : 2063.2"
         },
         {
-            "cardinal_points": "3 : 9",
+            "cardinal_points": "3 : 12",
             "club": "KSV L\u00f6rrach",
             "max_score": "542.6",
             "place": "4",
-            "score": "1755.4 : 2027"
+            "score": "2051.4 : 2551.6"
         },
         {
-            "cardinal_points": "3 : 9",
+            "cardinal_points": "3 : 12",
             "club": "SV Germania Obrigheim II",
             "max_score": "429.6",
             "place": "5",
-            "score": "1500.2 : 1997.9"
+            "score": "1760.5 : 2466.9"
         }
     ]
 }]
