@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "14 : 2",
+            "club": "AC Germania St.Ilgen",
+            "max_score": "808.6",
+            "place": "1",
+            "score": "5706.6 : 5179.8"
+        },
+        {
+            "cardinal_points": "12 : 4",
+            "club": "KSV Durlach",
+            "max_score": "726.2",
+            "place": "2",
+            "score": "5588.8 : 4995"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "SV Germania Obrigheim",
+            "max_score": "791.8",
+            "place": "3",
+            "score": "5616.2 : 5207.8"
+        },
+        {
+            "cardinal_points": "4 : 12",
+            "club": "TSV Heinsheim",
+            "max_score": "665.0",
+            "place": "4",
+            "score": "4849.7 : 5118.9"
+        },
+        {
+            "cardinal_points": "0 : 16",
+            "club": "VfL Duisburg - S\u00fcd",
+            "max_score": "553.2",
+            "place": "5",
+            "score": "3983 : 5242.8"
+        }
+    ]
+}]

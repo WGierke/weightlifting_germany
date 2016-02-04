@@ -1,0 +1,164 @@
+[{
+    "past_competitions": [
+        {
+            "date": "17.03.2012",
+            "guest": "SV Germania Obrigheim",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "827.2 : 793.3",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=9E12594A6CAD44B1A9F5FE1112E49654"
+        },
+        {
+            "date": "17.03.2012",
+            "guest": "TB 03 Roding",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "673.0 : 689.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=DA0DA917C13D41BA85790E39BD420D70"
+        },
+        {
+            "date": "03.03.2012",
+            "guest": "KSV Durlach",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "616.5 : 711.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=C8802090888C456E8CF56CDC95FB878C"
+        },
+        {
+            "date": "03.03.2012",
+            "guest": "AV Speyer 03",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "735.2 : 767.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=CA609511DD704B6C99D31FB45B7FE81A"
+        },
+        {
+            "date": "25.02.2012",
+            "guest": "AC Germania St.Ilgen",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "843.9 : 517.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=8A58287ED6C24927B06A5A3AB458B66A"
+        },
+        {
+            "date": "25.02.2012",
+            "guest": "TB 03 Roding",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "844.6 : 688.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=14DB3A06F5394F0C995722ABE1F53F5E"
+        },
+        {
+            "date": "11.02.2012",
+            "guest": "AV Speyer 03",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "704.4 : 734.7",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=85AA3BDA3FAE4A0EBFFBCCF465911492"
+        },
+        {
+            "date": "11.02.2012",
+            "guest": "SV Germania Obrigheim",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "673.0 : 788.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=0C98989FC5B54B9A9F0AD700BB57A95D"
+        },
+        {
+            "date": "28.01.2012",
+            "guest": "AC Germania St.Ilgen",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "712.4 : 677.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=D789AE43D00849E8B912DFC0599D0868"
+        },
+        {
+            "date": "28.01.2012",
+            "guest": "KSV Durlach",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "728.2 : 681.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=FE146C8F6C114AE3B06B6A957EF64EFE"
+        },
+        {
+            "date": "14.01.2012",
+            "guest": "TB 03 Roding",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "755.2 : 660.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=6C174852F2414E158E70D4379D83ACE6"
+        },
+        {
+            "date": "14.01.2012",
+            "guest": "AC Germania St.Ilgen",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "694.6 : 639.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=8D8EB595B5F44284805CA1BC5BC3301D"
+        },
+        {
+            "date": "10.12.2011",
+            "guest": "KSV Durlach",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "762.6 : 694.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=336E4C8729FF4C58B44D52A9EE5A60FF"
+        },
+        {
+            "date": "10.12.2011",
+            "guest": "AV Speyer 03",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "907.2 : 870.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=FC33DE79CEF54290B01345590B3DE8CF"
+        },
+        {
+            "date": "26.11.2011",
+            "guest": "AV Speyer 03",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "646.0 : 759.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=DE22740EA7244016858A91240248115D"
+        },
+        {
+            "date": "26.11.2011",
+            "guest": "SV Germania Obrigheim",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "715.6 : 798.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=293E5A8E8975407D9632FB0C5D800B47"
+        },
+        {
+            "date": "29.10.2011",
+            "guest": "AC Germania St.Ilgen",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "862.0 : 532.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=357D5BC16C1A4861A1DACA16B67D33CD"
+        },
+        {
+            "date": "22.10.2011",
+            "guest": "KSV Durlach",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "861.6 : 695.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=DEED66D423504C60AB129F38A893C04C"
+        },
+        {
+            "date": "17.09.2011",
+            "guest": "TB 03 Roding",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "721.2 : 720.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=29C9B14E5F334634B4FB6B6B23DCBDC7"
+        },
+        {
+            "date": "17.09.2011",
+            "guest": "SV Germania Obrigheim",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "615.2 : 785.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=18C80990DBF0475C9C4838394B88684E"
+        }
+    ]
+}]

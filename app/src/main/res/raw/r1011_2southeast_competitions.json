@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "19.03.2011",
+            "guest": "Riesaer AC",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "score": "653.2 : 525.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=5F10E8D66A8C4921845A19F407530417"
+        },
+        {
+            "date": "19.03.2011",
+            "guest": "TSG Rodewisch",
+            "home": "AC Atlas Plauen",
+            "location": "Plauen",
+            "score": "643.4 : 412.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=7A13934BA29A45BC9B5D7A5738A911BB"
+        },
+        {
+            "date": "26.02.2011",
+            "guest": "AC Suhl",
+            "home": "AC Atlas Plauen",
+            "location": "Plauen",
+            "score": "644.4 : 643.3",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=1F345379B29A4AC89BB579F58BF02C5E"
+        },
+        {
+            "date": "26.02.2011",
+            "guest": "TSG Rodewisch",
+            "home": "Riesaer AC",
+            "location": "Riesa",
+            "score": "528.8 : 419.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=079A8D5668D440F69CDB01F42697179A"
+        },
+        {
+            "date": "12.02.2011",
+            "guest": "TSG Rodewisch",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "score": "606.2 : 408.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=89729869459E45A9A0353E5CFD164430"
+        },
+        {
+            "date": "12.02.2011",
+            "guest": "Riesaer AC",
+            "home": "AC Atlas Plauen",
+            "location": "Plauen",
+            "score": "573.8 : 512.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=C5B0AF3CD4FA47A38499AD2CD47D780F"
+        },
+        {
+            "date": "18.12.2010",
+            "guest": "AC Atlas Plauen",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "370.8 : 640.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=54FAF639BA2A4CB0961CAA40010179DC"
+        },
+        {
+            "date": "18.12.2010",
+            "guest": "AC Suhl",
+            "home": "Riesaer AC",
+            "location": "Riesa",
+            "score": "497.8 : 590.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=6455782F9F83463197A0D99BC6C5719B"
+        },
+        {
+            "date": "20.11.2010",
+            "guest": "AC Atlas Plauen",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "score": "624.6 : 657.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=108AD7541DDF4F6C88C6B467BA5F9C6A"
+        },
+        {
+            "date": "20.11.2010",
+            "guest": "Riesaer AC",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "399.6 : 432.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=EFB6AF9A0C92475F82998F913D6F5D5E"
+        },
+        {
+            "date": "06.11.2010",
+            "guest": "TSG Rodewisch",
+            "home": "AC Suhl",
+            "location": "Suhl",
+            "score": "588.6 : 332.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=07F0B1CE131D4C30824B28A632C76CE1"
+        },
+        {
+            "date": "06.11.2010",
+            "guest": "AC Atlas Plauen",
+            "home": "Riesaer AC",
+            "location": "Riesa",
+            "score": "488.6 : 569.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=026A30945F834F4B8FCB8E32075EC86B"
+        }
+    ]
+}]

@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "19.03.2011",
+            "guest": "AC Potsdam",
+            "home": "TSV Stralsund",
+            "location": "Stralsund",
+            "score": "581.2 : 400.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=B746BA2E3FEB4859BF20165EDA33041D"
+        },
+        {
+            "date": "19.03.2011",
+            "guest": "AC Heros Berlin",
+            "home": "SC L\u00fcchow",
+            "location": "L\u00fcchow",
+            "score": "411.4 : 253.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=D998D32032B44910A9EDE421E0E27FEC"
+        },
+        {
+            "date": "26.02.2011",
+            "guest": "SC L\u00fcchow",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "435.0 : 392.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=228B7D1F2E754A7EB180446EF947B043"
+        },
+        {
+            "date": "26.02.2011",
+            "guest": "TSV Stralsund",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "312.8 : 468.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=FEF70CD22AFF4DF4A5E6ED5A849AD03E"
+        },
+        {
+            "date": "12.02.2011",
+            "guest": "SC L\u00fcchow",
+            "home": "TSV Stralsund",
+            "location": "Stralsund",
+            "score": "469.8 : 360.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=2F456D4483B14D1182059763B9D6D7AD"
+        },
+        {
+            "date": "12.02.2011",
+            "guest": "AC Potsdam",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "234.7 : 400.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=9B14C5DE283943D688502F92121F86B5"
+        },
+        {
+            "date": "29.01.2011",
+            "guest": "TSV Stralsund",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "345.3 : 485.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=27ED274B995E4B848F94C0151D3E7751"
+        },
+        {
+            "date": "15.01.2011",
+            "guest": "AC Heros Berlin",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "400.2 : 215.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=6FC1F65EE9124DAE8CDE2C14BB57812E"
+        },
+        {
+            "date": "18.12.2010",
+            "guest": "SC L\u00fcchow",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "249.0 : 463.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=74AD564690854589B1A5E27EC68D9C20"
+        },
+        {
+            "date": "20.11.2010",
+            "guest": "AC Potsdam",
+            "home": "SC L\u00fcchow",
+            "location": "L\u00fcchow",
+            "score": "435.9 : 461.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=14246171E2E04F69865187253F910FEB"
+        },
+        {
+            "date": "20.11.2010",
+            "guest": "AC Heros Berlin",
+            "home": "TSV Stralsund",
+            "location": "Stralsund",
+            "score": "494.0 : 160.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=F1F37F253D084CA4ADCBF5A6C0581D9F"
+        },
+        {
+            "date": "06.11.2010",
+            "guest": "TSV Stralsund",
+            "home": "SC L\u00fcchow",
+            "location": "L\u00fcchow",
+            "score": "438.8 : 562.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=8930D7AA25F84F50A5A1CD92F70344CA"
+        }
+    ]
+}]

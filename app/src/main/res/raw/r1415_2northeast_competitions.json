@@ -1,0 +1,52 @@
+[{
+    "past_competitions": [
+        {
+            "date": "21.03.2015",
+            "guest": "SV Empor Berlin",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "514.0 : 456.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=EE8564A097C648C481C384B46029CA80"
+        },
+        {
+            "date": "21.02.2015",
+            "guest": "SG Fortschritt Eibau",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "354.2 : 569.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=FA1C7EEF174F480E96DC274EF50DF021"
+        },
+        {
+            "date": "24.01.2015",
+            "guest": "AC Potsdam",
+            "home": "SG Fortschritt Eibau",
+            "location": "Eibau",
+            "score": "571.0 : 434.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=00AC216F7C44486E82A055425BBBB102"
+        },
+        {
+            "date": "06.12.2014",
+            "guest": "AC Potsdam",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "418.0 : 504.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=7E354BFC103741918D793737F08587F9"
+        },
+        {
+            "date": "15.11.2014",
+            "guest": "SV Empor Berlin",
+            "home": "SG Fortschritt Eibau",
+            "location": "Eibau",
+            "score": "619.4 : 414.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=0D0A80611B504DA6874ECDE77E2F9C3B"
+        },
+        {
+            "date": "11.10.2014",
+            "guest": "SG Fortschritt Eibau",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "527.9 : 601.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1415/start.php?pid='123'&protokoll=1&wkid=73235597E9E244D3BDBDFD388AEB90A9"
+        }
+    ]
+}]

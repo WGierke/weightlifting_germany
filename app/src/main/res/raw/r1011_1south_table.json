@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "21 : 3",
+            "club": "Chemnitzer AC",
+            "max_score": "895.0",
+            "place": "1",
+            "score": "6131.7 : 4808.7"
+        },
+        {
+            "cardinal_points": "16 : 8",
+            "club": "TB 03 Roding",
+            "max_score": "757.4",
+            "place": "2",
+            "score": "5502.9 : 5075.7"
+        },
+        {
+            "cardinal_points": "12 : 12",
+            "club": "SG Fortschritt Eibau",
+            "max_score": "658.0",
+            "place": "3",
+            "score": "5032.7 : 4975.1"
+        },
+        {
+            "cardinal_points": "9 : 15",
+            "club": "KG G\u00f6rlitz-Zittau",
+            "max_score": "679.8",
+            "place": "4",
+            "score": "4805.9 : 5372.7"
+        },
+        {
+            "cardinal_points": "2 : 22",
+            "club": "AC Mei\u00dfen",
+            "max_score": "588.6",
+            "place": "5",
+            "score": "4161.6 : 5402.6"
+        }
+    ]
+}]
