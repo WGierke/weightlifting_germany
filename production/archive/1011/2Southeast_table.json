@@ -1,0 +1,32 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "16 : 2",
+            "club": "AC Atlas Plauen",
+            "max_score": "657.0",
+            "place": "1",
+            "score": "3728.8 : 3052.4"
+        },
+        {
+            "cardinal_points": "14 : 4",
+            "club": "AC Suhl",
+            "max_score": "653.2",
+            "place": "2",
+            "score": "3706.5 : 3065"
+        },
+        {
+            "cardinal_points": "6 : 12",
+            "club": "Riesaer AC",
+            "max_score": "528.8",
+            "place": "3",
+            "score": "2985.2 : 3206"
+        },
+        {
+            "cardinal_points": "0 : 18",
+            "club": "TSG Rodewisch",
+            "max_score": "419.4",
+            "place": "4",
+            "score": "2343.3 : 3440.4"
+        }
+    ]
+}]
