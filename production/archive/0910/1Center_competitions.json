@@ -1,0 +1,164 @@
+[{
+    "past_competitions": [
+        {
+            "date": "10.04.2010",
+            "guest": "AV Speyer 03",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "542.0 : 723.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=E6290647F263469E8375B76239B4F64E"
+        },
+        {
+            "date": "10.04.2010",
+            "guest": "AC Germania St.Ilgen",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "820.6 : 585.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=4A75CA81052D4446B79E7A4AE84A112A"
+        },
+        {
+            "date": "20.03.2010",
+            "guest": "TSV Heinsheim",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "760.0 : 500.3",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=18FCE7C0468B4CA4BFCAB813C2FB50C7"
+        },
+        {
+            "date": "20.03.2010",
+            "guest": "SV Germania Obrigheim",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "807.8 : 788.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=F0C68659BDB045DAB4427E7A92DEB4BA"
+        },
+        {
+            "date": "06.03.2010",
+            "guest": "KSV Durlach",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "765.0 : 684.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=A94040018CF040E4AF6DF0BF4565048A"
+        },
+        {
+            "date": "06.03.2010",
+            "guest": "AV Speyer 03",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "690.8 : 735.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=F220C3111711486A8368C294C6BE48CE"
+        },
+        {
+            "date": "20.02.2010",
+            "guest": "AC Germania St.Ilgen",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "729.7 : 576.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=0426C9CA9C2346EC919ABC1FEFAD9181"
+        },
+        {
+            "date": "20.02.2010",
+            "guest": "TSV Heinsheim",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "721.0 : 563.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=6740A03325594A8DAD84D0A20437DA65"
+        },
+        {
+            "date": "06.02.2010",
+            "guest": "TSV Heinsheim",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "674.4 : 575.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=A6B38D6D21D9423CA9217A0742E14C85"
+        },
+        {
+            "date": "30.01.2010",
+            "guest": "KSV Durlach",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "649.0 : 546.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=C51531F9CACA4CB295C7557A4DB8D389"
+        },
+        {
+            "date": "19.12.2009",
+            "guest": "AV Speyer 03",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "854.5 : 800.7",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=094A9B90CABD4DF7BD06B2350D11349E"
+        },
+        {
+            "date": "12.12.2009",
+            "guest": "TSV Heinsheim",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "779.6 : 643.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=125D42A1C27E4EE9A764FC267C668239"
+        },
+        {
+            "date": "12.12.2009",
+            "guest": "SV Germania Obrigheim",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "734.0 : 752.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=BFBF57C3310741908AB66C005DB1D8E8"
+        },
+        {
+            "date": "28.11.2009",
+            "guest": "KSV Durlach",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "674.4 : 703.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=2BAA54A8299C44D982F118DC401BB25F"
+        },
+        {
+            "date": "14.11.2009",
+            "guest": "KSV Durlach",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "794.7 : 759.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=DB9E119934D04EB0BF9A1158674E6393"
+        },
+        {
+            "date": "07.11.2009",
+            "guest": "AC Germania St.Ilgen",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "808.2 : 596.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=7999D58216D343A391AD9F9A8D9A47E8"
+        },
+        {
+            "date": "07.11.2009",
+            "guest": "SV Germania Obrigheim",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "748.0 : 836.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=18971368624F41089BAD1CE590CAC27B"
+        },
+        {
+            "date": "10.10.2009",
+            "guest": "SV Germania Obrigheim",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "668.8 : 675.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=8840A03325594A8DAD84D0A20437DA88"
+        },
+        {
+            "date": "26.09.2009",
+            "guest": "AV Speyer 03",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "730.0 : 761.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=4F0EDD1A05F047108EE7539032BF0966"
+        },
+        {
+            "date": "26.09.2009",
+            "guest": "AC Germania St.Ilgen",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "636.8 : 629.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=84E7B007102B4E968F57D995938C7611"
+        }
+    ]
+}]

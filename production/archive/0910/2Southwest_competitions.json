@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "10.04.2010",
+            "guest": "ASV Ladenburg",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "535.6 : 596.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=23D7C74500244DE1BDBB44C03B8E289D"
+        },
+        {
+            "date": "20.03.2010",
+            "guest": "AC Weinheim",
+            "home": "Vfl Nagold",
+            "location": "Nagold",
+            "score": "613.2 : 585.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=4042222BDE4C4F38B9E9C68F78A685CB"
+        },
+        {
+            "date": "06.03.2010",
+            "guest": "AC Weinheim",
+            "home": "KSV Hostenbach",
+            "location": "Wadgassen/ Hostenbach",
+            "score": "563.5 : 574.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=40EEF05A28CC4FF8A73FBED638D1B76E"
+        },
+        {
+            "date": "20.02.2010",
+            "guest": "ASV Ladenburg",
+            "home": "KSV Hostenbach",
+            "location": "Wadgassen/ Hostenbach",
+            "score": "504.6 : 592.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=3D8FA2D7372F4E78B9D32B506862AC4A"
+        },
+        {
+            "date": "13.02.2010",
+            "guest": "Vfl Nagold",
+            "home": "ASV Ladenburg",
+            "location": "Ladenburg",
+            "score": "593.5 : 565.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=EAC98AF6B47444A1A7182C824A849A02"
+        },
+        {
+            "date": "30.01.2010",
+            "guest": "Vfl Nagold",
+            "home": "KSV Hostenbach",
+            "location": "Wadgassen/ Hostenbach",
+            "score": "528.1 : 546.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=F91283B986F748FA924D2249748A4A4E"
+        },
+        {
+            "date": "12.12.2009",
+            "guest": "AC Weinheim",
+            "home": "ASV Ladenburg",
+            "location": "Ladenburg",
+            "score": "570.3 : 581.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=1CEB6CB9EBFA433085F93D84B5B1AE98"
+        },
+        {
+            "date": "28.11.2009",
+            "guest": "Vfl Nagold",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "541.5 : 554.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=4A4E8BEA28964C9DB8710A6E6A54A049"
+        },
+        {
+            "date": "14.11.2009",
+            "guest": "KSV Hostenbach",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "574.0 : 405.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=8918DFD10FBA400F898540F626CF7FDE"
+        },
+        {
+            "date": "07.11.2009",
+            "guest": "ASV Ladenburg",
+            "home": "Vfl Nagold",
+            "location": "Nagold",
+            "score": "551.0 : 331.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=6E034525C5794C7098561DDB467219CE"
+        },
+        {
+            "date": "10.10.2009",
+            "guest": "KSV Hostenbach",
+            "home": "ASV Ladenburg",
+            "location": "Ladenburg",
+            "score": "483.0 : 307.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=702430752A6B4150B4C184B35C101D12"
+        },
+        {
+            "date": "26.09.2009",
+            "guest": "KSV Hostenbach",
+            "home": "Vfl Nagold",
+            "location": "Nagold",
+            "score": "598.0 : 535.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0910/start.php?pid='123'&protokoll=1&wkid=87EF16271D0345CEA63F379B43AC46EB"
+        }
+    ]
+}]

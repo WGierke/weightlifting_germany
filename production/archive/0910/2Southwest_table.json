@@ -1,0 +1,32 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "10 : 2",
+            "club": "Vfl Nagold",
+            "max_score": "613.2",
+            "place": "1",
+            "score": "3428.8 : 3115"
+        },
+        {
+            "cardinal_points": "8 : 4",
+            "club": "ASV Ladenburg",
+            "max_score": "596.6",
+            "place": "2",
+            "score": "3166.6 : 3045.8"
+        },
+        {
+            "cardinal_points": "6 : 6",
+            "club": "AC Weinheim",
+            "max_score": "585.0",
+            "place": "3",
+            "score": "3391.5 : 3303.4"
+        },
+        {
+            "cardinal_points": "0 : 12",
+            "club": "KSV Hostenbach",
+            "max_score": "563.5",
+            "place": "4",
+            "score": "2845.1 : 3367.8"
+        }
+    ]
+}]
