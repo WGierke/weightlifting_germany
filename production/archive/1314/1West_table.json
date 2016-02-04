@@ -1,0 +1,53 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "18 : 0",
+            "club": "SV Germania Obrigheim",
+            "max_score": "920.2",
+            "place": "1",
+            "score": "5148 : 3314"
+        },
+        {
+            "cardinal_points": "12 : 6",
+            "club": "KSV Durlach",
+            "max_score": "783.8",
+            "place": "2",
+            "score": "4341 : 4337.5"
+        },
+        {
+            "cardinal_points": "12 : 6",
+            "club": "AC Germania St.Ilgen",
+            "max_score": "777.4",
+            "place": "3",
+            "score": "4293.7 : 4230.3"
+        },
+        {
+            "cardinal_points": "9 : 9",
+            "club": "AV Speyer 03",
+            "max_score": "782.8",
+            "place": "4",
+            "score": "3579.6 : 4402.1"
+        },
+        {
+            "cardinal_points": "8 : 10",
+            "club": "AC Mutterstadt",
+            "max_score": "743.8",
+            "place": "5",
+            "score": "4295.3 : 4393.3"
+        },
+        {
+            "cardinal_points": "4 : 14",
+            "club": "TB 03 Roding",
+            "max_score": "750.0",
+            "place": "6",
+            "score": "4265.3 : 4383"
+        },
+        {
+            "cardinal_points": "0 : 18",
+            "club": "TSV Heinsheim",
+            "max_score": "610.0",
+            "place": "7",
+            "score": "3572.9 : 4435.6"
+        }
+    ]
+}]
