@@ -1,0 +1,32 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "18 : 0",
+            "club": "Chemnitzer AC",
+            "max_score": "888.4",
+            "place": "1",
+            "score": "5073.7 : 4285.5"
+        },
+        {
+            "cardinal_points": "11 : 7",
+            "club": "Berliner TSC",
+            "max_score": "787.9",
+            "place": "2",
+            "score": "4539.7 : 4513.3"
+        },
+        {
+            "cardinal_points": "6 : 12",
+            "club": "AC Airport Neuhardenberg",
+            "max_score": "752.0",
+            "place": "3",
+            "score": "4411.6 : 4534.4"
+        },
+        {
+            "cardinal_points": "1 : 17",
+            "club": "SSV Samswegen",
+            "max_score": "719.4",
+            "place": "4",
+            "score": "4082.7 : 4774.5"
+        }
+    ]
+}]

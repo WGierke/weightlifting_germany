@@ -1,0 +1,32 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "14 : 4",
+            "club": "AC Weiden",
+            "max_score": "484.1",
+            "place": "1",
+            "score": "2643.8 : 2401.2"
+        },
+        {
+            "cardinal_points": "14 : 4",
+            "club": "ESV M\u00fcnchen-Neuaubing",
+            "max_score": "470.0",
+            "place": "2",
+            "score": "2633.3 : 2473.5"
+        },
+        {
+            "cardinal_points": "5 : 13",
+            "club": "TSG Rodewisch",
+            "max_score": "442.0",
+            "place": "3",
+            "score": "2426.4 : 2535"
+        },
+        {
+            "cardinal_points": "3 : 15",
+            "club": "TSV Waldkirchen",
+            "max_score": "410.6",
+            "place": "4",
+            "score": "2289.7 : 2583.5"
+        }
+    ]
+}]

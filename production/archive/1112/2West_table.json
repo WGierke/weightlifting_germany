@@ -1,0 +1,46 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "29 : 1",
+            "club": "AC Mutterstadt",
+            "max_score": "724.7",
+            "place": "1",
+            "score": "6400.8 : 5286.9"
+        },
+        {
+            "cardinal_points": "22 : 8",
+            "club": "TSV Heinsheim",
+            "max_score": "625.2",
+            "place": "2",
+            "score": "5935.1 : 5505.1"
+        },
+        {
+            "cardinal_points": "18 : 12",
+            "club": "ASV Ladenburg",
+            "max_score": "618.8",
+            "place": "3",
+            "score": "5724.7 : 5437.5"
+        },
+        {
+            "cardinal_points": "13 : 17",
+            "club": "Vfl Nagold",
+            "max_score": "583.0",
+            "place": "4",
+            "score": "5293.6 : 5614.1"
+        },
+        {
+            "cardinal_points": "8 : 22",
+            "club": "AC Weinheim",
+            "max_score": "545.0",
+            "place": "5",
+            "score": "5260 : 5558.5"
+        },
+        {
+            "cardinal_points": "0 : 30",
+            "club": "KSV Langen",
+            "max_score": "480.8",
+            "place": "6",
+            "score": "4444.6 : 5656.7"
+        }
+    ]
+}]
