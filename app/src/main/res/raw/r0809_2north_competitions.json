@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "18.04.2009",
+            "guest": "SV Empor Berlin",
+            "home": "KG Schwalbe T\u00fcndern/Hameln",
+            "location": "Schwalbe T\u00fcndern/Hameln",
+            "score": "562.6 : 596.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=6CA91EF3CB264E85838DBF3301044ECF"
+        },
+        {
+            "date": "28.03.2009",
+            "guest": "AC Potsdam",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "539.8 : 485.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=C39584B98D8F4C668A84F80ED4313A1F"
+        },
+        {
+            "date": "28.03.2009",
+            "guest": "KG Schwalbe T\u00fcndern/Hameln",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "395.0 : 539.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=C97679B7A54B462BBADA57C71E98A03D"
+        },
+        {
+            "date": "07.03.2009",
+            "guest": "AC Heros Berlin",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "490.0 : 344.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=A9A431CD8BCD40BAAC015200E07F838E"
+        },
+        {
+            "date": "14.02.2009",
+            "guest": "SV Empor Berlin",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "256.8 : 482.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=D95B115F462141EBB8984DA55A2D12A4"
+        },
+        {
+            "date": "14.02.2009",
+            "guest": "KG Schwalbe T\u00fcndern/Hameln",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "452.0 : 484.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=1124E7578710415EA170980404AE7C32"
+        },
+        {
+            "date": "07.02.2009",
+            "guest": "AC Heros Berlin",
+            "home": "KG Schwalbe T\u00fcndern/Hameln",
+            "location": "Schwalbe T\u00fcndern/Hameln",
+            "score": "491.4 : 301.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=753881ECCE234AAF90550EAFF5A5A072"
+        },
+        {
+            "date": "15.11.2008",
+            "guest": "AC Potsdam",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "492.8 : 364.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=F3EBFCACA3444D83B57FE6D5335D7053"
+        },
+        {
+            "date": "01.11.2008",
+            "guest": "KG Schwalbe T\u00fcndern/Hameln",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "578.9 : 532.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=7AA63FF23FB54038990E8C20D19ED736"
+        },
+        {
+            "date": "01.11.2008",
+            "guest": "AC Potsdam",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "441.7 : 434.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=698C2212D50C46B8B4B924D52617A655"
+        },
+        {
+            "date": "18.10.2008",
+            "guest": "AC Potsdam",
+            "home": "KG Schwalbe T\u00fcndern/Hameln",
+            "location": "Schwalbe T\u00fcndern/Hameln",
+            "score": "517.0 : 417.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=CBE3EF9D0EE84025B9F09B617D37A015"
+        },
+        {
+            "date": "18.10.2008",
+            "guest": "AC Heros Berlin",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "554.4 : 394.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=0B56052155B94E689FB9C3914E506BB6"
+        }
+    ]
+}]

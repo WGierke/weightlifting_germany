@@ -1,0 +1,164 @@
+[{
+    "past_competitions": [
+        {
+            "date": "09.04.2011",
+            "guest": "Berliner TSC",
+            "home": "AC Airport Neuhardenberg",
+            "location": "Neuhardenberg",
+            "score": "712.8 : 797.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=273EEA649EE247FB9A647BF518A0874C"
+        },
+        {
+            "date": "09.04.2011",
+            "guest": "TSV Blau-Wei\u00df Schwedt",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "600.8 : 676.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=FFFCB73ABD8E472397A1639C309B2B10"
+        },
+        {
+            "date": "19.03.2011",
+            "guest": "SV Empor Berlin",
+            "home": "SSV Samswegen",
+            "location": "Samswegen",
+            "score": "718.2 : 569.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=8F4F1BD8EBA7401292ED50AEB675D3FF"
+        },
+        {
+            "date": "19.03.2011",
+            "guest": "AC Airport Neuhardenberg",
+            "home": "TSV Blau-Wei\u00df Schwedt",
+            "location": "Neuhardenberg",
+            "score": "644.6 : 752.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=1C89C82E433344E7950B71A7559A9AF5"
+        },
+        {
+            "date": "05.03.2011",
+            "guest": "AC Airport Neuhardenberg",
+            "home": "TSV Blau-Wei\u00df Schwedt",
+            "location": "Schwedt",
+            "score": "647.8 : 716.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=7F2EC537A06246AA936C2ECE04713ADA"
+        },
+        {
+            "date": "26.02.2011",
+            "guest": "TSV Blau-Wei\u00df Schwedt",
+            "home": "Berliner TSC",
+            "location": "Berlin",
+            "score": "809.2 : 644.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=3127CC73B85F4761B3A45FE244C05E4D"
+        },
+        {
+            "date": "26.02.2011",
+            "guest": "SSV Samswegen",
+            "home": "AC Airport Neuhardenberg",
+            "location": "Neuhardenberg",
+            "score": "712.6 : 756.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=068F3C071A68454D9A9CE72532201A90"
+        },
+        {
+            "date": "12.02.2011",
+            "guest": "AC Airport Neuhardenberg",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "557.8 : 707.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=10344F4C89394287829E84A72106E079"
+        },
+        {
+            "date": "12.02.2011",
+            "guest": "Berliner TSC",
+            "home": "SSV Samswegen",
+            "location": "Samswegen",
+            "score": "783.4 : 743.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=1D203372238C4F40A48A2A1EF9CDFA32"
+        },
+        {
+            "date": "29.01.2011",
+            "guest": "SSV Samswegen",
+            "home": "TSV Blau-Wei\u00df Schwedt",
+            "location": "Schwedt (Oder)",
+            "score": "707.4 : 747.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=1A72386BC58B4658B7B78085A7925C95"
+        },
+        {
+            "date": "29.01.2011",
+            "guest": "SV Empor Berlin",
+            "home": "Berliner TSC",
+            "location": "Berlin",
+            "score": "712.0 : 528.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=3F1D834989ED44D3B9ED4D75D66A41F3"
+        },
+        {
+            "date": "15.01.2011",
+            "guest": "SSV Samswegen",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "491.4 : 695.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=FAF7A18DD47B450CA03FCD838EFC1250"
+        },
+        {
+            "date": "18.12.2010",
+            "guest": "SV Empor Berlin",
+            "home": "TSV Blau-Wei\u00df Schwedt",
+            "location": "Schwedt (Oder)",
+            "score": "597.0 : 475.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=782E8969BECD4A8BBA381DD422C959F7"
+        },
+        {
+            "date": "18.12.2010",
+            "guest": "AC Airport Neuhardenberg",
+            "home": "Berliner TSC",
+            "location": "Berlin",
+            "score": "842.8 : 705.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=5A733B365C384D9F90A0C0CBDE86B49F"
+        },
+        {
+            "date": "20.11.2010",
+            "guest": "Berliner TSC",
+            "home": "TSV Blau-Wei\u00df Schwedt",
+            "location": "Schwedt (Oder)",
+            "score": "639.0 : 812.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=22F499BC61444866BF7D026D0106DEFD"
+        },
+        {
+            "date": "20.11.2010",
+            "guest": "AC Airport Neuhardenberg",
+            "home": "SSV Samswegen",
+            "location": "Samswegen",
+            "score": "656.7 : 727.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=56C2C9915E8845B6A615A4F45CD2945F"
+        },
+        {
+            "date": "06.11.2010",
+            "guest": "SSV Samswegen",
+            "home": "Berliner TSC",
+            "location": "Berlin",
+            "score": "834.6 : 700.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=FAD9B99A4C11486AB7B45FAC4BD25B18"
+        },
+        {
+            "date": "06.11.2010",
+            "guest": "SV Empor Berlin",
+            "home": "AC Airport Neuhardenberg",
+            "location": "Neuhardenberg",
+            "score": "730.4 : 547.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=033633E0C88F4C2AA3DDB91BA0E9D6EB"
+        },
+        {
+            "date": "16.10.2010",
+            "guest": "TSV Blau-Wei\u00df Schwedt",
+            "home": "SSV Samswegen",
+            "location": "Samswegen",
+            "score": "722.9 : 634.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=8AB72BF9A3274606846F2F328BEB34A9"
+        },
+        {
+            "date": "16.10.2010",
+            "guest": "Berliner TSC",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "579.8 : 798.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1011/start.php?pid='123'&protokoll=1&wkid=27B58B3937284A0C8DC7D0E5DFDC16BC"
+        }
+    ]
+}]

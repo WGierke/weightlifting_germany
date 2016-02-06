@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "16 : 0",
+            "club": "Chemnitzer AC",
+            "max_score": "893.6",
+            "place": "1",
+            "score": "6520.9 : 4742.6"
+        },
+        {
+            "cardinal_points": "12 : 4",
+            "club": "SG Fortschritt Eibau",
+            "max_score": "695.4",
+            "place": "2",
+            "score": "5156.8 : 5042.1"
+        },
+        {
+            "cardinal_points": "8 : 8",
+            "club": "TB 03 Roding",
+            "max_score": "670.2",
+            "place": "3",
+            "score": "5048.8 : 5295.2"
+        },
+        {
+            "cardinal_points": "2 : 14",
+            "club": "AC Suhl",
+            "max_score": "654.0",
+            "place": "4",
+            "score": "4651.6 : 5312"
+        },
+        {
+            "cardinal_points": "2 : 14",
+            "club": "AC Atlas Plauen",
+            "max_score": "629.4",
+            "place": "5",
+            "score": "4389.4 : 5375.6"
+        }
+    ]
+}]

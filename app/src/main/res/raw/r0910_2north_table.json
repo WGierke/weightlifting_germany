@@ -1,0 +1,32 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "8 : 4",
+            "club": "TSV Stralsund",
+            "max_score": "558.6",
+            "place": "1",
+            "score": "2879.4 : 2027.5"
+        },
+        {
+            "cardinal_points": "8 : 4",
+            "club": "AC Potsdam",
+            "max_score": "442.6",
+            "place": "2",
+            "score": "2525.2 : 2049"
+        },
+        {
+            "cardinal_points": "6 : 6",
+            "club": "KG Schwalbe T\u00fcndern/Hameln",
+            "max_score": "451.2",
+            "place": "3",
+            "score": "2084.8 : 2206.2"
+        },
+        {
+            "cardinal_points": "2 : 10",
+            "club": "AC Heros Berlin",
+            "max_score": "379.5",
+            "place": "4",
+            "score": "1056 : 2262.7"
+        }
+    ]
+}]

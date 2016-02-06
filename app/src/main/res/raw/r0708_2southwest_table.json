@@ -1,0 +1,39 @@
+[{
+    "table": [
+        {
+            "cardinal_points": "16 : 0",
+            "club": "TSV Heinsheim",
+            "max_score": "646.6",
+            "place": "1",
+            "score": "4995.2 : 4479.4"
+        },
+        {
+            "cardinal_points": "10 : 6",
+            "club": "AC Weinheim",
+            "max_score": "608.0",
+            "place": "2",
+            "score": "4727 : 4515.8"
+        },
+        {
+            "cardinal_points": "8 : 8",
+            "club": "AV Speyer 03",
+            "max_score": "639.4",
+            "place": "3",
+            "score": "4840.8 : 4615.1"
+        },
+        {
+            "cardinal_points": "4 : 12",
+            "club": "KSV Hostenbach",
+            "max_score": "620.9",
+            "place": "4",
+            "score": "4553.6 : 4524.5"
+        },
+        {
+            "cardinal_points": "2 : 14",
+            "club": "SV Germania Obrigheim II",
+            "max_score": "594.0",
+            "place": "5",
+            "score": "3837.7 : 4819.5"
+        }
+    ]
+}]

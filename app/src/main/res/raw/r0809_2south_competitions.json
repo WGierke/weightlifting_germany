@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "28.03.2009",
+            "guest": "Eichenauer SV",
+            "home": "TSV Waldkirchen",
+            "location": "Waldkirchen",
+            "score": "468.8 : 437.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=5D912AAA5AA1400D8E8266ED9ECA310D"
+        },
+        {
+            "date": "28.03.2009",
+            "guest": "ESV M\u00fcnchen-Neuaubing",
+            "home": "KSV Kitzingen",
+            "location": "Kitzingen",
+            "score": "406.9 : 247.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=D13EA9CCA92D486EACA6253F0B4D196C"
+        },
+        {
+            "date": "21.03.2009",
+            "guest": "ESV M\u00fcnchen-Neuaubing",
+            "home": "Eichenauer SV",
+            "location": "Eichenau",
+            "score": "446.0 : 248.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=D062B71D07954FFD88A943E28B5DA09C"
+        },
+        {
+            "date": "07.03.2009",
+            "guest": "KSV Kitzingen",
+            "home": "Eichenauer SV",
+            "location": "Eichenau",
+            "score": "463.0 : 377.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=8B953DBE3EF844908A979844A5AB734A"
+        },
+        {
+            "date": "07.03.2009",
+            "guest": "TSV Waldkirchen",
+            "home": "ESV M\u00fcnchen-Neuaubing",
+            "location": "M\u00fcnchen-Neuaubing",
+            "score": "350.0 : 452.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=7728C2DC2F4143D08ED7E0503A7BA888"
+        },
+        {
+            "date": "31.01.2009",
+            "guest": "KSV Kitzingen",
+            "home": "TSV Waldkirchen",
+            "location": "Waldkirchen",
+            "score": "472.3 : 449.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=724AE3FEB69D4FBAB0D422470FBC813C"
+        },
+        {
+            "date": "13.12.2008",
+            "guest": "TSV Waldkirchen",
+            "home": "Eichenauer SV",
+            "location": "Eichenau",
+            "score": "479.0 : 449.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=B69FFEA67CD249D58D283F86C31F1F14"
+        },
+        {
+            "date": "13.12.2008",
+            "guest": "KSV Kitzingen",
+            "home": "ESV M\u00fcnchen-Neuaubing",
+            "location": "M\u00fcnchen-Neuaubing",
+            "score": "437.2 : 437.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=965963BD5C0046AC9AFF0E4680FD37DE"
+        },
+        {
+            "date": "15.11.2008",
+            "guest": "Eichenauer SV",
+            "home": "KSV Kitzingen",
+            "location": "Kitzingen",
+            "score": "436.2 : 469.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=16E47AF306C24C60A15F4EA67AF23131"
+        },
+        {
+            "date": "15.11.2008",
+            "guest": "ESV M\u00fcnchen-Neuaubing",
+            "home": "TSV Waldkirchen",
+            "location": "Waldkirchen",
+            "score": "437.5 : 431.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=F93A851F0876482D9CFDFCDB5DC139F2"
+        },
+        {
+            "date": "18.10.2008",
+            "guest": "TSV Waldkirchen",
+            "home": "KSV Kitzingen",
+            "location": "Kitzingen",
+            "score": "431.0 : 382.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=26F0FA18C0B34D6983FB2B4CB1FA5818"
+        },
+        {
+            "date": "18.10.2008",
+            "guest": "Eichenauer SV",
+            "home": "ESV M\u00fcnchen-Neuaubing",
+            "location": "M\u00fcnchen-Neuaubing",
+            "score": "403.9 : 462.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0809/start.php?pid='123'&protokoll=1&wkid=D2D7D33D7C4D43209DBF210464E7E600"
+        }
+    ]
+}]

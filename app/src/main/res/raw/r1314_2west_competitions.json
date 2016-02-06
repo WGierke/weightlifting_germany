@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "22.03.2014",
+            "guest": "KSC Schifferstadt",
+            "home": "ASV Ladenburg",
+            "location": "Ladenburg",
+            "score": "469.5 : 506.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=6943AB49A41245BD81E37A24834F427A"
+        },
+        {
+            "date": "08.03.2014",
+            "guest": "ASV Ladenburg",
+            "home": "SC Pforzheim",
+            "location": "Pforzheim",
+            "score": "502.6 : 454.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=C6112828855848E8BD2B35FB626EA3B9"
+        },
+        {
+            "date": "22.02.2014",
+            "guest": "AC Weinheim",
+            "home": "ASV Ladenburg",
+            "location": "Ladenburg",
+            "score": "496.7 : 511.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=E45A71C4B0414085A1A57FDA11AAC6D1"
+        },
+        {
+            "date": "22.02.2014",
+            "guest": "SC Pforzheim",
+            "home": "KSC Schifferstadt",
+            "location": "Schifferstadt",
+            "score": "548.0 : 493.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=9A9C3573918D464F80A4737C791177C7"
+        },
+        {
+            "date": "08.02.2014",
+            "guest": "AC Weinheim",
+            "home": "KSC Schifferstadt",
+            "location": "Weinheim",
+            "score": "534.2 : 572.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=1B961710862E4A3FBE0F6899912F4CB6"
+        },
+        {
+            "date": "25.01.2014",
+            "guest": "ASV Ladenburg",
+            "home": "KSC Schifferstadt",
+            "location": "Schifferstadt",
+            "score": "544.2 : 453.7",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=7EAC7DE3E8DD4268A05A0656B076B280"
+        },
+        {
+            "date": "25.01.2014",
+            "guest": "AC Weinheim",
+            "home": "SC Pforzheim",
+            "location": "Pforzheim",
+            "score": "495.2 : 571.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=2716B4BEC4014954B76E874D4E0772D7"
+        },
+        {
+            "date": "14.12.2013",
+            "guest": "SC Pforzheim",
+            "home": "ASV Ladenburg",
+            "location": "Ladenburg",
+            "score": "496.5 : 484.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=F41C9C098340410FA8C7DF11E978C37B"
+        },
+        {
+            "date": "16.11.2013",
+            "guest": "ASV Ladenburg",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "571.0 : 418.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=214145D071764F24942D97CFEBE24E6A"
+        },
+        {
+            "date": "16.11.2013",
+            "guest": "KSC Schifferstadt",
+            "home": "SC Pforzheim",
+            "location": "Pforzheim - Engelsbrand",
+            "score": "515.4 : 514.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=7D456BBE4F0142008E58198C3772E1D0"
+        },
+        {
+            "date": "12.10.2013",
+            "guest": "AC Weinheim",
+            "home": "KSC Schifferstadt",
+            "location": "Schifferstadt",
+            "score": "530.3 : 549.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=6CF3648D26D64107B512E23456B3A21B"
+        },
+        {
+            "date": "21.09.2013",
+            "guest": "SC Pforzheim",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "497.0 : 421.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1314/start.php?pid='123'&protokoll=1&wkid=E1C834ED93364B24B128C51E42B8D569"
+        }
+    ]
+}]

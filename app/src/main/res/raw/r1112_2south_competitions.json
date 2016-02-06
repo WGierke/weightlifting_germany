@@ -1,0 +1,100 @@
+[{
+    "past_competitions": [
+        {
+            "date": "03.03.2012",
+            "guest": "TSV Waldkirchen",
+            "home": "AC Weiden",
+            "location": "Weiden",
+            "score": "484.1 : 363.1",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=2CD8122A9A5D4B0DB6FE1F5C294D0938"
+        },
+        {
+            "date": "03.03.2012",
+            "guest": "ESV M\u00fcnchen-Neuaubing",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "403.8 : 470.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=BA62B1E9E4FD4A05BCC7213B6B39B979"
+        },
+        {
+            "date": "25.02.2012",
+            "guest": "TSG Rodewisch",
+            "home": "TSV Waldkirchen",
+            "location": "R\u00f6hrnbach/ Au\u00dfernbr\u00fcnst",
+            "score": "409.6 : 377.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=1B8DFFC6D7BB4E12AB672086D378663F"
+        },
+        {
+            "date": "25.02.2012",
+            "guest": "AC Weiden",
+            "home": "ESV M\u00fcnchen-Neuaubing",
+            "location": "M\u00fcnchen-Neuaubing",
+            "score": "431.0 : 467.7",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=11B0CFA19B6E419D918EB45A93C8CA06"
+        },
+        {
+            "date": "11.02.2012",
+            "guest": "TSG Rodewisch",
+            "home": "AC Weiden",
+            "location": "Weiden",
+            "score": "442.6 : 367.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=CD46D5A0AFB244319D82D72B0EE0B57A"
+        },
+        {
+            "date": "11.02.2012",
+            "guest": "TSV Waldkirchen",
+            "home": "ESV M\u00fcnchen-Neuaubing",
+            "location": "M\u00fcnchen-Neuaubing",
+            "score": "449.0 : 395.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=9CAD1A2366AE4D9FAE2AAB7B04F8F631"
+        },
+        {
+            "date": "10.12.2011",
+            "guest": "AC Weiden",
+            "home": "TSV Waldkirchen",
+            "location": "R\u00f6hrnbach/ Au\u00dfernbr\u00fcnst",
+            "score": "410.6 : 427.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=DEB71D3B430B494B8816A90EE282344E"
+        },
+        {
+            "date": "10.12.2011",
+            "guest": "TSG Rodewisch",
+            "home": "ESV M\u00fcnchen-Neuaubing",
+            "location": "M\u00fcnchen-Neuaubing",
+            "score": "444.0 : 442.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=DC942505876549438F5E7DC76ADB9539"
+        },
+        {
+            "date": "26.11.2011",
+            "guest": "TSV Waldkirchen",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "422.0 : 359.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=006B29DD75FB4CCDB39C3694C10EC95E"
+        },
+        {
+            "date": "26.11.2011",
+            "guest": "ESV M\u00fcnchen-Neuaubing",
+            "home": "AC Weiden",
+            "location": "Weiden",
+            "score": "413.4 : 415.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=71B4F1955BEE479D9EA2CD7EF78A80FC"
+        },
+        {
+            "date": "29.10.2011",
+            "guest": "AC Weiden",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "413.8 : 409.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=276DAD8DAC4C4AED9B5B4231D76B299B"
+        },
+        {
+            "date": "29.10.2011",
+            "guest": "ESV M\u00fcnchen-Neuaubing",
+            "home": "TSV Waldkirchen",
+            "location": "R\u00f6hrnbach/ Au\u00dfernbr\u00fcnst",
+            "score": "350.8 : 423.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1112/start.php?pid='123'&protokoll=1&wkid=8E7A077C4C774899936891839313A507"
+        }
+    ]
+}]
