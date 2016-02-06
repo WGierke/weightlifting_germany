@@ -74,14 +74,6 @@
         },
         {
             "date": "12.01.2008",
-            "guest": "AC Germania St.Ilgen",
-            "home": "KSV Durlach",
-            "location": "Karlsruhe-Durlach",
-            "score": "676.0 : 738.9",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=D6CE06B626BF464BA3065E7F1E7FA15B"
-        },
-        {
-            "date": "12.01.2008",
             "guest": "AC Altrip",
             "home": "AC Forst",
             "location": "Forst",
@@ -89,12 +81,12 @@
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=342EF790CD94443FB947510C4D86124D"
         },
         {
-            "date": "15.12.2007",
-            "guest": "AC Altrip",
+            "date": "12.01.2008",
+            "guest": "AC Germania St.Ilgen",
             "home": "KSV Durlach",
             "location": "Karlsruhe-Durlach",
-            "score": "725.4 : 492.4",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=5A849DFA1ACC4101A75369EB12E4ECF2"
+            "score": "676.0 : 738.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=D6CE06B626BF464BA3065E7F1E7FA15B"
         },
         {
             "date": "15.12.2007",
@@ -105,12 +97,12 @@
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=F37451465FCC47D981706BBA25AB62F3"
         },
         {
-            "date": "10.11.2007",
-            "guest": "AC Germania St.Ilgen",
-            "home": "AC Altrip",
-            "location": "Altrip",
-            "score": "546.6 : 631.0",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=3130091D51EE499488991F95572AD8B1"
+            "date": "15.12.2007",
+            "guest": "AC Altrip",
+            "home": "KSV Durlach",
+            "location": "Karlsruhe-Durlach",
+            "score": "725.4 : 492.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=5A849DFA1ACC4101A75369EB12E4ECF2"
         },
         {
             "date": "10.11.2007",
@@ -121,12 +113,12 @@
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=E1091EBCC5C9450A9DF6D243B4E4A9E0"
         },
         {
-            "date": "27.10.2007",
-            "guest": "SV Germania Obrigheim",
-            "home": "AC Germania St.Ilgen",
-            "location": "Leimen-St Ilgen",
-            "score": "774.6 : 782.1",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=30A1187BAD704624BF8105084F59D4BE"
+            "date": "10.11.2007",
+            "guest": "AC Germania St.Ilgen",
+            "home": "AC Altrip",
+            "location": "Altrip",
+            "score": "546.6 : 631.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=3130091D51EE499488991F95572AD8B1"
         },
         {
             "date": "27.10.2007",
@@ -135,6 +127,14 @@
             "location": "Karlsruhe-Durlach",
             "score": "612.6 : 729.4",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=E85BCDD6179B44BBB7D0501821AB39A7"
+        },
+        {
+            "date": "27.10.2007",
+            "guest": "SV Germania Obrigheim",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St Ilgen",
+            "score": "774.6 : 782.1",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=30A1187BAD704624BF8105084F59D4BE"
         },
         {
             "date": "13.10.2007",

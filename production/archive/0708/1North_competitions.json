@@ -2,19 +2,19 @@
     "past_competitions": [
         {
             "date": "08.03.2008",
-            "guest": "AC Airport Neuhardenberg",
-            "home": "AC Heros Berlin",
-            "location": "Berlin-Wilmersdorf",
-            "score": "504.0 : 580.8",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=A854805746564B57B49F0111D3DDCE37"
-        },
-        {
-            "date": "08.03.2008",
             "guest": "Berliner TSC",
             "home": "SSV Samswegen",
             "location": "Samswegen",
             "score": "793.0 : 790.0",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=69C980F6EC044891A945C90AC03275D3"
+        },
+        {
+            "date": "08.03.2008",
+            "guest": "AC Airport Neuhardenberg",
+            "home": "AC Heros Berlin",
+            "location": "Berlin-Wilmersdorf",
+            "score": "504.0 : 580.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=A854805746564B57B49F0111D3DDCE37"
         },
         {
             "date": "01.03.2008",

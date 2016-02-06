@@ -34,19 +34,19 @@
         },
         {
             "date": "09.02.2008",
-            "guest": "KSV Hostenbach",
-            "home": "TSV Heinsheim",
-            "location": "Bad Rappenau - Heinsheim",
-            "score": "646.6 : 493.8",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=27819E6135324CFFB9DCED4F84951594"
-        },
-        {
-            "date": "09.02.2008",
             "guest": "AC Weinheim",
             "home": "AV Speyer 03",
             "location": "Speyer",
             "score": "639.4 : 602.0",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=422DC8ABD95B4D93A645893FBB500C20"
+        },
+        {
+            "date": "09.02.2008",
+            "guest": "KSV Hostenbach",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "646.6 : 493.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=27819E6135324CFFB9DCED4F84951594"
         },
         {
             "date": "26.01.2008",
@@ -82,19 +82,19 @@
         },
         {
             "date": "15.12.2007",
-            "guest": "SV Germania Obrigheim II",
-            "home": "KSV Hostenbach",
-            "location": "Hostenbach",
-            "score": "598.4 : 310.7",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=BF0DCC89044D47E78FF766E27453D345"
-        },
-        {
-            "date": "15.12.2007",
             "guest": "AV Speyer 03",
             "home": "TSV Heinsheim",
             "location": "Bad Rappenau - Heinsheim",
             "score": "640.6 : 602.6",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=F6CD1F7B905C4A709EE27C3001886E5A"
+        },
+        {
+            "date": "15.12.2007",
+            "guest": "SV Germania Obrigheim II",
+            "home": "KSV Hostenbach",
+            "location": "Hostenbach",
+            "score": "598.4 : 310.7",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=BF0DCC89044D47E78FF766E27453D345"
         },
         {
             "date": "17.11.2007",
@@ -114,19 +114,19 @@
         },
         {
             "date": "27.10.2007",
-            "guest": "TSV Heinsheim",
-            "home": "KSV Hostenbach",
-            "location": "Hostenbach",
-            "score": "581.2 : 600.2",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=0A2A060FB03C4E5CA54417AFD43A54CD"
-        },
-        {
-            "date": "27.10.2007",
             "guest": "AV Speyer 03",
             "home": "AC Weinheim",
             "location": "Weinheim",
             "score": "603.0 : 573.6",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=CE8470400F5D4BD8A0474950BB085245"
+        },
+        {
+            "date": "27.10.2007",
+            "guest": "TSV Heinsheim",
+            "home": "KSV Hostenbach",
+            "location": "Hostenbach",
+            "score": "581.2 : 600.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=0A2A060FB03C4E5CA54417AFD43A54CD"
         },
         {
             "date": "13.10.2007",
