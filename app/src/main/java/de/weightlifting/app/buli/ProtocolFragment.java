@@ -10,6 +10,9 @@ import android.view.ViewGroup;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.ShareEvent;
+
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.API;
@@ -50,6 +53,10 @@ public class ProtocolFragment extends Fragment {
                     Intent chooserIntent = Intent.createChooser(shareIntent, getString(R.string.share_this));
                     chooserIntent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     app.startActivity(chooserIntent);
+
+                    Answers.getInstance().logShare(new ShareEvent()
+                            .putMethod("Protocol Share")
+                            .putContentName(competitionParties));
                 }
             });
         } else {
