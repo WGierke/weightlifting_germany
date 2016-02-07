@@ -4,13 +4,14 @@ buildscript {
         maven { url 'https://maven.fabric.io/public' }
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:1.3.0'
+        classpath 'com.android.tools.build:gradle:2.0.0-alpha9'
         classpath 'io.fabric.tools:gradle:1.+'
     }
 }
+
 apply plugin: 'com.android.application'
 apply plugin: 'io.fabric'
-apply plugin: 'com.google.gms.google-services'
+
 
 repositories {
     mavenCentral()
@@ -18,17 +19,21 @@ repositories {
 }
 
 android {
+    dexOptions {
+        preDexLibraries = false
+    }
     compileSdkVersion 23
-    buildToolsVersion '20'
+    buildToolsVersion '23.0.2'
 
     defaultConfig {
         minSdkVersion 14
         targetSdkVersion 23
+        multiDexEnabled true
     }
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFile getDefaultProguardFile('proguard-android.txt')
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt')
         }
     }
     productFlavors {
@@ -45,9 +50,10 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile 'com.parse.bolts:bolts-android:1.+'
     compile fileTree(include: 'Parse-*.jar', dir: 'libs')
-    compile fileTree(dir: 'libs', include: 'ParseCrashReporting-*.jar')
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:design:23.1.1'
     compile('com.mikepenz:materialdrawer:4.5.6@aar') {
         transitive = true
     }
@@ -55,3 +61,5 @@ dependencies {
         transitive = true;
     }
 }
+
+apply plugin: 'com.google.gms.google-services'
