@@ -11,11 +11,7 @@ public class API {
     public static final int FRAGMENT_FAQ = 11;
     public static final int FRAGMENT_CONTACT = 13;
 
-    public final static String FRAGMENT_INDEX = "fragmentIndex";
     public final static String ITEM = "item";
-    public final static String GALLERY_POSITION = "GALLERY_POSITION";
-    public final static String IMAGE_POSITION = "IMAGE_POSITION";
-    public final static String IMAGE_URL = "imageUrl";
     public final static String SEASON_ITEM_POSITION = "seasonItem";
     public final static String RELAY_ITEM_POSITION = "relayItem";
     public final static String PROTOCOL_URL = "protocolUrl";

@@ -15,6 +15,7 @@ import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.TableEntry;
 import de.weightlifting.app.buli.TableFragment;
 import de.weightlifting.app.buli.TableListAdapter;
+import de.weightlifting.app.helper.API;
 
 public class TableFragment1B extends TableFragment {
 
@@ -44,7 +45,7 @@ public class TableFragment1B extends TableFragment {
                         Fragment protocol = new FilterCompetitionsFragment1B();
                         Bundle bundle = new Bundle();
                         TableEntry entry = (TableEntry) buliTable.getItem(position);
-                        bundle.putString("club-name", entry.getClub());
+                        bundle.putString(API.CLUB_NAME, entry.getClub());
                         protocol.setArguments(bundle);
                         ((MainActivity) getActivity()).addFragment(protocol, entry.getClub(), true);
                     }

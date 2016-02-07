@@ -11,6 +11,7 @@ import java.util.ArrayList;
 
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.helper.API;
 
 public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
 
@@ -38,7 +39,7 @@ public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
         } else {
             try {
                 Bundle bundle = this.getArguments();
-                String clubName = bundle.getString("club-name");
+                String clubName = bundle.getString(API.CLUB_NAME);
                 filteredCompetitions = filter(Competitions.casteArray(competitions.getItems()), clubName);
                 CompetitionsListAdapter adapter = new CompetitionsListAdapter(filteredCompetitions, getActivity());
                 listViewBuli.setAdapter(adapter);
@@ -47,7 +48,7 @@ public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                         Fragment protocol = new ProtocolFragment();
                         Bundle bundle = new Bundle();
-                        bundle.putString("protocol-url", filteredCompetitions.get(position).getProtocolUrl());
+                        bundle.putString(API.PROTOCOL_URL, filteredCompetitions.get(position).getProtocolUrl());
                         protocol.setArguments(bundle);
                         ((MainActivity) getActivity()).addFragment(protocol, getTitle(), true);
                     }

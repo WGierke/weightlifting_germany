@@ -14,6 +14,7 @@ import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.CompetitionsFragment;
 import de.weightlifting.app.buli.CompetitionsListAdapter;
 import de.weightlifting.app.buli.ProtocolFragment;
+import de.weightlifting.app.helper.API;
 
 public class CompetitionsFragment1A extends CompetitionsFragment {
 
@@ -40,7 +41,7 @@ public class CompetitionsFragment1A extends CompetitionsFragment {
                         // Show the protocol which belongs to the competition
                         Fragment protocol = new ProtocolFragment();
                         Bundle bundle = new Bundle();
-                        bundle.putString("protocol-url", Competitions.casteArray(competitions1A.getItems()).get(position).getProtocolUrl());
+                        bundle.putString(API.PROTOCOL_URL, Competitions.casteArray(competitions1A.getItems()).get(position).getProtocolUrl());
                         protocol.setArguments(bundle);
                         ((MainActivity) getActivity()).addFragment(protocol, getString(R.string.buli_1A), true);
                     }

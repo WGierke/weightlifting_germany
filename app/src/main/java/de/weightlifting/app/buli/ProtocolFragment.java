@@ -9,6 +9,7 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import de.weightlifting.app.R;
+import de.weightlifting.app.helper.API;
 
 public class ProtocolFragment extends Fragment {
 
@@ -24,7 +25,7 @@ public class ProtocolFragment extends Fragment {
         // Get protocol url from bundle
         try {
             Bundle bundle = this.getArguments();
-            String url = bundle.getString("protocol-url");
+            String url = bundle.getString(API.PROTOCOL_URL);
             webview.loadUrl(url);
         } catch (Exception ex) {
             ex.printStackTrace();
