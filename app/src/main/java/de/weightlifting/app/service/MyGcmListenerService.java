@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 
-import de.weightlifting.app.API;
+import de.weightlifting.app.helper.API;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.UiHelper;

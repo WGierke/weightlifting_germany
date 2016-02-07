@@ -94,6 +94,8 @@
     <string name="updating_in_progress">Update-Prozess wurde bereits gestartet.</string>
     <string name="error_network">Netzwerkfehler. Sind Sie online?</string>
     <string name="loading_data">Lade aktuellste Daten …</string>
+    <string name="nav_archive">Archiv</string>
+    <string name="nav_buli">Bundesliga</string>
 
 </resources>
 

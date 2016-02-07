@@ -59,7 +59,7 @@ public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
         }
     }
 
-    private ArrayList<PastCompetition> filter(ArrayList<PastCompetition> items, String name) {
+    protected ArrayList<PastCompetition> filter(ArrayList<PastCompetition> items, String name) {
         ArrayList<PastCompetition> result = new ArrayList<>();
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).getHome().contains(name) || items.get(i).getGuest().contains(name)) {

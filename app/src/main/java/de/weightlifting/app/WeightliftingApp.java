@@ -36,6 +36,7 @@ import de.weightlifting.app.buli.relay2South.Competitions2South;
 import de.weightlifting.app.buli.relay2South.Schedule2South;
 import de.weightlifting.app.buli.relay2South.Table2South;
 import de.weightlifting.app.faq.FaqItem;
+import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
 import de.weightlifting.app.helper.Keys;
@@ -89,10 +90,8 @@ public class WeightliftingApp extends Application {
         memoryCache = new MemoryCache();
         imageLoader = new ImageLoader(getApplicationContext());
 
-        FaqFragment.faqEntries.add(new FaqItem(getString(R.string.faq_off_signal_heading), getString(R.string.faq_off_signal_question), getString(R.string.faq_off_signal_answer)));
-        FaqFragment.faqEntries.add(new FaqItem(getString(R.string.faq_bad_attempt_jerking_heading), getString(R.string.faq_bad_attempt_jerking_question), getString(R.string.faq_bad_attempt_jerking_answer)));
-        FaqFragment.faqEntries.add(new FaqItem(getString(R.string.winner_single_competition_heading), getString(R.string.winner_single_competition_question), getString(R.string.winner_single_competition_answer)));
-        FaqFragment.faqEntries.add(new FaqItem(getString(R.string.winner_team_competition_heading), getString(R.string.winner_team_competition_question), getString(R.string.winner_team_competition_answer)));
+        initFaqs();
+        initArchive();
 
         DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
                 .cacheInMemory(true)
@@ -114,6 +113,20 @@ public class WeightliftingApp extends Application {
         updateDataForcefully();
         updateSplashScreen();
         loadSettings();
+    }
+
+    private void initFaqs() {
+        FaqFragment.faqEntries.add(new FaqItem(getString(R.string.faq_off_signal_heading), getString(R.string.faq_off_signal_question), getString(R.string.faq_off_signal_answer)));
+        FaqFragment.faqEntries.add(new FaqItem(getString(R.string.faq_bad_attempt_jerking_heading), getString(R.string.faq_bad_attempt_jerking_question), getString(R.string.faq_bad_attempt_jerking_answer)));
+        FaqFragment.faqEntries.add(new FaqItem(getString(R.string.winner_single_competition_heading), getString(R.string.winner_single_competition_question), getString(R.string.winner_single_competition_answer)));
+        FaqFragment.faqEntries.add(new FaqItem(getString(R.string.winner_team_competition_heading), getString(R.string.winner_team_competition_question), getString(R.string.winner_team_competition_answer)));
+    }
+
+
+    private void initArchive() {
+        ArrayList<String> archivedSeasons = DataHelper.getSeasons();
+        Collections.reverse(archivedSeasons);
+        ArchiveFragment.archivedSeasonEntries = archivedSeasons;
     }
 
     private void updateSplashScreen() {

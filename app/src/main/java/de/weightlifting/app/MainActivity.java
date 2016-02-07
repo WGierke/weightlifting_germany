@@ -30,6 +30,7 @@ import de.weightlifting.app.buli.relay1B.BuliFragment1B;
 import de.weightlifting.app.buli.relay2Middle.BuliFragment2Middle;
 import de.weightlifting.app.buli.relay2North.BuliFragment2North;
 import de.weightlifting.app.buli.relay2South.BuliFragment2South;
+import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.UiHelper;
 import de.weightlifting.app.service.RegistrationIntentService;
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         PrimaryDrawerItem nav_buli_2North = new PrimaryDrawerItem().withName(R.string.nav_buli_2North).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_2Middle = new PrimaryDrawerItem().withName(R.string.nav_buli_2Middle).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_2South = new PrimaryDrawerItem().withName(R.string.nav_buli_2South).withIcon(R.drawable.nav_buli);
+        PrimaryDrawerItem nav_archive = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_archive);
         PrimaryDrawerItem nav_faq = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_help);
         PrimaryDrawerItem nav_contact = new PrimaryDrawerItem().withName(R.string.nav_contact).withIcon(R.drawable.nav_contact);
 
@@ -95,6 +97,8 @@ public class MainActivity extends AppCompatActivity {
                         nav_buli_2North,
                         nav_buli_2Middle,
                         nav_buli_2South,
+                        new DividerDrawerItem(),
+                        nav_archive,
                         new DividerDrawerItem(),
                         nav_faq,
                         new DividerDrawerItem(),
@@ -212,6 +216,10 @@ public class MainActivity extends AppCompatActivity {
             case API.FRAGMENT_BULI_2MIDDLE:
                 fragment = new BuliFragment2Middle();
                 setTitle(getString(R.string.buli_2Middle));
+                break;
+            case API.FRAGMENT_ARCHIVE:
+                fragment = new ArchiveFragment();
+                setTitle(getString(R.string.nav_archive));
                 break;
             case API.FRAGMENT_FAQ:
                 fragment = new FaqFragment();

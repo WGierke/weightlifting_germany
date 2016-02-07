@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 import de.weightlifting.app.buli.ScheduleEntry;
 import de.weightlifting.app.buli.ScheduleListAdapter;
+import de.weightlifting.app.helper.API;
 
 public class HomeFragment extends Fragment {
 
