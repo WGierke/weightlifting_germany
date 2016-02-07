@@ -6,6 +6,9 @@ import android.os.Handler;
 import android.support.multidex.MultiDex;
 import android.util.Log;
 
+import com.crashlytics.android.answers.Answers;
+import com.crashlytics.android.answers.CustomEvent;
+import com.crashlytics.android.answers.ShareEvent;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
@@ -441,14 +444,19 @@ public class WeightliftingApp extends Application {
             } else {
                 userID = DataHelper.readIntern(INSTALLATION_FILE, getApplicationContext());
             }
-            //TODO: trigger fabric event
-            ParseObject filter = new ParseObject("FilterSetting");
-            filter.put("userId", userID);
+            ParseObject filterObject = new ParseObject("FilterSetting");
+            filterObject.put("userId", userID);
+            String filterSetting;
             if (filterMode.equals(API.FILTER_MODE_NONE))
-                filter.put("filter", "all");
+                filterSetting = "all";
             else
-                filter.put("filter", filterText);
-            filter.saveInBackground();
+                filterSetting = filterText;
+            filterObject.put("filter", filterSetting);
+            filterObject.saveInBackground();
+
+            Answers.getInstance().logCustom(new CustomEvent("Filter Saving")
+                    .putCustomAttribute("Setting", filterSetting));
+
         } catch (Exception e) {
             e.printStackTrace();
         }
