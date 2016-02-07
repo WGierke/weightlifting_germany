@@ -27,7 +27,6 @@ public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
         competitions = getSpecificCompetitions();
         if (competitions.getItems().size() == 0) {
             //Log.d(WeightliftingApp.TAG, "Waiting for Competitions...");
-
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
@@ -41,18 +40,7 @@ public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
                 Bundle bundle = this.getArguments();
                 String clubName = bundle.getString(API.CLUB_NAME);
                 filteredCompetitions = filter(Competitions.casteArray(competitions.getItems()), clubName);
-                CompetitionsListAdapter adapter = new CompetitionsListAdapter(filteredCompetitions, getActivity());
-                listViewBuli.setAdapter(adapter);
-                listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        Fragment protocol = new ProtocolFragment();
-                        Bundle bundle = new Bundle();
-                        bundle.putString(API.PROTOCOL_URL, filteredCompetitions.get(position).getProtocolUrl());
-                        protocol.setArguments(bundle);
-                        ((MainActivity) getActivity()).addFragment(protocol, getTitle(), true);
-                    }
-                });
+                setCompetitionsListAdaptherWithProtocolFragment(filteredCompetitions, getActivity());
             } catch (Exception ex) {
                 Log.e(WeightliftingApp.TAG, "Showing competitions failed");
                 ex.toString();

@@ -1,20 +1,11 @@
 package de.weightlifting.app.buli.relay2Middle;
 
-import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
 
-import de.weightlifting.app.MainActivity;
-import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.CompetitionsFragment;
-import de.weightlifting.app.buli.CompetitionsListAdapter;
-import de.weightlifting.app.buli.ProtocolFragment;
-import de.weightlifting.app.helper.API;
 
 public class CompetitionsFragment2Middle extends CompetitionsFragment {
 
@@ -33,19 +24,7 @@ public class CompetitionsFragment2Middle extends CompetitionsFragment {
             refreshHandler.postDelayed(refreshRunnable, Competitions.TIMER_RETRY);
         } else {
             try {
-                CompetitionsListAdapter adapter = new CompetitionsListAdapter(Competitions.casteArray(competitions2Middle.getItems()), getActivity());
-                listViewBuli.setAdapter(adapter);
-                listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                        // Show the protocol which belongs to the competition
-                        Fragment protocol = new ProtocolFragment();
-                        Bundle bundle = new Bundle();
-                        bundle.putString(API.PROTOCOL_URL, Competitions.casteArray(competitions2Middle.getItems()).get(position).getProtocolUrl());
-                        protocol.setArguments(bundle);
-                        ((MainActivity) getActivity()).addFragment(protocol, getString(R.string.buli_1A), true);
-                    }
-                });
+                setCompetitionsListAdaptherWithProtocolFragment(Competitions.casteArray(competitions2Middle.getItems()), getActivity());
 
             } catch (Exception ex) {
                 Log.e(WeightliftingApp.TAG, "Showing competitions1B failed");

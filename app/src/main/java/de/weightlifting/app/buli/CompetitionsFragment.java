@@ -36,9 +36,10 @@ public class CompetitionsFragment extends ListViewFragment {
                 Bundle bundle = new Bundle();
                 PastCompetition competition = competitionItems.get(position);
                 bundle.putString(API.PROTOCOL_URL, competition.getProtocolUrl());
-                bundle.putString(API.COMPETITION_PARTIES, competition.getHome() + " vs. " + competition.getGuest() + ": " + competition.getScore());
+                String competitionParties = competition.getHome() + " vs. " + competition.getGuest() + ": " + competition.getScore();
+                bundle.putString(API.COMPETITION_PARTIES, competitionParties);
                 protocol.setArguments(bundle);
-                ((MainActivity) getActivity()).addFragment(protocol, getString(R.string.nav_buli), true);
+                ((MainActivity) getActivity()).addFragment(protocol, competitionParties, true);
             }
         });
     }
