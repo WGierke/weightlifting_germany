@@ -96,6 +96,8 @@
     <string name="loading_data">Lade aktuellste Daten …</string>
     <string name="nav_archive">Archiv</string>
     <string name="nav_buli">Bundesliga</string>
+    <string name="buli_protocol">Protokoll</string>
+    <string name="share_this">Teilen</string>
 
 </resources>
 
