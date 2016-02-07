@@ -66,19 +66,19 @@
         },
         {
             "date": "12.01.2008",
-            "guest": "Riesaer AC",
-            "home": "TSG Rodewisch",
-            "location": "Rodewisch",
-            "score": "472.8 : 436.8",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=FBD8BEEADBE64553801DDCCAA6D554CB"
-        },
-        {
-            "date": "12.01.2008",
             "guest": "ASV Herbsleben",
             "home": "AC Mei\u00dfen",
             "location": "Mei\u00dfen",
             "score": "551.4 : 435.0",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=F5BAF3C228944200B78891C688EFE373"
+        },
+        {
+            "date": "12.01.2008",
+            "guest": "Riesaer AC",
+            "home": "TSG Rodewisch",
+            "location": "Rodewisch",
+            "score": "472.8 : 436.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=FBD8BEEADBE64553801DDCCAA6D554CB"
         },
         {
             "date": "15.12.2007",
@@ -114,19 +114,19 @@
         },
         {
             "date": "27.10.2007",
-            "guest": "TSG Rodewisch",
-            "home": "AC Mei\u00dfen",
-            "location": "Meissen",
-            "score": "505.6 : 520.6",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=2DB2D049234E4AEB84E62DE882E9CBF1"
-        },
-        {
-            "date": "27.10.2007",
             "guest": "KG G\u00f6rlitz-Zittau",
             "home": "Riesaer AC",
             "location": "Riesa",
             "score": "478.0 : 538.8",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=4039D7BF0D9D43AAA309C6A99727B7DD"
+        },
+        {
+            "date": "27.10.2007",
+            "guest": "TSG Rodewisch",
+            "home": "AC Mei\u00dfen",
+            "location": "Meissen",
+            "score": "505.6 : 520.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=2DB2D049234E4AEB84E62DE882E9CBF1"
         },
         {
             "date": "13.10.2007",

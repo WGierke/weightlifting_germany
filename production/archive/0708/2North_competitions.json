@@ -50,14 +50,6 @@
         },
         {
             "date": "10.11.2007",
-            "guest": "SV Empor Berlin",
-            "home": "AC Potsdam",
-            "location": "Potsdam",
-            "score": "284.0 : 478.6",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=A8257981C4B140959D9DFDFE964F7CA4"
-        },
-        {
-            "date": "10.11.2007",
             "guest": "TSV Blau-Wei\u00df Schwedt",
             "home": "FSV Magdeburg",
             "location": "Magdeburg",
@@ -65,12 +57,12 @@
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=EEF1287FF4E544BDAEA981F71205AF36"
         },
         {
-            "date": "27.10.2007",
-            "guest": "TSV Blau-Wei\u00df Schwedt",
-            "home": "SV Empor Berlin",
-            "location": "Berlin",
-            "score": "502.0 : 628.4",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=1A78EC7C9C3B4CD1BA8601A47996187A"
+            "date": "10.11.2007",
+            "guest": "SV Empor Berlin",
+            "home": "AC Potsdam",
+            "location": "Potsdam",
+            "score": "284.0 : 478.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=A8257981C4B140959D9DFDFE964F7CA4"
         },
         {
             "date": "27.10.2007",
@@ -79,6 +71,14 @@
             "location": "Magdeburg",
             "score": "521.8 : 350.6",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=DCDAACEFC3444EE0BE8044C6C70D25FD"
+        },
+        {
+            "date": "27.10.2007",
+            "guest": "TSV Blau-Wei\u00df Schwedt",
+            "home": "SV Empor Berlin",
+            "location": "Berlin",
+            "score": "502.0 : 628.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=1A78EC7C9C3B4CD1BA8601A47996187A"
         },
         {
             "date": "13.10.2007",

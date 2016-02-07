@@ -18,19 +18,19 @@
         },
         {
             "date": "23.02.2008",
-            "guest": "TB 03 Roding",
-            "home": "TSV Waldkirchen",
-            "location": "Waldkirchen",
-            "score": "384.2 : 596.4",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=3AD4396AD1AB4FD48860CEF4FED3CDDE"
-        },
-        {
-            "date": "23.02.2008",
             "guest": "KSV Kitzingen",
             "home": "Eichenauer SV",
             "location": "Eichenau",
             "score": "433.0 : 400.4",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=31CF20D318BC4669A383E87DA4474BD4"
+        },
+        {
+            "date": "23.02.2008",
+            "guest": "TB 03 Roding",
+            "home": "TSV Waldkirchen",
+            "location": "Waldkirchen",
+            "score": "384.2 : 596.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=3AD4396AD1AB4FD48860CEF4FED3CDDE"
         },
         {
             "date": "09.02.2008",
@@ -50,19 +50,19 @@
         },
         {
             "date": "26.01.2008",
-            "guest": "TB 03 Roding",
-            "home": "KSV Kitzingen",
-            "location": "Kitzingen",
-            "score": "385.5 : 502.4",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=E601FAA488294E8688EE576AB83F75F1"
-        },
-        {
-            "date": "26.01.2008",
             "guest": "Eichenauer SV",
             "home": "TSV Erding",
             "location": "Erding",
             "score": "350.8 : 395.4",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=F5FC268F1C9E466FAB5405F3411AD0E3"
+        },
+        {
+            "date": "26.01.2008",
+            "guest": "TB 03 Roding",
+            "home": "KSV Kitzingen",
+            "location": "Kitzingen",
+            "score": "385.5 : 502.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=E601FAA488294E8688EE576AB83F75F1"
         },
         {
             "date": "12.01.2008",
@@ -130,19 +130,19 @@
         },
         {
             "date": "13.10.2007",
-            "guest": "KSV Kitzingen",
-            "home": "TB 03 Roding",
-            "location": "Roding",
-            "score": "521.2 : 358.4",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=6223AD986EC24A259AA40FF75BA31D8D"
-        },
-        {
-            "date": "13.10.2007",
             "guest": "TSV Erding",
             "home": "Eichenauer SV",
             "location": "Eichenau",
             "score": "453.0 : 385.4",
             "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=450887B604C7427AA55073D8499107EB"
+        },
+        {
+            "date": "13.10.2007",
+            "guest": "KSV Kitzingen",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "521.2 : 358.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew0708/start.php?pid='123'&protokoll=1&wkid=6223AD986EC24A259AA40FF75BA31D8D"
         },
         {
             "date": "29.09.2007",
