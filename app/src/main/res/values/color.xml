@@ -3,7 +3,6 @@
     <!-- Corporate colors -->
     <color name="tsv_blue">#153387</color>
     <color name="tsv_middle_blue">#385299</color>
-    <color name="tsv_light_blue">#ADB8D5</color>
 
     <!-- Stuff -->
     <color name="text_heading">@color/tsv_blue</color>
@@ -21,9 +20,5 @@
     <!--<color name="colorPrimary">#125688</color>-->
     <color name="colorPrimary">@color/tsv_blue</color>
     <color name="colorPrimaryDark">@color/tsv_blue</color>
-    <color name="textColorPrimary">#FFFFFF</color>
-    <color name="windowBackground">#FFFFFF</color>
-    <color name="navigationBarColor">@color/white</color>
-    <color name="colorAccent">@color/tsv_light_blue</color>
 
 </resources>

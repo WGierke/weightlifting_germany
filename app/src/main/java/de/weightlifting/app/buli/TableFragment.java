@@ -2,17 +2,13 @@ package de.weightlifting.app.buli;
 
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Handler;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
-import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.archive.ArchiveFilterCompetitionsFragment;
 import de.weightlifting.app.helper.API;
 

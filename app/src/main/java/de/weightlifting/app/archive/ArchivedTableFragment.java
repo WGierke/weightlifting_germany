@@ -36,8 +36,4 @@ public class ArchivedTableFragment extends TableFragment {
         }
     }
 
-    @Override
-    protected void getBuliElements() {
-
-    }
 }
