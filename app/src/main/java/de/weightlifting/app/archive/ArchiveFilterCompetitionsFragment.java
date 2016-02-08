@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.buli.Competitions;
-import de.weightlifting.app.buli.FilterCompetitionsFragment;
+import de.weightlifting.app.buli.AbstractFilterCompetitionsFragment;
 import de.weightlifting.app.buli.PastCompetition;
 import de.weightlifting.app.helper.API;
 
-public class ArchiveFilterCompetitionsFragment extends FilterCompetitionsFragment {
+public class ArchiveFilterCompetitionsFragment extends AbstractFilterCompetitionsFragment {
 
     private Competitions archivedCompetitions;
     private Bundle bundle;

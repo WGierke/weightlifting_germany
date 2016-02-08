@@ -13,7 +13,7 @@ import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.API;
 
-public abstract class FilterCompetitionsFragment extends CompetitionsFragment {
+public abstract class AbstractFilterCompetitionsFragment extends CompetitionsFragment {
 
     protected ArrayList<PastCompetition> filteredCompetitions;
 

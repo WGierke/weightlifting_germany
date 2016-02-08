@@ -5,9 +5,9 @@ import android.widget.TextView;
 
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.buli.FilterCompetitionsFragment;
+import de.weightlifting.app.buli.AbstractFilterCompetitionsFragment;
 
-public class FilterCompetitionsFragment1B extends FilterCompetitionsFragment {
+public class FilterCompetitionsFragment1B extends AbstractFilterCompetitionsFragment {
 
     protected String getTitle() {
         return getString(R.string.buli_1B);
