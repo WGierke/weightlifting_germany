@@ -14,9 +14,8 @@ public class ScheduleFragment2Middle extends ScheduleFragment {
         Schedule2Middle schedule2Middle = app.getSchedule2Middle(WeightliftingApp.UPDATE_IF_NECESSARY);
 
         try {
-            ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
             ScheduleListAdapter adapter = new ScheduleListAdapter(Schedule2Middle.casteArray(schedule2Middle.getItems()), getActivity());
-            listViewTable.setAdapter(adapter);
+            listViewBuli.setAdapter(adapter);
         } catch (Exception ex) {
             Log.e(WeightliftingApp.TAG, "Showing Schedule2Middle failed");
             ex.toString();

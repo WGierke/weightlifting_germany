@@ -14,9 +14,8 @@ public class ScheduleFragment2North extends ScheduleFragment {
         Schedule2North schedule2North = app.getSchedule2North(WeightliftingApp.UPDATE_IF_NECESSARY);
 
         try {
-            ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
             ScheduleListAdapter adapter = new ScheduleListAdapter(Schedule2North.casteArray(schedule2North.getItems()), getActivity());
-            listViewTable.setAdapter(adapter);
+            listViewBuli.setAdapter(adapter);
         } catch (Exception ex) {
             Log.e(WeightliftingApp.TAG, "Showing Schedule2North failed");
             ex.toString();

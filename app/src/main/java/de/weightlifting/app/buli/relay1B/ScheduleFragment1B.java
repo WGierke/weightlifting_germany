@@ -14,9 +14,8 @@ public class ScheduleFragment1B extends ScheduleFragment {
         Schedule1B schedule1B = app.getSchedule1B(WeightliftingApp.UPDATE_IF_NECESSARY);
 
         try {
-            ListView listViewTable = (ListView) fragment.findViewById(R.id.listViewBuli);
             ScheduleListAdapter adapter = new ScheduleListAdapter(Schedule1B.casteArray(schedule1B.getItems()), getActivity());
-            listViewTable.setAdapter(adapter);
+            listViewBuli.setAdapter(adapter);
         } catch (Exception ex) {
             Log.e(WeightliftingApp.TAG, "Showing Schedule1B failed");
             ex.toString();
