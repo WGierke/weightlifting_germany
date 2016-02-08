@@ -39,6 +39,7 @@ android {
     productFlavors {
         defaultFlavor {
             proguardFile 'proguard-rules.txt'
+            applicationId 'de.weightlifting.app'
         }
     }
 }
