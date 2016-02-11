@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -14,9 +15,11 @@ import java.util.ArrayList;
 import de.weightlifting.app.buli.ScheduleEntry;
 import de.weightlifting.app.buli.ScheduleListAdapter;
 import de.weightlifting.app.helper.API;
+import de.weightlifting.app.helper.UiHelper;
 
 public class HomeFragment extends Fragment {
 
+    public static boolean homeInForeground;
     private WeightliftingApp app;
     private View fragment;
 
@@ -25,6 +28,8 @@ public class HomeFragment extends Fragment {
         app = (WeightliftingApp) getActivity().getApplicationContext();
         fragment = inflater.inflate(R.layout.fragment_home, container, false);
         TextView homeText = (TextView) fragment.findViewById(R.id.home_text);
+        final ImageView v = (ImageView) fragment.findViewById(R.id.cover_home);
+        UiHelper.animateHomeCover(v, getContext());
 
         String filterText;
         if (app.getFilterMode().equals(API.FILTER_MODE_NONE))
@@ -37,6 +42,18 @@ public class HomeFragment extends Fragment {
         getFileredSchedules();
 
         return fragment;
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        HomeFragment.homeInForeground = false;
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        HomeFragment.homeInForeground = true;
     }
 
     public void getFileredSchedules() {
