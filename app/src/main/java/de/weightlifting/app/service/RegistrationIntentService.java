@@ -21,7 +21,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
-import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
@@ -46,7 +45,7 @@ public class RegistrationIntentService extends IntentService {
             String token = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
                     GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
 
-            Log.i(TAG, "GCM Registration Token: " + token);
+            //Log.i(TAG, "GCM Registration Token: " + token);
 
             sendRegistrationToServer(token, sharedPreferences.getBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false));
 
@@ -69,7 +68,7 @@ public class RegistrationIntentService extends IntentService {
      */
     private void sendRegistrationToServer(String token, boolean sent_token) {
         if (!sent_token) {
-            Log.i(TAG, "Sent token");
+            //Log.i(TAG, "Sent token");
             ParseObject GcmToken = new ParseObject("GcmToken");
             GcmToken.put("token", token);
             GcmToken.saveInBackground();
