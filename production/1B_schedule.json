@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "13.02.2016",
-            "guest": "SG Fortschritt Eibau",
-            "home": "Berliner TSC",
-            "location": "Berlin",
-            "time": "16:00"
-        },
-        {
             "date": "05.03.2016",
             "guest": "Athletenteam Vogtland",
             "home": "SG Fortschritt Eibau",
