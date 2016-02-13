@@ -1,11 +1,11 @@
 [{
     "table": [
         {
-            "cardinal_points": "13 : 2",
+            "cardinal_points": "15 : 3",
             "club": "AC Suhl",
             "max_score": "503.0",
             "place": "1",
-            "score": "2252.9 : 2069"
+            "score": "2750.9 : 2565.8"
         },
         {
             "cardinal_points": "12 : 3",
@@ -22,11 +22,11 @@
             "score": "2292.2 : 2112.6"
         },
         {
-            "cardinal_points": "4 : 11",
+            "cardinal_points": "5 : 13",
             "club": "KSV Langen",
-            "max_score": "483.0",
+            "max_score": "496.8",
             "place": "4",
-            "score": "2159.2 : 2130"
+            "score": "2656 : 2628"
         },
         {
             "cardinal_points": "0 : 12",
