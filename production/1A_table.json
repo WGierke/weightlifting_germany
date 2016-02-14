@@ -22,11 +22,11 @@
             "score": "3452 : 3724.8"
         },
         {
-            "cardinal_points": "5 : 7",
+            "cardinal_points": "6 : 9",
             "club": "AC Germania St.Ilgen",
             "max_score": "745.2",
             "place": "4",
-            "score": "2626.6 : 2915.5"
+            "score": "3369.6 : 3672.1"
         },
         {
             "cardinal_points": "5 : 10",
@@ -36,18 +36,18 @@
             "score": "3573.4 : 3794.5"
         },
         {
+            "cardinal_points": "4 : 11",
+            "club": "AC Mutterstadt",
+            "max_score": "766.8",
+            "place": "6",
+            "score": "3651.4 : 3870.2"
+        },
+        {
             "cardinal_points": "3 : 12",
             "club": "TSV Heinsheim",
             "max_score": "704.0",
-            "place": "6",
-            "score": "3405.3 : 3699.1"
-        },
-        {
-            "cardinal_points": "2 : 10",
-            "club": "AC Mutterstadt",
-            "max_score": "766.8",
             "place": "7",
-            "score": "2894.8 : 3127.2"
+            "score": "3405.3 : 3699.1"
         }
     ]
 }]

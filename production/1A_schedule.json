@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "13.02.2016",
-            "guest": "AC Mutterstadt",
-            "home": "AC Germania St.Ilgen",
-            "location": "Leimen-St.Ilgen",
-            "time": "19:00"
-        },
-        {
             "date": "05.03.2016",
             "guest": "AC Germania St.Ilgen",
             "home": "KSV Durlach",
