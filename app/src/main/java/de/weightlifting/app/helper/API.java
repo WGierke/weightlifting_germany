@@ -26,4 +26,9 @@ public class API {
     public static final String FILTER_MODE_CLUB = "FILTER_CLUB";
 
     public static final String FILTER_TEXT_KEY = "FILTER_TEXT_KEY";
+
+    //Client <-> Server
+    //Token:    token - value
+    //Filter:   userId - user_id, filterSetting - filter_setting,   createdAt - timestamp
+    //Protocol: competitionParties - competition_parties,           createdAt - timestamp
 }

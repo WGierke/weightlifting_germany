@@ -39,6 +39,7 @@ build/
 *~
 *.swp
 *.iml
+*.pyc
 
 !production/*.apk
 
@@ -49,3 +50,4 @@ fabric.properties
 
 app/libs/*
 server/push_messages.txt
+server/germany_app_engine/app.yaml
