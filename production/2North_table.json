@@ -1,11 +1,11 @@
 [{
     "table": [
         {
-            "cardinal_points": "15 : 0",
+            "cardinal_points": "18 : 0",
             "club": "AC Potsdam",
             "max_score": "544.3",
             "place": "1",
-            "score": "2608.5 : 1848.3"
+            "score": "3074.2 : 2269.7"
         },
         {
             "cardinal_points": "4 : 11",
@@ -15,11 +15,11 @@
             "score": "1961.1 : 2302.8"
         },
         {
-            "cardinal_points": "2 : 10",
+            "cardinal_points": "2 : 13",
             "club": "SV Empor Berlin",
             "max_score": "451.8",
             "place": "3",
-            "score": "1395.8 : 1814.3"
+            "score": "1817.2 : 2280"
         }
     ]
 }]

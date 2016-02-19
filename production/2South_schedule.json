@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "13.02.2016",
-            "guest": "SC Pforzheim",
-            "home": "AC Weinheim",
-            "location": "Weinheim",
-            "time": "19:00"
-        },
-        {
             "date": "20.02.2016",
             "guest": "KSC Schifferstadt",
             "home": "SV Germania Obrigheim II",

@@ -1,11 +1,11 @@
 [{
     "table": [
         {
-            "cardinal_points": "13 : 2",
+            "cardinal_points": "15 : 3",
             "club": "AC Suhl",
             "max_score": "503.0",
             "place": "1",
-            "score": "2252.9 : 2069"
+            "score": "2750.9 : 2565.8"
         },
         {
             "cardinal_points": "12 : 3",
@@ -15,25 +15,25 @@
             "score": "2393.6 : 2047.4"
         },
         {
-            "cardinal_points": "7 : 8",
+            "cardinal_points": "10 : 8",
             "club": "SV90 Gr\u00e4fenroda",
             "max_score": "473.3",
             "place": "3",
-            "score": "2292.2 : 2112.6"
+            "score": "2742.5 : 2357.6"
         },
         {
-            "cardinal_points": "4 : 11",
+            "cardinal_points": "5 : 13",
             "club": "KSV Langen",
-            "max_score": "483.0",
+            "max_score": "496.8",
             "place": "4",
-            "score": "2159.2 : 2130"
+            "score": "2656 : 2628"
         },
         {
-            "cardinal_points": "0 : 12",
+            "cardinal_points": "0 : 15",
             "club": "FTG Pfungstadt",
             "max_score": "286.2",
             "place": "5",
-            "score": "928.1 : 1667"
+            "score": "1173.1 : 2117.3"
         }
     ]
 }]

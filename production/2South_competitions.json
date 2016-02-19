@@ -1,6 +1,14 @@
 [{
     "past_competitions": [
         {
+            "date": "13.02.2016",
+            "guest": "SC Pforzheim",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "505.0 : 549.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=0B66F64B94524F35982CC1C1CC769581"
+        },
+        {
             "date": "30.01.2016",
             "guest": "AC Weinheim",
             "home": "SV Germania Obrigheim II",

@@ -1,53 +1,53 @@
 [{
     "table": [
         {
-            "cardinal_points": "15 : 0",
+            "cardinal_points": "18 : 0",
             "club": "Chemnitzer AC",
             "max_score": "847.8",
             "place": "1",
-            "score": "3790.8 : 2561.2"
+            "score": "4488 : 3072"
         },
         {
-            "cardinal_points": "9 : 3",
+            "cardinal_points": "12 : 3",
             "club": "Berliner TSC",
             "max_score": "809.6",
             "place": "2",
-            "score": "3022.6 : 2708.8"
+            "score": "3801.8 : 3319.8"
         },
         {
-            "cardinal_points": "6 : 6",
+            "cardinal_points": "8 : 7",
+            "club": "SSV Samswegen",
+            "max_score": "735.6",
+            "place": "3",
+            "score": "3469.6 : 3499"
+        },
+        {
+            "cardinal_points": "6 : 9",
             "club": "Athletenteam Vogtland",
             "max_score": "667.5",
-            "place": "3",
-            "score": "2375.7 : 2620.7"
+            "place": "4",
+            "score": "2981.5 : 3306.1"
         },
         {
             "cardinal_points": "6 : 9",
             "club": "Oder-Sund-Team ",
             "max_score": "710.0",
-            "place": "4",
+            "place": "5",
             "score": "2497.1 : 3221.6"
         },
         {
-            "cardinal_points": "5 : 7",
-            "club": "SSV Samswegen",
-            "max_score": "735.6",
-            "place": "5",
-            "score": "2784.2 : 2893.2"
-        },
-        {
-            "cardinal_points": "2 : 10",
+            "cardinal_points": "2 : 13",
             "club": "SG Fortschritt Eibau",
             "max_score": "615.8",
             "place": "6",
-            "score": "2383.2 : 2566.5"
+            "score": "2994.2 : 3345.7"
         },
         {
-            "cardinal_points": "2 : 10",
+            "cardinal_points": "2 : 13",
             "club": "AC Mei\u00dfen",
             "max_score": "613.0",
             "place": "7",
-            "score": "2246.3 : 2527.9"
+            "score": "2757.1 : 3225.1"
         }
     ]
 }]
