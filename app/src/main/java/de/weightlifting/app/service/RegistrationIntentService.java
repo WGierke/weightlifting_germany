@@ -25,7 +25,6 @@ import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
-import com.google.android.gms.wearable.Wearable;
 import com.parse.ParseObject;
 
 import de.weightlifting.app.R;
@@ -46,38 +45,35 @@ public class RegistrationIntentService extends IntentService {
 
         try {
             InstanceID instanceID = InstanceID.getInstance(this);
-            String token = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
+            String newToken = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
                     GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
 
-            Log.d(TAG, "GCM Registration Token: " + token);
+            Log.d(TAG, "GCM Registration Token: " + newToken);
 
-            sendRegistrationToServer(token, sharedPreferences.getBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false));
+            String oldToken = sharedPreferences.getString(GCMPreferences.TOKEN, "");
+            boolean sentToServer = sharedPreferences.getBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false);
 
-            sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, true).apply();
-
+            if (!newToken.equals(oldToken) || !sentToServer) {
+                sendRegistrationToServer(newToken);
+                sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, true).apply();
+                sharedPreferences.edit().putString(GCMPreferences.TOKEN, newToken).apply();
+            }
         } catch (Exception e) {
             //Log.d(TAG, "Failed to complete token refresh", e);
             sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false).apply();
         }
-        // Notify UI that registration has completed, so the progress indicator can be hidden.
-        Intent registrationComplete = new Intent(GCMPreferences.REGISTRATION_COMPLETE);
-        LocalBroadcastManager.getInstance(this).sendBroadcast(registrationComplete);
     }
 
     /**
      * Persist registration to third-party servers.
      *
-     * @param token      The new token.
-     * @param sent_token Flag that indicates if token was already sent
+     * @param token The new token.
      */
-    private void sendRegistrationToServer(String token, boolean sent_token) {
-        if (!sent_token) {
-            //Log.i(TAG, "Sent token");
-            Log.d(WeightliftingApp.TAG, "Sending new token: " + token);
-            ParseObject GcmToken = new ParseObject("GcmToken");
-            GcmToken.put("token", token);
-            GcmToken.saveInBackground();
-            NetworkHelper.sendToken(token);
-        }
+    private void sendRegistrationToServer(String token) {
+        Log.d(WeightliftingApp.TAG, "Sending new token: " + token);
+        ParseObject GcmToken = new ParseObject("GcmToken");
+        GcmToken.put("token", token);
+        GcmToken.saveInBackground();
+        NetworkHelper.sendToken(token);
     }
 }
