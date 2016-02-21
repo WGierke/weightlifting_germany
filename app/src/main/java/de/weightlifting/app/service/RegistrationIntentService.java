@@ -21,12 +21,16 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v4.content.LocalBroadcastManager;
+import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
+import com.google.android.gms.wearable.Wearable;
 import com.parse.ParseObject;
 
 import de.weightlifting.app.R;
+import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.helper.NetworkHelper;
 
 public class RegistrationIntentService extends IntentService {
 
@@ -45,7 +49,7 @@ public class RegistrationIntentService extends IntentService {
             String token = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
                     GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
 
-            //Log.i(TAG, "GCM Registration Token: " + token);
+            Log.d(TAG, "GCM Registration Token: " + token);
 
             sendRegistrationToServer(token, sharedPreferences.getBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false));
 
@@ -69,9 +73,11 @@ public class RegistrationIntentService extends IntentService {
     private void sendRegistrationToServer(String token, boolean sent_token) {
         if (!sent_token) {
             //Log.i(TAG, "Sent token");
+            Log.d(WeightliftingApp.TAG, "Sending new token: " + token);
             ParseObject GcmToken = new ParseObject("GcmToken");
             GcmToken.put("token", token);
             GcmToken.saveInBackground();
+            NetworkHelper.sendToken(token);
         }
     }
 }

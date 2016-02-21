@@ -16,6 +16,7 @@ import com.crashlytics.android.answers.ShareEvent;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.API;
+import de.weightlifting.app.helper.NetworkHelper;
 
 public class ProtocolFragment extends Fragment {
 
@@ -57,6 +58,8 @@ public class ProtocolFragment extends Fragment {
                     Answers.getInstance().logShare(new ShareEvent()
                             .putMethod("Protocol Share")
                             .putContentName(competitionParties));
+
+                    NetworkHelper.sendProtocolShare(competitionParties);
                 }
             });
         } else {

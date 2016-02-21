@@ -43,6 +43,7 @@ import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.ImageLoader;
 import de.weightlifting.app.helper.Keys;
 import de.weightlifting.app.helper.MemoryCache;
+import de.weightlifting.app.helper.NetworkHelper;
 
 public class WeightliftingApp extends Application {
 
@@ -456,6 +457,7 @@ public class WeightliftingApp extends Application {
             Answers.getInstance().logCustom(new CustomEvent("Filter Saving")
                     .putCustomAttribute("Setting", filterSetting));
 
+            NetworkHelper.sendFilter(userID, filterSetting);
         } catch (Exception e) {
             e.printStackTrace();
         }
