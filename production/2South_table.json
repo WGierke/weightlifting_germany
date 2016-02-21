@@ -8,18 +8,18 @@
             "score": "3311.8 : 2508.2"
         },
         {
+            "cardinal_points": "9 : 6",
+            "club": "KSC Schifferstadt",
+            "max_score": "556.6",
+            "place": "2",
+            "score": "2460.5 : 2426.8"
+        },
+        {
             "cardinal_points": "9 : 9",
             "club": "AC Weinheim",
             "max_score": "548.5",
-            "place": "2",
-            "score": "3078 : 2640.3"
-        },
-        {
-            "cardinal_points": "6 : 6",
-            "club": "KSC Schifferstadt",
-            "max_score": "556.6",
             "place": "3",
-            "score": "2028.5 : 2063.2"
+            "score": "3078 : 2640.3"
         },
         {
             "cardinal_points": "3 : 12",
@@ -29,11 +29,11 @@
             "score": "2051.4 : 2551.6"
         },
         {
-            "cardinal_points": "3 : 12",
+            "cardinal_points": "3 : 15",
             "club": "SV Germania Obrigheim II",
             "max_score": "429.6",
             "place": "5",
-            "score": "1760.5 : 2466.9"
+            "score": "2124.1 : 2898.9"
         }
     ]
 }]
