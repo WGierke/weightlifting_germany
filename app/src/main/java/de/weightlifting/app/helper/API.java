@@ -27,6 +27,8 @@ public class API {
 
     public static final String FILTER_TEXT_KEY = "FILTER_TEXT_KEY";
 
+    public static final String PREFERENCE_USER_ID = "PREFERENCE_USER_ID";
+
     //HTTP Post Param<-> Server
     //Token:    token - value
     //Filter:   userId - user_id, filterSetting - filter_setting,   createdAt - timestamp

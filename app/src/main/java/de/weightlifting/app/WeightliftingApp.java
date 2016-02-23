@@ -409,12 +409,6 @@ public class WeightliftingApp extends Application {
         return result;
     }
 
-    public ImageLoader getImageLoader() {
-        if (imageLoader == null)
-            imageLoader = new ImageLoader(getApplicationContext());
-        return imageLoader;
-    }
-
     public String getFilterMode() {
         if (filterMode == null) {
             filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
@@ -438,12 +432,17 @@ public class WeightliftingApp extends Application {
     public void saveFilterOnline() {
         try {
             String userID;
-            if (DataHelper.readIntern(INSTALLATION_FILE, getApplicationContext()).equals("")) {
-                userID = UUID.randomUUID().toString();
-                DataHelper.saveIntern(userID, INSTALLATION_FILE, getApplicationContext());
+            if (DataHelper.checkPreference(API.PREFERENCE_USER_ID, this)) {
+                userID = DataHelper.getPreference(API.PREFERENCE_USER_ID, this);
+                if (userID.length() < 1) {
+                    userID = UUID.randomUUID().toString();
+                    DataHelper.setPreference(API.PREFERENCE_USER_ID, userID, this);
+                }
             } else {
-                userID = DataHelper.readIntern(INSTALLATION_FILE, getApplicationContext());
+                userID = UUID.randomUUID().toString();
+                DataHelper.setPreference(API.PREFERENCE_USER_ID, userID, this);
             }
+
             ParseObject filterObject = new ParseObject("FilterSetting");
             filterObject.put("userId", userID);
             String filterSetting;

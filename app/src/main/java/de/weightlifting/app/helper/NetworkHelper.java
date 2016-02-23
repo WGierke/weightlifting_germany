@@ -15,6 +15,7 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.service.GCMPreferences;
 
 public class NetworkHelper {
 
@@ -64,11 +65,11 @@ public class NetworkHelper {
         return result;
     }
 
-    public static void sendToken(String token) {
+    public static void sendToken(String token, Handler handler) {
         try {
             String data = URLEncoder.encode("token", "UTF-8") + "=" + URLEncoder.encode(token, "UTF-8");
             String url = BASE_SERVER_URL + "add_token";
-            sendAuthenticatedHttpPostRequest(url, data);
+            sendAuthenticatedHttpPostRequest(url, data, handler);
         } catch (UnsupportedEncodingException ignored) {
             ignored.printStackTrace();
         }
@@ -78,7 +79,7 @@ public class NetworkHelper {
         try {
             String data = URLEncoder.encode("competitionParties", "UTF-8") + "=" + URLEncoder.encode(competitionParties, "UTF-8");
             String url = BASE_SERVER_URL + "add_protocol";
-            sendAuthenticatedHttpPostRequest(url, data);
+            sendAuthenticatedHttpPostRequest(url, data, new Handler());
         } catch (UnsupportedEncodingException ignored) {
             ignored.printStackTrace();
         }
@@ -89,16 +90,18 @@ public class NetworkHelper {
             String data = URLEncoder.encode("userId", "UTF-8") + "=" + URLEncoder.encode(userId, "UTF-8");
             data += "&" + URLEncoder.encode("filterSetting", "UTF-8") + "=" + URLEncoder.encode(filterSetting, "UTF-8");
             String url = BASE_SERVER_URL + "add_filter";
-            sendAuthenticatedHttpPostRequest(url, data);
+            sendAuthenticatedHttpPostRequest(url, data, new Handler());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
     }
 
-    public static void sendAuthenticatedHttpPostRequest(final String url, final String data) {
+    public static void sendAuthenticatedHttpPostRequest(final String url, final String data, final Handler handler) {
         (new Thread() {
             @Override
             public void run() {
+                Message message = new Message();
+                Bundle resultBundle = new Bundle();
                 try {
                     byte[] dataBytes = data.getBytes();
                     int dataLength = dataBytes.length;
@@ -124,13 +127,17 @@ public class NetworkHelper {
                     }
                     in.close();
                     String response = responseBuffer.toString();
-                    if (responseCode != 200 || !response.contains("Success")) {
-                        Log.d(WeightliftingApp.TAG, "Posting data failed. Code: " + responseCode + " Response: " + response);
+                    if (responseCode == 200 && response.contains("Success")) {
+                        resultBundle.putString(GCMPreferences.RESULT_KEY, GCMPreferences.RESULT_SUCCESS);
+                    } else {
+                        throw new Exception("Request failed with Code " + responseCode + " and content '" + response + "'");
                     }
-
                 } catch (Exception e) {
                     Log.d(WeightliftingApp.TAG, "posting authenticated data failed: " + e.getMessage());
+                    resultBundle.putString(GCMPreferences.RESULT_KEY, GCMPreferences.RESULT_FAILURE);
                 }
+                message.setData(resultBundle);
+                handler.sendMessage(message);
             }
         }).start();
     }

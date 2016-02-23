@@ -19,8 +19,10 @@ package de.weightlifting.app.service;
 import android.app.IntentService;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
 import android.preference.PreferenceManager;
-import android.support.v4.content.LocalBroadcastManager;
 import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
@@ -34,6 +36,8 @@ import de.weightlifting.app.helper.NetworkHelper;
 public class RegistrationIntentService extends IntentService {
 
     private static final String TAG = "RegIntentService";
+    private SharedPreferences sharedPreferences;
+    private String newToken;
 
     public RegistrationIntentService() {
         super(TAG);
@@ -41,25 +45,22 @@ public class RegistrationIntentService extends IntentService {
 
     @Override
     protected void onHandleIntent(Intent intent) {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
+        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
 
         try {
             InstanceID instanceID = InstanceID.getInstance(this);
-            String newToken = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
+            newToken = instanceID.getToken(getString(R.string.gcm_defaultSenderId),
                     GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
 
-            Log.d(TAG, "GCM Registration Token: " + newToken);
+            //Log.d(TAG, "GCM Registration Token: " + newToken);
 
             String oldToken = sharedPreferences.getString(GCMPreferences.TOKEN, "");
             boolean sentToServer = sharedPreferences.getBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false);
 
             if (!newToken.equals(oldToken) || !sentToServer) {
                 sendRegistrationToServer(newToken);
-                sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, true).apply();
-                sharedPreferences.edit().putString(GCMPreferences.TOKEN, newToken).apply();
             }
         } catch (Exception e) {
-            //Log.d(TAG, "Failed to complete token refresh", e);
             sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false).apply();
         }
     }
@@ -74,6 +75,24 @@ public class RegistrationIntentService extends IntentService {
         ParseObject GcmToken = new ParseObject("GcmToken");
         GcmToken.put("token", token);
         GcmToken.saveInBackground();
-        NetworkHelper.sendToken(token);
+
+        //notify service that token was successfully uploaded
+        Handler callBackHandler = new Handler() {
+            @Override
+            public void handleMessage(Message msg) {
+                try {
+                    Bundle data = msg.getData();
+                    String result = data.getString(GCMPreferences.RESULT_KEY);
+                    if (result.equals(GCMPreferences.RESULT_SUCCESS)) {
+                        sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, true).apply();
+                        sharedPreferences.edit().putString(GCMPreferences.TOKEN, newToken).apply();
+                    } else {
+                        sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false).apply();
+                    }
+                } catch (Exception ignored) {
+                }
+            }
+        };
+        NetworkHelper.sendToken(token, callBackHandler);
     }
 }
