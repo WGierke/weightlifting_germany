@@ -31,34 +31,6 @@ public class DataHelper {
     public static final String PREF_FILE_NAME = "weightlifting_ger_preferences";
     private static final Charset UTF8_CHARSET = Charset.forName("UTF-8");
 
-    public static byte[] encodeUTF8(String string) {
-        return string.getBytes(UTF8_CHARSET);
-    }
-
-    public static String decodeUTF8(byte[] data) {
-        return new String(data, UTF8_CHARSET);
-    }
-
-    public static int dipToPx(int value, Activity activity) {
-        final float scale = activity.getResources().getDisplayMetrics().density;
-        return (int) (value * scale + 0.5f);
-    }
-
-    public static int pxToDip(int value, Activity activity) {
-        final float scale = activity.getResources().getDisplayMetrics().density;
-        return (int) ((value - 0.5f) / scale);
-    }
-
-    public static byte[] inputStreamToByte(InputStream is) throws IOException {
-        ByteArrayOutputStream baos = new ByteArrayOutputStream();
-        int reads = is.read();
-        while (reads != -1) {
-            baos.write(reads);
-            reads = is.read();
-        }
-        return baos.toByteArray();
-    }
-
     public static String inputStreamToString(InputStream stream) throws IOException {
         BufferedReader r = new BufferedReader(new InputStreamReader(stream, "UTF-8"));
         StringBuilder total = new StringBuilder();
@@ -81,19 +53,6 @@ public class DataHelper {
             }
         } catch (Exception ex) {
             ex.printStackTrace();
-        }
-    }
-
-    public static String trimString(String string, int length) {
-        if (string.length() > length) {
-            String result = string.substring(0, length);
-            if (result.contains(" ")) {
-                result = result.substring(0, result.lastIndexOf(" "));
-                result = result + " ...";
-            }
-            return result;
-        } else {
-            return string;
         }
     }
 
@@ -165,14 +124,6 @@ public class DataHelper {
     public static Boolean getSetting(String prev_name, Boolean prev_default, Application application) {
         SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(application);
         return sharedPref.getBoolean(prev_name, prev_default);
-    }
-
-    public static int sumOfArray(int[] array) {
-        int n = 0;
-        for (int elem : array) {
-            n += elem;
-        }
-        return n;
     }
 
     public static String readIntern(String fileName, Context context) {
