@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "05.03.2016",
-            "guest": "SV Empor Berlin",
-            "home": "KG G\u00f6rlitz-Zittau",
-            "location": "G\u00f6rlitz",
-            "time": "16:00"
-        },
-        {
             "date": "02.04.2016",
             "guest": "KG G\u00f6rlitz-Zittau AC Potsdam",
             "home": "SV Empor Berlin",
