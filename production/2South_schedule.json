@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "05.03.2016",
-            "guest": "KSV L\u00f6rrach",
-            "home": "AC Weinheim",
-            "location": "L\u00f6rrach-Haagen",
-            "time": "19:00"
-        },
-        {
             "date": "02.04.2016",
             "guest": "SV Germania Obrigheim II",
             "home": "KSV L\u00f6rrach",
