@@ -1,6 +1,22 @@
 [{
     "past_competitions": [
         {
+            "date": "05.03.2016",
+            "guest": "Athletenteam Vogtland",
+            "home": "SG Fortschritt Eibau",
+            "location": "Eibau",
+            "score": "637.2 : 647.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=68E9AC18023146978AC40AD939F4B98B"
+        },
+        {
+            "date": "05.03.2016",
+            "guest": "Berliner TSC",
+            "home": "Oder-Sund-Team ",
+            "location": "Schwedt/Stralsund",
+            "score": "760.0 : 767.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=81B5094B47314D7AA8AC1B4B334EC4AC"
+        },
+        {
             "date": "13.02.2016",
             "guest": "Chemnitzer AC",
             "home": "AC Mei\u00dfen",

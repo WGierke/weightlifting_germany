@@ -1,6 +1,14 @@
 [{
     "past_competitions": [
         {
+            "date": "05.03.2016",
+            "guest": "KSC Schifferstadt",
+            "home": "SC Pforzheim",
+            "location": "Pforzheim",
+            "score": "561.4 : 391.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=CBF056DDD8DF47FC972B7A0BDF56E3F0"
+        },
+        {
             "date": "20.02.2016",
             "guest": "KSC Schifferstadt",
             "home": "SV Germania Obrigheim II",

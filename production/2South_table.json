@@ -1,25 +1,25 @@
 [{
     "table": [
         {
-            "cardinal_points": "18 : 0",
+            "cardinal_points": "21 : 0",
             "club": "SC Pforzheim",
             "max_score": "579.0",
             "place": "1",
-            "score": "3311.8 : 2508.2"
-        },
-        {
-            "cardinal_points": "9 : 6",
-            "club": "KSC Schifferstadt",
-            "max_score": "556.6",
-            "place": "2",
-            "score": "2460.5 : 2426.8"
+            "score": "3873.2 : 2899.2"
         },
         {
             "cardinal_points": "9 : 9",
             "club": "AC Weinheim",
             "max_score": "548.5",
-            "place": "3",
+            "place": "2",
             "score": "3078 : 2640.3"
+        },
+        {
+            "cardinal_points": "9 : 9",
+            "club": "KSC Schifferstadt",
+            "max_score": "556.6",
+            "place": "3",
+            "score": "2851.5 : 2988.2"
         },
         {
             "cardinal_points": "3 : 12",
