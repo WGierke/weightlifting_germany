@@ -1,18 +1,3 @@
 [{
-    "scheduled_competitions": [
-        {
-            "date": "05.03.2016",
-            "guest": "AC Germania St.Ilgen",
-            "home": "KSV Durlach",
-            "location": "Durlach",
-            "time": "19:00"
-        },
-        {
-            "date": "05.03.2016",
-            "guest": "SV Germania Obrigheim",
-            "home": "TB 03 Roding",
-            "location": "Roding",
-            "time": "19:00"
-        }
-    ]
+    "scheduled_competitions": []
 }]
