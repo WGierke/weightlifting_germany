@@ -49,7 +49,11 @@ class BuliParser:
         """Save scheduled competitions in schedule_file_name.json"""
         print "Parsing scheduled competitions ..."
         try:
-            scheduled = urllib2.urlopen(self.iat_schedule_url, timeout=self.TIMEOUT).read().split("</TABLE>")[0]
+            schedule_page = urllib2.urlopen(self.iat_schedule_url, timeout=self.TIMEOUT).read()
+            if "</TABLE>" in schedule_page:
+                scheduled = schedule_page.split("</TABLE>")[0]
+            else:
+                raise Exception('There is no table on this page.')
         except Exception, e:
             print 'Error while downloading schedule ', e
             self.error_occured = True
@@ -73,22 +77,46 @@ class BuliParser:
 
                 final_schedule.append(entry)
 
-        if len(final_schedule) == 0:
-            return
-
         schedule_dict["scheduled_competitions"] = final_schedule
         json_scheduled = json.dumps(schedule_dict, encoding='latin1', sort_keys=True, indent=4, separators=(',', ': '))
         schedule_dict_json = "[" + json_scheduled + "]"
 
-        with open(self.schedule_file_name, "w+") as f:
+        if not os.path.isfile(self.schedule_file_name):
+            with open(self.schedule_file_name, "w+") as f:
+                f.write(schedule_dict_json.decode('utf-8'))
+            return
+
+        # Handle swapping of scheduled competitions due to IAT database
+        with open(self.schedule_file_name, "r") as f:
+            old_schedules = f.read()
+
+        if sorted(schedule_dict_json.decode('utf-8')) != sorted(old_schedules.decode('utf-8')):
+            print "Scheduled competitions: Change detected"
+            f = open(self.schedule_file_name, "w")
             f.write(schedule_dict_json.decode('utf-8'))
+            f.close()
+
+            push_messages = []
+            old_schedule_dict = json.loads(old_schedules, encoding='utf-8')[0]["scheduled_competitions"]
+            new_schedule_dict = json.loads(schedule_dict_json, encoding='utf-8')[0]["scheduled_competitions"]
+
+            additional_schedules = self.get_additional_entries(old_schedule_dict, new_schedule_dict)
+
+            if(len(additional_schedules) > 0):
+                for schedule in additional_schedules:
+                    push_messages.append(schedule["home"] + " vs. " + schedule["guest"] + ": " + schedule["time"] + " in " + schedule["location"])
+                self.save_push_message("Neue Ansetzungen", push_messages, "0")
 
 
     def create_competitions_file(self):
         """Save past competitions in competition_file_name.json"""
         print "Parsing past competitions ..."
         try:
-            competitions = urllib2.urlopen(self.iat_competitions_url, timeout=self.TIMEOUT).read().split("</TABLE>")[0]
+            competitions_page = urllib2.urlopen(self.iat_competitions_url, timeout=self.TIMEOUT).read()
+            if "</TABLE>" in competitions_page:
+                competitions = competitions_page.split("</TABLE>")[0]
+            else:
+                raise Exception('There is no table on this page.')
         except Exception, e:
             print 'Error while downloading competitions ', e
             self.error_occured = True
@@ -112,9 +140,6 @@ class BuliParser:
             entry["url"] = self.iat_season_base + re.findall(re_href, competition_entries[i+6])[0]
 
             final_competitions.append(entry)
-
-        if len(final_competitions) == 0:
-            return
 
         competitions_dict["past_competitions"] = final_competitions
         json_competitions = json.dumps(competitions_dict, encoding='latin1', sort_keys=True, indent=4, separators=(',', ': '))
@@ -147,7 +172,11 @@ class BuliParser:
         """Save table entries in table_file_name.json"""
         print "Parsing table ..."
         try:
-            table = urllib2.urlopen(self.iat_table_url, timeout=self.TIMEOUT).read().split("</TABLE>")[0]
+            table_page = urllib2.urlopen(self.iat_table_url, timeout=self.TIMEOUT).read()
+            if "</TABLE>" in table_page:
+                table = table_page.split("</TABLE>")[0]
+            else:
+                raise Exception('There is no table on this page.')
         except Exception, e:
             print 'Error while downloading table ', e
             self.error_occured = True
@@ -168,9 +197,6 @@ class BuliParser:
             entry["max_score"] = table_entries[i+2]
             entry["cardinal_points"] = table_entries[i+3]
             final_entries.append(entry)
-
-        if len(final_entries) == 0:
-            return
 
         table_dict["table"] = final_entries
         json_table = json.dumps(table_dict, encoding='latin1', sort_keys=True, indent=4, separators=(',', ': '))
