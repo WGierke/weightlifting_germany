@@ -77,6 +77,25 @@ class BuliParser:
 
                 final_schedule.append(entry)
 
+        if "1. Bundesliga" in self.push_descr:
+            base_schedule = {"date": "19.03.2016", "time": "(Uhrzeit folgt)"}
+            obrig_berlin = base_schedule.copy()
+            obrig_berlin.update({"home": "SV Germania Obrigheim", "guest": "Berliner TSC", "location": "Obrigheim"})
+            ilgen_samsw = base_schedule.copy()
+            ilgen_samsw.update({"home": "AC Germania St. Ilgen", "guest": "SSV Samswegen", "location": "St. Ilgen"})
+            mutterstadt_vogtland = base_schedule.copy()
+            mutterstadt_vogtland.update({"home": "AC Mutterstadt", "guest": "Athletenteam Vogtland", "location": "Mutterstadt"})
+            durlach_odersund = base_schedule.copy()
+            durlach_odersund.update({"home": "KSV Durlach", "guest": "Oder-Sund-Team", "location": "Durlach"})
+            roding_eibau = base_schedule.copy()
+            roding_eibau.update({"home": "TB 03 Roding", "guest": "SG Fortschritt Eibau", "location": "Roding"})
+
+            final_schedule.append(obrig_berlin)
+            final_schedule.append(ilgen_samsw)
+            final_schedule.append(mutterstadt_vogtland)
+            final_schedule.append(durlach_odersund)
+            final_schedule.append(roding_eibau)
+
         schedule_dict["scheduled_competitions"] = final_schedule
         json_scheduled = json.dumps(schedule_dict, encoding='latin1', sort_keys=True, indent=4, separators=(',', ': '))
         schedule_dict_json = "[" + json_scheduled + "]"
