@@ -1,3 +1,39 @@
 [{
-    "scheduled_competitions": []
+    "scheduled_competitions": [
+        {
+            "date": "19.03.2016",
+            "guest": "Berliner TSC",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "time": "(Uhrzeit folgt)"
+        },
+        {
+            "date": "19.03.2016",
+            "guest": "SSV Samswegen",
+            "home": "AC Germania St. Ilgen",
+            "location": "St. Ilgen",
+            "time": "(Uhrzeit folgt)"
+        },
+        {
+            "date": "19.03.2016",
+            "guest": "Athletenteam Vogtland",
+            "home": "AC Mutterstadt",
+            "location": "Mutterstadt",
+            "time": "(Uhrzeit folgt)"
+        },
+        {
+            "date": "19.03.2016",
+            "guest": "Oder-Sund-Team",
+            "home": "KSV Durlach",
+            "location": "Durlach",
+            "time": "(Uhrzeit folgt)"
+        },
+        {
+            "date": "19.03.2016",
+            "guest": "SG Fortschritt Eibau",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "time": "(Uhrzeit folgt)"
+        }
+    ]
 }]
