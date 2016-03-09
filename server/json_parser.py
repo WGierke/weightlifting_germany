@@ -78,9 +78,9 @@ class BuliParser:
                 final_schedule.append(entry)
 
         if "1. Bundesliga" in self.push_descr:
-            base_schedule = {"date": "19.03.2016", "time": "00:00"}
+            base_schedule = {"date": "19.03.2016", "time": "19:00"}
             obrig_berlin = base_schedule.copy()
-            obrig_berlin.update({"home": "SV Germania Obrigheim", "guest": "Berliner TSC", "location": "Obrigheim"})
+            obrig_berlin.update({"home": "SV Germania Obrigheim", "guest": "Berliner TSC", "location": "Obrigheim", "time": "19:30"})
             ilgen_samsw = base_schedule.copy()
             ilgen_samsw.update({"home": "AC Germania St. Ilgen", "guest": "SSV Samswegen", "location": "St. Ilgen"})
             mutterstadt_vogtland = base_schedule.copy()
