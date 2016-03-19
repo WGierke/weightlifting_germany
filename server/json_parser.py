@@ -78,7 +78,8 @@ class BuliParser:
                 final_schedule.append(entry)
 
         if "1. Bundesliga" in self.push_descr:
-            final_schedule.append({"home": "Chemnitzer AC", "guest": "AV Speyer 03", "location": "Chemnitz", "date": "20.03.2016", "time": "14:30"})
+            if "Gruppe A" in self.push_descr:
+                final_schedule.append({"home": "Chemnitzer AC", "guest": "AV Speyer 03", "location": "Chemnitz", "date": "20.03.2016", "time": "15:00"})
 
             if "Gruppe B" in self.push_descr:
                 base_schedule = {"date": "19.03.2016", "time": "19:00"}
