@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "19.03.2016",
-            "guest": "FTG Pfungstadt",
-            "home": "TB 03 Roding II",
-            "location": "Roding",
-            "time": "16:30"
-        },
-        {
             "date": "02.04.2016",
             "guest": "KSV Langen",
             "home": "SV90 Gr\u00e4fenroda",

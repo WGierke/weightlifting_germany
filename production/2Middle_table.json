@@ -1,11 +1,11 @@
 [{
     "table": [
         {
-            "cardinal_points": "15 : 3",
+            "cardinal_points": "18 : 3",
             "club": "TB 03 Roding II",
             "max_score": "539.6",
             "place": "1",
-            "score": "2901.7 : 2474.2"
+            "score": "3365.1 : 2691.6"
         },
         {
             "cardinal_points": "15 : 6",
@@ -29,11 +29,11 @@
             "score": "3071 : 2829.2"
         },
         {
-            "cardinal_points": "0 : 18",
+            "cardinal_points": "0 : 21",
             "club": "FTG Pfungstadt",
             "max_score": "286.2",
             "place": "5",
-            "score": "1374.3 : 2532.3"
+            "score": "1591.7 : 2995.7"
         }
     ]
 }]
