@@ -2,6 +2,14 @@
     "past_competitions": [
         {
             "date": "19.03.2016",
+            "guest": "Athletenteam Vogtland",
+            "home": "AC Mutterstadt",
+            "location": "Mutterstadt",
+            "score": "758.8 : 549.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=6618D86E9A784485B0F51E2A35064D15"
+        },
+        {
+            "date": "19.03.2016",
             "guest": "Oder-Sund-Team ",
             "home": "KSV Durlach",
             "location": "Durlach",
@@ -18,11 +26,11 @@
         },
         {
             "date": "19.03.2016",
-            "guest": "Athletenteam Vogtland",
-            "home": "AC Mutterstadt",
-            "location": "Mutterstadt",
-            "score": "758.8 : 549.4",
-            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=6618D86E9A784485B0F51E2A35064D15"
+            "guest": "SSV Samswegen",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St.Ilgen",
+            "score": "688.4 : 667.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1516/start.php?pid='123'&protokoll=1&wkid=E7DA72046E3E4D799F2B99217D9685BF"
         },
         {
             "date": "05.03.2016",

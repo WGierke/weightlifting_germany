@@ -2,13 +2,6 @@
     "scheduled_competitions": [
         {
             "date": "19.03.2016",
-            "guest": "SSV Samswegen",
-            "home": "AC Germania St.Ilgen",
-            "location": "Leimen-St.Ilgen",
-            "time": "19:00"
-        },
-        {
-            "date": "19.03.2016",
             "guest": "Berliner TSC",
             "home": "SV Germania Obrigheim",
             "location": "Obrigheim",
