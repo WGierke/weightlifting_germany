@@ -1,13 +1,6 @@
 [{
     "scheduled_competitions": [
         {
-            "date": "19.03.2016",
-            "guest": "Berliner TSC",
-            "home": "SV Germania Obrigheim",
-            "location": "Obrigheim",
-            "time": "19:30"
-        },
-        {
             "date": "20.03.2016",
             "guest": "AV Speyer 03",
             "home": "Chemnitzer AC",
