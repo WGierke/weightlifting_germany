@@ -1,11 +1,11 @@
 [{
     "table": [
         {
-            "cardinal_points": "21 : 0",
+            "cardinal_points": "24 : 0",
             "club": "SC Pforzheim",
             "max_score": "579.0",
             "place": "1",
-            "score": "3873.2 : 2899.2"
+            "score": "4322.2 : 3280.2"
         },
         {
             "cardinal_points": "12 : 9",
@@ -29,11 +29,11 @@
             "score": "4122.5 : 3778.7"
         },
         {
-            "cardinal_points": "3 : 18",
+            "cardinal_points": "3 : 21",
             "club": "SV Germania Obrigheim II",
             "max_score": "429.6",
             "place": "5",
-            "score": "2361.3 : 3442.3"
+            "score": "2742.3 : 3891.3"
         }
     ]
 }]
