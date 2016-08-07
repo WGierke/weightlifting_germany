@@ -4,8 +4,11 @@ from gcm import GCM
 import requests
 import json
 import ConfigParser
-import os
-import sys
+
+"""
+Send an unparsed payload to all token owners and remove those token that are already invalid
+"""
+
 
 def send_appspot_get_request(url, secret_key):
     return requests.get("http://weightliftinggermany.appspot.com/" + url, headers={"Content-Type": "application/json", "X-Secret-Key": secret_key}).content
