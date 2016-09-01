@@ -6,17 +6,15 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.helper.DataHelper;
-import de.weightlifting.app.helper.JsonParser;
 import de.weightlifting.app.helper.NetworkHelper;
 
 
@@ -96,37 +94,30 @@ public class News extends UpdateableWrapper {
     }
 
     public void parseFromString(String jsonString) {
-        //Log.d(WeightliftingApp.TAG, "Parsing news JSON...");
         try {
             ArrayList<UpdateableItem> newItems = new ArrayList<>();
 
-            JsonParser jsonParser = new JsonParser();
-            jsonParser.getJsonFromString(jsonString);
+            JSONObject jsonObject = new JSONObject(jsonString);
+            JSONObject result = jsonObject.getJSONObject("result");
 
-            JSONArray articles = jsonParser.getJsonArray("articles");
-            for (int i = 0; i < articles.length(); i++) {
-                try {
-                    JSONObject article = articles.getJSONObject(i);
+            NewsItem item = new NewsItem();
+            item.setPublisher(result.getString("publisher"));
+            item.setHeading(result.getString("heading"));
+            item.setContent(result.getString("content"));
+            item.setURL(result.getString("url"));
+            item.setImageURL(result.getString("image"));
 
-                    NewsItem item = new NewsItem();
-                    item.setHeading(article.getString("heading"));
-                    item.setContent(article.getString("content"));
-                    item.setDate(article.getString("date"));
-                    item.setURL(article.getString("url"));
-                    item.setImageURL(article.getString("image"));
-                    newItems.add(item);
-                } catch (Exception ex) {
-                    Log.e(WeightliftingApp.TAG, "Error while parsing feed item #" + i);
-                    //ex.printStackTrace();
-                    Log.e(WeightliftingApp.TAG, ex.getMessage());
-                }
-            }
+            String epochString =result.getString("date").replace(".0", "");
+            long epoch = Long.parseLong(epochString);
+            String humanDate = new SimpleDateFormat("dd.MM.yyyy").format(new Date( epoch * 1000 ));
+            item.setDate(humanDate);
+            newItems.add(item);
 
             setItems(newItems);
             setLastUpdate((new Date()).getTime());
-            Log.i(WeightliftingApp.TAG, "News parsed, " + newItems.size() + " items found");
+//            Log.i(WeightliftingApp.TAG, "News parsed, " + newItems.size() + " items found");
         } catch (Exception ex) {
-            Log.e(WeightliftingApp.TAG, "News parsing failed");
+//            Log.e(WeightliftingApp.TAG, "News parsing failed");
             ex.printStackTrace();
         }
     }

@@ -5,16 +5,24 @@ import de.weightlifting.app.helper.DataHelper;
 
 public class NewsItem extends UpdateableItem {
 
+    private String publisher;
     private String heading;
     private String content;
     private String preview;
-
     private String url;
     private String imageURL;
     private String date;
 
     public NewsItem() {
 
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
 
     public String getHeading() {

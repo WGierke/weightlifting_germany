@@ -62,6 +62,7 @@ public class WeightliftingApp extends Application {
     public boolean initializedParse = false;
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
+    public News news;
     public Schedule1A schedule1A;
     public Competitions1A competitions1A;
     public Table1A table1A;
@@ -164,6 +165,7 @@ public class WeightliftingApp extends Application {
     }
 
     public void loadDataFromStorage() {
+        getNews(LOAD_FROM_FILE);
         getSchedule1A(LOAD_FROM_FILE);
         getCompetitions1A(LOAD_FROM_FILE);
         getTable1A(LOAD_FROM_FILE);
@@ -183,6 +185,7 @@ public class WeightliftingApp extends Application {
 
     public void updateDataForcefully() {
         //Update everything and save it on storage
+        getNews(UPDATE_FORCEFULLY);
         getSchedule1A(UPDATE_FORCEFULLY);
         getCompetitions1A(UPDATE_FORCEFULLY);
         getTable1A(UPDATE_FORCEFULLY);
@@ -291,7 +294,7 @@ public class WeightliftingApp extends Application {
 
     public News getNews(int updateMode) {
         NetworkHelper.sendAuthenticatedHttpGetRequest("http://weightliftinggermany.appspot.com/get_articles?publisher=BVDG", new Handler());
-        News news = new News();
+        News newNews = new News();
         NewsItem newsItem = new NewsItem();
         newsItem.setHeading("Heading");
         newsItem.setContent("Content");
@@ -301,7 +304,8 @@ public class WeightliftingApp extends Application {
         newsItem.setURL("http://www.german-weightlifting.de/almir-velagic-im-superschwergewicht-ohne-chance/");
         ArrayList<UpdateableItem> newsItems = new ArrayList<>();
         newsItems.add(newsItem);
-        news.setItems(newsItems);
+        newNews.setItems(newsItems);
+        news = newNews;
         return news;
     }
 
@@ -382,8 +386,6 @@ public class WeightliftingApp extends Application {
 
     public ArrayList<ScheduleEntry> getFilteredScheduledCompetitions() {
         ArrayList<ScheduleEntry> result = new ArrayList<>();
-
-        News news = getNews(UPDATE_IF_NECESSARY);
 
         Schedule1A schedule1A = getSchedule1A(UPDATE_IF_NECESSARY);
         Schedule1B schedule1B = getSchedule1B(UPDATE_IF_NECESSARY);
