@@ -1,6 +1,5 @@
 package de.weightlifting.app.helper;
 
-import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
@@ -11,7 +10,6 @@ import android.os.Message;
 import android.preference.PreferenceManager;
 
 import java.io.BufferedReader;
-import java.io.ByteArrayOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -201,6 +199,19 @@ public class DataHelper {
             return sb.toString();
         } else {
             return "";
+        }
+    }
+
+    public static String trimString(String string, int length) {
+        if (string.length() > length) {
+            String result = string.substring(0, length);
+            if (result.contains(" ")) {
+                result = result.substring(0, result.lastIndexOf(" "));
+                result = result + " ...";
+            }
+            return result;
+        } else {
+            return string;
         }
     }
 

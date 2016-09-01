@@ -2,14 +2,15 @@ package de.weightlifting.app.helper;
 
 public class API {
     public static final int FRAGMENT_HOME = 0;
-    public static final int FRAGMENT_BULI_1A = 2;
-    public static final int FRAGMENT_BULI_1B = 3;
-    public static final int FRAGMENT_BULI_2NORTH = 5;
-    public static final int FRAGMENT_BULI_2MIDDLE = 6;
-    public static final int FRAGMENT_BULI_2SOUTH = 7;
-    public static final int FRAGMENT_ARCHIVE = 9;
-    public static final int FRAGMENT_FAQ = 11;
-    public static final int FRAGMENT_CONTACT = 13;
+    public static final int FRAGMENT_NEWS = 2;
+    public static final int FRAGMENT_BULI_1A = 4;
+    public static final int FRAGMENT_BULI_1B = 5;
+    public static final int FRAGMENT_BULI_2NORTH = 7;
+    public static final int FRAGMENT_BULI_2MIDDLE = 8;
+    public static final int FRAGMENT_BULI_2SOUTH = 9;
+    public static final int FRAGMENT_ARCHIVE = 11;
+    public static final int FRAGMENT_FAQ = 13;
+    public static final int FRAGMENT_CONTACT = 15;
 
     public final static String ITEM = "item";
     public final static String SEASON_ITEM_POSITION = "seasonItem";
@@ -17,6 +18,7 @@ public class API {
     public final static String PROTOCOL_URL = "protocolUrl";
     public final static String COMPETITION_PARTIES = "competitionParties";
     public final static String CLUB_NAME = "clubName";
+    public final static String IMAGE_URL = "imageUrl";
 
     //TITLE#TEXT#DESCRIPTION#FRAGMENT_ID#FRAGMENT_SUB_ID
     //Neue Tabellenergebnisse#1. Potsdam|2.Berlin#2. Bundesliga - Staffel Nordost#5#2

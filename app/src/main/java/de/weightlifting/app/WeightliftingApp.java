@@ -11,6 +11,7 @@ import com.crashlytics.android.answers.CustomEvent;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
+import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.parse.Parse;
 import com.parse.ParseObject;
@@ -40,10 +41,11 @@ import de.weightlifting.app.buli.relay2South.Table2South;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.DataHelper;
-import de.weightlifting.app.helper.ImageLoader;
 import de.weightlifting.app.helper.Keys;
 import de.weightlifting.app.helper.MemoryCache;
 import de.weightlifting.app.helper.NetworkHelper;
+import de.weightlifting.app.news.News;
+import de.weightlifting.app.news.NewsItem;
 
 public class WeightliftingApp extends Application {
 
@@ -91,7 +93,7 @@ public class WeightliftingApp extends Application {
         Log.i(TAG, "Initializing...");
 
         memoryCache = new MemoryCache();
-        imageLoader = new ImageLoader(getApplicationContext());
+        imageLoader = ImageLoader.getInstance();
 
         initFaqs();
         initArchive();
@@ -103,7 +105,7 @@ public class WeightliftingApp extends Application {
         ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
                 .defaultDisplayImageOptions(defaultOptions)
                 .build();
-        com.nostra13.universalimageloader.core.ImageLoader.getInstance().init(config);
+        ImageLoader.getInstance().init(config);
 
         try {
             Parse.initialize(this, Keys.CONFIG_APP_ID, Keys.CONFIG_CLIENT_KEY);
@@ -287,6 +289,22 @@ public class WeightliftingApp extends Application {
         return myInstance;
     }
 
+    public News getNews(int updateMode) {
+        NetworkHelper.sendAuthenticatedHttpGetRequest("http://weightliftinggermany.appspot.com/get_articles?publisher=BVDG", new Handler());
+        News news = new News();
+        NewsItem newsItem = new NewsItem();
+        newsItem.setHeading("Heading");
+        newsItem.setContent("Content");
+        newsItem.setDate("01.01.1970");
+        newsItem.setPreview("Preview");
+        newsItem.setImageURL("http://www.german-weightlifting.de/wp-content/uploads/2016/08/wp-1471390316731.png");
+        newsItem.setURL("http://www.german-weightlifting.de/almir-velagic-im-superschwergewicht-ohne-chance/");
+        ArrayList<UpdateableItem> newsItems = new ArrayList<>();
+        newsItems.add(newsItem);
+        news.setItems(newsItems);
+        return news;
+    }
+
     public Schedule1A getSchedule1A(int updateMode) {
         schedule1A = (Schedule1A) getWrapperItems(schedule1A, Schedule1A.class, updateMode);
         return schedule1A;
@@ -364,6 +382,8 @@ public class WeightliftingApp extends Application {
 
     public ArrayList<ScheduleEntry> getFilteredScheduledCompetitions() {
         ArrayList<ScheduleEntry> result = new ArrayList<>();
+
+        News news = getNews(UPDATE_IF_NECESSARY);
 
         Schedule1A schedule1A = getSchedule1A(UPDATE_IF_NECESSARY);
         Schedule1B schedule1B = getSchedule1B(UPDATE_IF_NECESSARY);
@@ -460,6 +480,12 @@ public class WeightliftingApp extends Application {
         } catch (Exception e) {
             e.printStackTrace();
         }
+    }
+
+    public ImageLoader getImageLoader() {
+        if (imageLoader == null)
+            imageLoader = ImageLoader.getInstance();
+        return imageLoader;
     }
 
     /**

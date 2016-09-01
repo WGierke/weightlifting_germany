@@ -32,6 +32,7 @@ import de.weightlifting.app.buli.relay2North.BuliFragment2North;
 import de.weightlifting.app.buli.relay2South.BuliFragment2South;
 import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.UiHelper;
+import de.weightlifting.app.news.NewsFeedFragment;
 import de.weightlifting.app.service.RegistrationIntentService;
 
 public class MainActivity extends AppCompatActivity {
@@ -74,6 +75,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initNavigation(Bundle savedInstanceState) {
         PrimaryDrawerItem nav_home = new PrimaryDrawerItem().withName(R.string.nav_home).withIcon(R.drawable.nav_home);
+        PrimaryDrawerItem nav_news = new PrimaryDrawerItem().withName(R.string.nav_news).withIcon(R.drawable.nav_news);
         SectionDrawerItem nav_buli1_section = new SectionDrawerItem().withName("1. Bundesliga");
         PrimaryDrawerItem nav_buli_1A = new PrimaryDrawerItem().withName(R.string.nav_buli_1A).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_1B = new PrimaryDrawerItem().withName(R.string.nav_buli_1B).withIcon(R.drawable.nav_buli);
@@ -90,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
                 .withToolbar(mToolbar)
                 .addDrawerItems(
                         nav_home,
+                        new DividerDrawerItem(),
+                        nav_news,
                         nav_buli1_section,
                         nav_buli_1A,
                         nav_buli_1B,
@@ -196,6 +200,10 @@ public class MainActivity extends AppCompatActivity {
             case API.FRAGMENT_HOME:
                 fragment = new HomeFragment();
                 setTitle(getString(R.string.nav_home));
+                break;
+            case API.FRAGMENT_NEWS:
+                fragment = new NewsFeedFragment();
+                setTitle(getString(R.string.nav_news));
                 break;
             case API.FRAGMENT_BULI_1A:
                 fragment = new BuliFragment1A();

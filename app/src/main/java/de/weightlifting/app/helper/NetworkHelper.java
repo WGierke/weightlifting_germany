@@ -151,6 +151,48 @@ public class NetworkHelper {
         }).start();
     }
 
+    public static void sendAuthenticatedHttpGetRequest(final String url, final Handler handler) {
+        (new Thread() {
+            @Override
+            public void run() {
+                Message message = new Message();
+                Bundle resultBundle = new Bundle();
+                try {
+                    URL httpUrl = new URL(url);
+                    HttpURLConnection conn = (HttpURLConnection) httpUrl.openConnection();
+                    conn.setRequestMethod("GET");
+                    conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                    conn.setRequestProperty("charset", "utf-8");
+                    conn.setRequestProperty("X-Secret-Key", Keys.SECRET_KEY);
+                    conn.setUseCaches(false);
+
+                    int responseCode = conn.getResponseCode();
+
+                    BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+                    String inputLine;
+                    StringBuilder responseBuffer = new StringBuilder();
+                    while ((inputLine = in.readLine()) != null) {
+                        responseBuffer.append(inputLine);
+                    }
+                    in.close();
+                    String response = responseBuffer.toString();
+                    System.out.println(response);
+                    Log.d("AuthenticatedServer", "Response: " + response);
+                    if (responseCode == 200 && response.contains("Success")) {
+                        resultBundle.putString(GCMPreferences.RESULT_KEY, GCMPreferences.RESULT_SUCCESS);
+                    } else {
+                        throw new Exception("Request failed with Code " + responseCode + " and content '" + response + "'");
+                    }
+                } catch (Exception e) {
+                    Log.d("AuthenticatedServer", "getting authenticated data failed: " + e.getMessage());
+                    resultBundle.putString(GCMPreferences.RESULT_KEY, GCMPreferences.RESULT_FAILURE);
+                }
+                message.setData(resultBundle);
+                handler.sendMessage(message);
+            }
+        }).start();
+    }
+
     public static void sendToSlack(String message) throws Exception {
         net.steppschuh.slackmessagebuilder.message.Message message2 = new MessageBuilder()
                 .setChannel("#germany")
