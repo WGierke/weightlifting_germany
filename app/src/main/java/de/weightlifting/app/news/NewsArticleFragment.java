@@ -46,16 +46,18 @@ public class NewsArticleFragment extends Fragment {
             showError();
         }
 
-        cover.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment fr = new ImageFragment();
-                Bundle bundle = new Bundle();
-                bundle.putString(API.IMAGE_URL, article.getImageURL());
-                fr.setArguments(bundle);
-                ((MainActivity) getActivity()).addFragment(fr, getString(R.string.nav_news), true);
-            }
-        });
+        if(article.hasImage()) {
+            cover.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Fragment fr = new ImageFragment();
+                    Bundle bundle = new Bundle();
+                    bundle.putString(API.IMAGE_URL, article.getImageURL());
+                    fr.setArguments(bundle);
+                    ((MainActivity) getActivity()).addFragment(fr, getString(R.string.nav_news), true);
+                }
+            });
+        }
 
         return fragment;
     }
@@ -67,10 +69,8 @@ public class NewsArticleFragment extends Fragment {
         url.setText(Html.fromHtml("<a href=\"" + article.getURL() + "\">" + getString(R.string.news_article_url) + "</a>"));
         url.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
 
-        if (article.getImageURL() != null) {
+        if (article.hasImage()) {
             app.getImageLoader().displayImage(article.getImageURL(), cover);
-        } else {
-            cover.setImageDrawable(getResources().getDrawable(R.drawable.cover_home));
         }
     }
 

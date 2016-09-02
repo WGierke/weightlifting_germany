@@ -2,6 +2,7 @@ package de.weightlifting.app.news;
 
 import android.app.Activity;
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -72,11 +73,8 @@ public class NewsFeedListAdapter extends BaseAdapter {
 
         ImageView icon = (ImageView) view.findViewById(R.id.news_icon);
 
-        if (items.get(position).getImageURL() != null) {
-            //crashes the app
+        if (items.get(position).hasImage()) {
             ((WeightliftingApp) activity.getApplicationContext()).getImageLoader().displayImage(items.get(position).getImageURL(), icon);
-        } else {
-            // Show default cover image
         }
         return view;
     }

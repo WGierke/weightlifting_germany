@@ -78,5 +78,9 @@ public class NewsItem extends UpdateableItem {
                 && url.equals(item2.getURL()) && imageURL.equals(item2.getImageURL())
                 && date.equals(item2.getDate());
     }
+
+    public boolean hasImage() {
+        return imageURL != null && imageURL.length() > 0;
+    }
 }
 
