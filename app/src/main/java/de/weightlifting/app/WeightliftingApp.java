@@ -293,19 +293,10 @@ public class WeightliftingApp extends Application {
     }
 
     public News getNews(int updateMode) {
-        NetworkHelper.sendAuthenticatedHttpGetRequest("http://weightliftinggermany.appspot.com/get_articles?publisher=BVDG", new Handler());
-        News newNews = new News();
-        NewsItem newsItem = new NewsItem();
-        newsItem.setHeading("Heading");
-        newsItem.setContent("Content");
-        newsItem.setDate("01.01.1970");
-        newsItem.setPreview("Preview");
-        newsItem.setImageURL("http://www.german-weightlifting.de/wp-content/uploads/2016/08/wp-1471390316731.png");
-        newsItem.setURL("http://www.german-weightlifting.de/almir-velagic-im-superschwergewicht-ohne-chance/");
-        ArrayList<UpdateableItem> newsItems = new ArrayList<>();
-        newsItems.add(newsItem);
-        newNews.setItems(newsItems);
-        news = newNews;
+        if (news == null) {
+            news = new News();
+        }
+        news.addArticleFromUrl("http://weightliftinggermany.appspot.com/get_article?url=http://www.german-weightlifting.de/passwort-regelung-fuer-adams-angepasst/");
         return news;
     }
 

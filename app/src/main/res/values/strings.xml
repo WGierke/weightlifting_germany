@@ -28,6 +28,7 @@
 
     <!-- Navigation -->
     <string name="nav_home">Startseite</string>
+    <string name="nav_news">Neuigkeiten</string>
     <string name="nav_buli_1A">Staffel A</string>
     <string name="nav_buli_1B">Staffel B</string>
     <string name="nav_buli_2North">Staffel Nordost</string>
@@ -45,11 +46,8 @@
     <!-- News -->
     <string name="news_error_heading">Something went wrong</string>
     <string name="news_error_content">This shouldn\'t happen, please go back and try again. Restart the app if that doesn\'t solve the issue.</string>
-    <string name="news_feed">Neuigkeiten</string>
-    <string name="news_events">Veranstaltungen</string>
     <string name="news_article_url">Link zum Artikel</string>
     <string name="news_no_articles">Es konnten keine Artikel gefunden werden.</string>
-    <string name="news_no_events">Es konnten keine Veranstaltungen gefunden werden.</string>
 
     <!-- Bundesliga -->
     <string name="buli_1A">1. Bundesliga - Staffel A</string>
@@ -107,7 +105,6 @@
     <string name="nav_buli">Bundesliga</string>
     <string name="buli_protocol">Protokoll</string>
     <string name="share_this">Teilen</string>
-    <string name="nav_news">Neuigkeiten</string>
 
 </resources>
 

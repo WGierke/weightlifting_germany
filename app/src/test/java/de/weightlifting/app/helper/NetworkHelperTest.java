@@ -24,4 +24,20 @@ public class NetworkHelperTest {
         Assert.assertTrue(newsItem.getContent().endsWith("ing-Beauftragter BVDG"));
         Assert.assertEquals(newsItem.getDate(), "26.08.2016");
     }
+//
+//    @Test
+//    public void testParseArticleFromUrl() throws Exception {
+//        News news = new News();
+//        news.addArticleFromUrl("http://weightliftinggermany.appspot.com/get_article?url=http://www.german-weightlifting.de/passwort-regelung-fuer-adams-angepasst/");
+//        Thread.sleep(3000);
+//        Assert.assertEquals(news.getItems().size(), 1);
+//        NewsItem newsItem = (NewsItem) news.getItem(0);
+//        Assert.assertEquals(newsItem.getPublisher(), "BVDG");
+//        Assert.assertEquals(newsItem.getURL(), "http://www.german-weightlifting.de/passwort-regelung-fuer-adams-angepasst/");
+//        Assert.assertEquals(newsItem.getImageURL(), "http://www.german-weightlifting.de/wp-content/uploads/2016/08/wp-1471390316731.png");
+//        Assert.assertEquals(newsItem.getHeading(), "Passwort-Regelung fu00fcr ADAMS angepasst");
+//        Assert.assertTrue(newsItem.getContent().startsWith("Liebe BVDG-Kaderathleten"));
+//        Assert.assertTrue(newsItem.getContent().endsWith("ing-Beauftragter BVDG"));
+//        Assert.assertEquals(newsItem.getDate(), "26.08.2016");
+//    }
 }

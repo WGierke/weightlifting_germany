@@ -39,7 +39,6 @@ public class NewsItem extends UpdateableItem {
 
     public void setContent(String content) {
         this.content = content;
-        setPreview(DataHelper.trimString(content, 150));
     }
 
     public String getURL() {

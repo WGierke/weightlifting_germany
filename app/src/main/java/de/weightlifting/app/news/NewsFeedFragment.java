@@ -54,7 +54,6 @@ public class NewsFeedFragment extends ListViewFragment {
                         Bundle bundle = new Bundle();
                         bundle.putInt(API.ITEM, position);
                         article.setArguments(bundle);
-                        Log.d("Neuigkeiten", "article clicked");
                         ((MainActivity) getActivity()).addFragment(article, getString(R.string.nav_news), true);
                     }
                 });
