@@ -31,6 +31,7 @@ import com.parse.ParseObject;
 
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.NetworkHelper;
 
 public class RegistrationIntentService extends IntentService {
@@ -70,6 +71,7 @@ public class RegistrationIntentService extends IntentService {
      *
      * @param token The new token.
      */
+    //TODO Do this without the exception that the resulting message is sent to a dead thread
     private void sendRegistrationToServer(String token) {
         Log.d(WeightliftingApp.TAG, "Sending new token: " + token);
         ParseObject GcmToken = new ParseObject("GcmToken");
@@ -82,14 +84,17 @@ public class RegistrationIntentService extends IntentService {
             public void handleMessage(Message msg) {
                 try {
                     Bundle data = msg.getData();
-                    String result = data.getString(GCMPreferences.RESULT_KEY);
-                    if (result.equals(GCMPreferences.RESULT_SUCCESS)) {
+                    String result = data.getString(API.HANDLER_RESULT_KEY);
+                    if (result.equals("Added token successfully") || result.equals("This token is already saved")) {
+                        Log.d(TAG, "sendRegistrationToServer - Success: " + result);
                         sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, true).apply();
                         sharedPreferences.edit().putString(GCMPreferences.TOKEN, newToken).apply();
                     } else {
                         sharedPreferences.edit().putBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false).apply();
+                        Log.d(TAG, "sendRegistrationToServer - Failure: " + result);
                     }
                 } catch (Exception ignored) {
+                    ignored.printStackTrace();
                 }
             }
         };

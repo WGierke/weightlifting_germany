@@ -126,7 +126,6 @@ public class NetworkHelper {
                     OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
                     wr.write(data);
                     wr.flush();
-                    int responseCode = conn.getResponseCode();
 
                     BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                     String inputLine;
@@ -136,14 +135,9 @@ public class NetworkHelper {
                     }
                     in.close();
                     String response = responseBuffer.toString();
-                    if (responseCode == 200 && response.contains("Success")) {
-                        resultBundle.putString(GCMPreferences.RESULT_KEY, GCMPreferences.RESULT_SUCCESS);
-                    } else {
-                        throw new Exception("Request failed with Code " + responseCode + " and content '" + response + "'");
-                    }
+                    resultBundle.putString(API.HANDLER_RESULT_KEY, response);
                 } catch (Exception e) {
                     Log.d(WeightliftingApp.TAG, "posting authenticated data failed: " + e.getMessage());
-                    resultBundle.putString(GCMPreferences.RESULT_KEY, GCMPreferences.RESULT_FAILURE);
                 }
                 message.setData(resultBundle);
                 handler.sendMessage(message);
@@ -166,8 +160,6 @@ public class NetworkHelper {
                     conn.setRequestProperty("X-Secret-Key", Keys.SECRET_KEY);
                     conn.setUseCaches(false);
 
-                    int responseCode = conn.getResponseCode();
-
                     BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                     String inputLine;
                     StringBuilder responseBuffer = new StringBuilder();
@@ -177,15 +169,9 @@ public class NetworkHelper {
                     in.close();
                     String response = responseBuffer.toString();
                     System.out.println(response);
-                    Log.d("AuthenticatedServer", "Response: " + response);
-                    if (responseCode == 200 && response.contains("Success")) {
-                        resultBundle.putString(GCMPreferences.RESULT_KEY, GCMPreferences.RESULT_SUCCESS);
-                    } else {
-                        throw new Exception("Request failed with Code " + responseCode + " and content '" + response + "'");
-                    }
+                    resultBundle.putString(API.HANDLER_RESULT_KEY, response);
                 } catch (Exception e) {
-                    Log.d("AuthenticatedServer", "getting authenticated data failed: " + e.getMessage());
-                    resultBundle.putString(GCMPreferences.RESULT_KEY, GCMPreferences.RESULT_FAILURE);
+                    e.printStackTrace();
                 }
                 message.setData(resultBundle);
                 handler.sendMessage(message);

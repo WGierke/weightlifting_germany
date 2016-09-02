@@ -41,6 +41,9 @@ android {
             applicationId 'de.weightlifting.app'
         }
     }
+    testOptions {
+        unitTests.returnDefaultValues = true
+    }
 }
 
 dependencies {

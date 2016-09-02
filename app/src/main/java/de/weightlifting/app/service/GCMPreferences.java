@@ -20,9 +20,5 @@ public class GCMPreferences {
 
     public static final String SENT_TOKEN_TO_SERVER = "sentTokenToServer";
     public static final String TOKEN = "gcmToken";
-    public static final String RESULT_KEY = "result";
-    public static final String RESULT_SUCCESS = "success";
-    public static final String RESULT_FAILURE = "failure";
-
 
 }

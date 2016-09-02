@@ -204,11 +204,9 @@ public class DataHelper {
 
     public static String trimString(String string, int length) {
         if (string.length() > length) {
-            String result = string.substring(0, length);
-            if (result.contains(" ")) {
-                result = result.substring(0, result.lastIndexOf(" "));
-                result = result + " ...";
-            }
+            int lastWhitespaceInResult = string.indexOf(' ', length);
+            String result = string.substring(0, lastWhitespaceInResult);
+            result += "...";
             return result;
         } else {
             return string;
