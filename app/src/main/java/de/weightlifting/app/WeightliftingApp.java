@@ -294,9 +294,9 @@ public class WeightliftingApp extends Application {
     public News getNews(int updateMode) {
         if (news == null) {
             news = new News();
-            //news.addArticleFromUrl("http://weightliftinggermany.appspot.com/get_article?url=http://www.german-weightlifting.de/passwort-regelung-fuer-adams-angepasst/");
-            news.addArticlesFromPublisher("BVDG");
-            news.addArticlesFromPublisher("Speyer");
+            news.addPublisher("BVDG");
+            news.addPublisher("Speyer");
+            news.addArticleUrlsForPublishers();
         }
         return news;
     }

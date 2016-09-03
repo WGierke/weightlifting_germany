@@ -11,6 +11,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
@@ -25,6 +26,7 @@ public class News extends UpdateableWrapper {
     public static final String FILE_NAME = "news.json";
     public static final String url = "news.json";
     public static ArrayList<NewsItem> itemsToMark = new ArrayList<>();
+    public static HashMap<String, ArrayList<String>> remainingPublisherArticleUrls = new HashMap<>();
 
     public static ArrayList<NewsItem> casteArray(ArrayList<UpdateableItem> array) {
         ArrayList<NewsItem> convertedItems = new ArrayList<>();
@@ -106,27 +108,22 @@ public class News extends UpdateableWrapper {
         }
     }
 
-    public NewsItem getNewsItemFromString(String jsonString) {
-        try {
-            JSONObject jsonObject = new JSONObject(jsonString);
-            JSONObject result = jsonObject.getJSONObject("result");
+    public NewsItem getNewsItemFromString(String jsonString) throws Exception {
+        JSONObject jsonObject = new JSONObject(jsonString);
+        JSONObject result = jsonObject.getJSONObject("result");
 
-            NewsItem item = new NewsItem();
-            item.setPublisher(result.getString("publisher"));
-            item.setHeading(result.getString("heading"));
-            item.setContent(result.getString("content"));
-            item.setPreview(DataHelper.trimString(item.getContent().replace("\n", "").replace("\r", ""), 30));
-            item.setURL(result.getString("url"));
-            item.setImageURL(result.getString("image"));
+        NewsItem item = new NewsItem();
+        item.setPublisher(result.getString("publisher"));
+        item.setHeading(result.getString("heading"));
+        item.setContent(result.getString("content"));
+        item.setPreview(DataHelper.trimString(item.getContent().replace("\n", "").replace("\r", ""), 30));
+        item.setURL(result.getString("url"));
+        item.setImageURL(result.getString("image"));
 
-            String epochString = result.getString("date").replace(".0", "");
-            long epoch = Long.parseLong(epochString);
-            item.setDate(new Date(epoch * 1000));
-            return item;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return null;
+        String epochString = result.getString("date").replace(".0", "");
+        long epoch = Long.parseLong(epochString);
+        item.setDate(new Date(epoch * 1000));
+        return item;
     }
 
     public void addArticleFromUrl(String url) {
@@ -153,8 +150,19 @@ public class News extends UpdateableWrapper {
         }
     }
 
-    public void addArticlesFromPublisher(String publisher) {
+    public void addPublisher(String publisher) {
+        remainingPublisherArticleUrls.put(publisher, new ArrayList<String>());
+    }
+
+    public void addArticleUrlsForPublishers() {
+        for (String publisher : remainingPublisherArticleUrls.keySet()) {
+            addArticleUrlsForPublisher(publisher);
+        }
+    }
+
+    public void addArticleUrlsForPublisher(final String publisher) {
         String url = NetworkHelper.BASE_SERVER_URL + "/get_articles?publisher=" + publisher;
+
         try {
             Handler addArticlesHandler = new Handler() {
                 @Override
@@ -170,9 +178,10 @@ public class News extends UpdateableWrapper {
                         for (int i = 0; i < urls.length(); i++) {
                             try {
                                 String url = urls.getJSONObject(i).getString("url");
-                                addArticleFromUrl(url);
-                                if (i == 20) {
-                                    return;
+                                if (items.size() < 5) {
+                                    addArticleFromUrl(url);
+                                } else {
+                                    remainingPublisherArticleUrls.get(publisher).add(url);
                                 }
                             } catch (Exception e) {
                                 e.printStackTrace();

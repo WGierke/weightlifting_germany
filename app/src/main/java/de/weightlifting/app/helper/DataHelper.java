@@ -205,6 +205,9 @@ public class DataHelper {
     public static String trimString(String string, int length) {
         if (string.length() > length) {
             int lastWhitespaceInResult = string.indexOf(' ', length);
+            if(lastWhitespaceInResult == -1) {
+                return string;
+            }
             String result = string.substring(0, lastWhitespaceInResult);
             result += "...";
             return result;

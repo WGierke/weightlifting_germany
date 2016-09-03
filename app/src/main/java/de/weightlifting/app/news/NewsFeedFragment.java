@@ -51,6 +51,7 @@ public class NewsFeedFragment extends ListViewFragment {
                 Collections.sort(newsItems, Collections.reverseOrder());
                 adapter = new NewsFeedListAdapter(newsItems, getActivity());
                 listViewBuli.setAdapter(adapter);
+                //addItems();
                 listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -79,14 +80,28 @@ public class NewsFeedFragment extends ListViewFragment {
                 });
             } catch (Exception ex) {
                 Log.e(WeightliftingApp.TAG, "Showing news feed failed");
-                ex.toString();
+                ex.printStackTrace();
             }
         }
     }
 
     private void addItems() {
         visibleItems += 5;
-        adapter.setItems(news.getFirstElements(visibleItems));
+        Log.d("weightlifting", "adding more");
+        //adapter.setItems(news.getFirstElements(visibleItems));
+
+        for (String publisher : News.remainingPublisherArticleUrls.keySet()) {
+            ArrayList<String> urls = News.remainingPublisherArticleUrls.get(publisher);
+            ArrayList<String> firstUrls;
+            if (5 <= urls.size())
+                firstUrls = new ArrayList(urls.subList(0, 5));
+            else
+                firstUrls = urls;
+            for (String firstUrl : firstUrls) {
+                news.addArticleFromUrl(firstUrl);
+            }
+            adapter.setItems(News.casteArray(news.getItems()));
+        }
         adapter.notifyDataSetChanged();
         is_loading = false;
     }
