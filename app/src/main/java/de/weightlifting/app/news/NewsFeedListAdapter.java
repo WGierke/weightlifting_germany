@@ -75,6 +75,8 @@ public class NewsFeedListAdapter extends BaseAdapter {
 
         if (items.get(position).hasImage()) {
             ((WeightliftingApp) activity.getApplicationContext()).getImageLoader().displayImage(items.get(position).getImageURL(), icon);
+        } else {
+            icon.setImageResource(R.drawable.icon_germany_bar);
         }
         return view;
     }

@@ -22,7 +22,7 @@ import de.weightlifting.app.service.GCMPreferences;
 
 public class NetworkHelper {
 
-    private static final String BASE_SERVER_URL = "http://weightliftinggermany.appspot.com/";
+    public static final String BASE_SERVER_URL = "http://weightliftinggermany.appspot.com";
 
     public static void getWebRequest(final String url, Handler handler) {
         final Handler mHandler = handler;

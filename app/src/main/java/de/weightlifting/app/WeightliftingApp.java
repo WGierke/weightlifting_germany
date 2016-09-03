@@ -45,7 +45,6 @@ import de.weightlifting.app.helper.Keys;
 import de.weightlifting.app.helper.MemoryCache;
 import de.weightlifting.app.helper.NetworkHelper;
 import de.weightlifting.app.news.News;
-import de.weightlifting.app.news.NewsItem;
 
 public class WeightliftingApp extends Application {
 
@@ -295,8 +294,9 @@ public class WeightliftingApp extends Application {
     public News getNews(int updateMode) {
         if (news == null) {
             news = new News();
+            //news.addArticleFromUrl("http://weightliftinggermany.appspot.com/get_article?url=http://www.german-weightlifting.de/passwort-regelung-fuer-adams-angepasst/");
+            news.addArticlesFromPublisher("BVDG");
         }
-        news.addArticleFromUrl("http://weightliftinggermany.appspot.com/get_article?url=http://www.german-weightlifting.de/passwort-regelung-fuer-adams-angepasst/");
         return news;
     }
 
