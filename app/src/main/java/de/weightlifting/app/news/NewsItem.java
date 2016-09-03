@@ -1,9 +1,11 @@
 package de.weightlifting.app.news;
 
-import de.weightlifting.app.UpdateableItem;
-import de.weightlifting.app.helper.DataHelper;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-public class NewsItem extends UpdateableItem {
+import de.weightlifting.app.UpdateableItem;
+
+public class NewsItem extends UpdateableItem implements Comparable<NewsItem> {
 
     private String publisher;
     private String heading;
@@ -11,7 +13,7 @@ public class NewsItem extends UpdateableItem {
     private String preview;
     private String url;
     private String imageURL;
-    private String date;
+    private Date date;
 
     public NewsItem() {
 
@@ -57,11 +59,11 @@ public class NewsItem extends UpdateableItem {
         this.preview = preview;
     }
 
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
 
@@ -81,6 +83,15 @@ public class NewsItem extends UpdateableItem {
 
     public boolean hasImage() {
         return imageURL != null && imageURL.length() > 0;
+    }
+
+    public String getHumanDate() {
+        return new SimpleDateFormat("dd.MM.yyyy").format(getDate());
+    }
+
+    @Override
+    public int compareTo(NewsItem another) {
+        return getDate().compareTo(another.getDate());
     }
 }
 

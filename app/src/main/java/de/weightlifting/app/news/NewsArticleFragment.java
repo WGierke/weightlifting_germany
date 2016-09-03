@@ -65,7 +65,7 @@ public class NewsArticleFragment extends Fragment {
     private void showArticle() {
         heading.setText(article.getHeading());
         content.setText(article.getContent());
-        date.setText(article.getDate());
+        date.setText(article.getHumanDate());
         url.setText(Html.fromHtml("<a href=\"" + article.getURL() + "\">" + getString(R.string.news_article_url) + "</a>"));
         url.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
 

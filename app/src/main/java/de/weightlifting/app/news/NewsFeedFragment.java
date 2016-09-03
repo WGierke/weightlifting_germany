@@ -9,6 +9,9 @@ import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Collections;
+
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
@@ -44,7 +47,9 @@ public class NewsFeedFragment extends ListViewFragment {
             refreshHandler.postDelayed(refreshRunnable, News.TIMER_RETRY);
         } else {
             try {
-                adapter = new NewsFeedListAdapter(news.getFirstElements(visibleItems), getActivity());
+                ArrayList<NewsItem> newsItems = News.casteArray(news.getItems());
+                Collections.sort(newsItems, Collections.reverseOrder());
+                adapter = new NewsFeedListAdapter(newsItems, getActivity());
                 listViewBuli.setAdapter(adapter);
                 listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override

@@ -2,15 +2,12 @@ package de.weightlifting.app.news;
 
 import android.app.Activity;
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-
-import com.nostra13.universalimageloader.core.ImageLoader;
 
 import java.util.ArrayList;
 
@@ -64,7 +61,7 @@ public class NewsFeedListAdapter extends BaseAdapter {
         preview.setText(items.get(position).getPreview());
 
         TextView date = (TextView) view.findViewById(R.id.event_date);
-        date.setText(items.get(position).getDate());
+        date.setText(items.get(position).getHumanDate());
 
         if (News.itemsToMark.contains(items.get(position))) {
             UiHelper.colorFade(view, activity.getResources());

@@ -9,7 +9,6 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -122,8 +121,7 @@ public class News extends UpdateableWrapper {
 
             String epochString = result.getString("date").replace(".0", "");
             long epoch = Long.parseLong(epochString);
-            String humanDate = new SimpleDateFormat("dd.MM.yyyy").format(new Date(epoch * 1000));
-            item.setDate(humanDate);
+            item.setDate(new Date(epoch * 1000));
             return item;
         } catch (Exception e) {
             e.printStackTrace();
