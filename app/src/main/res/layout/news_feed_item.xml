@@ -16,7 +16,7 @@
         android:src="@drawable/icon_germany_bar" />
 
     <TextView
-        android:id="@+id/event_title"
+        android:id="@+id/news_title"
         style="@style/NewsHeading"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -26,28 +26,40 @@
         android:text="Title" />
 
     <TextView
-        android:id="@+id/event_preview"
+        android:id="@+id/news_preview"
         style="@style/NewsPreview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/event_title"
+        android:layout_below="@id/news_title"
         android:layout_marginBottom="5dip"
         android:layout_marginRight="40dip"
         android:layout_toRightOf="@id/news_icon"
         android:text="Preview" />
 
     <TextView
-        android:id="@+id/event_date"
+        android:id="@+id/news_date"
         style="@style/NewsPreview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/event_preview"
+        android:layout_below="@id/news_preview"
         android:layout_marginBottom="5dip"
         android:layout_marginRight="40dip"
         android:layout_toRightOf="@id/news_icon"
         android:text="Date" />
 
+    <TextView
+        android:id="@+id/news_publisher"
+        style="@style/NewsPreview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/news_preview"
+        android:layout_marginBottom="5dip"
+        android:layout_marginRight="40dip"
+        android:layout_toLeftOf="@+id/arrow_right"
+        android:text="Publisher" />
+
     <ImageView
+        android:id="@+id/arrow_right"
         android:layout_width="40dip"
         android:layout_height="match_parent"
         android:layout_alignParentRight="true"

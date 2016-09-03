@@ -71,7 +71,7 @@ public class NetworkHelper {
     public static void sendToken(String token, Handler handler) {
         try {
             String data = URLEncoder.encode("token", "UTF-8") + "=" + URLEncoder.encode(token, "UTF-8");
-            String url = BASE_SERVER_URL + "add_token";
+            String url = BASE_SERVER_URL + "/add_token";
             sendAuthenticatedHttpPostRequest(url, data, handler);
         } catch (UnsupportedEncodingException ignored) {
             ignored.printStackTrace();

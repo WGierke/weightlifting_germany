@@ -54,14 +54,17 @@ public class NewsFeedListAdapter extends BaseAdapter {
             view = inflater.inflate(R.layout.news_feed_item, null);
         }
 
-        TextView title = (TextView) view.findViewById(R.id.event_title);
+        TextView title = (TextView) view.findViewById(R.id.news_title);
         title.setText(items.get(position).getHeading());
 
-        TextView preview = (TextView) view.findViewById(R.id.event_preview);
+        TextView preview = (TextView) view.findViewById(R.id.news_preview);
         preview.setText(items.get(position).getPreview());
 
-        TextView date = (TextView) view.findViewById(R.id.event_date);
+        TextView date = (TextView) view.findViewById(R.id.news_date);
         date.setText(items.get(position).getHumanDate());
+
+        TextView publisher = (TextView) view.findViewById(R.id.news_publisher);
+        publisher.setText(items.get(position).getPublisher() + "-Blog");
 
         if (News.itemsToMark.contains(items.get(position))) {
             UiHelper.colorFade(view, activity.getResources());
