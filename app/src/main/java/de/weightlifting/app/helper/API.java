@@ -22,12 +22,17 @@ public class API {
 
     //TITLE#TEXT#DESCRIPTION#FRAGMENT_ID#FRAGMENT_SUB_ID
     //Neue Tabellenergebnisse#1. Potsdam|2.Berlin#2. Bundesliga - Staffel Nordost#5#2
-    public static final String FILTER_MODE_KEY = "FILTER_MODE";
-    public static final String FILTER_MODE_NONE = "FILER_NONE";
-    public static final String FILTER_MODE_RELAY = "FILTER_RELAY";
-    public static final String FILTER_MODE_CLUB = "FILTER_CLUB";
+    public static final String BULI_FILTER_MODE_KEY = "BULI_FILTER_MODE";
+    public static final String BULI_FILTER_MODE_NONE = "BULI_FILTER_NONE";
+    public static final String BULI_FILTER_MODE_RELAY = "BULI_FILTER_RELAY";
+    public static final String BULI_FILTER_MODE_CLUB = "BULI_FILTER_CLUB";
+    public static final String BULI_FILTER_TEXT_KEY = "BULI_FILTER_TEXT_KEY";
 
-    public static final String FILTER_TEXT_KEY = "FILTER_TEXT_KEY";
+    public static final String BLOG_FILTER_MODE_KEY = "BLOG_FILTER_MODE_KEY";
+    public static final String BLOG_FILTER_SHOW_ALL = "BLOG_FILTER_SHOW_ALL";
+    public static final String BLOG_FILTER_SHOW_CHOSEN = "BLOG_FILTER_SHOW_CHOSEN";
+    public static final String BLOG_FILTER_SHOW_NONE = "BLOG_FILTER_SHOW_NONE";
+    public static final String BLOG_FILTER_TEXT_KEY = "BLOG_FILTER_TEXT_KEY";
 
     public static final String PREFERENCE_USER_ID = "PREFERENCE_USER_ID";
 

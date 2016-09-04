@@ -32,10 +32,10 @@ public class HomeFragment extends Fragment {
         UiHelper.animateHomeCover(v, getContext());
 
         String filterText;
-        if (app.getFilterMode().equals(API.FILTER_MODE_NONE))
+        if (app.getBuliFilterMode().equals(API.BULI_FILTER_MODE_NONE))
             filterText = getString(R.string.all_competitions_and_placings);
         else
-            filterText = app.getFilterText();
+            filterText = app.getBuliFilterText();
 
         homeText.setText(getString(R.string.home_text) + " (" + filterText + "):");
 

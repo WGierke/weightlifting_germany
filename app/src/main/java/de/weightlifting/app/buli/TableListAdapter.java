@@ -60,7 +60,7 @@ public class TableListAdapter extends BaseAdapter {
 
         TextView club = (TextView) view.findViewById(R.id.buli_table_club);
         club.setText(items.get(position).getClub());
-        if (app.getFilterMode().equals(API.FILTER_MODE_CLUB) && club.getText().toString().contains(app.getFilterText()))
+        if (app.getBuliFilterMode().equals(API.BULI_FILTER_MODE_CLUB) && club.getText().toString().contains(app.getBuliFilterText()))
             club.setText(Html.fromHtml("<u>" + club.getText() + "</u>"));
 
         TextView score = (TextView) view.findViewById(R.id.buli_table_score);

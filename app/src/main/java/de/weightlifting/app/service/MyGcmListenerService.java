@@ -42,8 +42,8 @@ public class MyGcmListenerService extends com.google.android.gms.gcm.GcmListener
         if (parts.length != 5 || !TextUtils.isDigitsOnly(parts[3]) || !TextUtils.isDigitsOnly(parts[4])) {
             Log.e(WeightliftingApp.TAG, "Number of parts: " + String.valueOf(parts.length) + ", notificationID: " + parts[3]);
         } else {
-            String filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, getApplication());
-            String filterText = DataHelper.getPreference(API.FILTER_TEXT_KEY, getApplication());
+            String filterMode = DataHelper.getPreference(API.BULI_FILTER_MODE_KEY, getApplication());
+            String filterText = DataHelper.getPreference(API.BULI_FILTER_TEXT_KEY, getApplication());
 
             //title - parts[0]
             //message - parts[1]
@@ -51,7 +51,7 @@ public class MyGcmListenerService extends com.google.android.gms.gcm.GcmListener
             //fragmentId - parts[3]
             //subFragmentId - parts[4]
 
-            if (filterMode == null || filterMode.equals(API.FILTER_MODE_NONE) || msg.contains(filterText)) {
+            if (filterMode == null || filterMode.equals(API.BULI_FILTER_MODE_NONE) || msg.contains(filterText)) {
                 UiHelper.showNotification(parts[0], parts[1], parts[2], Integer.parseInt(parts[3]), Integer.parseInt(parts[4]), this);
             }
         }

@@ -11,10 +11,17 @@
     <string name="all_competitions_and_placings">alle Wettkämpfe und Platzierungen</string>
     <string name="favorite_relay">nur über die Liga</string>
     <string name="favorite_club">nur über den Club</string>
-    <string name="be_notified_about">… informiert werden.</string>
+    <string name="be_notified_about">… benachrichtigt werden.</string>
     <string name="saved_no_filter">Einstellungen gespeichert. Sie werden zukünftig über alle Ereignisse informiert.</string>
     <string name="saved_club_filter">Einstellungen gespeichert. Sie werden zukünftig nur noch über die Mannschaft "%1$s" informiert.</string>
     <string name="saved_relay_filter">Einstellungen gespeichert. Sie werden zukünftig nur noch über die %1$s informiert.</string>
+
+    <string name="saved_all_blogs">Einstellungen gespeichert. Sie werden zukünftig über alle Artikel der aufgelisteten Vereinen informiert.</string>
+    <string name="saved_no_blogs">Einstellungen gespeichert. Sie werden zukünftig über keine Artikel informiert.</string>
+    <plurals name="saved_chosen_blogs">
+        <item quantity="one">Einstellungen gespeichert. Sie werden zukünftig nur über Artikel des Vereins %s informiert.</item>
+        <item quantity="other">Einstellungen gespeichert. Sie werden zukünftig nur über Artikel der Vereine %s informiert.</item>
+    </plurals>
 
     <!-- Refreshing -->
     <string name="refresh">Aktualisieren</string>

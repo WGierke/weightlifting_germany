@@ -10,6 +10,8 @@ import com.crashlytics.android.answers.Answers;
 import com.crashlytics.android.answers.CustomEvent;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.Tracker;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
@@ -78,8 +80,10 @@ public class WeightliftingApp extends Application {
     public Competitions2Middle competitions2Middle;
     public Table2Middle table2Middle;
     public Handler splashCallbackHandler;
-    private String filterMode;
-    private String filterText;
+    private String buliFilterMode;
+    private String buliFilterText;
+    private String blogFilterMode;
+    private ArrayList<String> blogFilterPublishers;
     private Tracker mTracker;
 
     public static Context getContext() {
@@ -127,7 +131,6 @@ public class WeightliftingApp extends Application {
         FaqFragment.faqEntries.add(new FaqItem(getString(R.string.winner_team_competition_heading), getString(R.string.winner_team_competition_question), getString(R.string.winner_team_competition_answer)));
     }
 
-
     private void initArchive() {
         ArrayList<String> archivedSeasons = DataHelper.getSeasons();
         Collections.reverse(archivedSeasons);
@@ -159,8 +162,10 @@ public class WeightliftingApp extends Application {
     }
 
     private void loadSettings() {
-        filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
-        filterText = DataHelper.getPreference(API.FILTER_TEXT_KEY, this);
+        buliFilterMode = DataHelper.getPreference(API.BULI_FILTER_MODE_KEY, this);
+        buliFilterText = DataHelper.getPreference(API.BULI_FILTER_TEXT_KEY, this);
+        blogFilterMode = getBlogFilterMode();
+        blogFilterPublishers = getBlogFilterPublishers();
     }
 
     public void loadDataFromStorage() {
@@ -392,20 +397,20 @@ public class WeightliftingApp extends Application {
         schedules.add(schedule2South);
         schedules.add(schedule2Middle);
 
-        switch (filterMode) {
-            case API.FILTER_MODE_RELAY:
+        switch (buliFilterMode) {
+            case API.BULI_FILTER_MODE_RELAY:
                 for (int i = 0; i < schedules.size(); i++) {
-                    if (schedules.get(i).getRelayName().equals(filterText)) {
+                    if (schedules.get(i).getRelayName().equals(buliFilterText)) {
                         result.addAll(Schedule.casteArray(schedules.get(i).getItems()));
                         break;
                     }
                 }
                 break;
-            case API.FILTER_MODE_CLUB:
+            case API.BULI_FILTER_MODE_CLUB:
                 for (int i = 0; i < schedules.size(); i++) {
                     ArrayList<ScheduleEntry> currentScheduleEntries = Schedule.casteArray(schedules.get(i).getItems());
                     for (ScheduleEntry s : currentScheduleEntries) {
-                        if (s.getHome().contains(filterText) || s.getGuest().contains(filterText)) {
+                        if (s.getHome().contains(buliFilterText) || s.getGuest().contains(buliFilterText)) {
                             result.add(s);
                         }
                     }
@@ -423,24 +428,51 @@ public class WeightliftingApp extends Application {
         return result;
     }
 
-    public String getFilterMode() {
-        if (filterMode == null) {
-            filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
-            if (filterMode == null)
-                filterMode = API.FILTER_MODE_NONE;
+    public String getBuliFilterMode() {
+        if (buliFilterMode == null) {
+            buliFilterMode = DataHelper.getPreference(API.BULI_FILTER_MODE_KEY, this);
+            if (buliFilterMode == null)
+                buliFilterMode = API.BULI_FILTER_MODE_NONE;
         }
-        return filterMode;
+        return buliFilterMode;
     }
 
-    public String getFilterText() {
-        if (filterText == null)
-            filterText = DataHelper.getPreference(API.FILTER_TEXT_KEY, this);
-        return filterText;
+    public String getBuliFilterText() {
+        if (buliFilterText == null)
+            buliFilterText = DataHelper.getPreference(API.BULI_FILTER_TEXT_KEY, this);
+        return buliFilterText;
+    }
+
+    public String getBlogFilterMode() {
+        if (blogFilterMode == null) {
+            blogFilterMode = DataHelper.getPreference(API.BLOG_FILTER_MODE_KEY, this);
+            if (blogFilterMode == null)
+                blogFilterMode = API.BLOG_FILTER_SHOW_ALL;
+        }
+        return blogFilterMode;
+    }
+
+    public ArrayList<String> getBlogFilterPublishers() {
+        if (blogFilterPublishers == null) {
+            String json = DataHelper.getPreference(API.BLOG_FILTER_TEXT_KEY, this);
+            blogFilterPublishers = new Gson().fromJson(json, new TypeToken<ArrayList<String>>() {
+            }.getType());
+            if (blogFilterPublishers == null) {
+                blogFilterPublishers = new ArrayList<>();
+            }
+            System.out.println(blogFilterPublishers);
+        }
+        return blogFilterPublishers;
     }
 
     public void refreshFilterSettings() {
-        filterMode = DataHelper.getPreference(API.FILTER_MODE_KEY, this);
-        filterText = DataHelper.getPreference(API.FILTER_TEXT_KEY, this);
+        buliFilterMode = DataHelper.getPreference(API.BULI_FILTER_MODE_KEY, this);
+        buliFilterText = DataHelper.getPreference(API.BULI_FILTER_TEXT_KEY, this);
+
+        blogFilterMode = DataHelper.getPreference(API.BLOG_FILTER_MODE_KEY, this);
+        String json = DataHelper.getPreference(API.BLOG_FILTER_TEXT_KEY, this);
+        blogFilterPublishers = new Gson().fromJson(json, new TypeToken<ArrayList<String>>() {
+        }.getType());
     }
 
     public void saveFilterOnline() {
@@ -460,10 +492,10 @@ public class WeightliftingApp extends Application {
             ParseObject filterObject = new ParseObject("FilterSetting");
             filterObject.put("userId", userID);
             String filterSetting;
-            if (filterMode.equals(API.FILTER_MODE_NONE))
+            if (buliFilterMode.equals(API.BULI_FILTER_MODE_NONE))
                 filterSetting = "all";
             else
-                filterSetting = filterText;
+                filterSetting = buliFilterText;
             filterObject.put("filter", filterSetting);
             filterObject.saveInBackground();
 

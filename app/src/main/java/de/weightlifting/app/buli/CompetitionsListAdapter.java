@@ -54,12 +54,12 @@ public class CompetitionsListAdapter extends BaseAdapter {
 
         TextView home = (TextView) view.findViewById(R.id.buli_competition_home);
         home.setText(items.get(position).getHome());
-        if (app.getFilterMode().equals(API.FILTER_MODE_CLUB) && home.getText().toString().contains(app.getFilterText()))
+        if (app.getBuliFilterMode().equals(API.BULI_FILTER_MODE_CLUB) && home.getText().toString().contains(app.getBuliFilterText()))
             home.setText(Html.fromHtml("<u>" + home.getText() + "</u>"));
 
         TextView guest = (TextView) view.findViewById(R.id.buli_competition_guest);
         guest.setText(items.get(position).getGuest());
-        if (app.getFilterMode().equals(API.FILTER_MODE_CLUB) && guest.getText().toString().contains(app.getFilterText()))
+        if (app.getBuliFilterMode().equals(API.BULI_FILTER_MODE_CLUB) && guest.getText().toString().contains(app.getBuliFilterText()))
             guest.setText(Html.fromHtml("<u>" + guest.getText() + "</u>"));
 
         TextView score = (TextView) view.findViewById(R.id.date_at);

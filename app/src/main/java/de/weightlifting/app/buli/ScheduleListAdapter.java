@@ -54,14 +54,14 @@ public class ScheduleListAdapter extends BaseAdapter {
 
         TextView home = (TextView) view.findViewById(R.id.home);
         home.setText(items.get(position).getHome());
-        if (app.getFilterMode().equals(API.FILTER_MODE_CLUB) && home.getText().toString().contains(app.getFilterText()))
+        if (app.getBuliFilterMode().equals(API.BULI_FILTER_MODE_CLUB) && home.getText().toString().contains(app.getBuliFilterText()))
             home.setText(Html.fromHtml("<u>" + home.getText() + "</u>"));
 
         ((TextView) view.findViewById(R.id.vs)).setText(R.string.buli_schedule_vs);
 
         TextView guest = (TextView) view.findViewById(R.id.guest);
         guest.setText(items.get(position).getGuest());
-        if (app.getFilterMode().equals(API.FILTER_MODE_CLUB) && guest.getText().toString().contains(app.getFilterText()))
+        if (app.getBuliFilterMode().equals(API.BULI_FILTER_MODE_CLUB) && guest.getText().toString().contains(app.getBuliFilterText()))
             guest.setText(Html.fromHtml("<u>" + guest.getText() + "</u>"));
 
         ((TextView) view.findViewById(R.id.date_at)).setText(R.string.buli_schedule_date_at);
