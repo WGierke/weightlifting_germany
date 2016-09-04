@@ -135,10 +135,9 @@ public class News extends UpdateableWrapper {
                     try {
                         Bundle data = msg.getData();
                         String result = data.getString(API.HANDLER_RESULT_KEY);
-                        System.out.println("Result: " + result);
                         NewsItem newsItem = getNewsItemFromString(result);
                         items.add(newsItem);
-                        System.out.println("added news item" + News.casteArray(items).get(0).getHeading());
+                        System.out.println("added news item" + newsItem.getHeading());
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -170,7 +169,6 @@ public class News extends UpdateableWrapper {
                     try {
                         Bundle data = msg.getData();
                         String result = data.getString(API.HANDLER_RESULT_KEY);
-                        System.out.println("Result: " + result);
 
                         JSONObject jsonObject = new JSONObject(result);
                         JSONArray urls = jsonObject.getJSONArray("result");
@@ -178,11 +176,7 @@ public class News extends UpdateableWrapper {
                         for (int i = 0; i < urls.length(); i++) {
                             try {
                                 String url = urls.getJSONObject(i).getString("url");
-                                if (items.size() < 5) {
-                                    addArticleFromUrl(url);
-                                } else {
-                                    remainingPublisherArticleUrls.get(publisher).add(url);
-                                }
+                                remainingPublisherArticleUrls.get(publisher).add(url);
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }

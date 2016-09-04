@@ -12,23 +12,24 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import de.weightlifting.app.R;
+import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.UiHelper;
 
 
 public class NewsFeedListAdapter extends BaseAdapter {
 
-    private ArrayList<NewsItem> items;
+    private ArrayList<UpdateableItem> items;
     private Activity activity;
     private LayoutInflater inflater;
 
-    public NewsFeedListAdapter(ArrayList<NewsItem> items, Activity activity) {
+    public NewsFeedListAdapter(ArrayList<UpdateableItem> items, Activity activity) {
         this.items = items;
         this.activity = activity;
         inflater = (LayoutInflater) activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
-    public void setItems(ArrayList<NewsItem> items) {
+    public void setItems(ArrayList<UpdateableItem> items) {
         this.items = items;
     }
 
@@ -53,18 +54,20 @@ public class NewsFeedListAdapter extends BaseAdapter {
         if (convertView == null) {
             view = inflater.inflate(R.layout.news_feed_item, null);
         }
+        
+        NewsItem newsItem = (NewsItem) items.get(position); 
 
         TextView title = (TextView) view.findViewById(R.id.news_title);
-        title.setText(items.get(position).getHeading());
+        title.setText(newsItem.getHeading());
 
         TextView preview = (TextView) view.findViewById(R.id.news_preview);
-        preview.setText(items.get(position).getPreview());
+        preview.setText(newsItem.getPreview());
 
         TextView date = (TextView) view.findViewById(R.id.news_date);
-        date.setText(items.get(position).getHumanDate());
+        date.setText(newsItem.getHumanDate());
 
         TextView publisher = (TextView) view.findViewById(R.id.news_publisher);
-        publisher.setText(items.get(position).getPublisher() + "-Blog");
+        publisher.setText(newsItem.getPublisher() + "-Blog");
 
         if (News.itemsToMark.contains(items.get(position))) {
             UiHelper.colorFade(view, activity.getResources());
@@ -73,8 +76,8 @@ public class NewsFeedListAdapter extends BaseAdapter {
 
         ImageView icon = (ImageView) view.findViewById(R.id.news_icon);
 
-        if (items.get(position).hasImage()) {
-            ((WeightliftingApp) activity.getApplicationContext()).getImageLoader().displayImage(items.get(position).getImageURL(), icon);
+        if (newsItem.hasImage()) {
+            ((WeightliftingApp) activity.getApplicationContext()).getImageLoader().displayImage(newsItem.getImageURL(), icon);
         } else {
             icon.setImageResource(R.drawable.icon_germany_bar);
         }

@@ -168,7 +168,6 @@ public class NetworkHelper {
                     }
                     in.close();
                     String response = responseBuffer.toString();
-                    System.out.println(response);
                     resultBundle.putString(API.HANDLER_RESULT_KEY, response);
                 } catch (Exception e) {
                     e.printStackTrace();

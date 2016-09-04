@@ -20,8 +20,7 @@ public abstract class UpdateableWrapper {
     // Refresh if older than 30 minutes
     public static final long TIMER_INVALIDATE = 1000 * 60 * 30;
 
-    // If not yet ready, try again in 30 seconds
-    public static final long TIMER_RETRY = 1000 * 30;
+    public static final long TIMER_RETRY = 1000;
     protected boolean isUpdating = false;
     protected boolean updateFailed = false;
     protected boolean isUpToDate = false;

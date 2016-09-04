@@ -24,7 +24,6 @@ public class NewsFeedFragment extends ListViewFragment {
     public News news;
     private NewsFeedListAdapter adapter;
     private boolean is_loading = false;
-    private int visibleItems = 5;
 
     @Override
     protected void setEmptyListItem() {
@@ -37,6 +36,10 @@ public class NewsFeedFragment extends ListViewFragment {
     protected void getBuliElements() {
         news = app.getNews(WeightliftingApp.UPDATE_IF_NECESSARY);
         if (news.getItems().size() == 0) {
+            ArrayList<String> firstUrls = getFirstUrlsAndRemove(5, true);
+            for (String firstUrl : firstUrls) {
+                news.addArticleFromUrl(firstUrl);
+            }
             Runnable refreshRunnable = new Runnable() {
                 @Override
                 public void run() {
@@ -47,11 +50,9 @@ public class NewsFeedFragment extends ListViewFragment {
             refreshHandler.postDelayed(refreshRunnable, News.TIMER_RETRY);
         } else {
             try {
-                ArrayList<NewsItem> newsItems = News.casteArray(news.getItems());
-                Collections.sort(newsItems, Collections.reverseOrder());
-                adapter = new NewsFeedListAdapter(newsItems, getActivity());
+                Collections.sort(news.getItems(), Collections.reverseOrder());
+                adapter = new NewsFeedListAdapter(news.getItems(), getActivity());
                 listViewBuli.setAdapter(adapter);
-                //addItems();
                 listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -70,7 +71,7 @@ public class NewsFeedFragment extends ListViewFragment {
 
                     @Override
                     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
-                        if (firstVisibleItem + visibleItemCount == totalItemCount && totalItemCount != 0 && totalItemCount < news.getItems().size()) {
+                        if (firstVisibleItem + visibleItemCount == totalItemCount && totalItemCount != 0) {
                             if (!is_loading) {
                                 is_loading = true;
                                 addItems();
@@ -86,23 +87,38 @@ public class NewsFeedFragment extends ListViewFragment {
     }
 
     private void addItems() {
-        visibleItems += 5;
-        Log.d("weightlifting", "adding more");
-        //adapter.setItems(news.getFirstElements(visibleItems));
+        ArrayList<String> firstUrls = getFirstUrlsAndRemove(3, true);
+        for (String firstUrl : firstUrls) {
+            news.addArticleFromUrl(firstUrl);
+        }
+        is_loading = false;
+        Runnable refreshRunnable = new Runnable() {
+            @Override
+            public void run() {
+                Collections.sort(news.getItems(), Collections.reverseOrder());
+                adapter.notifyDataSetChanged();
+                listViewBuli.invalidateViews();
+            }
+        };
+        Handler refreshHandler = new Handler();
+        refreshHandler.postDelayed(refreshRunnable, News.TIMER_RETRY);
+    }
 
+    private ArrayList<String> getFirstUrlsAndRemove(int n, boolean removeUrl) {
+        ArrayList<String> firstUrls = new ArrayList<>();
         for (String publisher : News.remainingPublisherArticleUrls.keySet()) {
             ArrayList<String> urls = News.remainingPublisherArticleUrls.get(publisher);
-            ArrayList<String> firstUrls;
-            if (5 <= urls.size())
-                firstUrls = new ArrayList(urls.subList(0, 5));
+            if (n <= urls.size())
+                firstUrls.addAll(urls.subList(0, n));
             else
-                firstUrls = urls;
-            for (String firstUrl : firstUrls) {
-                news.addArticleFromUrl(firstUrl);
+                firstUrls.addAll(urls);
+
+            if (removeUrl) {
+                for (String firstUrl : firstUrls) {
+                    News.remainingPublisherArticleUrls.get(publisher).remove(firstUrl);
+                }
             }
-            adapter.setItems(News.casteArray(news.getItems()));
         }
-        adapter.notifyDataSetChanged();
-        is_loading = false;
+        return firstUrls;
     }
 }
