@@ -10,7 +10,7 @@ public class API {
     public static final int FRAGMENT_BULI_2SOUTH = 9;
     public static final int FRAGMENT_ARCHIVE = 11;
     public static final int FRAGMENT_FAQ = 13;
-    public static final int FRAGMENT_CONTACT = 15;
+    public static final int FRAGMENT_INFO = 15;
 
     public final static String ITEM = "item";
     public final static String SEASON_ITEM_POSITION = "seasonItem";

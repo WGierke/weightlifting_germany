@@ -84,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
         PrimaryDrawerItem nav_buli_2Middle = new PrimaryDrawerItem().withName(R.string.nav_buli_2Middle).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_2South = new PrimaryDrawerItem().withName(R.string.nav_buli_2South).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_archive = new PrimaryDrawerItem().withName(R.string.nav_archive).withIcon(R.drawable.nav_archive);
-        PrimaryDrawerItem nav_faq = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_help);
-        PrimaryDrawerItem nav_contact = new PrimaryDrawerItem().withName(R.string.nav_contact).withIcon(R.drawable.nav_contact);
+        PrimaryDrawerItem nav_faq = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_faq);
+        PrimaryDrawerItem nav_info = new PrimaryDrawerItem().withName(R.string.nav_info).withIcon(R.drawable.nav_info);
 
         Drawer result = new DrawerBuilder()
                 .withActivity(this)
@@ -106,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                         new DividerDrawerItem(),
                         nav_faq,
                         new DividerDrawerItem(),
-                        nav_contact,
+                        nav_info,
                         new DividerDrawerItem()
                 ).withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
@@ -233,9 +233,9 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new FaqFragment();
                 setTitle(getString(R.string.nav_faq));
                 break;
-            case API.FRAGMENT_CONTACT:
-                fragment = new ContactFragment();
-                setTitle(getString(R.string.nav_contact));
+            case API.FRAGMENT_INFO:
+                fragment = new InfoFragment();
+                setTitle(getString(R.string.nav_info));
                 break;
             default:
                 break;
