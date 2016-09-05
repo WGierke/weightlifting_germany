@@ -288,14 +288,13 @@ public class WeightliftingApp extends Application {
             }
 
             if (mode == LOAD_FROM_FILE) {
-                String fileName = myClass.getDeclaredField("FILE_NAME").get(myInstance).toString();
+                String fileName = (String) myClass.getDeclaredMethod("getFileName").invoke(myInstance);
                 File file = getApplicationContext().getFileStreamPath(fileName);
                 if (file.exists()) {
                     String fileContent = DataHelper.readIntern(fileName, getApplicationContext());
                     if (!fileContent.equals("")) {
                         myInstance.parseFromString(fileContent);
                         myInstance.setLastUpdate(new File(getFilesDir() + "/" + fileName).lastModified());
-                        //Log.d(TAG, myClass.getName() + ": read from memory:" + fileContent.substring(0, 20) + "...");
                     }
                 }
             }

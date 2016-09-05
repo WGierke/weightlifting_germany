@@ -8,8 +8,10 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.Date;
 
+import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.DataHelper;
 import de.weightlifting.app.helper.NetworkHelper;
+import de.weightlifting.app.news.NewsItem;
 
 /**
  * This class holds the updateable items and information about the last update, update status and update timer.
@@ -75,7 +77,6 @@ public abstract class UpdateableWrapper {
         final String FILENAME = fileName;
         final String TAG = tag;
 
-        //Log.i(WeightliftingApp.TAG, "Updating " + TAG + " ...");
         isUpdating = true;
         updateFailed = false;
 
@@ -84,9 +85,8 @@ public abstract class UpdateableWrapper {
             public void handleMessage(Message msg) {
                 try {
                     Bundle data = msg.getData();
-                    String result = data.getString("result");
+                    String result = data.getString(API.HANDLER_RESULT_KEY);
                     if (result == null || result.equals("")) {
-                        //Log.d(WeightliftingApp.TAG, TAG + " returned nothing");
                         isUpdating = false;
                         updateFailed = true;
                         return;
@@ -95,7 +95,6 @@ public abstract class UpdateableWrapper {
 
                     updateWrapper(result);
 
-                    //Log.i(WeightliftingApp.TAG, TAG + " updated");
                 } catch (Exception ex) {
                     Log.e(WeightliftingApp.TAG, TAG + " update failed: " + ex.getMessage());
                     ex.printStackTrace();
@@ -104,6 +103,6 @@ public abstract class UpdateableWrapper {
                 isUpdating = false;
             }
         };
-        NetworkHelper.getWebRequest(url, callBackHandler);
+        NetworkHelper.sendAuthenticatedHttpGetRequest(url, callBackHandler);
     }
 }

@@ -37,7 +37,6 @@ public class NetworkHelper {
                         result = null;
                     data.putString("result", result);
                 } catch (Exception ex) {
-                    //Log.d(WeightliftingApp.TAG, "Error while fetching " + url + ":" + ex.getMessage());
                     data.putString("result", "");
                 }
                 Message message = new Message();

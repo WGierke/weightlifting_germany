@@ -5,19 +5,26 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
 
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.helper.NetworkHelper;
 
 public class Competitions extends UpdateableWrapper {
 
-    public static final String FILE_NAME = "competitions.json";
     public static ArrayList<PastCompetition> itemsToMark = new ArrayList<>();
-    private final String UPDATE_URL = "https://raw.githubusercontent.com/WGierke/weightlifting_schwedt/updates/production/competitions.json";
+    private final String UPDATE_URL = "/get_competitions?relay=";
     private final String TAG = "Competitions";
+
+    public String getLeagueRelay() {
+        return "";
+    }
+
+    public String getFileName() { return "competitions.json"; }
 
     public static ArrayList<PastCompetition> casteArray(ArrayList<UpdateableItem> array) {
         ArrayList<PastCompetition> convertedItems = new ArrayList<>();
@@ -45,7 +52,7 @@ public class Competitions extends UpdateableWrapper {
     }
 
     public void refreshItems() {
-        super.update(UPDATE_URL, FILE_NAME, TAG);
+        super.update(NetworkHelper.BASE_SERVER_URL + UPDATE_URL + URLEncoder.encode(getLeagueRelay()), getFileName(), TAG);
     }
 
     protected void updateWrapper(String result) {

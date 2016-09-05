@@ -4,11 +4,11 @@ import de.weightlifting.app.buli.Competitions;
 
 public class Competitions2North extends Competitions {
 
-    public static final String FILE_NAME = "2North_competitions.json";
-    private final String UPDATE_URL = "https://raw.githubusercontent.com/WGierke/weightlifting_germany/master/production/2North_competitions.json";
-    private final String TAG = "Competitions2North";
+    public String getLeagueRelay() {
+        return "2Nordost";
+    }
 
-    public void refreshItems() {
-        super.update(UPDATE_URL, FILE_NAME, TAG);
+    public String getFileName() {
+        return "2North_competitions.json";
     }
 }

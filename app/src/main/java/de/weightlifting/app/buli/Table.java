@@ -5,19 +5,26 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
 
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.helper.NetworkHelper;
 
 public class Table extends UpdateableWrapper {
 
-    public static final String FILE_NAME = "";
     public static ArrayList<TableEntry> itemsToMark = new ArrayList<>();
-    private final String UPDATE_URL = "";
+    private final String UPDATE_URL = "/get_table?relay=";
     private final String TAG = "Table";
+
+    public String getLeagueRelay() {
+        return "";
+    }
+
+    public String getFileName() { return "table.json"; }
 
     public static ArrayList<TableEntry> casteArray(ArrayList<UpdateableItem> array) {
         ArrayList<TableEntry> convertedItems = new ArrayList<>();
@@ -48,7 +55,7 @@ public class Table extends UpdateableWrapper {
     }
 
     public void refreshItems() {
-        super.update(UPDATE_URL, FILE_NAME, TAG);
+        super.update(NetworkHelper.BASE_SERVER_URL + UPDATE_URL + URLEncoder.encode(getLeagueRelay()), getFileName(), TAG);
     }
 
     protected void updateWrapper(String result) {

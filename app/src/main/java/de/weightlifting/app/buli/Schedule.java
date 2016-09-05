@@ -5,6 +5,7 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.net.URLEncoder;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -14,12 +15,18 @@ import java.util.Date;
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;
+import de.weightlifting.app.helper.NetworkHelper;
 
 public class Schedule extends UpdateableWrapper {
 
-    public static final String FILE_NAME = ".json";
-    private final String UPDATE_URL = "";
+    private final String UPDATE_URL = "/get_schedule?relay=";
     private final String TAG = "Schedule";
+
+    public String getLeagueRelay() {
+        return "";
+    }
+
+    public String getFileName() { return "schedule.json"; }
 
     public static ArrayList<ScheduleEntry> casteArray(ArrayList<UpdateableItem> array) {
         ArrayList<ScheduleEntry> convertedItems = new ArrayList<>();
@@ -34,7 +41,7 @@ public class Schedule extends UpdateableWrapper {
     }
 
     public void refreshItems() {
-        super.update(UPDATE_URL, FILE_NAME, TAG);
+        super.update(NetworkHelper.BASE_SERVER_URL + UPDATE_URL + URLEncoder.encode(getLeagueRelay()), getFileName(), TAG);
     }
 
     protected void updateWrapper(String result) {
@@ -75,7 +82,6 @@ public class Schedule extends UpdateableWrapper {
             }
             setItems(newBuliTableItems);
             setLastUpdate((new Date()).getTime());
-            //Log.i(WeightliftingApp.TAG, "Schedule items parsed, " + newBuliTableItems.size() + " items found");
         } catch (Exception ex) {
             Log.e(WeightliftingApp.TAG, "Error while parsing scheduled competitions");
             ex.printStackTrace();
