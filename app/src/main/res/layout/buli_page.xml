@@ -46,7 +46,7 @@
         android:layout_height="match_parent"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:text="@string/news_no_articles"
+        android:text="@string/news_no_articles_internet"
         android:visibility="gone" />
 
 

@@ -54,7 +54,8 @@
     <string name="news_error_heading">Something went wrong</string>
     <string name="news_error_content">This shouldn\'t happen, please go back and try again. Restart the app if that doesn\'t solve the issue.</string>
     <string name="news_article_url">Link zum Artikel</string>
-    <string name="news_no_articles">Es konnten keine Artikel gefunden werden.</string>
+    <string name="news_no_articles_internet">Es konnten keine Artikel gefunden werden. Besteht eine Internetverbindung?</string>
+    <string name="news_no_articles_settings">Es konnten keine Artikel gefunden werden. Bitte wählen Sie in den Einstellungen aus, welche Vereine Sie interessieren. Um zu den Einstellungen zu gelangen, können Sie hier klicken.</string>
 
     <!-- Bundesliga -->
     <string name="buli_1A">1. Bundesliga - Staffel A</string>

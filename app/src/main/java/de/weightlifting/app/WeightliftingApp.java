@@ -301,6 +301,7 @@ public class WeightliftingApp extends Application {
             news = new News();
             news.addPublisher("BVDG");
             news.addPublisher("Speyer");
+            news.addPublisher("Schwedt");
             news.addArticleUrlsForPublishers();
         }
         return news;

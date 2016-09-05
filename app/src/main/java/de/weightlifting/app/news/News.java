@@ -137,7 +137,7 @@ public class News extends UpdateableWrapper {
                         String result = data.getString(API.HANDLER_RESULT_KEY);
                         NewsItem newsItem = getNewsItemFromString(result);
                         items.add(newsItem);
-                        System.out.println("added news item" + newsItem.getHeading());
+                        System.out.println("added news item " + newsItem.getHeading());
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -209,5 +209,17 @@ public class News extends UpdateableWrapper {
             return new ArrayList(items.subList(0, n));
         else
             return casteArray(items);
+    }
+
+    public ArrayList<UpdateableItem> getFilteredItemsByPublishers(ArrayList<String> publishers) {
+        ArrayList<UpdateableItem> filteredItems = new ArrayList<>();
+        NewsItem newsItem;
+        for (UpdateableItem item : items) {
+            newsItem = (NewsItem) item;
+            if(publishers.contains(newsItem.getPublisher())) {
+                filteredItems.add(item);
+            }
+        }
+        return filteredItems;
     }
 }

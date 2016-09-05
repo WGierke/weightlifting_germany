@@ -14,6 +14,7 @@ import java.util.Collections;
 
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
+import de.weightlifting.app.SettingsFragment;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.helper.API;
@@ -28,6 +29,17 @@ public class NewsFeedFragment extends ListViewFragment {
     @Override
     protected void setEmptyListItem() {
         TextView emptyText = (TextView) fragment.findViewById(R.id.emptyArticles);
+        if(app.getBlogFilterMode().equals(API.BLOG_FILTER_SHOW_NONE)) {
+            emptyText.setText(R.string.news_no_articles_settings);
+            emptyText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    ((MainActivity) getActivity()).addFragment(new SettingsFragment(), getString(R.string.settings), true);
+                }
+            });
+        } else {
+            emptyText.setText(R.string.news_no_articles_internet);
+        }
         emptyText.setVisibility(View.VISIBLE);
         listViewBuli.setEmptyView(emptyText);
     }
@@ -35,8 +47,8 @@ public class NewsFeedFragment extends ListViewFragment {
     @Override
     protected void getBuliElements() {
         news = app.getNews(WeightliftingApp.UPDATE_IF_NECESSARY);
-        if (news.getItems().size() == 0) {
-            ArrayList<String> firstUrls = getFirstUrlsAndRemove(5, true);
+        if (news.getFilteredItemsByPublishers(app.getBlogFilterPublishers()).size() == 0) {
+            ArrayList<String> firstUrls = getFirstUrlsAndRemove(10, true);
             for (String firstUrl : firstUrls) {
                 news.addArticleFromUrl(firstUrl);
             }
@@ -51,7 +63,7 @@ public class NewsFeedFragment extends ListViewFragment {
         } else {
             try {
                 Collections.sort(news.getItems(), Collections.reverseOrder());
-                adapter = new NewsFeedListAdapter(news.getItems(), getActivity());
+                adapter = new NewsFeedListAdapter(news.getFilteredItemsByPublishers(app.getBlogFilterPublishers()), getActivity());
                 listViewBuli.setAdapter(adapter);
                 listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
@@ -96,6 +108,7 @@ public class NewsFeedFragment extends ListViewFragment {
             @Override
             public void run() {
                 Collections.sort(news.getItems(), Collections.reverseOrder());
+                adapter.setItems(news.getFilteredItemsByPublishers(app.getBlogFilterPublishers()));
                 adapter.notifyDataSetChanged();
                 listViewBuli.invalidateViews();
             }
@@ -106,7 +119,7 @@ public class NewsFeedFragment extends ListViewFragment {
 
     private ArrayList<String> getFirstUrlsAndRemove(int n, boolean removeUrl) {
         ArrayList<String> firstUrls = new ArrayList<>();
-        for (String publisher : News.remainingPublisherArticleUrls.keySet()) {
+        for (String publisher : app.getBlogFilterPublishers()) {
             ArrayList<String> urls = News.remainingPublisherArticleUrls.get(publisher);
             if (n <= urls.size())
                 firstUrls.addAll(urls.subList(0, n));
