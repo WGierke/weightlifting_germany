@@ -17,7 +17,7 @@ public class Competitions extends UpdateableWrapper {
 
     public static final String FILE_NAME = "competitions.json";
     public static ArrayList<PastCompetition> itemsToMark = new ArrayList<>();
-    private final String UPDATE_URL = "https://raw.githubusercontent.com/WGierke/weightlifting_schwedt/updates/production/past_competitions.json";
+    private final String UPDATE_URL = "https://raw.githubusercontent.com/WGierke/weightlifting_schwedt/updates/production/competitions.json";
     private final String TAG = "Competitions";
 
     public static ArrayList<PastCompetition> casteArray(ArrayList<UpdateableItem> array) {
@@ -68,7 +68,7 @@ public class Competitions extends UpdateableWrapper {
             jsonParser.getJsonFromString(jsonString);
 
             // parse past competitions
-            JSONArray competitions = jsonParser.getJsonArray("past_competitions");
+            JSONArray competitions = jsonParser.getJsonArray("competitions");
             //Log.d(WeightliftingApp.TAG, competitions.length() + " competitions found");
             for (int i = 0; i < competitions.length(); i++) {
                 try {

@@ -141,7 +141,7 @@ class BuliParser:
 
             final_competitions.append(entry)
 
-        competitions_dict["past_competitions"] = final_competitions
+        competitions_dict["competitions"] = final_competitions
         json_competitions = json.dumps(competitions_dict, encoding='latin1', sort_keys=True, indent=4, separators=(',', ': '))
         competitions_dict_json = "[" + json_competitions + "]"
 
@@ -161,8 +161,8 @@ class BuliParser:
             f.close()
 
             push_messages = []
-            old_competitions_dict = json.loads(old_competitions, encoding='utf-8')[0]["past_competitions"]
-            new_competitions_dict = json.loads(competitions_dict_json, encoding='utf-8')[0]["past_competitions"]
+            old_competitions_dict = json.loads(old_competitions, encoding='utf-8')[0]["competitions"]
+            new_competitions_dict = json.loads(competitions_dict_json, encoding='utf-8')[0]["competitions"]
 
             for competition in self.get_additional_entries(old_competitions_dict, new_competitions_dict):
                 push_messages.append(competition["home"] + " vs. " + competition["guest"] + " - " + competition["score"])
