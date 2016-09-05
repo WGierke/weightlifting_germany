@@ -84,6 +84,7 @@ public class WeightliftingApp extends Application {
     private String buliFilterText;
     private String blogFilterMode;
     private ArrayList<String> blogFilterPublishers;
+    private ArrayList<String> allBlogPublishers = new ArrayList<>();
     private Tracker mTracker;
 
     public static Context getContext() {
@@ -99,6 +100,7 @@ public class WeightliftingApp extends Application {
         memoryCache = new MemoryCache();
         imageLoader = ImageLoader.getInstance();
 
+        initNews();
         initFaqs();
         initArchive();
 
@@ -122,6 +124,19 @@ public class WeightliftingApp extends Application {
         updateDataForcefully();
         updateSplashScreen();
         loadSettings();
+    }
+
+    private void initNews() {
+        if (news == null) {
+            news = new News();
+            allBlogPublishers.add("BVDG");
+            allBlogPublishers.add("Speyer");
+            allBlogPublishers.add("Schwedt");
+            for (String blogPublisher : allBlogPublishers) {
+                news.addPublisher(blogPublisher);
+            }
+            news.addArticleUrlsForPublishers();
+        }
     }
 
     private void initFaqs() {
@@ -297,13 +312,7 @@ public class WeightliftingApp extends Application {
     }
 
     public News getNews(int updateMode) {
-        if (news == null) {
-            news = new News();
-            news.addPublisher("BVDG");
-            news.addPublisher("Speyer");
-            news.addPublisher("Schwedt");
-            news.addArticleUrlsForPublishers();
-        }
+        initNews();
         return news;
     }
 
@@ -447,8 +456,10 @@ public class WeightliftingApp extends Application {
     public String getBlogFilterMode() {
         if (blogFilterMode == null) {
             blogFilterMode = DataHelper.getPreference(API.BLOG_FILTER_MODE_KEY, this);
-            if (blogFilterMode == null)
+            if (blogFilterMode == null) {
                 blogFilterMode = API.BLOG_FILTER_SHOW_ALL;
+                blogFilterPublishers = allBlogPublishers;
+            }
         }
         return blogFilterMode;
     }
@@ -459,7 +470,7 @@ public class WeightliftingApp extends Application {
             blogFilterPublishers = new Gson().fromJson(json, new TypeToken<ArrayList<String>>() {
             }.getType());
             if (blogFilterPublishers == null) {
-                blogFilterPublishers = new ArrayList<>();
+                blogFilterPublishers = allBlogPublishers;
             }
             System.out.println(blogFilterPublishers);
         }
