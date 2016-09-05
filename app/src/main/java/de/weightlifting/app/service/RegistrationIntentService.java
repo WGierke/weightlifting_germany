@@ -21,6 +21,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.Looper;
 import android.os.Message;
 import android.preference.PreferenceManager;
 import android.util.Log;
@@ -54,7 +55,6 @@ public class RegistrationIntentService extends IntentService {
                     GoogleCloudMessaging.INSTANCE_ID_SCOPE, null);
 
             //Log.d(TAG, "GCM Registration Token: " + newToken);
-
             String oldToken = sharedPreferences.getString(GCMPreferences.TOKEN, "");
             boolean sentToServer = sharedPreferences.getBoolean(GCMPreferences.SENT_TOKEN_TO_SERVER, false);
 
@@ -71,7 +71,6 @@ public class RegistrationIntentService extends IntentService {
      *
      * @param token The new token.
      */
-    //TODO Do this without the exception that the resulting message is sent to a dead thread
     private void sendRegistrationToServer(String token) {
         Log.d(WeightliftingApp.TAG, "Sending new token: " + token);
         ParseObject GcmToken = new ParseObject("GcmToken");
@@ -96,8 +95,10 @@ public class RegistrationIntentService extends IntentService {
                 } catch (Exception ignored) {
                     ignored.printStackTrace();
                 }
+                Looper.myLooper().quit();
             }
         };
         NetworkHelper.sendToken(token, callBackHandler);
+        Looper.loop();
     }
 }
