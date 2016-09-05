@@ -14,7 +14,6 @@ import java.util.Date;
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.helper.JsonParser;
 
 public class Schedule extends UpdateableWrapper {
 
@@ -47,11 +46,9 @@ public class Schedule extends UpdateableWrapper {
     public void parseFromString(String jsonString) {
         try {
             ArrayList<UpdateableItem> newBuliTableItems = new ArrayList<>();
+            JSONObject jsonObject = new JSONObject(jsonString);
+            JSONArray table = jsonObject.getJSONArray("schedule");
 
-            JsonParser jsonParser = new JsonParser();
-            jsonParser.getJsonFromString(jsonString);
-
-            JSONArray table = jsonParser.getJsonArray("scheduled_competitions");
             for (int i = 0; i < table.length(); i++) {
                 try {
                     JSONObject jsonScheduleEntry = table.getJSONObject(i);

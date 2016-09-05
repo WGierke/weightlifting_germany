@@ -11,7 +11,6 @@ import java.util.Date;
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.helper.JsonParser;
 
 public class Competitions extends UpdateableWrapper {
 
@@ -60,26 +59,20 @@ public class Competitions extends UpdateableWrapper {
     }
 
     public void parseFromString(String jsonString) {
-        //Log.d(WeightliftingApp.TAG, "Parsing competitions JSON...");
         try {
             ArrayList<UpdateableItem> newItems = new ArrayList<>();
-
-            JsonParser jsonParser = new JsonParser();
-            jsonParser.getJsonFromString(jsonString);
-
-            // parse past competitions
-            JSONArray competitions = jsonParser.getJsonArray("competitions");
-            //Log.d(WeightliftingApp.TAG, competitions.length() + " competitions found");
+            JSONObject jsonObject = new JSONObject(jsonString);
+            JSONArray competitions = jsonObject.getJSONArray("competitions");
             for (int i = 0; i < competitions.length(); i++) {
                 try {
-                    JSONObject jsonCompoetition = competitions.getJSONObject(i);
+                    JSONObject jsonCompetition = competitions.getJSONObject(i);
                     PastCompetition competition = new PastCompetition();
-                    competition.setLocation(jsonCompoetition.getString("location"));
-                    competition.setDate(jsonCompoetition.getString("date"));
-                    competition.setHome(jsonCompoetition.getString("home"));
-                    competition.setGuest(jsonCompoetition.getString("guest"));
-                    competition.setScore(jsonCompoetition.getString("score"));
-                    competition.setUrl(jsonCompoetition.getString("url"));
+                    competition.setLocation(jsonCompetition.getString("location"));
+                    competition.setDate(jsonCompetition.getString("date"));
+                    competition.setHome(jsonCompetition.getString("home"));
+                    competition.setGuest(jsonCompetition.getString("guest"));
+                    competition.setScore(jsonCompetition.getString("score"));
+                    competition.setUrl(jsonCompetition.getString("url"));
 
                     newItems.add(competition);
                 } catch (Exception ex) {

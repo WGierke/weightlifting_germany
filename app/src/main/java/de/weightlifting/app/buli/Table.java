@@ -11,7 +11,6 @@ import java.util.Date;
 import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.UpdateableWrapper;
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.helper.JsonParser;
 
 public class Table extends UpdateableWrapper {
 
@@ -66,11 +65,8 @@ public class Table extends UpdateableWrapper {
         //Log.d(WeightliftingApp.TAG, "Parsing buli table JSON...");
         try {
             ArrayList<UpdateableItem> newBuliTableItems = new ArrayList<>();
-
-            JsonParser jsonParser = new JsonParser();
-            jsonParser.getJsonFromString(jsonString);
-
-            JSONArray table = jsonParser.getJsonArray("table");
+            JSONObject jsonObject = new JSONObject(jsonString);
+            JSONArray table = jsonObject.getJSONArray("table");
             //Log.d(WeightliftingApp.TAG, table.length() + " table entries found");
             for (int i = 0; i < table.length(); i++) {
                 try {
