@@ -1,7 +1,11 @@
 package de.weightlifting.app.buli;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.print.PrintAttributes;
+import android.print.PrintDocumentAdapter;
+import android.print.PrintManager;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,13 +26,15 @@ public class ProtocolFragment extends Fragment {
 
     private String protocolUrl;
     private String competitionParties;
+    private WebView webview;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View fragment = inflater.inflate(R.layout.buli_competition_protocol, container, false);
         FloatingActionButton fab = (FloatingActionButton) fragment.findViewById(R.id.fab);
+        FloatingActionButton print = (FloatingActionButton) fragment.findViewById(R.id.print_icon);
 
-        WebView webview = (WebView) fragment.findViewById(R.id.buli_competition_protocol);
+        webview = (WebView) fragment.findViewById(R.id.buli_competition_protocol);
         webview.getSettings().setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         // Get protocol url from bundle
         try {
@@ -38,7 +44,6 @@ public class ProtocolFragment extends Fragment {
             webview.loadUrl(protocolUrl);
         } catch (Exception ex) {
             ex.printStackTrace();
-
         }
 
         if (protocolUrl.length() > 0) {
@@ -62,10 +67,23 @@ public class ProtocolFragment extends Fragment {
                     NetworkHelper.sendProtocolShare(competitionParties);
                 }
             });
+            print.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    // Get a PrintManager instance
+                    PrintManager printManager = (PrintManager) getActivity().getSystemService(Context.PRINT_SERVICE);
+
+                    // Get a print adapter instance
+                    PrintDocumentAdapter printAdapter = webview.createPrintDocumentAdapter();
+
+                    // Create a print job with name and adapter instance
+                    String jobName = competitionParties;
+                    printManager.print(jobName, printAdapter, new PrintAttributes.Builder().build());
+                }
+            });
         } else {
             fab.setVisibility(View.INVISIBLE);
         }
-
         return fragment;
     }
 }
