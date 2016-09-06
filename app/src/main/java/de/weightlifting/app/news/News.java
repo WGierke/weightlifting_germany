@@ -4,7 +4,6 @@ package de.weightlifting.app.news;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -27,6 +26,8 @@ public class News extends UpdateableWrapper {
 
     public static ArrayList<String> newArticleUrlsToMark = new ArrayList<>();
     public static HashMap<String, ArrayList<String>> remainingPublisherArticleUrls = new HashMap<>();
+    public static boolean isUpdating = false;
+    public static boolean updateFailed = false;
 
     public static ArrayList<NewsItem> casteArray(ArrayList<UpdateableItem> array) {
         ArrayList<NewsItem> convertedItems = new ArrayList<>();
@@ -112,6 +113,9 @@ public class News extends UpdateableWrapper {
                         items.add(newsItem);
                         System.out.println("added news item " + newsItem.getHeading());
                     } catch (Exception e) {
+                        if(News.isUpdating) {
+                            News.updateFailed = true;
+                        }
                         e.printStackTrace();
                     }
                 }
@@ -198,6 +202,7 @@ public class News extends UpdateableWrapper {
                         }
                         if (remainingArticleUrlsAreInitialized()) {
                             WeightliftingApp.initializedNews = true;
+                            News.isUpdating = false;
                         }
                     } catch (Exception e) {
                         e.printStackTrace();

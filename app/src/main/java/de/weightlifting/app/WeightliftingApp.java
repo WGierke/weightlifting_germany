@@ -58,6 +58,7 @@ public class WeightliftingApp extends Application {
     public final static int UPDATE_IF_NECESSARY = 2;
     public final static int LOAD_FROM_FILE = 3;
     public static boolean isUpdatingAll = false;
+    public static boolean initializedNews = false;
     private static Context mContext;
     public boolean initializedParse = false;
     public MemoryCache memoryCache;
@@ -84,7 +85,6 @@ public class WeightliftingApp extends Application {
     private String blogFilterMode;
     private ArrayList<String> blogFilterPublishers;
     private ArrayList<String> allBlogPublishers = new ArrayList<>();
-    public static boolean initializedNews = false;
     private Tracker mTracker;
 
     public static Context getContext() {
@@ -226,7 +226,7 @@ public class WeightliftingApp extends Application {
                 schedule1B.updateFailed || competitions1B.updateFailed || table1B.updateFailed ||
                 schedule2North.updateFailed || competitions2North.updateFailed || table2North.updateFailed ||
                 schedule2South.updateFailed || competitions2South.updateFailed || table2South.updateFailed ||
-                schedule2Middle.updateFailed || competitions2Middle.updateFailed || table2Middle.updateFailed) {
+                schedule2Middle.updateFailed || competitions2Middle.updateFailed || table2Middle.updateFailed || News.updateFailed) {
 
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
@@ -235,7 +235,7 @@ public class WeightliftingApp extends Application {
                 schedule1B.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate &&
                 schedule2North.isUpToDate && competitions2North.isUpToDate && table2North.isUpToDate &&
                 schedule2South.isUpToDate && competitions2South.isUpToDate && table2South.isUpToDate &&
-                schedule2Middle.isUpToDate && competitions2Middle.isUpToDate && table2Middle.isUpToDate) {
+                schedule2Middle.isUpToDate && competitions2Middle.isUpToDate && table2Middle.isUpToDate && !News.isUpdating) {
 
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
@@ -318,24 +318,6 @@ public class WeightliftingApp extends Application {
                 news.refreshArticleUrlsForPublishers();
                 return news;
             }
-
-//            if (updateMode == LOAD_FROM_FILE) {
-//                String fileName = (String) myClass.getDeclaredMethod("getFileName").invoke(myInstance);
-//                File file = getApplicationContext().getFileStreamPath(fileName);
-//                if (file.exists()) {
-//                    String fileContent = DataHelper.readIntern(fileName, getApplicationContext());
-//                    if (!fileContent.equals("")) {
-//                        myInstance.parseFromString(fileContent);
-//                        myInstance.setLastUpdate(new File(getFilesDir() + "/" + fileName).lastModified());
-//                    }
-//                }
-//            }
-//
-//            if (mode == UPDATE_IF_NECESSARY) {
-//                if (myInstance.needsUpdate() && !myInstance.isUpdating && !isUpdatingAll) {
-//                    myInstance.refreshItems();
-//                }
-//            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -570,5 +552,11 @@ public class WeightliftingApp extends Application {
     protected void attachBaseContext(Context base) {
         super.attachBaseContext(base);
         MultiDex.install(this);
+    }
+
+    public void updateNewsForcefully() {
+        getNews(WeightliftingApp.UPDATE_FORCEFULLY);
+        News.isUpdating = true;
+        News.updateFailed = false;
     }
 }

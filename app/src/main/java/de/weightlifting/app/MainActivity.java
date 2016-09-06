@@ -32,6 +32,7 @@ import de.weightlifting.app.buli.relay2North.BuliFragment2North;
 import de.weightlifting.app.buli.relay2South.BuliFragment2South;
 import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.UiHelper;
+import de.weightlifting.app.news.News;
 import de.weightlifting.app.news.NewsFeedFragment;
 import de.weightlifting.app.service.RegistrationIntentService;
 
@@ -155,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showCountedNewElements(boolean updatedSuccessfully) {
-        int newElements = Competitions.itemsToMark.size() + Table.itemsToMark.size();
+        int newElements = Competitions.itemsToMark.size() + Table.itemsToMark.size() + News.newArticleUrlsToMark.size();
         if (updatedSuccessfully)
             UiHelper.showToast(getResources().getString(R.string.updated_all_successfully), getApplicationContext());
         else
@@ -174,10 +175,9 @@ public class MainActivity extends AppCompatActivity {
                     app.setFinishUpdateFlags(false);
                     try {
                         app.updateDataForcefully();
-                        app.getNews(WeightliftingApp.UPDATE_FORCEFULLY);
+                        app.updateNewsForcefully();
                         showAsyncUpdateResults();
                     } catch (Exception e) {
-                        //Log.d(WeightliftingApp.TAG, "Error while updating all");
                         e.printStackTrace();
                         UiHelper.showToast(getResources().getString(R.string.updated_all_unsuccessfully), getApplicationContext());
                     }
