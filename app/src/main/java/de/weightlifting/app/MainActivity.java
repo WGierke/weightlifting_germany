@@ -174,6 +174,7 @@ public class MainActivity extends AppCompatActivity {
                     app.setFinishUpdateFlags(false);
                     try {
                         app.updateDataForcefully();
+                        app.getNews(WeightliftingApp.UPDATE_FORCEFULLY);
                         showAsyncUpdateResults();
                     } catch (Exception e) {
                         //Log.d(WeightliftingApp.TAG, "Error while updating all");

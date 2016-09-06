@@ -65,6 +65,7 @@ public class NewsFeedFragment extends ListViewFragment {
                 Collections.sort(news.getItems(), Collections.reverseOrder());
                 adapter = new NewsFeedListAdapter(news.getFilteredItemsByPublishers(app.getBlogFilterPublishers()), getActivity());
                 listViewBuli.setAdapter(adapter);
+                adapter.notifyDataSetChanged();
                 listViewBuli.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                     @Override
                     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

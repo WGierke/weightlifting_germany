@@ -59,7 +59,6 @@ public class WeightliftingApp extends Application {
     public final static int LOAD_FROM_FILE = 3;
     public static boolean isUpdatingAll = false;
     private static Context mContext;
-    public final String INSTALLATION_FILE = "installation.txt";
     public boolean initializedParse = false;
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
@@ -85,6 +84,7 @@ public class WeightliftingApp extends Application {
     private String blogFilterMode;
     private ArrayList<String> blogFilterPublishers;
     private ArrayList<String> allBlogPublishers = new ArrayList<>();
+    public static boolean initializedNews = false;
     private Tracker mTracker;
 
     public static Context getContext() {
@@ -204,7 +204,6 @@ public class WeightliftingApp extends Application {
 
     public void updateDataForcefully() {
         //Update everything and save it on storage
-        getNews(UPDATE_FORCEFULLY);
         getSchedule1A(UPDATE_FORCEFULLY);
         getCompetitions1A(UPDATE_FORCEFULLY);
         getTable1A(UPDATE_FORCEFULLY);

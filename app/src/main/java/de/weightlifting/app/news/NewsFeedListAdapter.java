@@ -69,9 +69,9 @@ public class NewsFeedListAdapter extends BaseAdapter {
         TextView publisher = (TextView) view.findViewById(R.id.news_publisher);
         publisher.setText(newsItem.getPublisher() + "-Blog");
 
-        if (News.itemsToMark.contains(items.get(position))) {
+        if (News.newArticleUrlsToMark.contains(((NewsItem) items.get(position)).getURL())) {
             UiHelper.colorFade(view, activity.getResources());
-            News.itemsToMark.remove(items.get(position));
+            News.newArticleUrlsToMark.remove(((NewsItem) items.get(position)).getURL());
         }
 
         ImageView icon = (ImageView) view.findViewById(R.id.news_icon);

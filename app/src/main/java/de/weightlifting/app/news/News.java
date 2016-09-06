@@ -25,7 +25,7 @@ import de.weightlifting.app.helper.NetworkHelper;
 
 public class News extends UpdateableWrapper {
 
-    public static ArrayList<NewsItem> itemsToMark = new ArrayList<>();
+    public static ArrayList<String> newArticleUrlsToMark = new ArrayList<>();
     public static HashMap<String, ArrayList<String>> remainingPublisherArticleUrls = new HashMap<>();
 
     public static ArrayList<NewsItem> casteArray(ArrayList<UpdateableItem> array) {
@@ -36,63 +36,13 @@ public class News extends UpdateableWrapper {
         return convertedItems;
     }
 
-    public static void markNewItems(ArrayList<UpdateableItem> oldItems, ArrayList<UpdateableItem> newItems) {
-        ArrayList<NewsItem> oldNewsItems = casteArray(oldItems);
-        ArrayList<NewsItem> newNewsItems = casteArray(newItems);
-        for (int i = 0; i < newNewsItems.size(); i++) {
-            boolean isNew = true;
-            for (int j = 0; j < oldNewsItems.size(); j++) {
-                if (newNewsItems.get(i).getContent().equals(oldNewsItems.get(j).getContent()) && newNewsItems.get(i).getDate().equals(oldNewsItems.get(j).getDate()) && newNewsItems.get(i).getHeading().equals(oldNewsItems.get(j).getHeading()) && newNewsItems.get(i).getImageURL().equals(oldNewsItems.get(j).getImageURL()) && newNewsItems.get(i).getURL().equals(oldNewsItems.get(j).getURL())) {
-                    isNew = false;
-                    break;
-                }
-            }
-            if (isNew) {
-                itemsToMark.add(newNewsItems.get(i));
-            }
-        }
-    }
-
-    public void refreshItems() {
-//        final String TAG = "News";
-//        //Log.i(WeightliftingApp.TAG, "Updating " + TAG + " ...");
-//        isUpdating = true;
-//        updateFailed = false;
-//
-//        Handler callBackHandler = new Handler() {
-//            @Override
-//            public void handleMessage(Message msg) {
-//                try {
-//                    Bundle data = msg.getData();
-//                    String result = data.getString("result");
-//                    if (result == null || result.equals("")) {
-//                        //Log.d(WeightliftingApp.TAG, TAG + " returned nothing");
-//                        isUpdating = false;
-//                        updateFailed = true;
-//                        return;
-//                    }
-//                    //DataHelper.saveIntern(result, FILENAME, WeightliftingApp.getContext());
-//
-//                    updateWrapper(result);
-//
-//                    //Log.i(WeightliftingApp.TAG, TAG + " updated");
-//                } catch (Exception ex) {
-//                    Log.e(WeightliftingApp.TAG, TAG + " update failed: " + ex.getMessage());
-//                    ex.printStackTrace();
-//                }
-//                isUpToDate = true;
-//                isUpdating = false;
-//            }
-//        };
-//        NetworkHelper.getWebRequest(url, callBackHandler);
-    }
+    public void refreshItems() { }
 
     protected void updateWrapper(String result) {
         News newItems = new News();
         newItems.parseFromString(result);
         if (items.size() > 0) {
             keepOldReferences(items, newItems.getItems());
-            markNewItems(items, newItems.getItems());
         }
         items = newItems.getItems();
     }
@@ -135,11 +85,10 @@ public class News extends UpdateableWrapper {
                     NewsItem newsItem = getNewsItemFromString(fileContent);
                     items.add(newsItem);
                     for (String publisher : remainingPublisherArticleUrls.keySet()) {
-                        if(remainingPublisherArticleUrls.get(publisher).contains(articleUrl)) {
+                        if (remainingPublisherArticleUrls.get(publisher).contains(articleUrl)) {
                             remainingPublisherArticleUrls.get(publisher).remove(articleUrl);
                         }
                     }
-                    Log.d("Weightlifting", "added cached article: " + articleUrl);
                 }
             } catch (Exception e) {
                 loadArticleFromUrl(articleUrl);
@@ -191,6 +140,34 @@ public class News extends UpdateableWrapper {
         addArticleUrlsForPublishers();
     }
 
+    private boolean articleUrlAlreadyExists(String newUrl, String publisher) {
+        for (String existingUrl : remainingPublisherArticleUrls.get(publisher)) {
+            if (existingUrl.equals(newUrl)) {
+                return true;
+            }
+        }
+        for (UpdateableItem item : items) {
+            NewsItem newsItem = (NewsItem) item;
+            if (newsItem.getURL().equals(newUrl)) {
+                return true;
+            }
+        }
+        File file = WeightliftingApp.getContext().getFileStreamPath(URLEncoder.encode(newUrl));
+        if (file.exists()) {
+            return true;
+        }
+        return false;
+    }
+
+    private boolean remainingArticleUrlsAreInitialized() {
+        for (String publisher : remainingPublisherArticleUrls.keySet()) {
+            if (remainingPublisherArticleUrls.get(publisher).isEmpty()) {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public void addArticleUrlsForPublisher(final String publisher) {
         String url = NetworkHelper.BASE_SERVER_URL + "/get_articles?publisher=" + publisher;
 
@@ -208,10 +185,19 @@ public class News extends UpdateableWrapper {
                         for (int i = 0; i < urls.length(); i++) {
                             try {
                                 String url = urls.getJSONObject(i).getString("url");
+                                if (WeightliftingApp.initializedNews) {
+                                    if (!articleUrlAlreadyExists(url, publisher)) {
+                                        System.out.println(url + " is new");
+                                        newArticleUrlsToMark.add(url);
+                                    }
+                                }
                                 remainingPublisherArticleUrls.get(publisher).add(url);
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
+                        }
+                        if (remainingArticleUrlsAreInitialized()) {
+                            WeightliftingApp.initializedNews = true;
                         }
                     } catch (Exception e) {
                         e.printStackTrace();
