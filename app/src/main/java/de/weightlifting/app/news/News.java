@@ -9,6 +9,8 @@ import android.util.Log;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.io.File;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
@@ -23,8 +25,6 @@ import de.weightlifting.app.helper.NetworkHelper;
 
 public class News extends UpdateableWrapper {
 
-    public static final String FILE_NAME = "news.json";
-    public static final String url = "news.json";
     public static ArrayList<NewsItem> itemsToMark = new ArrayList<>();
     public static HashMap<String, ArrayList<String>> remainingPublisherArticleUrls = new HashMap<>();
 
@@ -54,37 +54,37 @@ public class News extends UpdateableWrapper {
     }
 
     public void refreshItems() {
-        final String TAG = "News";
-        //Log.i(WeightliftingApp.TAG, "Updating " + TAG + " ...");
-        isUpdating = true;
-        updateFailed = false;
-
-        Handler callBackHandler = new Handler() {
-            @Override
-            public void handleMessage(Message msg) {
-                try {
-                    Bundle data = msg.getData();
-                    String result = data.getString("result");
-                    if (result == null || result.equals("")) {
-                        //Log.d(WeightliftingApp.TAG, TAG + " returned nothing");
-                        isUpdating = false;
-                        updateFailed = true;
-                        return;
-                    }
-                    //DataHelper.saveIntern(result, FILENAME, WeightliftingApp.getContext());
-
-                    updateWrapper(result);
-
-                    //Log.i(WeightliftingApp.TAG, TAG + " updated");
-                } catch (Exception ex) {
-                    Log.e(WeightliftingApp.TAG, TAG + " update failed: " + ex.getMessage());
-                    ex.printStackTrace();
-                }
-                isUpToDate = true;
-                isUpdating = false;
-            }
-        };
-        NetworkHelper.getWebRequest(url, callBackHandler);
+//        final String TAG = "News";
+//        //Log.i(WeightliftingApp.TAG, "Updating " + TAG + " ...");
+//        isUpdating = true;
+//        updateFailed = false;
+//
+//        Handler callBackHandler = new Handler() {
+//            @Override
+//            public void handleMessage(Message msg) {
+//                try {
+//                    Bundle data = msg.getData();
+//                    String result = data.getString("result");
+//                    if (result == null || result.equals("")) {
+//                        //Log.d(WeightliftingApp.TAG, TAG + " returned nothing");
+//                        isUpdating = false;
+//                        updateFailed = true;
+//                        return;
+//                    }
+//                    //DataHelper.saveIntern(result, FILENAME, WeightliftingApp.getContext());
+//
+//                    updateWrapper(result);
+//
+//                    //Log.i(WeightliftingApp.TAG, TAG + " updated");
+//                } catch (Exception ex) {
+//                    Log.e(WeightliftingApp.TAG, TAG + " update failed: " + ex.getMessage());
+//                    ex.printStackTrace();
+//                }
+//                isUpToDate = true;
+//                isUpdating = false;
+//            }
+//        };
+//        NetworkHelper.getWebRequest(url, callBackHandler);
     }
 
     protected void updateWrapper(String result) {
@@ -126,8 +126,31 @@ public class News extends UpdateableWrapper {
         return item;
     }
 
-    public void addArticleFromUrl(String url) {
-        url = NetworkHelper.BASE_SERVER_URL + "/get_article?url=" + url;
+    public void addArticleFromUrl(final String articleUrl) {
+        File file = WeightliftingApp.getContext().getFileStreamPath(URLEncoder.encode(articleUrl));
+        if (file.exists()) {
+            try {
+                String fileContent = DataHelper.readIntern(URLEncoder.encode(articleUrl), WeightliftingApp.getContext());
+                if (!fileContent.equals("")) {
+                    NewsItem newsItem = getNewsItemFromString(fileContent);
+                    items.add(newsItem);
+                    for (String publisher : remainingPublisherArticleUrls.keySet()) {
+                        if(remainingPublisherArticleUrls.get(publisher).contains(articleUrl)) {
+                            remainingPublisherArticleUrls.get(publisher).remove(articleUrl);
+                        }
+                    }
+                    Log.d("Weightlifting", "added cached article: " + articleUrl);
+                }
+            } catch (Exception e) {
+                loadArticleFromUrl(articleUrl);
+            }
+        } else {
+            loadArticleFromUrl(articleUrl);
+        }
+    }
+
+    private void loadArticleFromUrl(final String url) {
+        String requestUrl = NetworkHelper.BASE_SERVER_URL + "/get_article?url=" + url;
         try {
             Handler parseArticleHandler = new Handler() {
                 @Override
@@ -135,6 +158,7 @@ public class News extends UpdateableWrapper {
                     try {
                         Bundle data = msg.getData();
                         String result = data.getString(API.HANDLER_RESULT_KEY);
+                        DataHelper.saveIntern(result, URLEncoder.encode(url), WeightliftingApp.getContext());
                         NewsItem newsItem = getNewsItemFromString(result);
                         items.add(newsItem);
                         System.out.println("added news item " + newsItem.getHeading());
@@ -143,7 +167,7 @@ public class News extends UpdateableWrapper {
                     }
                 }
             };
-            NetworkHelper.sendAuthenticatedHttpGetRequest(url, parseArticleHandler);
+            NetworkHelper.sendAuthenticatedHttpGetRequest(requestUrl, parseArticleHandler);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
@@ -157,6 +181,14 @@ public class News extends UpdateableWrapper {
         for (String publisher : remainingPublisherArticleUrls.keySet()) {
             addArticleUrlsForPublisher(publisher);
         }
+    }
+
+    public void refreshArticleUrlsForPublishers() {
+        for (String publisher : remainingPublisherArticleUrls.keySet()) {
+            remainingPublisherArticleUrls.get(publisher).clear();
+        }
+        items.clear();
+        addArticleUrlsForPublishers();
     }
 
     public void addArticleUrlsForPublisher(final String publisher) {
@@ -192,7 +224,8 @@ public class News extends UpdateableWrapper {
         }
     }
 
-    private void keepOldReferences(ArrayList<UpdateableItem> oldItems, ArrayList<UpdateableItem> newItems) {
+    private void keepOldReferences
+            (ArrayList<UpdateableItem> oldItems, ArrayList<UpdateableItem> newItems) {
         ArrayList<NewsItem> oldNewItems = casteArray(oldItems);
         ArrayList<NewsItem> newNewsItems = casteArray(newItems);
         for (int i = 0; i < newNewsItems.size(); i++) {
@@ -204,19 +237,13 @@ public class News extends UpdateableWrapper {
         }
     }
 
-    public ArrayList<NewsItem> getFirstElements(int n) {
-        if (n <= items.size())
-            return new ArrayList(items.subList(0, n));
-        else
-            return casteArray(items);
-    }
-
-    public ArrayList<UpdateableItem> getFilteredItemsByPublishers(ArrayList<String> publishers) {
+    public ArrayList<UpdateableItem> getFilteredItemsByPublishers
+            (ArrayList<String> publishers) {
         ArrayList<UpdateableItem> filteredItems = new ArrayList<>();
         NewsItem newsItem;
         for (UpdateableItem item : items) {
             newsItem = (NewsItem) item;
-            if(publishers.contains(newsItem.getPublisher())) {
+            if (publishers.contains(newsItem.getPublisher())) {
                 filteredItems.add(item);
             }
         }

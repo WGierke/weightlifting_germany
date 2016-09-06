@@ -311,7 +311,35 @@ public class WeightliftingApp extends Application {
     }
 
     public News getNews(int updateMode) {
-        initNews();
+        try {
+            if (news == null)
+                initNews();
+
+            if (updateMode == UPDATE_FORCEFULLY) {
+                news.refreshArticleUrlsForPublishers();
+                return news;
+            }
+
+//            if (updateMode == LOAD_FROM_FILE) {
+//                String fileName = (String) myClass.getDeclaredMethod("getFileName").invoke(myInstance);
+//                File file = getApplicationContext().getFileStreamPath(fileName);
+//                if (file.exists()) {
+//                    String fileContent = DataHelper.readIntern(fileName, getApplicationContext());
+//                    if (!fileContent.equals("")) {
+//                        myInstance.parseFromString(fileContent);
+//                        myInstance.setLastUpdate(new File(getFilesDir() + "/" + fileName).lastModified());
+//                    }
+//                }
+//            }
+//
+//            if (mode == UPDATE_IF_NECESSARY) {
+//                if (myInstance.needsUpdate() && !myInstance.isUpdating && !isUpdatingAll) {
+//                    myInstance.refreshItems();
+//                }
+//            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         return news;
     }
 
