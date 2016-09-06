@@ -21,6 +21,7 @@ import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.NetworkHelper;
+import de.weightlifting.app.helper.UiHelper;
 
 public class ProtocolFragment extends Fragment {
 
@@ -70,15 +71,14 @@ public class ProtocolFragment extends Fragment {
             print.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    // Get a PrintManager instance
-                    PrintManager printManager = (PrintManager) getActivity().getSystemService(Context.PRINT_SERVICE);
-
-                    // Get a print adapter instance
-                    PrintDocumentAdapter printAdapter = webview.createPrintDocumentAdapter();
-
-                    // Create a print job with name and adapter instance
-                    String jobName = competitionParties;
-                    printManager.print(jobName, printAdapter, new PrintAttributes.Builder().build());
+                    if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.KITKAT) {
+                        PrintManager printManager = (PrintManager) getActivity().getSystemService(Context.PRINT_SERVICE);
+                        PrintDocumentAdapter printAdapter = webview.createPrintDocumentAdapter();
+                        String jobName = competitionParties;
+                        printManager.print(jobName, printAdapter, new PrintAttributes.Builder().build());
+                    } else {
+                        UiHelper.showToast(getString(R.string.buli_print_too_old), getActivity());
+                    }
                 }
             });
         } else {

@@ -80,6 +80,7 @@
     <string name="buli_place">Platz</string>
     <string name="buli_max_score">Höchstpunktzahl</string>
     <string name="buli_points">Punkte</string>
+    <string name="buli_print_too_old">Dein Gerät unterstützt diese Funktion leider nicht. Es wird mindestens Android 4.4 (KitKat) benötigt. Sorry …</string>
 
     <!-- FAQs -->
     <string name="faq_off_signal_heading">Ab-Zeichen</string>

@@ -480,7 +480,6 @@ public class WeightliftingApp extends Application {
             if (blogFilterPublishers == null) {
                 blogFilterPublishers = allBlogPublishers;
             }
-            System.out.println(blogFilterPublishers);
         }
         return blogFilterPublishers;
     }

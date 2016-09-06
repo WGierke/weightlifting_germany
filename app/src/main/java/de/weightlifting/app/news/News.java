@@ -111,7 +111,6 @@ public class News extends UpdateableWrapper {
                         DataHelper.saveIntern(result, URLEncoder.encode(url), WeightliftingApp.getContext());
                         NewsItem newsItem = getNewsItemFromString(result);
                         items.add(newsItem);
-                        System.out.println("added news item " + newsItem.getHeading());
                     } catch (Exception e) {
                         if(News.isUpdating) {
                             News.updateFailed = true;
@@ -191,7 +190,6 @@ public class News extends UpdateableWrapper {
                                 String url = urls.getJSONObject(i).getString("url");
                                 if (WeightliftingApp.initializedNews) {
                                     if (!articleUrlAlreadyExists(url, publisher)) {
-                                        System.out.println(url + " is new");
                                         newArticleUrlsToMark.add(url);
                                     }
                                 }

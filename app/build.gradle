@@ -55,7 +55,7 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.3'
     compile 'com.parse.bolts:bolts-android:1.+'
     compile fileTree(include: 'Parse-*.jar', dir: 'libs')
-    compile fileTree(include: 'slackmessagebuilder.jar', dir: 'libs')
+    //compile fileTree(include: 'slackmessagebuilder.jar', dir: 'libs')
     compile 'com.android.support:appcompat-v7:23.0.1'
     compile 'com.android.support:design:23.0.1'
     compile 'com.android.support:multidex:1.0.1'

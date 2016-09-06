@@ -5,9 +5,6 @@ import android.os.Handler;
 import android.os.Message;
 import android.util.Log;
 
-import net.steppschuh.slackmessagebuilder.message.MessageBuilder;
-import net.steppschuh.slackmessagebuilder.request.Webhook;
-
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -18,7 +15,6 @@ import java.net.URL;
 import java.net.URLEncoder;
 
 import de.weightlifting.app.WeightliftingApp;
-import de.weightlifting.app.service.GCMPreferences;
 
 public class NetworkHelper {
 
@@ -76,11 +72,11 @@ public class NetworkHelper {
             ignored.printStackTrace();
         }
 
-        try {
-            sendToSlack(token);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+//        try {
+//            sendToSlack(token);
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
     }
 
     public static void sendProtocolShare(String competitionParties) {
@@ -177,14 +173,14 @@ public class NetworkHelper {
         }).start();
     }
 
-    public static void sendToSlack(String message) throws Exception {
-        net.steppschuh.slackmessagebuilder.message.Message message2 = new MessageBuilder()
-                .setChannel("#germany")
-                .setUsername("Weightlifting Germany")
-                .setText(message)
-                .build();
+//    public static void sendToSlack(String message) throws Exception {
+//        net.steppschuh.slackmessagebuilder.message.Message message2 = new MessageBuilder()
+//                .setChannel("#germany")
+//                .setUsername("Weightlifting Germany")
+//                .setText(message)
+//                .build();
 
-        Webhook webhook = new Webhook(Keys.SLACK_WEB_HOOK);
-        webhook.postMessage(message2);
-    }
+//        Webhook webhook = new Webhook(Keys.SLACK_WEB_HOOK);
+//        webhook.postMessage(message2);
+//    }
 }
