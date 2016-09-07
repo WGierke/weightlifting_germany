@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Weightlifting National League</string>
+
+    <!-- Settings -->
+    <string name="settings">Settings</string>
+    <string name="filter_notifications">If you only want to receive notifications about certain competitions or placements, you can choose your favorite league or favorite club here.</string>
+    <string name="i_want_to">I want to receive notifications …</string>
+    <string name="no_favorites">about all competitions and placements</string>
+    <string name="all_competitions_and_placings">all competitions and placements</string>
+    <string name="favorite_relay">only about the league</string>
+    <string name="favorite_club">only about the club</string>
+    <string name="saved_no_filter">Your settings are saved. In the future you\'ll receive notifications about all events.</string>
+    <string name="saved_club_filter">Your settings are saved. In the future you\'ll receive notifications about articles of "%1$s".</string>
+    <string name="saved_relay_filter">Your settings are saved. In the future you\'ll receive notifications only about the league "%1$s".</string>
+
+    <string name="saved_all_blogs">Your settings are saved. In the future you\'ll receive notifications about articles of all listed clubs.</string>
+    <string name="saved_no_blogs">Your settings are saved. In the future you won\'t receive any notifications about articles.</string>
+    <plurals name="saved_chosen_blogs">
+        <item quantity="one">Your settings are saved. In the future you\'ll only receive notifications about the club %s.</item>
+        <item quantity="other">Your settings are saved. In the future you\'ll only receive notifications about the clubs %s.</item>
+    </plurals>
+
+    <!-- Refreshing -->
+    <string name="refresh">Refresh</string>
+    <string name="updated_all_successfully">Content has been synchronized successfully.</string>
+    <string name="updated_all_unsuccessfully">Not the whole content could be synchronized. Are you connected to the internet?</string>
+    <plurals name="new_elements">
+        <item quantity="zero">No new or modified element found</item>
+        <item quantity="one">%d new/modified element found</item>
+        <item quantity="other">%d new/modified elements found</item>
+    </plurals>
+
+    <!-- Navigation -->
+    <string name="nav_home">Homepage</string>
+    <string name="nav_news">News</string>
+    <string name="nav_buli_1A">Relay A</string>
+    <string name="nav_buli_1B">Relay B</string>
+    <string name="nav_buli_2North">Relay Northeast</string>
+    <string name="nav_buli_2Middle">Relay Center</string>
+    <string name="nav_buli_2South">Relay Southwest</string>
+    <string name="nav_buli">National League</string>
+    <string name="nav_archive">Archive</string>
+    <string name="nav_faq">FAQ</string>
+    <string name="nav_info">Info</string>
+
+
+    <!-- Home -->
+    <string name="home_welcome">Welcome</string>
+    <string name="home_text">The following scheduled competitions match your filter settings</string>
+    <string name="home_no_schedules">No scheduled competitions could be found that match your filter settings.</string>
+
+    <!-- News -->
+    <string name="news_error_heading">Something went wrong</string>
+    <string name="news_error_content">This shouldn\'t happen, please go back and try again. Restart the app if that doesn\'t solve the issue.</string>
+    <string name="news_article_url">Link to the article</string>
+    <string name="news_no_articles_internet">No articles could be found. Are you connected to the internet?</string>
+    <string name="news_no_articles_settings">No articles could be found. Please choose which clubs are interesting in the settings. To get to the settings, please click here.</string>
+
+    <!-- Bundesliga -->
+    <string name="buli_1A">1. National League - Relay A</string>
+    <string name="buli_1B">1.National League - Relay B</string>
+    <string name="buli_2North">2. National League - Relay Northeast</string>
+    <string name="buli_2Middle">2. National League - Relay Center</string>
+    <string name="buli_2South">2. National League - Relay Southwest</string>
+
+    <string name="buli_schedule">Schedule</string>
+    <string name="buli_no_schedules">No schedule could be found.</string>
+    <string name="buli_schedule_vs">vs.</string>
+    <string name="buli_schedule_date_at">On</string>
+    <string name="buli_schedule_time_at">at</string>
+    <string name="buli_schedule_location_in">In</string>
+    <string name="buli_competitions">Competitions</string>
+    <string name="buli_no_competitions">No competitions could be found.</string>
+    <string name="buli_table">Placements</string>
+    <string name="buli_no_tables">No placements could be found.</string>
+    <string name="buli_relative_points">Relative Points</string>
+    <string name="buli_place">Place</string>
+    <string name="buli_max_score">High Score</string>
+    <string name="buli_points">Points</string>
+    <string name="buli_print_too_old">Your device does not support this function. Android 4.4 (KitKat) or higher is required. Sorry …</string>
+
+    <!-- FAQs -->
+    <string name="faq_off_signal_heading">"Down" Signal</string>
+    <string name="faq_off_signal_question">When do the judges give the down signal?</string>
+    <string name="faq_off_signal_answer">The athlete is required to stay motionless, to have arms and legs extended and to stand with the feet on the same line. If the athlete performed an incorrect movement, such as extending his arms incompletely at the finish of the lift, the attempt is counted as \'No lift\' and the referees give the down signal as well.</string>
+
+    <string name="faq_bad_attempt_jerking_heading">Bad lift in cleaning and jerking</string>
+    <string name="faq_bad_attempt_jerking_question">When is an attempt in cleaning and jerking invalid?</string>
+    <string name="faq_bad_attempt_jerking_answer">The following movements require an attempt in cleaning and jerking to be counted as \'No lift\':\n - a part of the body other than the feet touches the platform\n - touching the thighs or the knees with the elbows or the upper arms\n - extending the arms incompletely at the finish of the lift</string>
+
+    <string name="winner_team_competition_heading">Winner of a team competition</string>
+    <string name="winner_team_competition_question">Who is the winner of a team competition?</string>
+    <string name="winner_team_competition_answer">The winner of a team competition (e.g. a national league competition) is the team that acquires the most relative points.\nEvery athlete receives a value depending on his bodyweight. This value is subtracted from his heaviest successful lifts in snatching and in cleaning and jerking.\nAn athlete with a bodyweight of 80kg receives a withdrawal of 80 points. If the athlete snatches 130kg and cleans and jerks 150kg, he gains 130+150–2*80 = 280–160 = 120 relative points. The relative points of all team members of a team are added up. The team with the most relative points is the winner of the team competition.</string>
+
+    <string name="winner_single_competition_heading">Winner of an individual competition</string>
+    <string name="winner_single_competition_question">Who is the winner of an individual competition?</string>
+    <string name="winner_single_competition_answer">The winner of a bodyweight category is the athlete who lifts the highest overall result. It consists of the highest successful lift in snatching and the highest successful lift in cleaning and jerking.\nA male athlete with a bodyweight of 80kg is assigned to the bodyweight category -85kg. The athlete snatches 130kg and cleans and jerks 150kg so his overall result is 280kg. The athlete wins if there is no other athlete with a higher overall result.</string>
+
+    <!-- Contact -->
+    <string name="contact">Contact</string>
+    <string name="contact_app_developer">App Developer</string>
+    <string name="contact_app_developer_name">Willi Gierke</string>
+    <string name="contact_app_developer_email_key">Email</string>
+    <string name="contact_app_developer_email_value">willi.gierke@student.hpi.de</string>
+    <string name="contact_linkedin_key">LinkedIn Profile</string>
+    <string name="contact_linkedin_value">linkedin.com/in/willi-gierke-5221a7b5</string>
+    <string name="contact_database">Database</string>
+    <string name="contact_database_key">IAT Leipzig</string>
+    <string name="contact_database_value">www.iat.uni-leipzig.de/service/kontakt-zum-iat</string>
+    <string name="disclaimer_content_text">The content of our website has been compiled with meticulous care and to the best of our knowledge. However, we cannot assume any liability for the up-to-dateness, completeness or accuracy of any of the pages.  Pursuant to section 7, para. 1 of the TMG (Telemediengesetz – Tele Media Act by German law), we as service providers are liable for our own content on these pages in accordance with general laws. However, pursuant to sections 8 to 10 of the TMG, we as service providers are not under obligation to monitor external information provided or stored on our website. Once we have become aware of a specific infringement of the law, we will immediately remove the content in question. Any liability concerning this matter can only be assumed from the point in time at which the infringement becomes known to us.</string>
+    <string name="disclaimer_content_key">Limitation of liability for internal content</string>
+    <string name="disclaimer_links_key">Limitation of liability for external links</string>
+    <string name="disclaimer_links_text">Our service contains links to the websites of third parties (“external links”). As the content of these websites is not under our control, we cannot assume any liability for such external content. In all cases, the provider of information of the linked websites is liable for the content and accuracy of the information provided. At the point in time when the links were placed, no infringements of the law were recognisable to us. As soon as an infringement of the law becomes known to us, we will immediately remove the link in question.</string>
+    <string name="disclaimer_source_key">Source:</string>
+    <string name="disclaimer_source_text">e-recht24.de</string>
+    <string name="updating_in_progress">The update process was started already.</string>
+    <string name="error_network">Network failure. Are you online?</string>
+    <string name="loading_data">Loading most recent data …</string>
+    <string name="buli_protocol">Protocol</string>
+    <string name="share_this">Share</string>
+    <string name="settingsAnd">… and …</string>
+    <string name="settings_news_only_about">only about</string>
+    <string name="settings_news_none">about no club</string>
+    <string name="allClubNews">about all club news</string>
+    <string name="firstNationalLeague">1. National League</string>
+    <string name="secondNationalLeague">2. National League</string>
+
+</resources>
+

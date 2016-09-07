@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="relays_1516">
+        <item>1. Bundesliga - Staffel A</item>
+        <item>1. Bundesliga - Staffel B</item>
+        <item>2. Bundesliga - Staffel Nordost</item>
+        <item>2. Bundesliga - Staffel Südwest</item>
+        <item>2. Bundesliga - Staffel Mitte</item>
+    </string-array>
+</resources>

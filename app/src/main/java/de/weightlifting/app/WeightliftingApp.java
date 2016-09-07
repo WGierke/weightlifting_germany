@@ -472,14 +472,21 @@ public class WeightliftingApp extends Application {
         return blogFilterMode;
     }
 
+    private void tryLoadingBlogFilterPublishersFromJson(String json) {
+        try {
+            blogFilterPublishers = new Gson().fromJson(json, new TypeToken<ArrayList<String>>() {
+            }.getType());
+        } catch (Exception ignored) {
+        }
+        if (blogFilterPublishers == null) {
+            blogFilterPublishers = allBlogPublishers;
+        }
+    }
+
     public ArrayList<String> getBlogFilterPublishers() {
         if (blogFilterPublishers == null) {
             String json = DataHelper.getPreference(API.BLOG_FILTER_TEXT_KEY, this);
-            blogFilterPublishers = new Gson().fromJson(json, new TypeToken<ArrayList<String>>() {
-            }.getType());
-            if (blogFilterPublishers == null) {
-                blogFilterPublishers = allBlogPublishers;
-            }
+            tryLoadingBlogFilterPublishersFromJson(json);
         }
         return blogFilterPublishers;
     }
@@ -490,8 +497,7 @@ public class WeightliftingApp extends Application {
 
         blogFilterMode = DataHelper.getPreference(API.BLOG_FILTER_MODE_KEY, this);
         String json = DataHelper.getPreference(API.BLOG_FILTER_TEXT_KEY, this);
-        blogFilterPublishers = new Gson().fromJson(json, new TypeToken<ArrayList<String>>() {
-        }.getType());
+        tryLoadingBlogFilterPublishersFromJson(json);
     }
 
     public void saveFilterOnline() {

@@ -11,7 +11,7 @@
     <string name="all_competitions_and_placings">alle Wettkämpfe und Platzierungen</string>
     <string name="favorite_relay">nur über die Liga</string>
     <string name="favorite_club">nur über den Club</string>
-    <string name="be_notified_about">… benachrichtigt werden.</string>
+    <string name="be_notified_about" translatable="false">… benachrichtigt werden.</string>
     <string name="saved_no_filter">Einstellungen gespeichert. Sie werden zukünftig über alle Ereignisse informiert.</string>
     <string name="saved_club_filter">Einstellungen gespeichert. Sie werden zukünftig nur noch über die Mannschaft "%1$s" informiert.</string>
     <string name="saved_relay_filter">Einstellungen gespeichert. Sie werden zukünftig nur noch über die %1$s informiert.</string>
@@ -120,6 +120,13 @@
     <string name="loading_data">Lade aktuellste Daten …</string>
     <string name="buli_protocol">Protokoll</string>
     <string name="share_this">Teilen</string>
+    <string name="settingsAnd">... und ...</string>
+    <string name="allClubNews">über alle Vereins-Neuigkeiten</string>
+    <string name="settings_news_only_about">nur über</string>
+    <string name="settings_news_none">über keine Vereine</string>
+    <string name="firstNationalLeague">1. Bundesliga</string>
+    <string name="secondNationalLeague">2. Bundesliga</string>
+    <string name="contact">Kontakt</string>
 
 </resources>
 

@@ -92,7 +92,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="5dp"
-        android:text="... und ..."
+        android:text="@string/settingsAnd"
         android:textColor="@color/md_black_1000"
         android:textSize="16sp" />
 
@@ -107,7 +107,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="über alle Vereins-Neuigkeiten" />
+            android:text="@string/allClubNews" />
 
         <RadioButton
             android:id="@+id/radioBlogOnly"
@@ -117,7 +117,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="nur über" />
+            android:text="@string/settings_news_only_about" />
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -160,7 +160,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginStart="20dp"
             android:layout_marginTop="5dp"
-            android:text="über keine Vereine" />
+            android:text="@string/settings_news_none" />
 
     </RadioGroup>
 

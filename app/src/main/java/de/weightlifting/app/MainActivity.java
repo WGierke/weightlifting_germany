@@ -77,10 +77,10 @@ public class MainActivity extends AppCompatActivity {
     private void initNavigation(Bundle savedInstanceState) {
         PrimaryDrawerItem nav_home = new PrimaryDrawerItem().withName(R.string.nav_home).withIcon(R.drawable.nav_home);
         PrimaryDrawerItem nav_news = new PrimaryDrawerItem().withName(R.string.nav_news).withIcon(R.drawable.nav_news);
-        SectionDrawerItem nav_buli1_section = new SectionDrawerItem().withName("1. Bundesliga");
+        SectionDrawerItem nav_buli1_section = new SectionDrawerItem().withName(R.string.firstNationalLeague);
         PrimaryDrawerItem nav_buli_1A = new PrimaryDrawerItem().withName(R.string.nav_buli_1A).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_1B = new PrimaryDrawerItem().withName(R.string.nav_buli_1B).withIcon(R.drawable.nav_buli);
-        SectionDrawerItem nav_buli2_section = new SectionDrawerItem().withName("2. Bundesliga");
+        SectionDrawerItem nav_buli2_section = new SectionDrawerItem().withName(R.string.secondNationalLeague);
         PrimaryDrawerItem nav_buli_2North = new PrimaryDrawerItem().withName(R.string.nav_buli_2North).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_2Middle = new PrimaryDrawerItem().withName(R.string.nav_buli_2Middle).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_2South = new PrimaryDrawerItem().withName(R.string.nav_buli_2South).withIcon(R.drawable.nav_buli);

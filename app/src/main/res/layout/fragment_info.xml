@@ -18,7 +18,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
-                android:text="Kontakt"
+                android:text="@string/contact"
                 android:textColor="@color/md_black_1000"
                 android:textSize="20sp"
                 android:textStyle="bold" />
