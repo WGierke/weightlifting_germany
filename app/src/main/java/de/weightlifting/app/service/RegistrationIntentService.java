@@ -28,7 +28,6 @@ import android.util.Log;
 
 import com.google.android.gms.gcm.GoogleCloudMessaging;
 import com.google.android.gms.iid.InstanceID;
-import com.parse.ParseObject;
 
 import de.weightlifting.app.R;
 import de.weightlifting.app.WeightliftingApp;
@@ -73,9 +72,6 @@ public class RegistrationIntentService extends IntentService {
      */
     private void sendRegistrationToServer(String token) {
         Log.d(WeightliftingApp.TAG, "Sending new token: " + token);
-        ParseObject GcmToken = new ParseObject("GcmToken");
-        GcmToken.put("token", token);
-        GcmToken.saveInBackground();
 
         //notify service that token was successfully uploaded
         Handler callBackHandler = new Handler() {

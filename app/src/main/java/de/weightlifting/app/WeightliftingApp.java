@@ -15,8 +15,6 @@ import com.google.gson.reflect.TypeToken;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.parse.Parse;
-import com.parse.ParseObject;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -60,7 +58,6 @@ public class WeightliftingApp extends Application {
     public static boolean isUpdatingAll = false;
     public static boolean initializedNews = false;
     private static Context mContext;
-    public boolean initializedParse = false;
     public MemoryCache memoryCache;
     public ImageLoader imageLoader;
     public News news;
@@ -112,11 +109,6 @@ public class WeightliftingApp extends Application {
                 .defaultDisplayImageOptions(defaultOptions)
                 .build();
         ImageLoader.getInstance().init(config);
-
-        try {
-            Parse.initialize(this, Keys.CONFIG_APP_ID, Keys.CONFIG_CLIENT_KEY);
-        } catch (Exception e) {
-        }
 
         mContext = getApplicationContext();
 
