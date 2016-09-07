@@ -262,7 +262,7 @@ public class SettingsFragment extends Fragment {
             UiHelper.showToast(getString(R.string.saved_club_filter, selectedClub), getActivity());
         }
         app.refreshBuliFilterSettings();
-        app.saveFilterOnline();
+        app.saveBuliFilterOnline();
     }
 
     private void saveBlogSettings() {
@@ -287,7 +287,7 @@ public class SettingsFragment extends Fragment {
         }
         DataHelper.setPreference(API.BLOG_FILTER_TEXT_KEY, new Gson().toJson(checkedBlogs), app);
         app.setBlogFilterPublishers(checkedBlogs);
-        //app.saveFilterOnline();
+        app.saveBlogFilterOnline();
     }
 }
 

@@ -505,34 +505,61 @@ public class WeightliftingApp extends Application {
         buliFilterText = DataHelper.getPreference(API.BULI_FILTER_TEXT_KEY, this);
     }
 
-    public void saveFilterOnline() {
-        try {
-            String userID;
-            if (DataHelper.checkPreference(API.PREFERENCE_USER_ID, this)) {
-                userID = DataHelper.getPreference(API.PREFERENCE_USER_ID, this);
-                if (userID.length() < 1) {
-                    userID = UUID.randomUUID().toString();
-                    DataHelper.setPreference(API.PREFERENCE_USER_ID, userID, this);
-                }
-            } else {
+    public String getUserId() {
+        String userID;
+        if (DataHelper.checkPreference(API.PREFERENCE_USER_ID, this)) {
+            userID = DataHelper.getPreference(API.PREFERENCE_USER_ID, this);
+            if (userID.length() < 1) {
                 userID = UUID.randomUUID().toString();
                 DataHelper.setPreference(API.PREFERENCE_USER_ID, userID, this);
             }
+        } else {
+            userID = UUID.randomUUID().toString();
+            DataHelper.setPreference(API.PREFERENCE_USER_ID, userID, this);
+        }
+        return userID;
+    }
 
-            ParseObject filterObject = new ParseObject("FilterSetting");
-            filterObject.put("userId", userID);
+    public void saveBuliFilterOnline() {
+        try {
+            String userID = getUserId();
+
             String filterSetting;
             if (buliFilterMode.equals(API.BULI_FILTER_MODE_NONE))
                 filterSetting = "all";
             else
                 filterSetting = buliFilterText;
-            filterObject.put("filter", filterSetting);
-            filterObject.saveInBackground();
 
             Answers.getInstance().logCustom(new CustomEvent("Filter Saving")
                     .putCustomAttribute("Setting", filterSetting));
 
             NetworkHelper.sendFilter(userID, filterSetting);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void saveBlogFilterOnline() {
+        try {
+            String userID = getUserId();
+
+            String filterSetting;
+            switch (blogFilterMode) {
+                case API.BLOG_FILTER_SHOW_NONE:
+                    filterSetting = "none";
+                    break;
+                case API.BLOG_FILTER_SHOW_CHOSEN:
+                    filterSetting = new Gson().toJson(blogFilterPublishers);
+                    break;
+                default:
+                    filterSetting = "all";
+                    break;
+            }
+
+            Answers.getInstance().logCustom(new CustomEvent("Blog Filter Saving")
+                    .putCustomAttribute("BlogSetting", filterSetting));
+
+            NetworkHelper.sendBlogFilter(userID, filterSetting);
         } catch (Exception e) {
             e.printStackTrace();
         }

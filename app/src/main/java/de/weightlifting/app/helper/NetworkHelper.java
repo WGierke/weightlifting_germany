@@ -93,7 +93,18 @@ public class NetworkHelper {
         try {
             String data = URLEncoder.encode("userId", "UTF-8") + "=" + URLEncoder.encode(userId, "UTF-8");
             data += "&" + URLEncoder.encode("filterSetting", "UTF-8") + "=" + URLEncoder.encode(filterSetting, "UTF-8");
-            String url = BASE_SERVER_URL + "add_filter";
+            String url = BASE_SERVER_URL + "/add_filter";
+            sendAuthenticatedHttpPostRequest(url, data, new Handler());
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public static void sendBlogFilter(String userId, String blogFilterSetting) {
+        try {
+            String data = URLEncoder.encode("userId", "UTF-8") + "=" + URLEncoder.encode(userId, "UTF-8");
+            data += "&" + URLEncoder.encode("blogFilterSetting", "UTF-8") + "=" + URLEncoder.encode(blogFilterSetting, "UTF-8");
+            String url = BASE_SERVER_URL + "/add_blog_filter";
             sendAuthenticatedHttpPostRequest(url, data, new Handler());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
