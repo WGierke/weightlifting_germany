@@ -261,7 +261,7 @@ public class SettingsFragment extends Fragment {
             DataHelper.setPreference(API.BULI_FILTER_TEXT_KEY, selectedClub, app);
             UiHelper.showToast(getString(R.string.saved_club_filter, selectedClub), getActivity());
         }
-        app.refreshFilterSettings();
+        app.refreshBuliFilterSettings();
         app.saveFilterOnline();
     }
 
@@ -272,17 +272,21 @@ public class SettingsFragment extends Fragment {
 
         if (radioBlogAll.isChecked()) {
             DataHelper.setPreference(API.BLOG_FILTER_MODE_KEY, API.BLOG_FILTER_SHOW_ALL, app);
+            app.setBlogFilterMode(API.BLOG_FILTER_SHOW_ALL);
             UiHelper.showToast(getString(R.string.saved_all_blogs), app);
         } else if (radioBlogNone.isChecked()) {
             DataHelper.setPreference(API.BLOG_FILTER_MODE_KEY, API.BLOG_FILTER_SHOW_NONE, app);
+            checkedBlogs.clear();
+            app.setBlogFilterMode(API.BLOG_FILTER_SHOW_NONE);
             UiHelper.showToast(getString(R.string.saved_no_blogs), app);
         } else {
             DataHelper.setPreference(API.BLOG_FILTER_MODE_KEY, API.BLOG_FILTER_SHOW_CHOSEN, app);
+            app.setBlogFilterMode(API.BLOG_FILTER_SHOW_CHOSEN);
+            app.setBlogFilterPublishers(checkedBlogs);
             UiHelper.showToast(getResources().getQuantityString(R.plurals.saved_chosen_blogs, checkedBlogs.size(), TextUtils.join(", ", checkedBlogs)), app);
         }
         DataHelper.setPreference(API.BLOG_FILTER_TEXT_KEY, new Gson().toJson(checkedBlogs), app);
-
-        app.refreshFilterSettings();
+        app.setBlogFilterPublishers(checkedBlogs);
         //app.saveFilterOnline();
     }
 }

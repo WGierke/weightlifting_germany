@@ -1,8 +1,13 @@
 package de.weightlifting.app.helper;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import junit.framework.Assert;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
 
 import de.weightlifting.app.news.News;
 import de.weightlifting.app.news.NewsItem;
@@ -23,5 +28,13 @@ public class NetworkHelperTest {
         Assert.assertTrue(newsItem.getContent().startsWith("Liebe BVDG-Kaderathleten"));
         Assert.assertTrue(newsItem.getContent().endsWith("ing-Beauftragter BVDG"));
         Assert.assertEquals(newsItem.getDate(), "26.08.2016");
+    }
+
+    @Test
+    public void test() throws Exception {
+        String json = "[\"Schwedt\"]";
+        ArrayList<String> strings = new Gson().fromJson(json, new TypeToken<ArrayList<String>>() {
+        }.getType());
+        org.junit.Assert.assertEquals(strings.get(0), "Schwedt");
     }
 }

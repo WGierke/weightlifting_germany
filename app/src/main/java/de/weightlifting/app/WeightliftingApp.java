@@ -467,9 +467,14 @@ public class WeightliftingApp extends Application {
             if (blogFilterMode == null) {
                 blogFilterMode = API.BLOG_FILTER_SHOW_ALL;
                 blogFilterPublishers = allBlogPublishers;
+                DataHelper.setPreference(API.BLOG_FILTER_MODE_KEY, blogFilterMode, this);
             }
         }
         return blogFilterMode;
+    }
+
+    public void setBlogFilterMode(String blogFilterMode) {
+        this.blogFilterMode = blogFilterMode;
     }
 
     private void tryLoadingBlogFilterPublishersFromJson(String json) {
@@ -491,13 +496,13 @@ public class WeightliftingApp extends Application {
         return blogFilterPublishers;
     }
 
-    public void refreshFilterSettings() {
+    public void setBlogFilterPublishers(ArrayList<String> blogFilterPublishers) {
+        this.blogFilterPublishers = blogFilterPublishers;
+    }
+
+    public void refreshBuliFilterSettings() {
         buliFilterMode = DataHelper.getPreference(API.BULI_FILTER_MODE_KEY, this);
         buliFilterText = DataHelper.getPreference(API.BULI_FILTER_TEXT_KEY, this);
-
-        blogFilterMode = DataHelper.getPreference(API.BLOG_FILTER_MODE_KEY, this);
-        String json = DataHelper.getPreference(API.BLOG_FILTER_TEXT_KEY, this);
-        tryLoadingBlogFilterPublishersFromJson(json);
     }
 
     public void saveFilterOnline() {
