@@ -244,12 +244,12 @@ public class MainActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
-            int fragmentId = extras.getInt("fragmentId");
-            int subFragmentId = extras.getInt("subFragmentId");
+            int fragmentId = extras.getInt(API.NOTIFICATION_FRAGMENT_ID);
+            int subFragmentId = extras.getInt(API.NOTIFICATION_SUBFRAGMENT_ID);
             if (fragmentId == position && subFragmentId != 0) {
                 fragment.setArguments(extras);
-                getIntent().removeExtra("fragmentId");
-                getIntent().removeExtra("subFragmentId");
+                getIntent().removeExtra(API.NOTIFICATION_FRAGMENT_ID);
+                getIntent().removeExtra(API.NOTIFICATION_SUBFRAGMENT_ID);
             }
         }
 

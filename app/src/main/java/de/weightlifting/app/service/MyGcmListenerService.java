@@ -43,9 +43,16 @@ public class MyGcmListenerService extends com.google.android.gms.gcm.GcmListener
     //Example message: New Article#Victory in Görlitz#Push the button ...#4#1
     private void sendNotification(String msg) {
         String[] parts = msg.split("#");
+        Log.d(WeightliftingApp.TAG, "received notification: " + msg);
 
-        if (parts.length != 5 || !TextUtils.isDigitsOnly(parts[3]) || !TextUtils.isDigitsOnly(parts[4])) {
-            Log.e(WeightliftingApp.TAG, "Number of parts: " + String.valueOf(parts.length) + ", notificationID: " + parts[3]);
+        if (parts.length < 5 || !TextUtils.isDigitsOnly(parts[3]) || !TextUtils.isDigitsOnly(parts[4])) {
+            if (parts.length == 2) {
+                String title = parts[0];
+                String message = parts[1];
+                String description = "Willi Gierke (App Developer)";
+                UiHelper.showNotification(title, message, description, 0, 0, this);
+            }
+            Log.e(WeightliftingApp.TAG, "Invalid notification: " + msg);
         } else {
             String buliFilterMode = DataHelper.getPreference(API.BULI_FILTER_MODE_KEY, getApplication());
             String buliFilterText = DataHelper.getPreference(API.BULI_FILTER_TEXT_KEY, getApplication());

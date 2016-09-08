@@ -38,6 +38,9 @@ public class API {
 
     public static final String HANDLER_RESULT_KEY = "RESULT_KEY";
 
+    public static final String NOTIFICATION_FRAGMENT_ID = "fragmentId";
+    public static final String NOTIFICATION_SUBFRAGMENT_ID = "subFragmentId";
+
     //HTTP Post Param<-> Server
     //Token:    token - value
     //Filter:   userId - user_id, filterSetting - filter_setting,   createdAt - timestamp

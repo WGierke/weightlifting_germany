@@ -165,8 +165,8 @@ public class UiHelper {
         Intent resultIntent = new Intent(context, SplashActivity.class);
         resultIntent.setAction(Intent.ACTION_MAIN);
         resultIntent.addCategory(Intent.CATEGORY_LAUNCHER);
-        resultIntent.putExtra("fragmentId", notificationId);
-        resultIntent.putExtra("subFragmentId", subFragmentId);
+        resultIntent.putExtra(API.NOTIFICATION_FRAGMENT_ID, notificationId);
+        resultIntent.putExtra(API.NOTIFICATION_SUBFRAGMENT_ID, subFragmentId);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0, resultIntent, PendingIntent.FLAG_UPDATE_CURRENT);
 
