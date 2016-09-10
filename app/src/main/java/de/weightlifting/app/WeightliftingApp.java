@@ -29,19 +29,18 @@ import de.weightlifting.app.buli.relay1A.Table1A;
 import de.weightlifting.app.buli.relay1B.Competitions1B;
 import de.weightlifting.app.buli.relay1B.Schedule1B;
 import de.weightlifting.app.buli.relay1B.Table1B;
-import de.weightlifting.app.buli.relay2Middle.Competitions2Middle;
-import de.weightlifting.app.buli.relay2Middle.Schedule2Middle;
-import de.weightlifting.app.buli.relay2Middle.Table2Middle;
-import de.weightlifting.app.buli.relay2North.Competitions2North;
-import de.weightlifting.app.buli.relay2North.Schedule2North;
-import de.weightlifting.app.buli.relay2North.Table2North;
-import de.weightlifting.app.buli.relay2South.Competitions2South;
-import de.weightlifting.app.buli.relay2South.Schedule2South;
-import de.weightlifting.app.buli.relay2South.Table2South;
+import de.weightlifting.app.buli.relay2A.Competitions2A;
+import de.weightlifting.app.buli.relay2A.Schedule2A;
+import de.weightlifting.app.buli.relay2A.Table2A;
+import de.weightlifting.app.buli.relay2B.Competitions2B;
+import de.weightlifting.app.buli.relay2B.Schedule2B;
+import de.weightlifting.app.buli.relay2B.Table2B;
+import de.weightlifting.app.buli.relay2C.Competitions2C;
+import de.weightlifting.app.buli.relay2C.Schedule2C;
+import de.weightlifting.app.buli.relay2C.Table2C;
 import de.weightlifting.app.faq.FaqItem;
 import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.DataHelper;
-import de.weightlifting.app.helper.Keys;
 import de.weightlifting.app.helper.MemoryCache;
 import de.weightlifting.app.helper.NetworkHelper;
 import de.weightlifting.app.news.News;
@@ -67,15 +66,15 @@ public class WeightliftingApp extends Application {
     public Schedule1B schedule1B;
     public Competitions1B competitions1B;
     public Table1B table1B;
-    public Schedule2North schedule2North;
-    public Competitions2North competitions2North;
-    public Table2North table2North;
-    public Schedule2South schedule2South;
-    public Competitions2South competitions2South;
-    public Table2South table2South;
-    public Schedule2Middle schedule2Middle;
-    public Competitions2Middle competitions2Middle;
-    public Table2Middle table2Middle;
+    public Schedule2B schedule2B;
+    public Competitions2B competitions2B;
+    public Table2B table2B;
+    public Schedule2C schedule2C;
+    public Competitions2C competitions2C;
+    public Table2C table2C;
+    public Schedule2A schedule2A;
+    public Competitions2A competitions2A;
+    public Table2A table2A;
     public Handler splashCallbackHandler;
     private String buliFilterMode;
     private String buliFilterText;
@@ -183,15 +182,15 @@ public class WeightliftingApp extends Application {
         getSchedule1B(LOAD_FROM_FILE);
         getCompetitions1B(LOAD_FROM_FILE);
         getTable1B(LOAD_FROM_FILE);
-        getSchedule2North(LOAD_FROM_FILE);
-        getCompetitions2North(LOAD_FROM_FILE);
-        getTable2North(LOAD_FROM_FILE);
-        getSchedule2South(LOAD_FROM_FILE);
-        getCompetitions2South(LOAD_FROM_FILE);
-        getTable2South(LOAD_FROM_FILE);
-        getSchedule2Middle(LOAD_FROM_FILE);
-        getCompetitions2Middle(LOAD_FROM_FILE);
-        getTable2Middle(LOAD_FROM_FILE);
+        getSchedule2B(LOAD_FROM_FILE);
+        getCompetitions2B(LOAD_FROM_FILE);
+        getTable2B(LOAD_FROM_FILE);
+        getSchedule2C(LOAD_FROM_FILE);
+        getCompetitions2C(LOAD_FROM_FILE);
+        getTable2C(LOAD_FROM_FILE);
+        getSchedule2A(LOAD_FROM_FILE);
+        getCompetitions2A(LOAD_FROM_FILE);
+        getTable2A(LOAD_FROM_FILE);
     }
 
     public void updateDataForcefully() {
@@ -202,32 +201,32 @@ public class WeightliftingApp extends Application {
         getSchedule1B(UPDATE_FORCEFULLY);
         getCompetitions1B(UPDATE_FORCEFULLY);
         getTable1B(UPDATE_FORCEFULLY);
-        getSchedule2North(UPDATE_FORCEFULLY);
-        getCompetitions2North(UPDATE_FORCEFULLY);
-        getTable2North(UPDATE_FORCEFULLY);
-        getSchedule2South(UPDATE_FORCEFULLY);
-        getCompetitions2South(UPDATE_FORCEFULLY);
-        getTable2South(UPDATE_FORCEFULLY);
-        getSchedule2Middle(UPDATE_FORCEFULLY);
-        getCompetitions2Middle(UPDATE_FORCEFULLY);
-        getTable2Middle(UPDATE_FORCEFULLY);
+        getSchedule2B(UPDATE_FORCEFULLY);
+        getCompetitions2B(UPDATE_FORCEFULLY);
+        getTable2B(UPDATE_FORCEFULLY);
+        getSchedule2C(UPDATE_FORCEFULLY);
+        getCompetitions2C(UPDATE_FORCEFULLY);
+        getTable2C(UPDATE_FORCEFULLY);
+        getSchedule2A(UPDATE_FORCEFULLY);
+        getCompetitions2A(UPDATE_FORCEFULLY);
+        getTable2A(UPDATE_FORCEFULLY);
     }
 
     public int getUpdateStatus() {
         if (schedule1A.updateFailed || competitions1A.updateFailed || table1A.updateFailed ||
                 schedule1B.updateFailed || competitions1B.updateFailed || table1B.updateFailed ||
-                schedule2North.updateFailed || competitions2North.updateFailed || table2North.updateFailed ||
-                schedule2South.updateFailed || competitions2South.updateFailed || table2South.updateFailed ||
-                schedule2Middle.updateFailed || competitions2Middle.updateFailed || table2Middle.updateFailed || News.updateFailed) {
+                schedule2B.updateFailed || competitions2B.updateFailed || table2B.updateFailed ||
+                schedule2C.updateFailed || competitions2C.updateFailed || table2C.updateFailed ||
+                schedule2A.updateFailed || competitions2A.updateFailed || table2A.updateFailed || News.updateFailed) {
 
             isUpdatingAll = false;
             return UPDATE_STATUS_FAILED;
         }
         if (schedule1A.isUpToDate && competitions1A.isUpToDate && table1A.isUpToDate &&
                 schedule1B.isUpToDate && competitions1B.isUpToDate && table1B.isUpToDate &&
-                schedule2North.isUpToDate && competitions2North.isUpToDate && table2North.isUpToDate &&
-                schedule2South.isUpToDate && competitions2South.isUpToDate && table2South.isUpToDate &&
-                schedule2Middle.isUpToDate && competitions2Middle.isUpToDate && table2Middle.isUpToDate && !News.isUpdating) {
+                schedule2B.isUpToDate && competitions2B.isUpToDate && table2B.isUpToDate &&
+                schedule2C.isUpToDate && competitions2C.isUpToDate && table2C.isUpToDate &&
+                schedule2A.isUpToDate && competitions2A.isUpToDate && table2A.isUpToDate && !News.isUpdating) {
 
             isUpdatingAll = false;
             return UPDATE_STATUS_SUCCESSFUL;
@@ -248,24 +247,24 @@ public class WeightliftingApp extends Application {
             competitions1B.isUpToDate = value;
         if (table1B != null)
             table1B.isUpToDate = value;
-        if (schedule2North != null)
-            schedule2North.isUpToDate = value;
-        if (competitions2North != null)
-            competitions2North.isUpToDate = value;
-        if (table2North != null)
-            table2North.isUpToDate = value;
-        if (schedule2South != null)
-            schedule2South.isUpToDate = value;
-        if (competitions2South != null)
-            competitions2South.isUpToDate = value;
-        if (table2South != null)
-            table2South.isUpToDate = value;
-        if (schedule2Middle != null)
-            schedule2Middle.isUpToDate = value;
-        if (competitions2Middle != null)
-            competitions2Middle.isUpToDate = value;
-        if (table2Middle != null)
-            table2Middle.isUpToDate = value;
+        if (schedule2B != null)
+            schedule2B.isUpToDate = value;
+        if (competitions2B != null)
+            competitions2B.isUpToDate = value;
+        if (table2B != null)
+            table2B.isUpToDate = value;
+        if (schedule2C != null)
+            schedule2C.isUpToDate = value;
+        if (competitions2C != null)
+            competitions2C.isUpToDate = value;
+        if (table2C != null)
+            table2C.isUpToDate = value;
+        if (schedule2A != null)
+            schedule2A.isUpToDate = value;
+        if (competitions2A != null)
+            competitions2A.isUpToDate = value;
+        if (table2A != null)
+            table2A.isUpToDate = value;
     }
 
     public UpdateableWrapper getWrapperItems(UpdateableWrapper myInstance, Class<?> myClass, int mode) {
@@ -346,49 +345,49 @@ public class WeightliftingApp extends Application {
         return table1B;
     }
 
-    public Schedule2North getSchedule2North(int updateMode) {
-        schedule2North = (Schedule2North) getWrapperItems(schedule2North, Schedule2North.class, updateMode);
-        return schedule2North;
+    public Schedule2A getSchedule2A(int updateMode) {
+        schedule2A = (Schedule2A) getWrapperItems(schedule2A, Schedule2A.class, updateMode);
+        return schedule2A;
     }
 
-    public Competitions2North getCompetitions2North(int updateMode) {
-        competitions2North = (Competitions2North) getWrapperItems(competitions2North, Competitions2North.class, updateMode);
-        return competitions2North;
+    public Competitions2A getCompetitions2A(int updateMode) {
+        competitions2A = (Competitions2A) getWrapperItems(competitions2A, Competitions2A.class, updateMode);
+        return competitions2A;
     }
 
-    public Table2North getTable2North(int updateMode) {
-        table2North = (Table2North) getWrapperItems(table2North, Table2North.class, updateMode);
-        return table2North;
+    public Table2A getTable2A(int updateMode) {
+        table2A = (Table2A) getWrapperItems(table2A, Table2A.class, updateMode);
+        return table2A;
     }
 
-    public Schedule2South getSchedule2South(int updateMode) {
-        schedule2South = (Schedule2South) getWrapperItems(schedule2South, Schedule2South.class, updateMode);
-        return schedule2South;
+    public Schedule2B getSchedule2B(int updateMode) {
+        schedule2B = (Schedule2B) getWrapperItems(schedule2B, Schedule2B.class, updateMode);
+        return schedule2B;
     }
 
-    public Competitions2South getCompetitions2South(int updateMode) {
-        competitions2South = (Competitions2South) getWrapperItems(competitions2South, Competitions2South.class, updateMode);
-        return competitions2South;
+    public Competitions2B getCompetitions2B(int updateMode) {
+        competitions2B = (Competitions2B) getWrapperItems(competitions2B, Competitions2B.class, updateMode);
+        return competitions2B;
     }
 
-    public Table2South getTable2South(int updateMode) {
-        table2South = (Table2South) getWrapperItems(table2South, Table2South.class, updateMode);
-        return table2South;
+    public Table2B getTable2B(int updateMode) {
+        table2B = (Table2B) getWrapperItems(table2B, Table2B.class, updateMode);
+        return table2B;
     }
 
-    public Schedule2Middle getSchedule2Middle(int updateMode) {
-        schedule2Middle = (Schedule2Middle) getWrapperItems(schedule2Middle, Schedule2Middle.class, updateMode);
-        return schedule2Middle;
+    public Schedule2C getSchedule2C(int updateMode) {
+        schedule2C = (Schedule2C) getWrapperItems(schedule2C, Schedule2C.class, updateMode);
+        return schedule2C;
     }
 
-    public Competitions2Middle getCompetitions2Middle(int updateMode) {
-        competitions2Middle = (Competitions2Middle) getWrapperItems(competitions2Middle, Competitions2Middle.class, updateMode);
-        return competitions2Middle;
+    public Competitions2C getCompetitions2C(int updateMode) {
+        competitions2C = (Competitions2C) getWrapperItems(competitions2C, Competitions2C.class, updateMode);
+        return competitions2C;
     }
 
-    public Table2Middle getTable2Middle(int updateMode) {
-        table2Middle = (Table2Middle) getWrapperItems(table2Middle, Table2Middle.class, updateMode);
-        return table2Middle;
+    public Table2C getTable2C(int updateMode) {
+        table2C = (Table2C) getWrapperItems(table2C, Table2C.class, updateMode);
+        return table2C;
     }
 
     public ArrayList<ScheduleEntry> getFilteredScheduledCompetitions() {
@@ -396,16 +395,16 @@ public class WeightliftingApp extends Application {
 
         Schedule1A schedule1A = getSchedule1A(UPDATE_IF_NECESSARY);
         Schedule1B schedule1B = getSchedule1B(UPDATE_IF_NECESSARY);
-        Schedule2North schedule2North = getSchedule2North(UPDATE_IF_NECESSARY);
-        Schedule2South schedule2South = getSchedule2South(UPDATE_IF_NECESSARY);
-        Schedule2Middle schedule2Middle = getSchedule2Middle(UPDATE_IF_NECESSARY);
+        Schedule2B schedule2B = getSchedule2B(UPDATE_IF_NECESSARY);
+        Schedule2C schedule2C = getSchedule2C(UPDATE_IF_NECESSARY);
+        Schedule2A schedule2A = getSchedule2A(UPDATE_IF_NECESSARY);
 
         ArrayList<Schedule> schedules = new ArrayList<>();
         schedules.add(schedule1A);
         schedules.add(schedule1B);
-        schedules.add(schedule2North);
-        schedules.add(schedule2South);
-        schedules.add(schedule2Middle);
+        schedules.add(schedule2B);
+        schedules.add(schedule2C);
+        schedules.add(schedule2A);
 
         switch (buliFilterMode) {
             case API.BULI_FILTER_MODE_RELAY:

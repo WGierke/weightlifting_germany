@@ -5,9 +5,9 @@ public class API {
     public static final int FRAGMENT_NEWS = 2;
     public static final int FRAGMENT_BULI_1A = 4;
     public static final int FRAGMENT_BULI_1B = 5;
-    public static final int FRAGMENT_BULI_2NORTH = 7;
-    public static final int FRAGMENT_BULI_2MIDDLE = 8;
-    public static final int FRAGMENT_BULI_2SOUTH = 9;
+    public static final int FRAGMENT_BULI_2A = 7;
+    public static final int FRAGMENT_BULI_2B = 8;
+    public static final int FRAGMENT_BULI_2C = 9;
     public static final int FRAGMENT_ARCHIVE = 11;
     public static final int FRAGMENT_FAQ = 13;
     public static final int FRAGMENT_INFO = 15;

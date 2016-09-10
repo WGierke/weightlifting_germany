@@ -1,4 +1,4 @@
-package de.weightlifting.app.buli.relay2Middle;
+package de.weightlifting.app.buli.relay2B;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -12,10 +12,11 @@ import android.view.ViewGroup;
 import de.weightlifting.app.BuliFragment;
 import de.weightlifting.app.R;
 
-public class BuliFragment2Middle extends BuliFragment {
+public class BuliFragment2B extends BuliFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        //Log.d(WeightliftingApp.TAG, "Showing Buli fragment");
 
         View fragment = inflater.inflate(R.layout.pager_tab_strip, container, false);
 
@@ -38,13 +39,13 @@ public class BuliFragment2Middle extends BuliFragment {
 
             switch (position) {
                 case FRAGMENT_SCHEDULE:
-                    fragment = new ScheduleFragment2Middle();
+                    fragment = new ScheduleFragment2B();
                     break;
                 case FRAGMENT_COMPETITIONS:
-                    fragment = new CompetitionsFragment2Middle();
+                    fragment = new CompetitionsFragment2B();
                     break;
                 case FRAGMENT_TABLE:
-                    fragment = new TableFragment2Middle();
+                    fragment = new TableFragment2B();
                     break;
                 default:
                     fragment = null;
@@ -72,7 +73,7 @@ public class BuliFragment2Middle extends BuliFragment {
                     title = getString(R.string.buli_table);
                     break;
                 default:
-                    title = getString(R.string.buli_2Middle);
+                    title = getString(R.string.buli_2B);
             }
             return title;
         }

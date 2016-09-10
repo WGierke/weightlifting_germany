@@ -27,9 +27,9 @@ import de.weightlifting.app.buli.Competitions;
 import de.weightlifting.app.buli.Table;
 import de.weightlifting.app.buli.relay1A.BuliFragment1A;
 import de.weightlifting.app.buli.relay1B.BuliFragment1B;
-import de.weightlifting.app.buli.relay2Middle.BuliFragment2Middle;
-import de.weightlifting.app.buli.relay2North.BuliFragment2North;
-import de.weightlifting.app.buli.relay2South.BuliFragment2South;
+import de.weightlifting.app.buli.relay2A.BuliFragment2A;
+import de.weightlifting.app.buli.relay2B.BuliFragment2B;
+import de.weightlifting.app.buli.relay2C.BuliFragment2C;
 import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.UiHelper;
 import de.weightlifting.app.news.News;
@@ -81,9 +81,9 @@ public class MainActivity extends AppCompatActivity {
         PrimaryDrawerItem nav_buli_1A = new PrimaryDrawerItem().withName(R.string.nav_buli_1A).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_1B = new PrimaryDrawerItem().withName(R.string.nav_buli_1B).withIcon(R.drawable.nav_buli);
         SectionDrawerItem nav_buli2_section = new SectionDrawerItem().withName(R.string.secondNationalLeague);
-        PrimaryDrawerItem nav_buli_2North = new PrimaryDrawerItem().withName(R.string.nav_buli_2North).withIcon(R.drawable.nav_buli);
-        PrimaryDrawerItem nav_buli_2Middle = new PrimaryDrawerItem().withName(R.string.nav_buli_2Middle).withIcon(R.drawable.nav_buli);
-        PrimaryDrawerItem nav_buli_2South = new PrimaryDrawerItem().withName(R.string.nav_buli_2South).withIcon(R.drawable.nav_buli);
+        PrimaryDrawerItem nav_buli_2A = new PrimaryDrawerItem().withName(R.string.nav_buli_2A).withIcon(R.drawable.nav_buli);
+        PrimaryDrawerItem nav_buli_2B = new PrimaryDrawerItem().withName(R.string.nav_buli_2B).withIcon(R.drawable.nav_buli);
+        PrimaryDrawerItem nav_buli_2C = new PrimaryDrawerItem().withName(R.string.nav_buli_2C).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_archive = new PrimaryDrawerItem().withName(R.string.nav_archive).withIcon(R.drawable.nav_archive);
         PrimaryDrawerItem nav_faq = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_faq);
         PrimaryDrawerItem nav_info = new PrimaryDrawerItem().withName(R.string.nav_info).withIcon(R.drawable.nav_info);
@@ -99,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
                         nav_buli_1A,
                         nav_buli_1B,
                         nav_buli2_section,
-                        nav_buli_2North,
-                        nav_buli_2Middle,
-                        nav_buli_2South,
+                        nav_buli_2A,
+                        nav_buli_2B,
+                        nav_buli_2C,
                         new DividerDrawerItem(),
                         nav_archive,
                         new DividerDrawerItem(),
@@ -214,17 +214,17 @@ public class MainActivity extends AppCompatActivity {
                 fragment = new BuliFragment1B();
                 setTitle(getString(R.string.buli_1B));
                 break;
-            case API.FRAGMENT_BULI_2NORTH:
-                fragment = new BuliFragment2North();
-                setTitle(getString(R.string.buli_2North));
+            case API.FRAGMENT_BULI_2A:
+                fragment = new BuliFragment2B();
+                setTitle(getString(R.string.buli_2A));
                 break;
-            case API.FRAGMENT_BULI_2SOUTH:
-                fragment = new BuliFragment2South();
-                setTitle(getString(R.string.buli_2South));
+            case API.FRAGMENT_BULI_2C:
+                fragment = new BuliFragment2C();
+                setTitle(getString(R.string.buli_2C));
                 break;
-            case API.FRAGMENT_BULI_2MIDDLE:
-                fragment = new BuliFragment2Middle();
-                setTitle(getString(R.string.buli_2Middle));
+            case API.FRAGMENT_BULI_2B:
+                fragment = new BuliFragment2A();
+                setTitle(getString(R.string.buli_2B));
                 break;
             case API.FRAGMENT_ARCHIVE:
                 fragment = new ArchiveFragment();
