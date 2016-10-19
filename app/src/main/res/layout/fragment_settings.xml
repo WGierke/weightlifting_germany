@@ -151,6 +151,15 @@
                 android:layout_marginStart="60dp"
                 android:text="Schwedt" />
 
+            <CheckBox
+                android:id="@+id/checkMutterstadt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginLeft="60dp"
+                android:layout_marginStart="60dp"
+                android:text="Mutterstadt" />
+
         </RadioGroup>
 
         <RadioButton

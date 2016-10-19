@@ -123,6 +123,7 @@ public class WeightliftingApp extends Application {
             allBlogPublishers.add("BVDG");
             allBlogPublishers.add("Speyer");
             allBlogPublishers.add("Schwedt");
+            allBlogPublishers.add("Mutterstadt");
             for (String blogPublisher : allBlogPublishers) {
                 news.addPublisher(blogPublisher);
             }
