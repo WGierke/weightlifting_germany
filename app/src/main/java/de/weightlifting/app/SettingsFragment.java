@@ -168,6 +168,7 @@ public class SettingsFragment extends Fragment {
         checkBoxesBlogs.add((CheckBox) fragment.findViewById(R.id.checkSpeyer));
         checkBoxesBlogs.add((CheckBox) fragment.findViewById(R.id.checkSchwedt));
         checkBoxesBlogs.add((CheckBox) fragment.findViewById(R.id.checkMutterstadt));
+        checkBoxesBlogs.add((CheckBox) fragment.findViewById(R.id.checkRoding));
 
         for (CheckBox checkBoxesBlog : checkBoxesBlogs) {
             checkBoxesBlog.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
