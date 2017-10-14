@@ -1,0 +1,54 @@
+{
+    "relay": "1Gruppe+A",
+    "table": [
+        {
+            "cardinal_points": "21 : 0",
+            "club": "AV Speyer 03",
+            "max_score": "995.6",
+            "place": "1",
+            "score": "5791.2 : 4727.8"
+        },
+        {
+            "cardinal_points": "12 : 9",
+            "club": "SV Germania Obrigheim",
+            "max_score": "921.3",
+            "place": "2",
+            "score": "5475.5 : 5114.2"
+        },
+        {
+            "cardinal_points": "10 : 8",
+            "club": "AC Mutterstadt",
+            "max_score": "742.2",
+            "place": "3",
+            "score": "4302.5 : 4081.6"
+        },
+        {
+            "cardinal_points": "10 : 8",
+            "club": "KSV Durlach",
+            "max_score": "802.2",
+            "place": "4",
+            "score": "4084.4 : 4158.4"
+        },
+        {
+            "cardinal_points": "7 : 11",
+            "club": "TB 03 Roding",
+            "max_score": "734.5",
+            "place": "5",
+            "score": "4151 : 3596"
+        },
+        {
+            "cardinal_points": "5 : 13",
+            "club": "AC Germania St.Ilgen",
+            "max_score": "812.0",
+            "place": "6",
+            "score": "3265.6 : 4172.6"
+        },
+        {
+            "cardinal_points": "1 : 17",
+            "club": "SC Pforzheim",
+            "max_score": "588.5",
+            "place": "7",
+            "score": "3152.5 : 4372.1"
+        }
+    ]
+}

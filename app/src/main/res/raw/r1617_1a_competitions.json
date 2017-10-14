@@ -1,0 +1,237 @@
+{
+    "competitions": [
+        {
+            "date": "22.04.2017",
+            "guest": "SV Germania Obrigheim Berliner TSC",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "995.6 : 802.8 :811.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=AC085923243A42048E4A839C2D4951FC"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "SG Fortschritt Eibau",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St.Ilgen",
+            "score": "496.6 : 614.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=FE90970A3DEA4270A1C230CF75DECF2E"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "AC Potsdam",
+            "home": "SC Pforzheim",
+            "location": "Pforzheim",
+            "score": "408.6 : 446.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=8809406CC73548D491207FE0BC7FA32A"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "Chemnitzer AC",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "1,000.2 : 910.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=4D0E537BB11944D093E520453930A3ED"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "Berliner TSC",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "876.5 : 859.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=1F34AB62E2CA42C294CC4636BA1ACEAF"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "SSV Samswegen",
+            "home": "AC Mutterstadt",
+            "location": "Mutterstadt",
+            "score": "740.0 : 589.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=CE580167345840E5A63904F1D0EF3DEA"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "Oder-Sund-Team ",
+            "home": "KSV Durlach",
+            "location": "Durlach",
+            "score": "658.0 : 769.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=109BF302877245949ABF4A1967666D24"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "Athletenteam Vogtland",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "677.0 : 542.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=2E4B3850CD484F55A3DEAE53ED8B792C"
+        },
+        {
+            "date": "25.02.2017",
+            "guest": "AC Mutterstadt",
+            "home": "SC Pforzheim",
+            "location": "Pforzheim",
+            "score": "545.0 : 728.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=A1497D4435ED46BA8D0F5E3C78B49DAB"
+        },
+        {
+            "date": "25.02.2017",
+            "guest": "KSV Durlach",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St.Ilgen",
+            "score": "812.0 : 613.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=2AE6E1CEAA664939A3F59F61E4860B1A"
+        },
+        {
+            "date": "18.02.2017",
+            "guest": "TB 03 Roding",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "814.0 : 651.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=3D6D9F841E144671AC7143C2DB0371F2"
+        },
+        {
+            "date": "04.02.2017",
+            "guest": "AC Germania St.Ilgen",
+            "home": "AC Mutterstadt",
+            "location": "Mutterstadt",
+            "score": "728.4 : 646.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=FF4AA58FFB6A4EA1BAF691779E47B1FE"
+        },
+        {
+            "date": "04.02.2017",
+            "guest": "SV Germania Obrigheim",
+            "home": "KSV Durlach",
+            "location": "Durlach",
+            "score": "802.2 : 672.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=01DE0FEA30E847BDB3C90718233E82A3"
+        },
+        {
+            "date": "04.02.2017",
+            "guest": "SC Pforzheim",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "884.2 : 480.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=43D45AC969F84FDB821E8FF48045EB18"
+        },
+        {
+            "date": "21.01.2017",
+            "guest": "AV Speyer 03",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen",
+            "score": "605.4 : 726.3",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=0A2275401294475BABC9A91B3088268E"
+        },
+        {
+            "date": "21.01.2017",
+            "guest": "AC Mutterstadt",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "679.0 : 657.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=6F9DF7F0136C4560BDFE8A37A23076F4"
+        },
+        {
+            "date": "21.01.2017",
+            "guest": "KSV Durlach",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "730.8 : 754.7",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=E4536920926346C4AADF39064B2BE10F"
+        },
+        {
+            "date": "17.12.2016",
+            "guest": "SV Germania Obrigheim",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "952.2 : 921.3",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=B320635BD9604E5EAF206AD6CE53FC0A"
+        },
+        {
+            "date": "17.12.2016",
+            "guest": "TB 03 Roding",
+            "home": "AC Mutterstadt",
+            "location": "Mutterstadt",
+            "score": "742.2 : 734.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=70742C1EB6224AA0ABD03FC7B0721D1D"
+        },
+        {
+            "date": "17.12.2016",
+            "guest": "AC Germania St.Ilgen",
+            "home": "SC Pforzheim",
+            "location": "Pforzheim",
+            "score": "588.5 : 660.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=D34C203260BB4E8E81B04AA15E66DBF1"
+        },
+        {
+            "date": "12.11.2016",
+            "guest": "AC Mutterstadt",
+            "home": "KSV Durlach",
+            "location": "Durlach",
+            "score": "716.4 : 731.1",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=AA56183980204852B8D561BA6A81948E"
+        },
+        {
+            "date": "12.11.2016",
+            "guest": "SC Pforzheim",
+            "home": "SV Germania Obrigheim",
+            "location": "Obrigheim",
+            "score": "786.0 : 514.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=8A9580C7E8294E1BA6B530CD1AB3B404"
+        },
+        {
+            "date": "12.11.2016",
+            "guest": "AV Speyer 03",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "647.0 : 765.2",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=53F363CBF28B43ABBD7D1E6505F9A52A"
+        },
+        {
+            "date": "15.10.2016",
+            "guest": "TB 03 Roding",
+            "home": "SC Pforzheim",
+            "location": "Pforzheim",
+            "score": "519.9 : 670.9",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=3308264F56594EFC9B7C789E609642F4"
+        },
+        {
+            "date": "15.10.2016",
+            "guest": "SV Germania Obrigheim",
+            "home": "AC Germania St.Ilgen",
+            "location": "Leimen-St.Ilgen",
+            "score": "541.6 : 800.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=F973E980330443C0B583FE12E7C230B3"
+        },
+        {
+            "date": "15.10.2016",
+            "guest": "KSV Durlach",
+            "home": "AV Speyer 03",
+            "location": "Speyer",
+            "score": "707.4 : 555.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=F1B85C4A6A074B22B20E2AC1F51A0856"
+        },
+        {
+            "date": "24.09.2016",
+            "guest": "SC Pforzheim",
+            "home": "KSV Durlach",
+            "location": "Durlach",
+            "score": "642.6 : 504.7",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=A6430BE7739E4F10851EE5310120AC5E"
+        },
+        {
+            "date": "24.09.2016",
+            "guest": "AV Speyer 03",
+            "home": "AC Mutterstadt",
+            "location": "Mutterstadt",
+            "score": "715.4 : 760.3",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=AA9AEEA7E4B84447BB3D99E891D1258C"
+        },
+        {
+            "date": "24.09.2016",
+            "guest": "AC Germania St.Ilgen",
+            "home": "TB 03 Roding",
+            "location": "Roding",
+            "score": "716.4 : 0.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=B039BC7F80CE48F8B2656ADD00E9CAE1"
+        }
+    ],
+    "relay": "1Gruppe+A"
+}

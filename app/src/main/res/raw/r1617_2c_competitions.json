@@ -1,0 +1,165 @@
+{
+    "competitions": [
+        {
+            "date": "08.04.2017",
+            "guest": "KSV Gr\u00fcnstadt",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "654.0 : 594.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=FDAF83CEC3B944C58D04D0CF4DACBB80"
+        },
+        {
+            "date": "08.04.2017",
+            "guest": "KSV L\u00f6rrach",
+            "home": "KSC Schifferstadt",
+            "location": "Schifferstadt",
+            "score": "464.5 : 500.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=2390C3C8A933460DBEBE0DA001D42239"
+        },
+        {
+            "date": "25.03.2017",
+            "guest": "TSV Heinsheim",
+            "home": "KSV L\u00f6rrach",
+            "location": "L\u00f6rrach-Haagen",
+            "score": "490.9 : 636.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=93285299879C45FF91E43C0F102CCEBF"
+        },
+        {
+            "date": "25.03.2017",
+            "guest": "KSC Schifferstadt",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "508.0 : 344.1",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=C4730C971092487AA31E8DEAB2885320"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "KSC Schifferstadt",
+            "home": "KSV Gr\u00fcnstadt",
+            "location": "Schifferstadt",
+            "score": "502.0 : 540.5",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=3114E8AEB535402D90F223FB7EFF6C8D"
+        },
+        {
+            "date": "11.03.2017",
+            "guest": "AC Weinheim",
+            "home": "KSV L\u00f6rrach",
+            "location": "L\u00f6rrach-Haagen",
+            "score": "541.0 : 451.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=CE105490D23E4E048E721199E7A5DC56"
+        },
+        {
+            "date": "25.02.2017",
+            "guest": "TSV Heinsheim",
+            "home": "KSC Schifferstadt",
+            "location": "Schifferstadt",
+            "score": "576.8 : 600.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=1BA53AD517134BD89D2C6E143F9E816E"
+        },
+        {
+            "date": "25.02.2017",
+            "guest": "KSV Gr\u00fcnstadt",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "488.0 : 573.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=FAFB08D09F774ABEA829D090BE4D6209"
+        },
+        {
+            "date": "04.02.2017",
+            "guest": "KSV L\u00f6rrach",
+            "home": "KSV Gr\u00fcnstadt",
+            "location": "Gr\u00fcnstadt",
+            "score": "535.5 : 553.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=11B0B5DF75B347C09AFC998E13D24D83"
+        },
+        {
+            "date": "04.02.2017",
+            "guest": "AC Weinheim",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "602.2 : 481.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=5A6389E99D604AEC93B22B6876D272CA"
+        },
+        {
+            "date": "28.01.2017",
+            "guest": "KSC Schifferstadt",
+            "home": "KSV L\u00f6rrach",
+            "location": "L\u00f6rrach-Haagen",
+            "score": "405.6 : 493.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=2DE83F4A2C694A32ADB3A23BDEFD38B6"
+        },
+        {
+            "date": "21.01.2017",
+            "guest": "TSV Heinsheim",
+            "home": "KSV Gr\u00fcnstadt",
+            "location": "Gr\u00fcnstadt",
+            "score": "465.0 : 578.4",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=7F1B8B714A25477C86C9B70BE78F0870"
+        },
+        {
+            "date": "17.12.2016",
+            "guest": "KSC Schifferstadt",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "612.8 : 489.6",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=1A9F5C6A412645BB9286FE257CFD63D7"
+        },
+        {
+            "date": "17.12.2016",
+            "guest": "AC Weinheim",
+            "home": "KSV Gr\u00fcnstadt",
+            "location": "Gr\u00fcnstadt",
+            "score": "481.0 : 475.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=B4B60364768645C0B79DFB728CD61320"
+        },
+        {
+            "date": "12.11.2016",
+            "guest": "KSV L\u00f6rrach",
+            "home": "TSV Heinsheim",
+            "location": "Bad Rappenau - Heinsheim",
+            "score": "661.2 : 607.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=A0CCEE34712E40AFA0FCB77D545A6CF4"
+        },
+        {
+            "date": "12.11.2016",
+            "guest": "AC Weinheim",
+            "home": "KSC Schifferstadt",
+            "location": "Schifferstadt",
+            "score": "562.4 : 409.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=75437CBD09FF4F529DE8A0D6D2F8B2FD"
+        },
+        {
+            "date": "15.10.2016",
+            "guest": "KSV L\u00f6rrach",
+            "home": "KSV Gr\u00fcnstadt",
+            "location": "L\u00f6rrach-Haagen",
+            "score": "509.0 : 554.8",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=1A140E9A4CF84948B354AAC4E4DE2FCD"
+        },
+        {
+            "date": "15.10.2016",
+            "guest": "TSV Heinsheim",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "390.5 : 635.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=5F5E8D9A035C4EE2A6EDAE8D8614975D"
+        },
+        {
+            "date": "24.09.2016",
+            "guest": "KSC Schifferstadt",
+            "home": "KSV Gr\u00fcnstadt",
+            "location": "Gr\u00fcnstadt",
+            "score": "481.0 : 522.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=E3B664E255084F758205A4C7CF675428"
+        },
+        {
+            "date": "24.09.2016",
+            "guest": "KSV L\u00f6rrach",
+            "home": "AC Weinheim",
+            "location": "Weinheim",
+            "score": "427.0 : 543.0",
+            "url": "https://www.iat.uni-leipzig.de/datenbanken/blgew1617/start.php?pid='123'&protokoll=1&wkid=EBAD049A7A8F4B03AF7B5D98FFB154C8"
+        }
+    ],
+    "relay": "2Gruppe+C"
+}
