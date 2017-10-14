@@ -65,6 +65,9 @@
         </service>
         <service android:name=".service.RegistrationIntentService" android:exported="false">
         </service>
+        <meta-data
+            android:name="io.fabric.ApiKey"
+            android:value="ced4d96d987de7ef074b9366f739f4c853c990f2" />
     </application>
 
 </manifest>
