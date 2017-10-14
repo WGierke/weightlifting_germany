@@ -11,10 +11,12 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 import de.weightlifting.app.MainActivity;
 import de.weightlifting.app.R;
 import de.weightlifting.app.SettingsFragment;
+import de.weightlifting.app.UpdateableItem;
 import de.weightlifting.app.WeightliftingApp;
 import de.weightlifting.app.buli.ListViewFragment;
 import de.weightlifting.app.helper.API;
@@ -24,12 +26,14 @@ public class NewsFeedFragment extends ListViewFragment {
 
     public News news;
     private NewsFeedListAdapter adapter;
-    private boolean is_loading = false;
+    private long throttleStarted;
+    private boolean isThrottling = false;
+    final private int THROTTLE_DURATION = 1000; //time window in which events should be discarded
 
     @Override
     protected void setEmptyListItem() {
         TextView emptyText = (TextView) fragment.findViewById(R.id.emptyArticles);
-        if(app.getBlogFilterMode().equals(API.BLOG_FILTER_SHOW_NONE)) {
+        if (app.getBlogFilterMode().equals(API.BLOG_FILTER_SHOW_NONE)) {
             emptyText.setText(R.string.news_no_articles_settings);
             emptyText.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -85,9 +89,17 @@ public class NewsFeedFragment extends ListViewFragment {
                     @Override
                     public void onScroll(AbsListView view, int firstVisibleItem, int visibleItemCount, int totalItemCount) {
                         if (firstVisibleItem + visibleItemCount == totalItemCount && totalItemCount != 0) {
-                            if (!is_loading) {
-                                is_loading = true;
+                            if (!isThrottling) {
+                                isThrottling = true;
+                                throttleStarted = System.currentTimeMillis();
                                 addItems();
+                            }
+
+                            if (isThrottling) {
+                                if (System.currentTimeMillis() - throttleStarted > THROTTLE_DURATION) {
+                                    isThrottling = false;
+                                    addItems();
+                                }
                             }
                         }
                     }
@@ -99,12 +111,21 @@ public class NewsFeedFragment extends ListViewFragment {
         }
     }
 
+    /**
+     * Add more items when the user scrolled to the end of the list
+     */
     private void addItems() {
-        ArrayList<String> firstUrls = getFirstUrlsAndRemove(3, true);
+        //For each publisher, add 10 more articles with a offset of how many items there already are
+        for (String publisher : news.remainingPublisherArticleUrls.keySet()) {
+            int loadedArticles = news.existingPublisherArticleUrls.get(publisher).size();
+            loadedArticles += news.remainingPublisherArticleUrls.get(publisher).size();
+            news.addArticleUrlsForPublisher(publisher, loadedArticles);
+        }
+
+        ArrayList<String> firstUrls = getFirstUrlsAndRemove(10, true);
         for (String firstUrl : firstUrls) {
             news.addArticleFromUrl(firstUrl);
         }
-        is_loading = false;
         Runnable refreshRunnable = new Runnable() {
             @Override
             public void run() {
@@ -121,7 +142,7 @@ public class NewsFeedFragment extends ListViewFragment {
     private ArrayList<String> getFirstUrlsAndRemove(int n, boolean removeUrl) {
         ArrayList<String> firstUrls = new ArrayList<>();
         for (String publisher : app.getBlogFilterPublishers()) {
-            ArrayList<String> urls = News.remainingPublisherArticleUrls.get(publisher);
+            ArrayList<String> urls = news.remainingPublisherArticleUrls.get(publisher);
             if (n <= urls.size())
                 firstUrls.addAll(urls.subList(0, n));
             else
@@ -129,7 +150,7 @@ public class NewsFeedFragment extends ListViewFragment {
 
             if (removeUrl) {
                 for (String firstUrl : firstUrls) {
-                    News.remainingPublisherArticleUrls.get(publisher).remove(firstUrl);
+                    news.remainingPublisherArticleUrls.get(publisher).remove(firstUrl);
                 }
             }
         }

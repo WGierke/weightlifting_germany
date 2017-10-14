@@ -4,6 +4,7 @@ package de.weightlifting.app.news;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -25,6 +26,7 @@ import de.weightlifting.app.helper.NetworkHelper;
 public class News extends UpdateableWrapper {
 
     public static ArrayList<String> newArticleUrlsToMark = new ArrayList<>();
+    public static HashMap<String, ArrayList<String>> existingPublisherArticleUrls = new HashMap<>();
     public static HashMap<String, ArrayList<String>> remainingPublisherArticleUrls = new HashMap<>();
     public static boolean isUpdating = false;
     public static boolean updateFailed = false;
@@ -37,7 +39,8 @@ public class News extends UpdateableWrapper {
         return convertedItems;
     }
 
-    public void refreshItems() { }
+    public void refreshItems() {
+    }
 
     protected void updateWrapper(String result) {
         News newItems = new News();
@@ -77,6 +80,9 @@ public class News extends UpdateableWrapper {
         return item;
     }
 
+    /**
+     * Add an article given its URL either from cached local storage or by downloading it
+     */
     public void addArticleFromUrl(final String articleUrl) {
         File file = WeightliftingApp.getContext().getFileStreamPath(URLEncoder.encode(articleUrl));
         if (file.exists()) {
@@ -84,11 +90,12 @@ public class News extends UpdateableWrapper {
                 String fileContent = DataHelper.readIntern(URLEncoder.encode(articleUrl), WeightliftingApp.getContext());
                 if (!fileContent.equals("")) {
                     NewsItem newsItem = getNewsItemFromString(fileContent);
-                    items.add(newsItem);
-                    for (String publisher : remainingPublisherArticleUrls.keySet()) {
-                        if (remainingPublisherArticleUrls.get(publisher).contains(articleUrl)) {
-                            remainingPublisherArticleUrls.get(publisher).remove(articleUrl);
-                        }
+                    if (!existingPublisherArticleUrls.get(newsItem.getPublisher()).contains(articleUrl)) {
+                        items.add(newsItem);
+                        ArrayList oldExistingPublisherArticleUrls = existingPublisherArticleUrls.get(newsItem.getPublisher());
+                        oldExistingPublisherArticleUrls.add(articleUrl);
+                        existingPublisherArticleUrls.put(newsItem.getPublisher(), oldExistingPublisherArticleUrls);
+                        remainingPublisherArticleUrls.get(newsItem.getPublisher()).remove(articleUrl);
                     }
                 }
             } catch (Exception e) {
@@ -99,8 +106,11 @@ public class News extends UpdateableWrapper {
         }
     }
 
+    /**
+     * Download an article
+     */
     private void loadArticleFromUrl(final String url) {
-        String requestUrl = NetworkHelper.BASE_SERVER_URL + "/get_article?url=" + url;
+        String requestUrl = NetworkHelper.BASE_SERVER_MAIN_URL + "/get_article?url=" + url;
         try {
             Handler parseArticleHandler = new Handler() {
                 @Override
@@ -110,9 +120,14 @@ public class News extends UpdateableWrapper {
                         String result = data.getString(API.HANDLER_RESULT_KEY);
                         DataHelper.saveIntern(result, URLEncoder.encode(url), WeightliftingApp.getContext());
                         NewsItem newsItem = getNewsItemFromString(result);
-                        items.add(newsItem);
+                        if (!existingPublisherArticleUrls.get(newsItem.getPublisher()).contains(newsItem.getURL())) {
+                            items.add(newsItem);
+                            ArrayList oldExistingPublisherArticleUrls = existingPublisherArticleUrls.get(newsItem.getPublisher());
+                            oldExistingPublisherArticleUrls.add(newsItem.getURL());
+                            existingPublisherArticleUrls.put(newsItem.getPublisher(), oldExistingPublisherArticleUrls);
+                        }
                     } catch (Exception e) {
-                        if(News.isUpdating) {
+                        if (News.isUpdating) {
                             News.updateFailed = true;
                         }
                         e.printStackTrace();
@@ -126,12 +141,13 @@ public class News extends UpdateableWrapper {
     }
 
     public void addPublisher(String publisher) {
+        existingPublisherArticleUrls.put(publisher, new ArrayList<String>());
         remainingPublisherArticleUrls.put(publisher, new ArrayList<String>());
     }
 
     public void addArticleUrlsForPublishers() {
         for (String publisher : remainingPublisherArticleUrls.keySet()) {
-            addArticleUrlsForPublisher(publisher);
+            addArticleUrlsForPublisher(publisher, 0);
         }
     }
 
@@ -171,8 +187,11 @@ public class News extends UpdateableWrapper {
         return true;
     }
 
-    public void addArticleUrlsForPublisher(final String publisher) {
-        String url = NetworkHelper.BASE_SERVER_URL + "/get_articles?publisher=" + publisher;
+    /**
+     * Download 10 articles of a publisher for the given offset
+     */
+    public void addArticleUrlsForPublisher(final String publisher, final int offset) {
+        String url = NetworkHelper.BASE_SERVER_MAIN_URL + "/get_articles?publisher=" + publisher + "&offset=" + String.valueOf(offset);
 
         try {
             Handler addArticlesHandler = new Handler() {
@@ -193,7 +212,9 @@ public class News extends UpdateableWrapper {
                                         newArticleUrlsToMark.add(url);
                                     }
                                 }
-                                remainingPublisherArticleUrls.get(publisher).add(url);
+                                if (!remainingPublisherArticleUrls.get(publisher).contains(url)) {
+                                    remainingPublisherArticleUrls.get(publisher).add(url);
+                                }
                             } catch (Exception e) {
                                 e.printStackTrace();
                             }
