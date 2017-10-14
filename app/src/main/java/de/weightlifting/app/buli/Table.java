@@ -55,7 +55,7 @@ public class Table extends UpdateableWrapper {
     }
 
     public void refreshItems() {
-        super.update(NetworkHelper.BASE_SERVER_URL + UPDATE_URL + URLEncoder.encode(getLeagueRelay()), getFileName(), TAG);
+        super.update(NetworkHelper.BASE_SERVER_BULI_URL + UPDATE_URL + URLEncoder.encode(getLeagueRelay()), getFileName(), TAG);
     }
 
     protected void updateWrapper(String result) {

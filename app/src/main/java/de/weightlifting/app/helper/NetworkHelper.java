@@ -18,7 +18,8 @@ import de.weightlifting.app.WeightliftingApp;
 
 public class NetworkHelper {
 
-    public static final String BASE_SERVER_URL = "http://weightliftinggermany.appspot.com";
+    public static final String BASE_SERVER_MAIN_URL = "http://weightliftinggermany.appspot.com";
+    public static final String BASE_SERVER_BULI_URL = "http://weightliftingcompetitions.appspot.com";
 
     public static void getWebRequest(final String url, Handler handler) {
         final Handler mHandler = handler;
@@ -66,7 +67,7 @@ public class NetworkHelper {
     public static void sendToken(String token, Handler handler) {
         try {
             String data = URLEncoder.encode("token", "UTF-8") + "=" + URLEncoder.encode(token, "UTF-8");
-            String url = BASE_SERVER_URL + "/add_token";
+            String url = BASE_SERVER_MAIN_URL + "/add_token";
             sendAuthenticatedHttpPostRequest(url, data, handler);
         } catch (UnsupportedEncodingException ignored) {
             ignored.printStackTrace();
@@ -82,7 +83,7 @@ public class NetworkHelper {
     public static void sendProtocolShare(String competitionParties) {
         try {
             String data = URLEncoder.encode("competitionParties", "UTF-8") + "=" + URLEncoder.encode(competitionParties, "UTF-8");
-            String url = BASE_SERVER_URL + "add_protocol";
+            String url = BASE_SERVER_MAIN_URL + "/add_protocol";
             sendAuthenticatedHttpPostRequest(url, data, new Handler());
         } catch (UnsupportedEncodingException ignored) {
             ignored.printStackTrace();
@@ -93,7 +94,7 @@ public class NetworkHelper {
         try {
             String data = URLEncoder.encode("userId", "UTF-8") + "=" + URLEncoder.encode(userId, "UTF-8");
             data += "&" + URLEncoder.encode("filterSetting", "UTF-8") + "=" + URLEncoder.encode(filterSetting, "UTF-8");
-            String url = BASE_SERVER_URL + "/add_filter";
+            String url = BASE_SERVER_MAIN_URL + "/add_filter";
             sendAuthenticatedHttpPostRequest(url, data, new Handler());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
@@ -104,7 +105,7 @@ public class NetworkHelper {
         try {
             String data = URLEncoder.encode("userId", "UTF-8") + "=" + URLEncoder.encode(userId, "UTF-8");
             data += "&" + URLEncoder.encode("blogFilterSetting", "UTF-8") + "=" + URLEncoder.encode(blogFilterSetting, "UTF-8");
-            String url = BASE_SERVER_URL + "/add_blog_filter";
+            String url = BASE_SERVER_MAIN_URL + "/add_blog_filter";
             sendAuthenticatedHttpPostRequest(url, data, new Handler());
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
