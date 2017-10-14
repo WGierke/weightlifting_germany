@@ -29,7 +29,6 @@ import de.weightlifting.app.buli.relay1A.BuliFragment1A;
 import de.weightlifting.app.buli.relay1B.BuliFragment1B;
 import de.weightlifting.app.buli.relay2A.BuliFragment2A;
 import de.weightlifting.app.buli.relay2B.BuliFragment2B;
-import de.weightlifting.app.buli.relay2C.BuliFragment2C;
 import de.weightlifting.app.helper.API;
 import de.weightlifting.app.helper.UiHelper;
 import de.weightlifting.app.news.News;
@@ -83,7 +82,6 @@ public class MainActivity extends AppCompatActivity {
         SectionDrawerItem nav_buli2_section = new SectionDrawerItem().withName(R.string.secondNationalLeague);
         PrimaryDrawerItem nav_buli_2A = new PrimaryDrawerItem().withName(R.string.nav_buli_2A).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_buli_2B = new PrimaryDrawerItem().withName(R.string.nav_buli_2B).withIcon(R.drawable.nav_buli);
-        PrimaryDrawerItem nav_buli_2C = new PrimaryDrawerItem().withName(R.string.nav_buli_2C).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_archive = new PrimaryDrawerItem().withName(R.string.nav_archive).withIcon(R.drawable.nav_archive);
         PrimaryDrawerItem nav_faq = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_faq);
         PrimaryDrawerItem nav_info = new PrimaryDrawerItem().withName(R.string.nav_info).withIcon(R.drawable.nav_info);
@@ -101,7 +99,6 @@ public class MainActivity extends AppCompatActivity {
                         nav_buli2_section,
                         nav_buli_2A,
                         nav_buli_2B,
-                        nav_buli_2C,
                         new DividerDrawerItem(),
                         nav_archive,
                         new DividerDrawerItem(),
@@ -217,10 +214,6 @@ public class MainActivity extends AppCompatActivity {
             case API.FRAGMENT_BULI_2A:
                 fragment = new BuliFragment2B();
                 setTitle(getString(R.string.buli_2A));
-                break;
-            case API.FRAGMENT_BULI_2C:
-                fragment = new BuliFragment2C();
-                setTitle(getString(R.string.buli_2C));
                 break;
             case API.FRAGMENT_BULI_2B:
                 fragment = new BuliFragment2A();

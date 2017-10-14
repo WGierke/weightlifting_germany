@@ -40,7 +40,6 @@
     <string name="nav_buli_1B">Staffel B</string>
     <string name="nav_buli_2A">Staffel A</string>
     <string name="nav_buli_2B">Staffel B</string>
-    <string name="nav_buli_2C">Staffel C</string>
     <string name="nav_buli">Bundesliga</string>
     <string name="nav_archive">Archiv</string>
     <string name="nav_faq">FAQ</string>
@@ -64,7 +63,6 @@
     <string name="buli_1B">1. Bundesliga - Staffel B</string>
     <string name="buli_2A">2. Bundesliga - Staffel A</string>
     <string name="buli_2B">2. Bundesliga - Staffel B</string>
-    <string name="buli_2C">2. Bundesliga - Staffel C</string>
 
     <string name="buli_schedule">Ansetzungen</string>
     <string name="buli_no_schedules">Es konnten keine Ansetzungen gefunden werden.</string>

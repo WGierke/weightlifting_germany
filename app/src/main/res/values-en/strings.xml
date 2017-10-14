@@ -39,7 +39,6 @@
     <string name="nav_buli_1B">Relay B</string>
     <string name="nav_buli_2A">Relay A</string>
     <string name="nav_buli_2B">Relay B</string>
-    <string name="nav_buli_2C">Relay C</string>
     <string name="nav_buli">National League</string>
     <string name="nav_archive">Archive</string>
     <string name="nav_faq">FAQ</string>
@@ -63,7 +62,6 @@
     <string name="buli_1B">1.National League - Relay B</string>
     <string name="buli_2A">2. National League - Relay A</string>
     <string name="buli_2B">2. National League - Relay B</string>
-    <string name="buli_2C">2. National League - Relay C</string>
 
     <string name="buli_schedule">Schedule</string>
     <string name="buli_no_schedules">No schedule could be found.</string>
