@@ -84,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         PrimaryDrawerItem nav_buli_2B = new PrimaryDrawerItem().withName(R.string.nav_buli_2B).withIcon(R.drawable.nav_buli);
         PrimaryDrawerItem nav_archive = new PrimaryDrawerItem().withName(R.string.nav_archive).withIcon(R.drawable.nav_archive);
         PrimaryDrawerItem nav_faq = new PrimaryDrawerItem().withName(R.string.nav_faq).withIcon(R.drawable.nav_faq);
+        PrimaryDrawerItem nav_support = new PrimaryDrawerItem().withName(R.string.nav_support).withIcon(R.drawable.nav_support);
         PrimaryDrawerItem nav_info = new PrimaryDrawerItem().withName(R.string.nav_info).withIcon(R.drawable.nav_info);
 
         Drawer result = new DrawerBuilder()
@@ -103,6 +104,8 @@ public class MainActivity extends AppCompatActivity {
                         nav_archive,
                         new DividerDrawerItem(),
                         nav_faq,
+                        new DividerDrawerItem(),
+                        nav_support,
                         new DividerDrawerItem(),
                         nav_info,
                         new DividerDrawerItem()
