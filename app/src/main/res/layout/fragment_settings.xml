@@ -6,190 +6,204 @@
     android:background="@android:color/white"
     android:orientation="vertical">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="15dp"
-        android:text="@string/settings"
-        android:textColor="@color/md_black_1000"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/filter_notifications"
-        android:textSize="16sp" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:text="@string/i_want_to"
-        android:textColor="@color/md_black_1000"
-        android:textSize="16sp" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radioFilterNothing"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:text="@string/no_favorites" />
-
-        <RadioButton
-            android:id="@+id/radioFilterRelay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:text="@string/favorite_relay" />
-
-        <Spinner
-            android:id="@+id/spinnerRelay"
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginLeft="60dp"
-            android:layout_marginStart="60dp"
-            android:textColor="#FF0000" />
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:orientation="vertical">
 
-        <RadioButton
-            android:id="@+id/radioFilterClub"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:text="@string/favorite_club" />
-
-        <Spinner
-            android:id="@+id/spinnerClub"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="right"
-            android:layout_marginLeft="60dp"
-            android:layout_marginStart="60dp"
-            android:prompt="@string/settings" />
-
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/settingsAnd"
-        android:textColor="@color/md_black_1000"
-        android:textSize="16sp" />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-
-        <RadioButton
-            android:id="@+id/radioBlogAll"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:text="@string/allClubNews" />
-
-        <RadioButton
-            android:id="@+id/radioBlogOnly"
-            android:clickable="false"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:text="@string/settings_news_only_about" />
-
-        <RadioGroup
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-
-            <CheckBox
-                android:id="@+id/checkBVDG"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="60dp"
-                android:layout_marginStart="60dp"
-                android:text="BVDG" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/settings"
+                android:textColor="@color/md_black_1000"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-            <CheckBox
-                android:id="@+id/checkSpeyer"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="60dp"
-                android:layout_marginStart="60dp"
-                android:text="Speyer" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/filter_notifications"
+                android:textSize="16sp" />
 
-            <CheckBox
-                android:id="@+id/checkSchwedt"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="60dp"
-                android:layout_marginStart="60dp"
-                android:text="Schwedt" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/i_want_to"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
 
-            <CheckBox
-                android:id="@+id/checkMutterstadt"
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioFilterNothing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/no_favorites" />
+
+                <RadioButton
+                    android:id="@+id/radioFilterRelay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/favorite_relay" />
+
+                <Spinner
+                    android:id="@+id/spinnerRelay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="60dp"
+                    android:textColor="#FF0000" />
+
+                <RadioButton
+                    android:id="@+id/radioFilterClub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:text="@string/favorite_club" />
+
+                <Spinner
+                    android:id="@+id/spinnerClub"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginStart="60dp"
+                    android:prompt="@string/settings" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="60dp"
-                android:layout_marginStart="60dp"
-                android:text="Mutterstadt" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/settingsAnd"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
 
-            <CheckBox
-                android:id="@+id/checkRoding"
-                android:layout_width="match_parent"
+            <RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radioBlogAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/allClubNews" />
+
+                <RadioButton
+                    android:id="@+id/radioBlogOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:clickable="false"
+                    android:text="@string/settings_news_only_about" />
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <CheckBox
+                        android:id="@+id/checkBVDG"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:text="BVDG" />
+
+                    <CheckBox
+                        android:id="@+id/checkSpeyer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:text="Speyer" />
+
+                    <CheckBox
+                        android:id="@+id/checkSchwedt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:text="Schwedt" />
+
+                    <CheckBox
+                        android:id="@+id/checkMutterstadt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:text="Mutterstadt" />
+
+                    <CheckBox
+                        android:id="@+id/checkRoding"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="right"
+                        android:layout_marginLeft="60dp"
+                        android:layout_marginStart="60dp"
+                        android:text="Roding" />
+
+                </RadioGroup>
+
+                <RadioButton
+                    android:id="@+id/radioBlogNone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="5dp"
+                    android:text="@string/settings_news_none" />
+
+            </RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginLeft="60dp"
-                android:layout_marginStart="60dp"
-                android:text="Roding" />
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/be_notified_about"
+                android:textColor="@color/md_black_1000"
+                android:textSize="16sp" />
 
-        </RadioGroup>
+        </LinearLayout>
 
-        <RadioButton
-            android:id="@+id/radioBlogNone"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:text="@string/settings_news_none" />
-
-    </RadioGroup>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="5dp"
-        android:text="@string/be_notified_about"
-        android:textColor="@color/md_black_1000"
-        android:textSize="16sp" />
+    </ScrollView>
 
 </LinearLayout>
